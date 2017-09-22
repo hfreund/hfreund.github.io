@@ -15,13 +15,32 @@ h1, h2, h3, h4 {
 .hero {
   display: grid;
   height: 100vh;
+  grid-template-rows: 1fr 300px;
   justify-content: center;
   align-content: center;
   background: #000000;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #53346D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #53346D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to top, #53346D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #53346D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .hero .content {
   text-align: center;
+}
+
+a {
+  font-color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid inherit;
+  transition: 150ms ease;
+}
+
+a:hover {
+  color: #333;
+  background-color: rgba(255,255,255,0.5);
+  border-bottom: 2px solid transparent;
+}
+
+.map {
+  display: grid;
+  grid-template-columns: minmax(25%,300px);
 }
