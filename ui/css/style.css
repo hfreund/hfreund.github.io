@@ -4,6 +4,7 @@ TYPOGRAPHY
 body {
     font-family: 'Raleway', sans-serif;
     line-height: 1.8em;
+    background-color: #f3f5f7;
 }
 
 .blockquote {
