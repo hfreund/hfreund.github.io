@@ -10,3 +10,7 @@ body {
 .blockquote {
   border-bottom: 2px solid #d3d5d7;
 }
+
+blockquote {
+  border-bottom: 2px solid #d3d5d7;
+}
