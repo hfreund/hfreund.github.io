@@ -11,6 +11,6 @@ body {
   border-bottom: 2px solid #d3d5d7;
 }
 
-blockquote {
-  border-bottom: 2px solid #d3d5d7;
+h1, h2, h3, h4 {
+  font-weight: 100;
 }
