@@ -15,7 +15,6 @@ h1, h2, h3, h4 {
 .hero {
   display: grid;
   height: 100vh;
-  grid-template-rows: 1fr 300px;
   justify-content: center;
   align-content: center;
   background: #000000;  /* fallback for old browsers */
@@ -35,12 +34,27 @@ h1, h2, h3, h4 {
 }
 
 .muted>a:hover {
-  color: #000;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.15);
   border-bottom: 2px solid transparent;
 }
 
-.map {
-  display: grid;
-  grid-template-columns: minmax(25%,300px);
+.btn.btn-hero {
+    display: inline-block;
+    padding: 1em 2em;
+    margin: 0 10px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    transition: 150ms ease;
+    color: rgba(255,255,255,0.85);
+}
+
+a.btn.btn-hero {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+}
+
+a.btn.btn-hero:hover {
+    background-color: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.85);
+    cursor: pointer;
 }
