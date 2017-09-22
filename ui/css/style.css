@@ -6,10 +6,13 @@ body {
     line-height: 1.8em;
     background-color: #f3f5f7;
     display: grid;
-    align-content: center;
-    justify-content: center;
 }
 
 h1, h2, h3, h4 {
   font-weight: 100;
+}
+
+.hero {
+  align-self: center;
+  justify-self: center;
 }
