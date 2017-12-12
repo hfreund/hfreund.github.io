@@ -5,9 +5,23 @@
 <meta name="Copyright" content="" />
   <link rel="stylesheet" href="../ui/css/style.css" type="text/css" />
   <link rel="stylesheet" href="../ui/css/normalize.css" type="text/css" />
+  <script>
+  var open = false;
+
+  function change() {
+    if (open) {
+        document.getElementById("expandNav").className = "closed";
+        open = false;
+    } else {
+        document.getElementById("expandNav").className = "open";
+        open = true;
+    }
+  }
+
+  </script>
 </head>
 <body>
-  <div class="main project">
+  <div class="main project" id="expandNav">
     <div class="nav">
       <div class="content">
         &times;

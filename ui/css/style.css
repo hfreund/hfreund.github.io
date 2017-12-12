@@ -57,7 +57,7 @@ h1, h2, h3, h4 {
   grid-template-columns: 320px 1fr;
   height: 100vh;
 }
-.nav, .main.project .nav:hover {
+.nav {
   grid-area: nav;
   padding: 2em 1.25em;
   border-right: 1px solid #d3d5d7;
@@ -66,14 +66,14 @@ h1, h2, h3, h4 {
   grid-area: content;
   overflow-y: scroll;
 }
-.main.project {
+.main.project, .main.project.closed {
   display:grid;
   grid-template-areas: "nav content";
   grid-template-areas: 80px 1fr;
   transition: 200ms ease;
   height: 100vh;
 }
-.main.project .nav:hover {
+.main.project.open {
   grid-template-areas: 320px 1fr;
   transition: 200ms ease;
 }
