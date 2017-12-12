@@ -10,7 +10,7 @@
 
   function change() {
     if (open) {
-        document.getElementById("expandNav").className = "closed";
+        document.getElementById("expandNav").className = "main closed";
         open = false;
     } else {
         document.getElementById("expandNav").className = "main";
@@ -30,26 +30,17 @@
         }
     }
 </script>
-<style>
-p.closed {
-    display: none;
-}
-p.open {
-    display: block;}
-    </style>
 
 </head>
 <body>
   <div class="main closed" id="expandNav">
     <div class="nav">
       <div class="content">
-        <a href="#" onmouseclick="hi">Menu</a>
+      <a href="#" onmouseover="change()">Menu</a>
       </div>
     </div>
     <div class="content">
       <h1>Courageous Sailing</h1>
-      <a href="#" onmouseover="change()">Link</a>
-
 <p id="hi" class="closed">Hi</p>
     </div>
   </div>
