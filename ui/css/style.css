@@ -56,6 +56,7 @@ h1, h2, h3, h4 {
   grid-template-areas: "nav content";
   grid-template-columns: 320px 1fr;
   height: 100vh;
+  transition: 200ms ease;
 }
 .nav {
   grid-area: nav;
@@ -66,16 +67,12 @@ h1, h2, h3, h4 {
   grid-area: content;
   overflow-y: scroll;
 }
-.main.project, .main.project.closed {
+.main.closed {
   display:grid;
   grid-template-areas: "nav content";
   grid-template-areas: 80px 1fr;
   transition: 200ms ease;
   height: 100vh;
-}
-.main.project.open {
-  grid-template-areas: 320px 1fr;
-  transition: 200ms ease;
 }
 .project-wrapper {
   height: calc(85vh - 3em);
