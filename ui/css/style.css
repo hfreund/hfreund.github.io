@@ -57,7 +57,7 @@ h1, h2, h3, h4 {
   grid-template-columns: 320px 1fr;
   height: 100vh;
 }
-.nav {
+.nav, .main.project .nav:hover {
   grid-area: nav;
   padding: 2em 1.25em;
   border-right: 1px solid #d3d5d7;
@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
   transition: 200ms ease;
   height: 100vh;
 }
-.main.project:hover {
+.main.project .nav:hover {
   grid-template-areas: 320px 1fr;
   transition: 200ms ease;
 }
