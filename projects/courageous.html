@@ -6,30 +6,42 @@
   <link rel="stylesheet" href="../ui/css/style.css" type="text/css" />
   <link rel="stylesheet" href="../ui/css/normalize.css" type="text/css" />
   <script>
-//   var open = false;
-//
-//   function open() {
-//     document.getElementById("expandNav").className = "main";
-//     open = true;
-//   }
+  var open = false;
 
-  var test = document.getElementById("expandNav");
-  
-  // this handler will be executed every time the cursor is moved over a different list item
-  test.addEventListener("mouseover", function( event ) {
-    event.target.class = "main";
-  }, false);
-  test.addEventListener("mouseout", function( event ) {
-  	event.target.class = "main closed";
-  }, false);
+  function change() {
+    if (open) {
+        document.getElementById("expandNav").className = "main closed";
+        open = false;
+    } else {
+        document.getElementById("expandNav").className = "main";
+        open = true;
+    }
+  }
+
+    var open = false;
+
+    function hi() {
+        if (open) {
+            document.getElementById("hi").className = "closed";
+            open = false;
+        } else {
+            document.getElementById("hi").className = "open";
+            open = true;
+        }
+    }
 </script>
 
 </head>
 <body>
   <div class="main closed" id="expandNav">
-    <a href="#" class="nav" onmouseover="open()" onmouseout="close()">Menu</a>
+    <div class="nav">
+      <div class="content">
+      <a href="#" onmouseover="change()">Menu</a>
+      </div>
+    </div>
     <div class="content">
       <h1>Courageous Sailing</h1>
+<p id="hi" class="closed">Hi</p>
     </div>
   </div>
 </body>
