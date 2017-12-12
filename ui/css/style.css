@@ -58,3 +58,17 @@ a.btn.btn-hero:hover {
     border-color: rgba(255,255,255,0.85);
     cursor: pointer;
 }
+
+.main {
+  display: grid;
+  grid-template-areas: "nav content";
+  grid-template-columns: 320px 1fr;
+  align-content: stretch;
+}
+.nav {
+  grid-area: "nav";
+}
+.content {
+  grid-area: "content";
+  overflow-y: scroll;
+}
