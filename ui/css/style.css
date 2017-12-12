@@ -58,9 +58,39 @@ h1, h2, h3, h4 {
   align-content: stretch;
 }
 .nav {
-  grid-area: "nav";
+  grid-area: nav;
+  padding: 2em 1.25em;
+  border-right: 1px solid #d3d5d7;
 }
 .content {
-  grid-area: "content";
+  grid-area: content;
   overflow-y: scroll;
+}
+.project-wrapper {
+  height: calc(85vh - 3em);
+  padding: 1.5em;
+  border-bottom: 1px solid #d3d5d7;
+}
+.project-wrapper {
+    height: calc(85vh);
+    border-bottom: 1px solid #d3d5d7;
+    transition: 200ms ease;
+}
+
+.project-inner {
+    padding: 1.5em;
+    height: calc(100% - 3em);
+}
+
+.project-inner#courageous {
+    background-color: aquamarine;
+}
+
+.project-inner#commoncensus {
+    background-color: darkblue;
+    color: #fff;
+}
+
+.project-inner#riwe {
+    background-color: orange;
 }
