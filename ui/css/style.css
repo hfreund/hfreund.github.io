@@ -70,7 +70,7 @@ h1, h2, h3, h4 {
 .main.closed {
   display:grid;
   grid-template-areas: "nav content";
-  grid-template-areas: 80px 1fr;
+  grid-template-columns: 80px 1fr;
   transition: 200ms ease;
   height: 100vh;
 }
