@@ -8,27 +8,14 @@
   <script>
   var open = false;
 
-  function change() {
-    if (open) {
-        document.getElementById("expandNav").className = "main closed";
-        open = false;
-    } else {
-        document.getElementById("expandNav").className = "main";
-        open = true;
-    }
+  function open() {
+    document.getElementById("expandNav").className = "main";
+    open = true;
   }
-
-    var open = false;
-
-    function hi() {
-        if (open) {
-            document.getElementById("hi").className = "closed";
-            open = false;
-        } else {
-            document.getElementById("hi").className = "open";
-            open = true;
-        }
-    }
+  function close() {
+    document.getElementById("expandNav").className = "main close";
+    close = true;
+  }
 </script>
 
 </head>
@@ -36,7 +23,7 @@
   <div class="main closed" id="expandNav">
     <div class="nav">
       <div class="content">
-      <a href="#" onmouseover="change()">Menu</a>
+      <a href="#" onmouseover="open()" onmouseout="close()">Menu</a>
       </div>
     </div>
     <div class="content">
