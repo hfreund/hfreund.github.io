@@ -6,16 +6,22 @@
   <link rel="stylesheet" href="../ui/css/style.css" type="text/css" />
   <link rel="stylesheet" href="../ui/css/normalize.css" type="text/css" />
   <script>
-  var open = false;
+//   var open = false;
+//
+//   function open() {
+//     document.getElementById("expandNav").className = "main";
+//     open = true;
+//   }
 
-  function open() {
-    document.getElementById("expandNav").className = "main";
-    open = true;
-  }
-  function close() {
-    document.getElementById("expandNav").className = "main close";
-    open = false;
-  }
+  var test = document.getElementById("expandNav");
+  
+  // this handler will be executed every time the cursor is moved over a different list item
+  test.addEventListener("mouseover", function( event ) {
+    event.target.class = "main";
+  }, false);
+  test.addEventListener("mouseout", function( event ) {
+  	event.target.class = "main closed";
+  }, false);
 </script>
 
 </head>
