@@ -10,10 +10,10 @@
 
   function change() {
     if (open) {
-        document.getElementById("expandNav").className = "closed";
+        document.getElementById("expandNav").className = "main closed";
         open = false;
     } else {
-        document.getElementById("expandNav").className = "open";
+        document.getElementById("expandNav").className = "main";
         open = true;
     }
   }
@@ -21,8 +21,8 @@
   </script>
 </head>
 <body>
-  <div class="main project" id="expandNav">
-    <div class="nav">
+  <div class="main" id="expandNav">
+    <div class="nav" onmouseover="change">
       <div class="content">
         &times;
       </div>
