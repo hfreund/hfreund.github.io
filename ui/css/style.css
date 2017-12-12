@@ -102,3 +102,11 @@ h1, h2, h3, h4 {
 .project-inner#riwe {
     background-color: orange;
 }
+.project-inner > h3 {
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+.project-card {
+    border: 1px solid #ffffff6b;
+    padding: 1em;
+}
