@@ -66,6 +66,17 @@ h1, h2, h3, h4 {
   grid-area: content;
   overflow-y: scroll;
 }
+.main.project {
+  display:grid;
+  grid-template-areas: "nav content";
+  grid-template-areas: 80px 1fr;
+  transition: 200ms ease;
+  height: 100vh;
+}
+.main.project:hover {
+  grid-template-areas: 320px 1fr;
+  transition: 200ms ease;
+}
 .project-wrapper {
   height: calc(85vh - 3em);
   padding: 1.5em;
