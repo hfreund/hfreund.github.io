@@ -46,12 +46,19 @@ h1, h2, h3, h4 {
   border-color: rgba(255, 255, 255, 0.85);
   cursor: pointer; }
 
-.main {
-  display: grid;
-  grid-template-areas: "nav content";
-  grid-template-columns: 320px 1fr;
-  height: 100vh;
-  transition: 200ms ease; }
+@media (max-width: 599px) {
+  .main {
+    display: grid;
+    grid-template-areas: "nav" "content";
+    height: 100vh;
+    transition: 200ms ease; } }
+@media (min-width: 900px) {
+  .main {
+    display: grid;
+    grid-template-areas: "nav content";
+    grid-template-columns: 320px 1fr;
+    height: 100vh;
+    transition: 200ms ease; } }
 
 .nav {
   grid-area: nav;
