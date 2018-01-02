@@ -75,7 +75,11 @@ h1, h2, h3, h4 {
   @media (min-width: 1800px) { @content; }
 }
 .main {
-  @include for-tablet-landscape-up;
+    @include for-tablet-landscape-up {
+      background-color: pink;
+    }
+}
+.main {
   display: grid;
   grid-template-areas: "nav content";
   grid-template-columns: 320px 1fr;
@@ -83,11 +87,10 @@ h1, h2, h3, h4 {
   transition: 200ms ease;
 }
 .nav {
-  @include for-tablet-landscape-up {
-  grid-area: nav;
-  padding: 2em 1.25em;
-  border-right: 1px solid #d3d5d7;
-}}
+    grid-area: nav;
+    padding: 2em 1.25em;
+    border-right: 1px solid #d3d5d7;
+}
 .content {
   grid-area: content;
   overflow-y: scroll;
