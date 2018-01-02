@@ -111,6 +111,16 @@ HOME
 /*================================
 PROJECTS
 ================================*/
+.project {
+  display: grid;
+  grid-template-areas: "content";
+  transition: 200ms ease;
+}
+.project.open {
+  grid-template-areas: "nav content";
+  grid-template-columns: 320px 1fr;
+  transition: 200ms ease;
+}
 .project-overview > .top {
     border: 8px solid $cc-light-blue;
     border-bottom: 0;
