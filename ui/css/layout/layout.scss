@@ -115,11 +115,17 @@ PROJECTS
   display: grid;
   grid-template-areas: "content";
   transition: 200ms ease;
+  .nav {
+    display: none;
+  }
 }
 .project.open {
   grid-template-areas: "nav content";
   grid-template-columns: 320px 1fr;
   transition: 200ms ease;
+  .nav {
+    display: block;
+  }
 }
 .project-overview > .top {
     border: 8px solid $cc-light-blue;

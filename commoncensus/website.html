@@ -14,10 +14,23 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+  <script>
+  var open = false;
+
+  function change() {
+    if (open) {
+        document.getElementById("expandNav").className = "project";
+        open = false;
+    } else {
+        document.getElementById("expandNav").className = "project open";
+        open = true;
+    }
+  }
+</script>
 </head>
 <body>
   <a href="#" onclick="document.getElementById('project').classList.toggle('open');" class="fa fa-bars menu-btn"></a>
-  <div class="project">
+  <div class="project" id="expandNav">
     <div class="nav">
       <div class="nav-inner">
         <h5>&larr; All Projects</h5>
