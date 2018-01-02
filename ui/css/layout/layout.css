@@ -1,4 +1,7 @@
 /*================================
+Color variables
+================================*/
+/*================================
 Layouts by Page
 ================================*/
 /*================================
@@ -77,5 +80,39 @@ HOME
 /*================================
 PROJECTS
 ================================*/
+.project-overview > .top {
+  border: 8px solid #066fb9;
+  border-bottom: 0;
+  padding: 2em; }
+
+.project-overview > .bottom {
+  background-color: #066fb9;
+  padding: 2em;
+  color: #fff;
+  display: grid;
+  grid-template-areas: "description stats";
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2em; }
+
+.bottom > .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center; }
+
+.stat-item {
+  padding: 0.75em;
+  border-right: 1px solid;
+  border-bottom: 1px solid; }
+
+.stat-item:nth-child(3) {
+  border-right: 0; }
+
+.project-overview > .top > h4.title {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  background-color: #fff;
+  top: -1em;
+  padding: 0 1em; }
 
 /*# sourceMappingURL=layout.css.map */
