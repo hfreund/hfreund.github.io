@@ -1,15 +1,4 @@
-/*================================
-TYPOGRAPHY
-================================*/
-body {
-    font-family: 'Raleway', sans-serif;
-    line-height: 1.8em;
-    margin: 0;
-}
-
-h1, h2, h3, h4 {
-  font-weight: 100;
-}
+@import "typography/typography.scss";
 
 .nav {
   background: #000000;  /* fallback for old browsers */
@@ -75,12 +64,10 @@ h1, h2, h3, h4 {
   @media (min-width: 1800px) { @content; }
 }
 .main {
-  @include for-phone-only {
-    display: grid;
-    grid-template-areas: "nav" "content";
-    height: 100vh;
-    transition: 200ms ease;
-  }
+  display: grid;
+  grid-template-areas: "nav" "content";
+  height: 100vh;
+  transition: 200ms ease;
   @include for-tablet-landscape-up {
     display: grid;
     grid-template-areas: "nav content";
@@ -89,13 +76,6 @@ h1, h2, h3, h4 {
     transition: 200ms ease;
   }
 }
-// .main {
-//   display: grid;
-//   grid-template-areas: "nav content";
-//   grid-template-columns: 320px 1fr;
-//   height: 100vh;
-//   transition: 200ms ease;
-// }
 .nav {
     grid-area: nav;
     padding: 2em 1.25em;
