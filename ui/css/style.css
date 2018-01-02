@@ -11,43 +11,6 @@ body {
 h1, h2, h3, h4 {
   font-weight: 100; }
 
-.nav {
-  background: #000000;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #53346D, #000000);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #53346D, #000000);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: rgba(255, 255, 255, 0.85); }
-
-.muted > a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 2px solid;
-  transition: 150ms ease; }
-
-.muted > a:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-bottom: 2px solid transparent; }
-
-.nav .btn {
-  display: inline-block;
-  padding: 1em 2em;
-  margin: 0 10px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-radius: 2px;
-  transition: 150ms ease;
-  color: rgba(255, 255, 255, 0.85); }
-
-.nav a.btn {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none; }
-
-.nav a.btn:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.85);
-  cursor: pointer; }
-
 .main {
   display: grid;
   grid-template-areas: "nav" "content";
@@ -107,6 +70,53 @@ h1, h2, h3, h4 {
 .project-inner > h3 {
   grid-area: 1 / 1 / 2 / 5; }
 
+.project-card.hero {
+  grid-area: 1/1/2/4; }
+
+.project-array {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 100px;
+  grid-auto-flow: row dense; }
+
+.nav {
+  background: #000000;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #53346D, #000000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #53346D, #000000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: rgba(255, 255, 255, 0.85); }
+
+.muted > a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid;
+  transition: 150ms ease; }
+
+.muted > a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-bottom: 2px solid transparent; }
+
+.nav .btn {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 0 10px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  transition: 150ms ease;
+  color: rgba(255, 255, 255, 0.85); }
+
+.nav a.btn {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none; }
+
+.nav a.btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.85);
+  cursor: pointer; }
+
 .project-card {
   border: 1px solid #ffffff6b;
   padding: 1em;
@@ -124,15 +134,5 @@ a.project-card:hover {
 a.project-card:hover {
   background-color: rgba(255, 255, 255, 0.95);
   transition: 150ms ease; }
-
-.project-card.hero {
-  grid-area: 1/1/2/4; }
-
-.project-array {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-auto-rows: 100px;
-  grid-auto-flow: row dense; }
 
 /*# sourceMappingURL=style.css.map */
