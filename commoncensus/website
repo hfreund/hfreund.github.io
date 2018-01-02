@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Common Census - Website | Hugh Freund</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Hugh Freund">
+
+  <link rel="stylesheet" href="ui/css/normalize/normalize.css" type="text/css" />
+	<link rel="stylesheet" href="ui/css/style.min.css" type="text/css" />
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="main">
+    <div class="nav">
+      <div class="content">
+        <h5>&larr; All Projects</h5>
+        <h1>Common Census</h1>
+      </div>
+    </div>
+    <div class="content">
+      <div class="project">
+        <section class="project-overview">
+          <div class="title">
+            <h4>Common Census</h4>
+            <h2>Website</h2>
+          </div>
+          <img src="" alt="" width="" />
+          <div class="description">
+            <p>I designed and built the company sales website. Using Wordpress and a template from Theme.co, I customized the template and navigation to suit the needs of the sales and support teams. This includes building a custom PDF generator for forms submitted through the website.</p>
+          </div>
+          <div class="stats">
+            <div class="stat-item">
+              <i>Icon</i>
+              <h5>Wordpress</h5>
+            </div>
+            <div class="stat-item">
+              <i>Icon</i>
+              <h5>Brand</h5>
+            </div>
+            <div class="stat-item">
+              <i>Icon</i>
+              <h5>Git</h5>
+            </div>
+            <div class="stat-item">
+              <i>Icon</i>
+              <h5>HTML/CSS/PHP</h5>
+            </div>
+          </div>
+        </section>
+        <section>
+          <strong>PROJECT OVERVIEW</strong>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
