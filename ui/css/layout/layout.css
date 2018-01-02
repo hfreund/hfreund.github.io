@@ -16,7 +16,6 @@ HOME
 
 .nav {
   grid-area: nav;
-  padding: 2em 1.25em;
   border-right: 1px solid #d3d5d7;
   height: 100vh; }
   @media (min-width: 900px) {
@@ -25,6 +24,7 @@ HOME
 
 .content {
   grid-area: content;
+  padding: 2em 1.25em;
   overflow-y: scroll; }
 
 .main.closed {
