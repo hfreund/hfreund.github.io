@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
 <head>
-  <!-- Who owns the content of this site? -->
-<meta name="Copyright" content="" />
-  <link rel="stylesheet" href="../ui/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="../ui/css/normalize.css" type="text/css" />
+  <meta charset="utf-8">
+
+  <title>Courageous Sailing | Hugh Freund</title>
+  <meta name="description" content="Courageous Sailing">
+  <meta name="author" content="Hugh Freund">
+
+	<link rel="stylesheet" href="ui/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="ui/css/normalize.css" type="text/css" />
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
   <script>
   var open = false;
 
@@ -17,18 +26,6 @@
         open = true;
     }
   }
-
-    var open = false;
-
-    function hi() {
-        if (open) {
-            document.getElementById("hi").className = "closed";
-            open = false;
-        } else {
-            document.getElementById("hi").className = "open";
-            open = true;
-        }
-    }
 </script>
 
 </head>
@@ -36,7 +33,7 @@
   <div class="main closed" id="expandNav">
     <div class="nav">
       <div class="content">
-      <a href="#" onclick="change()">Menu</a>
+      <a href="#" onmouseover="change()">Menu</a>
       </div>
     </div>
     <div class="content">
