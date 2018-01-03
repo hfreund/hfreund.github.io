@@ -91,15 +91,12 @@ PROJECTS
   grid-area: 1/2/2/3;
   z-index: 99;
   transform: translateY(0px);
-  transition: 700ms ease;
-  display: none; }
-
-div[class^="fp-viewing"] .project .page-heading {
-  display: block; }
+  transition: 700ms ease; }
 
 .fp-viewing-0 .page-heading {
   transform: translateY(-80px);
-  transition: 1200ms ease; }
+  transition: 1200ms ease;
+  display: none; }
 
 .fullpage-wrapper {
   grid-area: content; }
