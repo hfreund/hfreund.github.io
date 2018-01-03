@@ -91,7 +91,11 @@ PROJECTS
   grid-area: 1/2/2/3;
   z-index: 99;
   transform: translateY(0px);
-  transition: 700ms ease; }
+  transition: 700ms ease;
+  display: none; }
+
+div[class^="fp-viewing"] .page-heading {
+  display: block; }
 
 .fp-viewing-0 .page-heading {
   transform: translateY(-80px);
