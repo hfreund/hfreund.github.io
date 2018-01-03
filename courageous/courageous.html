@@ -9,11 +9,11 @@
   <meta name="author" content="Hugh Freund">
 
 	<link rel="stylesheet" href="../ui/css/style.min.css" type="text/css" />
-  <link rel="stylesheet" type="text/css" href="../ui/fullpage/dist/jquery.fullPage.css" />
+  <link rel="stylesheet" type="text/css" href="../ui/fullpage/dist/jquery.fullpage.css" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="../ui/fullpage/vendors/jquery.easings.min.js"></script>
   <script type="text/javascript" src="../ui/fullpage/vendors/scrolloverflow.min.js"></script>
-  <script type="text/javascript" src="../ui/fullpage/dist/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="../ui/fullpage/dist/jquery.fullpage.js"></script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -30,6 +30,10 @@
         open = true;
     }
   }
+
+  $(document).ready(function() {
+	$('#fullpage').fullpage();
+});
   </script>
 
 </head>
