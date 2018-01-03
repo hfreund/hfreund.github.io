@@ -78,3 +78,23 @@ img {
   display: flex;
   justify-content: center;
 }
+
+.stat-block {
+    display: flex;
+    flex-flow: row wrap;
+    border-top: 1px solid red;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+
+.stat-item {min-width: 100px;margin-right: 30px;}
+
+.stat-item h5 {
+    margin: 0;
+}
+
+.stat-item ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

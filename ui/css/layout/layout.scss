@@ -134,7 +134,7 @@ PROJECTS
 }
 .section.split {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     .fp-slidesNav.bottom {
       grid-area: 1/2/1/2;
     }

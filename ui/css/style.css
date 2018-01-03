@@ -117,7 +117,7 @@ PROJECTS
 
 .section.split {
   display: grid;
-  grid-template-columns: auto auto; }
+  grid-template-columns: 1fr 1fr; }
   .section.split .fp-slidesNav.bottom {
     grid-area: 1/2/1/2; }
 
@@ -265,5 +265,24 @@ img {
 .fp-slidesNav ul {
   display: flex;
   justify-content: center; }
+
+.stat-block {
+  display: flex;
+  flex-flow: row wrap;
+  border-top: 1px solid red;
+  margin-top: 10px;
+  padding-top: 20px; }
+
+.stat-item {
+  min-width: 100px;
+  margin-right: 30px; }
+
+.stat-item h5 {
+  margin: 0; }
+
+.stat-item ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
 
 /*# sourceMappingURL=style.css.map */
