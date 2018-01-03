@@ -1,3 +1,4 @@
+@import url(normalize/normalize.css);
 /*================================
 TYPOGRAPHY
 ================================*/
@@ -203,5 +204,11 @@ a.project-card:hover {
 img {
   width: 100%;
   height: auto; }
+
+#cc-website-desktop-phone {
+  background-image: url("images/cc_website_desktop+phone-03.png");
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */
