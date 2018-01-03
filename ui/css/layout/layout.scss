@@ -127,8 +127,7 @@ PROJECTS
 }
 .fp-viewing-0 .page-heading {
   transform: translateY(-80px);
-  transition: 1200ms ease;
-  display: none;
+  opacity: 0;
 }
 .fullpage-wrapper {
   grid-area: content;
