@@ -97,6 +97,22 @@ PROJECTS
   transform: translateY(-80px);
   transition: 1200ms ease; }
 
+.fullpage-wrapper {
+  grid-area: content; }
+
+.section .left, .section .right {
+  display: flex;
+  align-content: center;
+  height: 100%;
+  flex-wrap: wrap; }
+
+.section .right {
+  position: relative; }
+
+.section.split {
+  display: grid;
+  grid-template-columns: auto auto; }
+
 /*
 .project {
   display: grid;
