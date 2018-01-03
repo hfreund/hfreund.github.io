@@ -145,6 +145,10 @@ PROJECTS
     display: grid;
     grid-template-columns: auto auto;
 }
+.section .text {
+    padding: 80px 3.5em;
+    height: calc(100% - 160px);
+}
 
 /*
 .project {
