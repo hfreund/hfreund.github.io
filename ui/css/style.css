@@ -1,8 +1,9 @@
 /*================================
 TYPOGRAPHY
 ================================*/
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.8em;
@@ -93,10 +94,24 @@ HOME
 /*================================
 PROJECTS
 ================================*/
+.project {
+  display: grid;
+  grid-template-areas: "content";
+  transition: 200ms ease; }
+  .project .nav {
+    display: none; }
+
+.project.open {
+  grid-template-areas: "nav content";
+  grid-template-columns: 320px 1fr;
+  transition: 200ms ease; }
+  .project.open .nav {
+    display: block; }
+
 .project-overview > .top {
   border: 8px solid #066fb9;
   border-bottom: 0;
-  padding: 2em; }
+  padding: calc(2em - 8px); }
 
 .project-overview > .bottom {
   background-color: #066fb9;
@@ -125,8 +140,10 @@ PROJECTS
   position: relative;
   margin: 0;
   background-color: #fff;
-  top: -1em;
-  padding: 0 1em; }
+  top: calc(-2em - 12px);
+  padding: 0 1em;
+  text-transform: uppercase;
+  color: #066fb9; }
 
 .nav {
   background: #000000;
@@ -182,5 +199,9 @@ a.project-card:hover {
 a.project-card:hover {
   background-color: rgba(255, 255, 255, 0.95);
   transition: 150ms ease; }
+
+img {
+  width: 100%;
+  height: auto; }
 
 /*# sourceMappingURL=style.css.map */

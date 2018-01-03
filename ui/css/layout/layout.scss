@@ -130,7 +130,7 @@ PROJECTS
 .project-overview > .top {
     border: 8px solid $cc-light-blue;
     border-bottom: 0;
-    padding: 2em;
+    padding: calc(2em - 8px);
 }
 
 .project-overview > .bottom {
@@ -161,6 +161,8 @@ PROJECTS
     position: relative;
     margin: 0;
     background-color: #fff;
-    top: -1em;
+    top: calc(-2em - 12px);
     padding: 0 1em;
+    text-transform: uppercase;
+    color: $cc-light-blue;
 }

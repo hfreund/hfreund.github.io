@@ -97,7 +97,7 @@ PROJECTS
 .project-overview > .top {
   border: 8px solid #066fb9;
   border-bottom: 0;
-  padding: 2em; }
+  padding: calc(2em - 8px); }
 
 .project-overview > .bottom {
   background-color: #066fb9;
@@ -126,7 +126,9 @@ PROJECTS
   position: relative;
   margin: 0;
   background-color: #fff;
-  top: -1em;
-  padding: 0 1em; }
+  top: calc(-2em - 12px);
+  padding: 0 1em;
+  text-transform: uppercase;
+  color: #066fb9; }
 
 /*# sourceMappingURL=layout.css.map */
