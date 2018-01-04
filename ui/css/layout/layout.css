@@ -82,12 +82,12 @@ PROJECTS
 ================================*/
 .project {
   display: grid;
-  grid-template-areas: "nav" "content"; }
+  grid-template-areas: "nav" "content";
+  grid-template-rows: 80px 1fr; }
   @media (min-width: 900px) {
     .project {
       grid-template-areas: "nav content" "nav content";
       grid-template-columns: 80px 1fr;
-      grid-template-rows: 80px 1fr;
       height: 100vh; } }
 
 .project .page-heading {

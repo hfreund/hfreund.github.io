@@ -114,11 +114,11 @@ PROJECTS
 .project {
   display: grid;
   grid-template-areas: "nav" "content";
+  grid-template-rows: 80px 1fr;
   @include for-tablet-landscape-up {
     grid-template-areas:  "nav content"
                           "nav content";
     grid-template-columns: 80px 1fr;
-    grid-template-rows: 80px 1fr;
     height: 100vh;
   }
 }

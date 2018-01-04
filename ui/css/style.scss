@@ -110,15 +110,19 @@ img {
 }
 
 .stat-item {
-  min-width: 100px;
   margin-right: 30px;
   h5 {
     margin: 0;
+    font-size: 0.8em;
   }
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+  li {
+    font-size: 0.75em;
+    line-height: 1.4;
   }
 }
 
