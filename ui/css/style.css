@@ -259,7 +259,7 @@ a.project-card {
     margin-top: 0.5em;
     font-weight: 500;
     width: 48%;
-    color: #fff; }
+    color: #333; }
 
 a.project-card#commoncensus {
   border-color: #066fb9; }
