@@ -95,7 +95,7 @@ PROJECTS
 
 .fp-viewing-0 .page-heading {
   transform: translateY(-80px);
-  opacity: 0; }
+  visibility: hidden; }
 
 .fullpage-wrapper {
   grid-area: content; }
