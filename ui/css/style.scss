@@ -41,24 +41,37 @@
     border-color: rgba(255,255,255,0.85);
     cursor: pointer;
 }
-
-.project-card {
-    border: 1px solid #ffffff6b;
+.project-card-wrapper {
+  display: flex;
+}
+a.project-card {
+    border: 1px solid;
     padding: 1em;
     display: block;
+    background-color: #fff;
     transition: 150ms ease;
+    display: flex;
+    width: 48%;
 }
-a.project-card:hover {
-  background-color: rgba(255,255,255,0.95);
+a.project-card#commoncensus {
+  border-color: $cc-light-blue;
+  .project-card-image {
+    width: 48%;
+    background-image: url(../images/cc_website_desktop+phone-03.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
+a.project-card#commoncensus:hover {
+  background-color: $cc-light-blue;
+  color: #fff;
   transition: 150ms ease;
 }
-.project-card h4 {
+a.project-card h3 {
     margin-top: 0.5em;
     font-weight: 500;
-}
-a.project-card:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    transition: 150ms ease;
+    width: 48%;
 }
 
 img {
