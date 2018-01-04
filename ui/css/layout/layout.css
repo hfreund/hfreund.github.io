@@ -94,7 +94,7 @@ PROJECTS
   transition: 700ms ease;
   visibility: hidden; }
 
-:not(.fp-viewing-0) .project .page-heading {
+body:not(.fp-viewing-0) .project .page-heading {
   visibility: visible; }
 
 .fp-viewing-0 .page-heading {
