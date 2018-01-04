@@ -124,6 +124,11 @@ body:not(.fp-viewing-0) .project .page-heading {
   .section.split .fp-slidesNav.bottom {
     grid-area: 1/2/1/2; }
 
+.section.footer {
+  background-color: #f3f5f7;
+  padding: 3.5em;
+  border-top: 1px solid #d3d5d7; }
+
 .section .left, .section .right {
   display: flex;
   align-content: center;
@@ -247,7 +252,14 @@ a.project-card {
   background-color: #fff;
   transition: 150ms ease;
   display: flex;
-  width: 48%; }
+  width: 48%;
+  text-decoration: none;
+  border-radius: 2px; }
+  a.project-card h3 {
+    margin-top: 0.5em;
+    font-weight: 500;
+    width: 48%;
+    color: #fff; }
 
 a.project-card#commoncensus {
   border-color: #066fb9; }
@@ -262,11 +274,8 @@ a.project-card#commoncensus:hover {
   background-color: #066fb9;
   color: #fff;
   transition: 150ms ease; }
-
-a.project-card h3 {
-  margin-top: 0.5em;
-  font-weight: 500;
-  width: 48%; }
+  a.project-card#commoncensus:hover h3 {
+    color: #fff; }
 
 img {
   width: 100%;

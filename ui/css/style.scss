@@ -52,6 +52,14 @@ a.project-card {
     transition: 150ms ease;
     display: flex;
     width: 48%;
+    text-decoration: none;
+    border-radius: 2px;
+    h3 {
+        margin-top: 0.5em;
+        font-weight: 500;
+        width: 48%;
+        color: #fff;
+    }
 }
 a.project-card#commoncensus {
   border-color: $cc-light-blue;
@@ -67,11 +75,9 @@ a.project-card#commoncensus:hover {
   background-color: $cc-light-blue;
   color: #fff;
   transition: 150ms ease;
-}
-a.project-card h3 {
-    margin-top: 0.5em;
-    font-weight: 500;
-    width: 48%;
+  h3 {
+    color: #fff;
+  }
 }
 
 img {

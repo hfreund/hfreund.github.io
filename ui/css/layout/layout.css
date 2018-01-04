@@ -109,6 +109,11 @@ body:not(.fp-viewing-0) .project .page-heading {
   .section.split .fp-slidesNav.bottom {
     grid-area: 1/2/1/2; }
 
+.section.footer {
+  background-color: #f3f5f7;
+  padding: 3.5em;
+  border-top: 1px solid #d3d5d7; }
+
 .section .left, .section .right {
   display: flex;
   align-content: center;
