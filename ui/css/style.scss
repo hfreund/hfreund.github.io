@@ -87,12 +87,32 @@ a.project-card#commoncensus:hover {
 }
 
 /*==== Navigation ====*/
-.navbar{
+.navbar {
   border-right: 1px solid #d3d5d7;
   background-color: #fff;
   height: 100%;
   display: block;
+  ul {
+      margin: 5em 0 0;
+      list-style-type: none;
+      padding: 0;
+      li {
+          margin-left: 2em;
+          a {
+              text-decoration: none;
+              display: block;
+              color: gray;
+              transition: 150ms ease;
+          }
+          a:hover {
+              color: red;
+              background-color: #f3f5f7;
+              transition: 200ms ease;
+          }
+      }
+  }
 }
+ 
 a.btn-menu {
     position: absolute;
     z-index: 101;
