@@ -23,10 +23,10 @@
 
   function change() {
     if (open) {
-        document.getElementById("expandNav").className = "main closed";
+        document.getElementById("expandNav").className = "main";
         open = false;
     } else {
-        document.getElementById("expandNav").className = "main";
+        document.getElementById("expandNav").className = "main open";
         open = true;
     }
   }
@@ -74,7 +74,7 @@
 
 </head>
 <body>
-  <div class="project" id="expandNav">
+  <div class="main" id="expandNav">
     <nav>
       <a class="btn-menu" href="#" onclick="change()">
         <span class="menu-bar"></span>

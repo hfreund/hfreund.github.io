@@ -88,8 +88,9 @@ a.project-card#commoncensus:hover {
 
 a.btn-menu {
     position: absolute;
+    z-index: 101;
     top: 20px;
-    left: 20px;
+    left: 10px;
     /* background-color: #f1da2a; */
     height: 44px;
     width: 44px;

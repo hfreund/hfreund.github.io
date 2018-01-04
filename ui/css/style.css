@@ -20,19 +20,19 @@ Color variables
 .main {
   display: grid;
   grid-template-areas: "nav" "content";
+  grid-template-columns: 64px 1fr;
   transition: 200ms ease; }
-  @media (min-width: 900px) {
-    .main {
-      grid-template-areas: "nav content";
-      grid-template-columns: 320px 1fr;
-      height: 100vh; } }
 
-.nav {
+.main.open nav {
+  transition: translateX(0);
+  transtion: 200ms ease; }
+
+nav {
   grid-area: nav;
-  border-right: 1px solid #d3d5d7; }
-  @media (min-width: 900px) {
-    .nav {
-      height: initial; } }
+  width: 320px;
+  z-index: 100;
+  transition: translateX(-256px);
+  transition: 200ms ease; }
 
 .content {
   grid-area: content;
@@ -272,8 +272,9 @@ a.project-card#commoncensus:hover {
 
 a.btn-menu {
   position: absolute;
+  z-index: 101;
   top: 20px;
-  left: 20px;
+  left: 10px;
   /* background-color: #f1da2a; */
   height: 44px;
   width: 44px; }

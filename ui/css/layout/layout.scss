@@ -30,19 +30,21 @@
 .main {
   display: grid;
   grid-template-areas: "nav" "content";
+  grid-template-columns: 64px 1fr;
   transition: 200ms ease;
-  @include for-tablet-landscape-up {
-    grid-template-areas: "nav content";
-    grid-template-columns: 320px 1fr;
-    height: 100vh;
+}
+.main.open {
+  nav {
+    transition: translateX(0);
+    transtion: 200ms ease;
   }
 }
-.nav {
+nav {
   grid-area: nav;
-  border-right: 1px solid #d3d5d7;
-  @include for-tablet-landscape-up {
-    height: initial;
-  }
+  width: 320px;
+  z-index: 100;
+  transition: translateX(-256px);
+  transition: 200ms ease;
 }
 .content {
   grid-area: content;
@@ -51,7 +53,7 @@
 }
 .main.closed {
   .fullpage-wrapper {
-    
+
   }
 }
 .project-wrapper {
