@@ -86,6 +86,13 @@ a.project-card#commoncensus:hover {
   background-size: contain;
 }
 
+/*==== Navigation ====*/
+.navbar{
+  border-right: 1px solid #d3d5d7;
+  background-color: #fff;
+  height: 100%;
+  display: block;
+}
 a.btn-menu {
     position: absolute;
     z-index: 101;
