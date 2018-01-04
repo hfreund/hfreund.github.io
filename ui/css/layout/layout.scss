@@ -124,10 +124,13 @@ PROJECTS
   z-index: 99;
   transform: translateY(0px);
   transition: 700ms ease;
+  visibility: hidden;
+}
+:not(.fp-viewing-0) .project .page-heading {
+  visibility: visible;
 }
 .fp-viewing-0 .page-heading {
   transform: translateY(-80px);
-  visibility: hidden;
 }
 .fullpage-wrapper {
   grid-area: content;
