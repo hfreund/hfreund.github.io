@@ -82,17 +82,23 @@ PROJECTS
 ================================*/
 .project {
   display: grid;
-  grid-template-areas: "nav content" "nav content";
-  grid-template-columns: 80px 1fr;
-  grid-template-rows: 80px 1fr;
-  height: 100vh; }
+  grid-template-areas: "nav" "content"; }
+  @media (min-width: 900px) {
+    .project {
+      grid-template-areas: "nav content" "nav content";
+      grid-template-columns: 80px 1fr;
+      grid-template-rows: 80px 1fr;
+      height: 100vh; } }
 
 .project .page-heading {
-  grid-area: 1/2/2/3;
+  grid-area: 1/2/1/2;
   z-index: 99;
   transform: translateY(0px);
   transition: 700ms ease;
   visibility: hidden; }
+  @media (min-width: 900px) {
+    .project .page-heading {
+      grid-area: 1/2/2/3; } }
 
 body:not(.fp-viewing-0) .project .page-heading {
   visibility: visible; }
