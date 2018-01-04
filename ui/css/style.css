@@ -1,73 +1,310 @@
+@import url(normalize.css);
+/*================================
+TYPOGRAPHY
+================================*/
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8em;
+  margin: 0; }
+
+h1, h2, h3, h4 {
+  font-weight: 100; }
+
+/*================================
+Color variables
+================================*/
+/*==== HOME ====*/
+.main {
+  display: grid;
+  grid-template-areas: "nav" "content";
+  transition: 200ms ease; }
+  @media (min-width: 900px) {
+    .main {
+      grid-template-areas: "nav content";
+      grid-template-columns: 320px 1fr;
+      height: 100vh; } }
+
+.nav {
+  grid-area: nav;
+  border-right: 1px solid #d3d5d7; }
+  @media (min-width: 900px) {
+    .nav {
+      height: initial; } }
+
+.content {
+  grid-area: content;
+  padding: 2em 1.25em;
+  overflow-y: scroll; }
+
+.project-wrapper {
+  height: calc(85vh - 3em);
+  padding: 1.5em;
+  border-bottom: 1px solid #d3d5d7; }
+
+.project-wrapper {
+  height: calc(85vh);
+  border-bottom: 1px solid #d3d5d7;
+  transition: 200ms ease; }
+
+.project-inner {
+  padding: 1.5em;
+  height: calc(100% - 3em);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 0 1.5em; }
+
+.project-inner#courageous {
+  background-color: aquamarine; }
+
+.project-inner#commoncensus {
+  background-color: darkblue;
+  color: #fff; }
+
+.project-inner#riwe {
+  background-color: orange; }
+
+.project-inner > h3 {
+  grid-area: 1 / 1 / 2 / 5; }
+
+.project-card.hero {
+  grid-area: 1/1/2/4; }
+
+.project-array {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 100px;
+  grid-auto-flow: row dense; }
+
+/*==== PROJECTS ====*/
+.project {
+  display: grid;
+  grid-template-areas: "nav" "content";
+  grid-template-rows: 80px 1fr; }
+  @media (min-width: 900px) {
+    .project {
+      grid-template-areas: "nav content" "nav content";
+      grid-template-columns: 80px 1fr;
+      height: 100vh; } }
+
+.project .page-heading {
+  grid-area: 1/2/1/2;
+  z-index: 99;
+  transform: translateY(0px);
+  transition: 700ms ease;
+  visibility: hidden; }
+  @media (min-width: 900px) {
+    .project .page-heading {
+      grid-area: 1/2/2/3; } }
+
+body:not(.fp-viewing-0) .project .page-heading {
+  visibility: visible; }
+
+.fp-viewing-0 .page-heading {
+  transform: translateY(-80px); }
+
+.fullpage-wrapper {
+  grid-area: content; }
+
+.section.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .section.split .fp-slidesNav.bottom {
+    grid-area: 1/2/1/2; }
+
+.section.footer {
+  background-color: #f3f5f7;
+  padding: 3.5em;
+  border-top: 1px solid #d3d5d7; }
+
+.section .left, .section .right {
+  display: flex;
+  align-content: center;
+  height: 100%;
+  flex-wrap: wrap; }
+
+.section .right {
+  position: relative; }
+.section .text {
+  padding: 80px 3.5em;
+  height: calc(100% - 160px); }
+
 /*
-Error: Invalid CSS after "...ullpage-wrapper": expected "{", was "}"
-        on line 54 of /Users/Hugh/Sites/Portfolio - hughfreund.com/hfreund.github.io/ui/css/layout/layout.scss
-        from line 3 of /Users/Hugh/Sites/Portfolio - hughfreund.com/hfreund.github.io/ui/css/style.scss
+.project {
+  display: grid;
+  grid-template-areas: "content";
+  transition: 200ms ease;
+  .nav {
+    display: none;
+  }
+}
+.project.open {
+  grid-template-areas: "nav content";
+  grid-template-columns: 320px 1fr;
+  transition: 200ms ease;
+  .nav {
+    display: block;
+  }
+}
+.project-overview {
+  height: calc(100vh - 6em);
+  display: grid;
+  grid-template-areas: "top" "bottom";
+  grid-template-rows: 65% 35%;
+}
+.project-overview > .top {
+  grid-area: "top";
+  border: 8px solid $cc-light-blue;
+  border-bottom: 0;
+  padding: calc(2em - 8px);
+}
+.project-overview > .bottom {
+  grid-area: "bottom";
+  background-color: $cc-light-blue;
+  padding: 2em;
+  color: #fff;
+  display: grid;
+  grid-template-areas: "description stats";
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2em;
+}
 
-49:   padding: 2em 1.25em;
-50:   overflow-y: scroll;
-51: }
-52: .main.closed {
-53:   .fullpage-wrapper
-54: }
-55: .project-wrapper {
-56:   height: calc(85vh - 3em);
-57:   padding: 1.5em;
-58:   border-bottom: 1px solid #d3d5d7;
-59: }
-
-Backtrace:
-/Users/Hugh/Sites/Portfolio - hughfreund.com/hfreund.github.io/ui/css/layout/layout.scss:54
-/Users/Hugh/Sites/Portfolio - hughfreund.com/hfreund.github.io/ui/css/style.scss:3
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:1278:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:1208:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:1203:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:677:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:697:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:686:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:678:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:670:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:696:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:689:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:137:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:414:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:321:in `to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:327:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/exec/sass_scss.rb:391:in `run'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.5.4/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
+.bottom > .stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+.stat-item {
+  padding: 0.75em;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}
+.stat-item:nth-child(3) {
+  border-right: 0;
+}
+.project-overview > .top > h4.title {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  background-color: #fff;
+  top: calc(-2em - 12px);
+  padding: 0 1em;
+  text-transform: uppercase;
+  color: $cc-light-blue;
+}
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...ullpage-wrapper\": expected \"{\", was \"}\"\A         on line 54 of /Users/Hugh/Sites/Portfolio - hughfreund.com/hfreund.github.io/ui/css/layout/layout.scss\A         from line 3 of /Users/Hugh/Sites/Portfolio - hughfreund.com/hfreund.github.io/ui/css/style.scss\A \A 49:   padding: 2em 1.25em;\A 50:   overflow-y: scroll;\A 51: }\A 52: .main.closed {\A 53:   .fullpage-wrapper\A 54: }\A 55: .project-wrapper {\A 56:   height: calc(85vh - 3em);\A 57:   padding: 1.5em;\A 58:   border-bottom: 1px solid #d3d5d7;\A 59: }"; }
+/*================================
+Elements
+================================*/
+/*==== Project Card ====*/
+.project-card-wrapper {
+  display: flex; }
+
+a.project-card {
+  border: 1px solid;
+  padding: 2em 0 2em 2em;
+  display: block;
+  background-color: #fff;
+  transition: 150ms ease;
+  display: flex;
+  width: 48%;
+  text-decoration: none;
+  border-radius: 2px; }
+  a.project-card h3 {
+    margin: 0.5em 1em 0.5em 0;
+    font-weight: 100;
+    color: #333;
+    font-size: 2em;
+    line-height: 1.1;
+    align-self: center; }
+
+a.project-card#commoncensus {
+  border-color: #066fb9; }
+  a.project-card#commoncensus .project-card-image {
+    width: 100%;
+    height: 10em;
+    background-image: url(/images/cc_website_desktop+phone-03.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center; }
+
+a.project-card#commoncensus:hover {
+  background-color: #066fb9;
+  color: #fff;
+  transition: 150ms ease; }
+  a.project-card#commoncensus:hover h3 {
+    color: #fff; }
+
+/*==== Project Stat Block ====*/
+.stat-block {
+  display: flex;
+  flex-flow: row wrap;
+  border-top: 1px solid red;
+  margin-top: 10px;
+  padding-top: 20px; }
+
+.stat-item {
+  margin-right: 30px; }
+  .stat-item h5 {
+    margin: 0;
+    font-size: 0.8em; }
+  .stat-item ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .stat-item li {
+    font-size: 0.75em;
+    line-height: 1.4; }
+
+/*==== Project Logo ====*/
+.logo {
+  height: 44px;
+  margin: 18px 3.5em; }
+
+.logo#courageous {
+  background-image: url(/images/courageous-logo.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain; }
+
+a.btn-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  /* background-color: #f1da2a; */
+  height: 44px;
+  width: 44px; }
+
+.menu-bar {
+  height: 1px;
+  width: 30px;
+  margin: 0 auto;
+  display: block;
+  background-color: #63696f;
+  position: relative;
+  top: 20px; }
+
+.menu-bar:first-of-type {
+  top: 12px; }
+
+.menu-bar:last-of-type {
+  top: 28px; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+#cc-website-desktop-phone {
+  background-image: url("images/cc_website_desktop+phone-03.png");
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat; }
+
+.fp-slidesNav ul {
+  display: flex;
+  justify-content: center; }
+
+/*# sourceMappingURL=style.css.map */

@@ -86,6 +86,29 @@ a.project-card#commoncensus:hover {
   background-size: contain;
 }
 
+a.btn-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /* background-color: #f1da2a; */
+    height: 44px;
+    width: 44px;
+}
+.menu-bar {
+    height: 1px;
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    background-color: #63696f;
+    position: relative;
+    top: 20px;
+}
+.menu-bar:first-of-type {
+    top: 12px;
+}
+.menu-bar:last-of-type {
+    top: 28px;
+}
 
 
 img {
