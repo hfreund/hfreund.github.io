@@ -285,4 +285,14 @@ img {
   margin: 0;
   padding: 0; }
 
+.logo {
+  height: 50px;
+  padding: 15px 2em; }
+
+.logo#courageous {
+  background-image: url(../images/Logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+
 /*# sourceMappingURL=style.css.map */
