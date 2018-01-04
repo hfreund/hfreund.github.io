@@ -129,6 +129,8 @@ a.btn-menu {
   background-color: #63696f;
   position: relative;
   top: 20px;
+  transform:rotate(0deg);
+  transition: 300ms ease;
 }
 .menu-bar:first-of-type {
   top: 12px;
@@ -143,6 +145,8 @@ a.btn-menu {
 .main.open {
   .menu-bar {
     opacity: 0;
+    transform:rotate(-180deg);
+    transition: 300ms ease;
   }
   .menu-bar:first-of-type {
     opacity: 1;
