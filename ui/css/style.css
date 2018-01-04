@@ -297,7 +297,6 @@ a.btn-menu {
   z-index: 101;
   top: 20px;
   left: 10px;
-  /* background-color: #f1da2a; */
   height: 44px;
   width: 44px; }
 
@@ -311,10 +310,25 @@ a.btn-menu {
   top: 20px; }
 
 .menu-bar:first-of-type {
-  top: 12px; }
+  top: 12px;
+  transform: rotate(0deg) translateY(0px) translateX(0px);
+  transition: 300ms ease; }
 
 .menu-bar:last-of-type {
-  top: 28px; }
+  top: 28px;
+  transform: rotate(0deg) translateY(0px) translateX(0px);
+  transition: 300ms ease; }
+
+.main.open .menu-bar {
+  opacity: 0; }
+.main.open .menu-bar:first-of-type {
+  opacity: 1;
+  transform: rotate(-135deg) translateY(-6px) translateX(-7px);
+  transition: 300ms ease; }
+.main.open .menu-bar:last-of-type {
+  opacity: 1;
+  transform: rotate(135deg) translateY(7px) translateX(-6px);
+  transition: 300ms ease; }
 
 img {
   width: 100%;
