@@ -1,12 +1,7 @@
 /*================================
 Color variables
 ================================*/
-/*================================
-Layouts by Page
-================================*/
-/*================================
-HOME
-================================*/
+/*==== HOME ====*/
 .main {
   display: grid;
   grid-template-areas: "nav" "content";
@@ -19,8 +14,7 @@ HOME
 
 .nav {
   grid-area: nav;
-  border-right: 1px solid #d3d5d7;
-  height: 100vh; }
+  border-right: 1px solid #d3d5d7; }
   @media (min-width: 900px) {
     .nav {
       height: initial; } }
@@ -29,13 +23,6 @@ HOME
   grid-area: content;
   padding: 2em 1.25em;
   overflow-y: scroll; }
-
-.main.closed {
-  display: grid;
-  grid-template-areas: "nav content";
-  grid-template-columns: 80px 1fr;
-  transition: 200ms ease;
-  height: 100vh; }
 
 .project-wrapper {
   height: calc(85vh - 3em);
@@ -77,9 +64,7 @@ HOME
   grid-auto-rows: 100px;
   grid-auto-flow: row dense; }
 
-/*================================
-PROJECTS
-================================*/
+/*==== PROJECTS ====*/
 .project {
   display: grid;
   grid-template-areas: "nav" "content";

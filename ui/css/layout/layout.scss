@@ -26,12 +26,7 @@
   @media (min-width: 1800px) { @content; }
 }
 
-/*================================
-Layouts by Page
-================================*/
-/*================================
-HOME
-================================*/
+/*==== HOME ====*/
 .main {
   display: grid;
   grid-template-areas: "nav" "content";
@@ -45,7 +40,6 @@ HOME
 .nav {
   grid-area: nav;
   border-right: 1px solid #d3d5d7;
-  height: 100vh;
   @include for-tablet-landscape-up {
     height: initial;
   }
@@ -56,11 +50,9 @@ HOME
   overflow-y: scroll;
 }
 .main.closed {
-  display:grid;
-  grid-template-areas: "nav content";
-  grid-template-columns: 80px 1fr;
-  transition: 200ms ease;
-  height: 100vh;
+  .fullpage-wrapper {
+    
+  }
 }
 .project-wrapper {
   height: calc(85vh - 3em);
@@ -72,7 +64,6 @@ HOME
   border-bottom: 1px solid #d3d5d7;
   transition: 200ms ease;
 }
-
 .project-inner {
   padding: 1.5em;
   height: calc(100% - 3em);
@@ -80,16 +71,13 @@ HOME
   grid-template-columns: 1fr 2fr;
   grid-gap: 0 1.5em;
 }
-
 .project-inner#courageous {
     background-color: aquamarine;
 }
-
 .project-inner#commoncensus {
   background-color: darkblue;
   color: #fff;
 }
-
 .project-inner#riwe {
   background-color: orange;
 }
@@ -99,7 +87,6 @@ HOME
 .project-card.hero {
   grid-area: 1/1/2/4;
 }
-
 .project-array {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -108,9 +95,7 @@ HOME
   grid-auto-flow: row dense;
 }
 
-/*================================
-PROJECTS
-================================*/
+/*==== PROJECTS ====*/
 .project {
   display: grid;
   grid-template-areas: "nav" "content";
