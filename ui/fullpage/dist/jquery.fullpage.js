@@ -2692,6 +2692,91 @@
         /*
         * Removes inline styles added by fullpage.js
         */
+
+        function destroyStructure(){
+            //reseting the `top` or `translate` properties to 0
+            // silentScroll(0);
+
+            //loading all the lazy load content
+            // container.find('img[data-src], source[data-src], audio[data-src], iframe[data-src]').each(function(){
+            //     setSrc($(this), 'src');
+            // });
+
+            // container.find('img[data-srcset]').each(function(){
+            //     setSrc($(this), 'srcset');
+            // });
+
+            $(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
+
+            //removing inline styles
+            $(SECTION_SEL).css( {
+                'height': '',
+                'background-color' : '',
+                'padding': ''
+            });
+
+            $(SLIDE_SEL).css( {
+                'width': ''
+            });
+
+            container.css({
+                'height': '',
+                'position': '',
+                '-ms-touch-action': '',
+                'touch-action': ''
+            });
+
+            $htmlBody.css({
+                'overflow': '',
+                'height': ''
+            });
+
+            // remove .fp-enabled class
+            // $('html').removeClass(ENABLED);
+
+            // remove .fp-responsive class
+            // $body.removeClass(RESPONSIVE);
+
+            // remove all of the .fp-viewing- classes
+            // $.each($body.get(0).className.split(/\s+/), function (index, className) {
+            //     if (className.indexOf(VIEWING_PREFIX) === 0) {
+            //         $body.removeClass(className);
+            //     }
+            // });
+
+            //removing added classes
+            // $(SECTION_SEL + ', ' + SLIDE_SEL).each(function(){
+            //     if(options.scrollOverflowHandler){
+            //         options.scrollOverflowHandler.remove($(this));
+            //     }
+            //     $(this).removeClass(TABLE + ' ' + ACTIVE);
+            // });
+            //
+            // removeAnimation(container);
+
+            //Unwrapping content
+            // container.find(TABLE_CELL_SEL + ', ' + SLIDES_CONTAINER_SEL + ', ' + SLIDES_WRAPPER_SEL).each(function(){
+            //     //unwrap not being use in case there's no child element inside and its just text
+            //     $(this).replaceWith(this.childNodes);
+            // });
+
+            //removing the applied transition from the fullpage wrapper
+            // container.css({
+            //     '-webkit-transition': 'none',
+            //     'transition': 'none'
+            // });
+
+            //scrolling the page to the top with no animation
+            // $htmlBody.scrollTop(0);
+
+            //removing selectors
+            // var usedSelectors = [SECTION, SLIDE, SLIDES_CONTAINER];
+            // $.each(usedSelectors, function(index, value){
+            //     $('.' + value).removeClass(value);
+            // });
+        }
+
+        /*
         function destroyStructure(){
             //reseting the `top` or `translate` properties to 0
             silentScroll(0);
@@ -2705,18 +2790,18 @@
                 setSrc($(this), 'srcset');
             });
 
-            //$(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
+            $(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
 
             //removing inline styles
             $(SECTION_SEL).css( {
                 'height': '',
-                //'background-color' : '',
+                'background-color' : '',
                 'padding': ''
             });
 
-            /*$(SLIDE_SEL).css( {
+            $(SLIDE_SEL).css( {
                 'width': ''
-            });*/
+            });
 
             container.css({
                 'height': '',
@@ -2774,6 +2859,7 @@
                 $('.' + value).removeClass(value);
             });
         }
+        */
 
         /*
         * Sets the state for a variable with multiple states (original, and temporal)
