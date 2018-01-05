@@ -2796,7 +2796,7 @@
             //removing inline styles
             $(SECTION_SEL).css( {
                 'height': '',
-              //  'background-color' : '',
+                'background-color' : '',
                 'padding': ''
             });
 
