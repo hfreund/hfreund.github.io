@@ -161,6 +161,18 @@ a.btn-menu {
   }
 }
 
+/*==== Responsive Sections & Slides ====*/
+
+.fp-responsive .section.split.fp-section {
+    height: initial !important;
+}
+.fp-responsive .section .fp-slide .fp-tableCell {
+    height: initial !important;
+}
+.fp-responsive .fp-slides .fp-slide.fp-table .fp-tableCell {
+    padding: 3.5em;
+}
+
 img {
   width: 100%;
   height: auto;
