@@ -2777,7 +2777,7 @@
         }
 */
 
-        function destroyStructure(){
+        function destroyStructure(height){
             //reseting the `top` or `translate` properties to 0
             // silentScroll(0);
 
@@ -2795,7 +2795,7 @@
             //removing inline styles
             $(SECTION_SEL).css( {
                 'height': '',
-                'background-color' : '',
+              //  'background-color' : '',
                 'padding': ''
             });
 
