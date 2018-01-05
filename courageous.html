@@ -32,45 +32,51 @@
   }
 
   $(document).ready(function() {
-  	$('#fullpage').fullpage({
-  		//Navigation
-  		slidesNavigation: true,
-  		slidesNavPosition: 'bottom',
+      function initialization(){
+    	   $('#fullpage').fullpage({
+    		//Navigation
+    		slidesNavigation: true,
+    		slidesNavPosition: 'bottom',
 
-  		//Scrolling
-  		fitToSectionDelay: 1000,
-  		scrollBar: false,
-  		dragAndMove: false,
-  		offsetSections: false,
-  		scrollOverflow: false,
-  		touchSensitivity: 8,
+    		//Scrolling
+    		fitToSectionDelay: 1000,
+    		scrollBar: false,
+    		dragAndMove: false,
+    		offsetSections: false,
+    		scrollOverflow: false,
+    		touchSensitivity: 8,
 
-  		//Accessibility
-  		recordHistory: false,
+    		//Accessibility
+    		recordHistory: false,
 
-  		//Design
-  		sectionsColor : ['#ccc', '#fff'],
-  		responsiveWidth: 600,
-  		responsiveHeight: 767,
-  		responsiveSlides: false,
+    		//Design
+    		sectionsColor : ['#ccc', '#fff'],
+    		responsiveWidth: 600,
+    		responsiveHeight: 767,
+    		responsiveSlides: false,
 
-  		//Custom selectors
-  		sectionSelector: '.section',
-  		slideSelector: '.slide'
+    		//Custom selectors
+    		sectionSelector: '.section',
+    		slideSelector: '.slide'
 
-  		//Events
-  		/*
-      onLeave: function(index, nextIndex, direction){},
-  		afterLoad: function(anchorLink, index){},
-  		afterRender: function(){},
-  		afterResize: function(){},
-  		afterResponsive: function(isResponsive){},
-  		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-  		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-      */
-  	});
+    		//Events
+    		/*
+        onLeave: function(index, nextIndex, direction){},
+    		afterLoad: function(anchorLink, index){},
+    		afterRender: function(){},
+    		afterResize: function(){},
+    		afterResponsive: function(isResponsive){},
+    		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        */
+    	});
+      }
+      //fullPage.js initialization
+            initialization();
+
+			$.fn.fullpage.destroy('all');
   });
-  $.fn.fullpage.destroy('all');
+
   </script>
 
 </head>
