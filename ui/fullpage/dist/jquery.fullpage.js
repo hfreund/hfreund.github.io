@@ -2705,7 +2705,7 @@
                 setSrc($(this), 'srcset');
             });
 
-            $(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
+            //$(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
 
             //removing inline styles
             $(SECTION_SEL).css( {
@@ -2714,9 +2714,9 @@
                 'padding': ''
             });
 
-            $(SLIDE_SEL).css( {
+            /*$(SLIDE_SEL).css( {
                 'width': ''
-            });
+            });*/
 
             container.css({
                 'height': '',
