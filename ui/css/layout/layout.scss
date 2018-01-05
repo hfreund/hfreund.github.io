@@ -5,10 +5,10 @@
   @media (max-width: 599px) { @content; }
 }
 @mixin for-tablet-portrait-up {
-  @media (min-width: 769px) { @content; }
+  @media (min-width: 600px) { @content; }
 }
 @mixin for-tablet-portait-only {
-  @media (min-width: 769px) and (max-width: 899px) { @content; }
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
 }
 @mixin for-tablet-landscape-up {
   @media (min-width: 900px) { @content; }
@@ -32,7 +32,7 @@
   grid-template-areas: "nav content";
   grid-template-columns: 0 1fr;
   transition: 200ms ease;
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     grid-template-columns: 64px 1fr;
   }
 }
@@ -48,7 +48,7 @@ nav {
   z-index: 100;
   transform: translateX(-320px);
   transition: 200ms ease;
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
     transform: translateX(-256px);
   }
 }
@@ -134,7 +134,7 @@ body:not(.fp-viewing-0) .project .page-heading {
 .fullpage-wrapper {
   grid-area: content;
 }
-@include for-tablet-portrait-up {
+@include for-tablet-landscape-up {
   .section.split {
     display: grid;
     grid-template-columns: 1fr 1fr;

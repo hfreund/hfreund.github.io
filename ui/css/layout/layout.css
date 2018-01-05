@@ -7,7 +7,7 @@ Color variables
   grid-template-areas: "nav content";
   grid-template-columns: 0 1fr;
   transition: 200ms ease; }
-  @media (min-width: 769px) {
+  @media (min-width: 900px) {
     .main {
       grid-template-columns: 64px 1fr; } }
 
@@ -21,7 +21,7 @@ nav {
   z-index: 100;
   transform: translateX(-320px);
   transition: 200ms ease; }
-  @media (min-width: 769px) {
+  @media (min-width: 900px) {
     nav {
       transform: translateX(-256px); } }
 
@@ -100,7 +100,7 @@ body:not(.fp-viewing-0) .project .page-heading {
 .fullpage-wrapper {
   grid-area: content; }
 
-@media (min-width: 769px) {
+@media (min-width: 900px) {
   .section.split {
     display: grid;
     grid-template-columns: 1fr 1fr; }
