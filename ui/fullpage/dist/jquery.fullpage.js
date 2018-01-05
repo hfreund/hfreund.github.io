@@ -2708,23 +2708,23 @@
 
             // $(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
 
-            removing inline styles
-            $(SECTION_SEL).css( {
-                'height': '',
+            //removing inline styles
+            //$(SECTION_SEL).css( {
+                //'height': '',
                 //'background-color' : '',
                 //'padding': ''
-            });
+            //});
 
             // $(SLIDE_SEL).css( {
             //     'width': ''
             // });
 
-            // container.css({
-            //     'height': '',
+             container.css({
+                 'height': '',
             //     'position': '',
             //     '-ms-touch-action': '',
             //     'touch-action': ''
-            // });
+             });
 
             // $htmlBody.css({
             //     'overflow': '',
