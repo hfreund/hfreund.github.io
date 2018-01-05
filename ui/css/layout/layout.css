@@ -7,6 +7,9 @@ Color variables
   grid-template-areas: "nav content";
   grid-template-columns: 0 1fr;
   transition: 200ms ease; }
+  @media (min-width: 600px) {
+    .main {
+      grid-template-columns: 64px 1fr; } }
 
 .main.open nav {
   transform: translateX(0);
@@ -18,6 +21,9 @@ nav {
   z-index: 100;
   transform: translateX(-320px);
   transition: 200ms ease; }
+  @media (min-width: 600px) {
+    nav {
+      transform: translateX(-256px); } }
 
 .content {
   grid-area: content;
