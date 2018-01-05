@@ -2711,13 +2711,12 @@
             //removing inline styles
             $(SECTION_SEL).css( {
                 'height': '',
-                'background-color' : '',
+                //'background-color' : '',
                 'padding': ''
             });
 
             //  $(SLIDE_SEL).css( {
             //      'width': ''
-            //      'height': '',
             //  });
 
             // container.css({
