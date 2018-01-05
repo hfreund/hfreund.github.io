@@ -301,7 +301,7 @@ a.project-card#commoncensus:hover {
 
 a.btn-menu {
   position: fixed;
-  z-index: 101;
+  z-index: 102;
   top: 20px;
   left: 10px;
   height: 44px;
