@@ -2693,7 +2693,7 @@
         * Removes inline styles added by fullpage.js
         */
 
-        function destroyStructure(){
+        /*function destroyStructure(){
             //reseting the `top` or `translate` properties to 0
             // silentScroll(0);
 
@@ -2775,8 +2775,8 @@
             //     $('.' + value).removeClass(value);
             // });
         }
+*/
 
-        /*
         function destroyStructure(){
             //reseting the `top` or `translate` properties to 0
             silentScroll(0);
@@ -2859,7 +2859,7 @@
                 $('.' + value).removeClass(value);
             });
         }
-        */
+        
 
         /*
         * Sets the state for a variable with multiple states (original, and temporal)
