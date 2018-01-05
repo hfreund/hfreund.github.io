@@ -100,12 +100,12 @@ body:not(.fp-viewing-0) .project .page-heading {
 .fullpage-wrapper {
   grid-area: content; }
 
-.section.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
-  .section.split .fp-slidesNav.bottom {
-    grid-area: 1/2/1/2; }
-
+@media (min-width: 600px) {
+  .section.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .section.split .fp-slidesNav.bottom {
+      grid-area: 1/2/1/2; } }
 .section.footer {
   background-color: #f3f5f7;
   padding: 3.5em;

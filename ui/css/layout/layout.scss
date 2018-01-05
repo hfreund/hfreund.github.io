@@ -134,12 +134,14 @@ body:not(.fp-viewing-0) .project .page-heading {
 .fullpage-wrapper {
   grid-area: content;
 }
-.section.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  .fp-slidesNav.bottom {
-      grid-area: 1/2/1/2;
-    }
+@include for-tablet-portrait-up {
+  .section.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .fp-slidesNav.bottom {
+        grid-area: 1/2/1/2;
+      }
+  }
 }
 .section.footer {
   background-color: #f3f5f7;
