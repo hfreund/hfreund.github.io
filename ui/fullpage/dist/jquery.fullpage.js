@@ -2706,30 +2706,30 @@
             //     setSrc($(this), 'srcset');
             // });
 
-            $(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
+            // $(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
 
             //removing inline styles
-            $(SECTION_SEL).css( {
-                'height': '',
-                'background-color' : '',
-                'padding': ''
-            });
+            // $(SECTION_SEL).css( {
+            //     'height': '',
+            //     'background-color' : '',
+            //     'padding': ''
+            // });
 
-            $(SLIDE_SEL).css( {
-                'width': ''
-            });
+            // $(SLIDE_SEL).css( {
+            //     'width': ''
+            // });
 
-            container.css({
-                'height': '',
-                'position': '',
-                '-ms-touch-action': '',
-                'touch-action': ''
-            });
+            // container.css({
+            //     'height': '',
+            //     'position': '',
+            //     '-ms-touch-action': '',
+            //     'touch-action': ''
+            // });
 
-            $htmlBody.css({
-                'overflow': '',
-                'height': ''
-            });
+            // $htmlBody.css({
+            //     'overflow': '',
+            //     'height': ''
+            // });
 
             // remove .fp-enabled class
             // $('html').removeClass(ENABLED);
