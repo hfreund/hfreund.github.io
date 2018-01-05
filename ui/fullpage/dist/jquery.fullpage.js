@@ -2715,10 +2715,10 @@
                 //'padding': ''
             });
 
-             $(SLIDE_SEL).css( {
-            //     'width': ''
-                 'height': '',
-             });
+            //  $(SLIDE_SEL).css( {
+            // //     'width': ''
+            //      'height': '',
+            //  });
 
             // container.css({
             //     'height': '',
