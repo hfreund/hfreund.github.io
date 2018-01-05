@@ -5,10 +5,10 @@
   @media (max-width: 599px) { @content; }
 }
 @mixin for-tablet-portrait-up {
-  @media (min-width: 600px) { @content; }
+  @media (min-width: 769px) { @content; }
 }
 @mixin for-tablet-portait-only {
-  @media (min-width: 600px) and (max-width: 899px) { @content; }
+  @media (min-width: 769px) and (max-width: 899px) { @content; }
 }
 @mixin for-tablet-landscape-up {
   @media (min-width: 900px) { @content; }
