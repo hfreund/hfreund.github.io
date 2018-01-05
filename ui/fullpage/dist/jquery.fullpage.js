@@ -2708,12 +2708,12 @@
 
             // $(SECTION_NAV_SEL + ', ' + SLIDES_NAV_SEL +  ', ' + SLIDES_ARROW_SEL).remove();
 
-            // removing inline styles
-            // $(SECTION_SEL).css( {
-            //     'height': '',
-            //     'background-color' : '',
-            //     'padding': ''
-            // });
+            removing inline styles
+            $(SECTION_SEL).css( {
+                'height': '',
+                //'background-color' : '',
+                //'padding': ''
+            });
 
             // $(SLIDE_SEL).css( {
             //     'width': ''
