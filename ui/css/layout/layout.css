@@ -5,7 +5,7 @@ Color variables
 .main {
   display: grid;
   grid-template-areas: "nav content";
-  grid-template-columns: 64px 1fr;
+  grid-template-columns: 0 1fr;
   transition: 200ms ease; }
 
 .main.open nav {
@@ -16,7 +16,7 @@ nav {
   grid-area: nav;
   width: 320px;
   z-index: 100;
-  transform: translateX(-256px);
+  transform: translateX(-320px);
   transition: 200ms ease; }
 
 .content {

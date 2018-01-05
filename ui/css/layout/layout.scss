@@ -30,8 +30,11 @@
 .main {
   display: grid;
   grid-template-areas: "nav content";
-  grid-template-columns: 64px 1fr;
+  grid-template-columns: 0 1fr;
   transition: 200ms ease;
+  @mixin for-tablet-portait-up {
+    grid-template-columns: 64px 1fr;
+  }
 }
 .main.open {
   nav {
@@ -43,8 +46,11 @@ nav {
   grid-area: nav;
   width: 320px;
   z-index: 100;
-  transform: translateX(-256px);
+  transform: translateX(-320px);
   transition: 200ms ease;
+  @mixin for-tablet-portait-up {
+    transform: translateX(-256px);
+  }
 }
 .content {
   grid-area: content;
