@@ -523,6 +523,7 @@
             FP.reBuild = reBuild;
             FP.setResponsive = setResponsive;
             FP.destroy = destroy;
+            FP.destroyStructure = destroyStructure;
 
             //functions we want to share across files but which are not
             //mean to be used on their own by developers
