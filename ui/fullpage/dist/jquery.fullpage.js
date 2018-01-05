@@ -2795,7 +2795,7 @@
             //removing inline styles
             $(SECTION_SEL).css( {
                 'height': '',
-                //'background-color' : '',
+                'background-color' : '',
                 'padding': ''
             });
 
@@ -2810,10 +2810,10 @@
                 'touch-action': ''
             });
 
-            $htmlBody.css({
-                'overflow': '',
-                'height': ''
-            });
+            // $htmlBody.css({
+            //     'overflow': '',
+            //     'height': ''
+            // });
 
             // remove .fp-enabled class
             // $('html').removeClass(ENABLED);
