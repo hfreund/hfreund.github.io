@@ -2796,7 +2796,7 @@
             //removing inline styles
             $(SECTION_SEL).css( {
                 'height': '',
-                'background-color' : '',
+              //  'background-color' : '',
                 'padding': ''
             });
 
@@ -2804,12 +2804,12 @@
                 'width': ''
             });
 
-            container.css({
-                'height': '',
-                'position': '',
-                '-ms-touch-action': '',
-                'touch-action': ''
-            });
+            // container.css({
+            //     'height': '',
+            //     'position': '',
+            //     '-ms-touch-action': '',
+            //     'touch-action': ''
+            // });
 
             // $htmlBody.css({
             //     'overflow': '',
