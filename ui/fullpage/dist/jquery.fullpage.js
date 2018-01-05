@@ -2715,16 +2715,17 @@
                 //'padding': ''
             //});
 
-            // $(SLIDE_SEL).css( {
+             $(SLIDE_SEL).css( {
             //     'width': ''
-            // });
-
-             container.css({
                  'height': '',
+             });
+
+            // container.css({
+            //     'height': '',
             //     'position': '',
             //     '-ms-touch-action': '',
             //     'touch-action': ''
-             });
+            // });
 
             // $htmlBody.css({
             //     'overflow': '',
