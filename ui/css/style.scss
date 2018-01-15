@@ -215,6 +215,24 @@ a.btn-menu {
     }
   }
 }
+.fp-controlArrow.fp-next{
+  @include for-phone-only {
+    right: 1px;
+    border-width: 18.5px 0 18.5px 14px;
+  }
+  @include for-tablet-portrait-up {
+    border-width: 28.5px 0 28.5px 24px;
+  }
+}
+.fp-controlArrow.fp-prev{
+  @include for-phone-only {
+    left: 1px;
+    border-width: 18.5px 14px 18.5px 0;
+  }
+  @include for-tablet-portrait-up {
+    border-width: 28.5px 24px 28.5px 0;
+  }
+}
 #cc-website-desktop-phone {
   background-image: url('images/cc_website_desktop+phone-03.png');
   background-size: contain;
