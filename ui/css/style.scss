@@ -187,6 +187,9 @@ a.btn-menu {
       h2 {
         margin: 0.5em 0 0.25em;
       }
+      h4 {
+        margin-top: 0.5em;
+      }
     }
     @include for-tablet-portrait-up {
       flex-basis: 66%;
