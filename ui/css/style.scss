@@ -181,9 +181,8 @@ a.btn-menu {
 }
 .slide {
   .text {
-    padding: 0 0 0 3.5em;
     @include for-phone-only {
-      padding: 0 3em 1.5em 3em;
+      padding: 0 1em 1.5em 1em;
       h2 {
         margin: 0.5em 0 0.25em;
       }
@@ -192,6 +191,7 @@ a.btn-menu {
       }
     }
     @include for-tablet-portrait-up {
+      padding: 0 0 0 3.5em;
       flex-basis: 66%;
       flex-grow: 1;
     }
