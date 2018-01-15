@@ -46,7 +46,7 @@ nav {
   grid-area: nav;
   width: 320px;
   z-index: 100;
-  transform: translateX(-320px);
+  transform: translateX(-321px);
   transition: 200ms ease;
   @include for-tablet-landscape-up {
     transform: translateX(-256px);
