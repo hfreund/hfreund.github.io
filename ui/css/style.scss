@@ -76,7 +76,7 @@ a.project-card#commoncensus:hover {
   @include for-phone-only {
       margin-right: 20px;
   }
-  @include for-phone-only {
+  @include for-tablet-portrait-up {
       margin-right: 30px;
   }
 }
