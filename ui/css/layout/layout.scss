@@ -137,6 +137,10 @@ body:not(.fp-viewing-0) .project .page-heading {
 .fp-tableCell {
   display: flex;
   align-items: center;
+  @include for-phone-only {
+    flex-flow: column-reverse;
+    justify-content: center;
+  };
 }
 .section.footer {
   background-color: #f3f5f7;

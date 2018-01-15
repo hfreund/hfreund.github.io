@@ -175,17 +175,32 @@ a.btn-menu {
 .slide {
   .text {
     padding: 0 0 0 3.5em;
+    flex-grow: 1;
+    @include for-phone-only {
+      padding: 0 3em;
+    };
+    @include for-tablet-portrait-up {
+      flex-basis: 66%;
+    };
   }
   .img-block {
     overflow-x: hidden;
-    flex-basis: 33%;
-    flex-grow: 1;
     padding: 0 3.5em;
+    flex-grow: 1;
       img {
       width: 100%;
       min-width: 400px;
       height: auto;
     }
+    @include for-phone-only {
+    flex-basis: 33%;
+      img {
+        min-width: 360px;
+      }
+    }
+    @include for-tablet-portrait-up {
+      flex-basis: 33%;
+    };
   }
 }
 #cc-website-desktop-phone {
