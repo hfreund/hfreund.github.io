@@ -6,12 +6,16 @@
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
 
-  <title>Common Census - Website | Hugh Freund</title>
+  <title>Hugh Freund | Common Census</title>
   <meta name="description" content="Portfolio">
   <meta name="author" content="Hugh Freund">
-
-  <link rel="stylesheet" href="../ui/css/normalize/normalize.css" type="text/css" />
-	<link rel="stylesheet" href="../ui/css/style.min.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="/ui/fullpage/dist/jquery.fullpage.css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -21,25 +25,90 @@
 
   function change() {
     if (open) {
-        document.getElementById("expandNav").className = "project";
+        document.getElementById("expandNav").className = "main";
         open = false;
     } else {
-        document.getElementById("expandNav").className = "project open";
+        document.getElementById("expandNav").className = "main open";
         open = true;
     }
   }
+
+  $(document).ready(function() {
+      function initialization(){
+    	   $('#fullpage').fullpage({
+    		//Navigation
+    		slidesNavigation: true,
+    		slidesNavPosition: 'bottom',
+
+    		//Scrolling
+    		fitToSectionDelay: 1000,
+    		scrollBar: false,
+    		dragAndMove: false,
+    		offsetSections: false,
+    		scrollOverflow: false,
+    		touchSensitivity: 8,
+
+    		//Accessibility
+    		recordHistory: false,
+
+    		//Design
+    		sectionsColor : ['#ccc', '#fff'],
+    		responsiveWidth: 900,
+    		responsiveHeight: 768,
+    		responsiveSlides: true,
+
+    		//Custom selectors
+    		sectionSelector: '.section',
+    		slideSelector: '.slide'
+
+    		//Events
+    		/*
+        onLeave: function(index, nextIndex, direction){},
+    		afterLoad: function(anchorLink, index){},
+    		afterRender: function(){},
+    		afterResize: function(){},
+    		afterResponsive: function(isResponsive){},
+    		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        */
+    	});
+      }
+      //fullPage.js initialization
+            initialization();
+
+			//$.fn.fullpage.destroyStructure('height');
+  });
+
 </script>
+
 </head>
 <body>
-  <a href="#" onclick="change()">Menu</a>
-  <div class="project" id="expandNav">
-    <div class="nav">
-      <div class="nav-inner">
-        <h5>&larr; All Projects</h5>
-        <h1>Common Census</h1>
-      </div>
+  <div class="main" id="expandNav">
+    <a class="btn-menu" href="#" onclick="change()">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </a>
+    <nav class="navbar">
+      <ul>
+        <li>
+    		    <a href="#">First</a>
+        </li>
+        <li>
+            <a href="#">Second</a>
+        </li>
+        <li>
+    		    <a href="#">Third</a>
+        </li>
+        <li>
+    		    <a href="#">Fourth</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-heading">
+      <div class="logo" id="commoncensus"></div>
     </div>
-    <div class="content">
+    <div id="fullpage">
       <section class="project-overview">
         <div class="top">
           <h4 class="title">Common Census</h4>
@@ -80,6 +149,8 @@
       <section>
         <strong>PROJECT OVERVIEW</strong>
       </section>
+    </div>
+    <div class="bg-fade">
     </div>
   </div>
 </body>
