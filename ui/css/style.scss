@@ -172,10 +172,21 @@ a.btn-menu {
 .fp-responsive .fp-slides .fp-slide.fp-table .fp-tableCell {
     padding: 3.5em;
 }
-
-img {
-  width: 100%;
-  height: auto;
+.slide {
+  .text {
+    padding: 0 3.5em;
+  }
+  .img-block {
+    overflow-x: hidden;
+    flex-basis: 33%;
+    flex-grow: 1;
+    padding: 0 3.5em;
+      img {
+      width: 100%;
+      min-width: 400px;
+      height: auto;
+    }
+  }
 }
 #cc-website-desktop-phone {
   background-image: url('images/cc_website_desktop+phone-03.png');
