@@ -51,11 +51,13 @@ a.project-card#commoncensus:hover {
 
 /*==== Project Stat Block ====*/
 .stat-block {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
+  @include for-tablet-portrait-up {
     border-top: 1px solid red;
     margin-top: 10px;
     padding-top: 20px;
+  }
 }
 .stat-item {
   margin-right: 30px;
@@ -175,31 +177,31 @@ a.btn-menu {
 .slide {
   .text {
     padding: 0 0 0 3.5em;
-    flex-grow: 1;
     @include for-phone-only {
-      padding: 0 3em;
+      padding: 0 3em 1.5em 3em;
     };
     @include for-tablet-portrait-up {
       flex-basis: 66%;
+      flex-grow: 1;
     };
   }
   .img-block {
     overflow-x: hidden;
     padding: 0 3.5em;
-    flex-grow: 1;
       img {
       width: 100%;
       min-width: 400px;
       height: auto;
     }
     @include for-phone-only {
-    flex-basis: 33%;
+    padding: 1.5em 3.5em;
       img {
         min-width: 360px;
       }
     }
     @include for-tablet-portrait-up {
       flex-basis: 33%;
+      flex-grow: 1;
     };
   }
 }
