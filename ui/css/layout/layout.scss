@@ -134,6 +134,10 @@ body:not(.fp-viewing-0) .project .page-heading {
 .fullpage-wrapper {
   grid-area: content;
 }
+.fp-tableCell {
+  display: flex;
+  align-items: center;
+}
 @include for-tablet-landscape-up {
   .section.split {
     display: grid;
@@ -160,7 +164,6 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   .text {
     padding: 80px 3.5em;
-    height: calc(100% - 160px);
   }
 }
 
