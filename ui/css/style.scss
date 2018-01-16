@@ -292,29 +292,8 @@ a.btn-menu {
     width: 0.45em;
   }
 }
-.section.title .fp-tableCell {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "title image" "scroll scroll";
-    grid-gap: 2em;
-}
-.section.title .fp-tableCell .text {
-  grid-area: title;
-  padding: 0 3em;
-}
-.section.title .fp-tableCell picture {
-  padding-top: 4em;
-}
-.scroll {
-  grid-area: scroll;
-  justify-content: center;
-  margin-bottom: 1.5em;
-  display: grid;
-  grid-template-areas:  "... top ..."
-                        "left bottom right";
-  grid-gap: 5px;
-}
+
+
 .arw {
     width: 44px;
     background-color: rgba(53, 55, 57, 0.25);

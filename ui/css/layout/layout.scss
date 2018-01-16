@@ -146,6 +146,44 @@ body:not(.fp-viewing-0) .project .page-heading {
     justify-content: space-evenly;
   }
 }
+.section.title {
+  .fp-tableCell {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 65% 35%;
+    grid-template-areas: "title image" "scroll scroll";
+    @include for-tablet-landscape-up {
+      grid-template-columns: 40% 60%
+      grid-gap: 3em;
+    }
+    .text {
+      grid-area: title;
+      padding: 2em 1em 0;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      @include for-tablet-landscape-up {
+        padding: 0 3em;
+      }
+    }
+    .img-block {
+      display: flex;
+      align-self: center;
+    }
+    picture {
+      padding-top: 4em;
+    }
+    .scroll {
+      grid-area: scroll;
+      justify-content: center;
+      margin-bottom: 1.5em;
+      display: grid;
+      grid-template-areas:  "... top ..."
+                            "left bottom right";
+      grid-gap: 5px;
+    }
+  }
+}
 .section.footer {
   background-color: #f3f5f7;
   padding: 3.5em;
