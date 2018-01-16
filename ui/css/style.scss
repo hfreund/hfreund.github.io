@@ -295,7 +295,7 @@ a.btn-menu {
   align-self: flex-end;
   margin-bottom: 1.5em;
   display: grid;
-  grid-template-areas:  ". top ."
+  grid-template-areas:  "... top ..."
                         "left bottom right";
   grid-gap: 5px;
 }
@@ -312,23 +312,30 @@ a.btn-menu {
 	vertical-align: top;
 	width: 0.45em;
 }
-.arw.top:before{
-  grid-area: top;
+.arw {
+  .top{
+    grid-area: top;
+  .right {
+    grid-area: right;
+  }
+  .left {
+    grid-area: left;
+  }
+  .bottom {
+    grid-area: bottom;
+  }
 }
-.arw.right:before {
+.arw.right::before {
 	left: 0;
 	transform: rotate(45deg);
-  grid-area: right;
 }
-.arw.bottom:before {
+.arw.bottom::before {
 	top: 0;
 	transform: rotate(135deg);
-  grid-area: bottom;
 }
-.arw.left:before {
+.arw.left::before {
 	left: 0.25em;
 	transform: rotate(-135deg);
-  grid-area: left;
 }
 
 #cc-website-desktop-phone {
