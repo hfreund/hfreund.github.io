@@ -312,6 +312,13 @@ a.btn-menu {
                         "left bottom right";
   grid-gap: 5px;
 }
+.arw {
+    width: 44px;
+    background-color: rgba(53, 55, 57, 0.25);
+    height: 24px;
+    text-align: center;
+    border-radius: 2px;
+}
 .arw::before {
 	border-style: solid;
 	border-width: 0.25em 0.25em 0 0;
