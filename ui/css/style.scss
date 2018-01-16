@@ -60,15 +60,6 @@ a.project-card#commoncensus:hover {
   margin-top: 10px;
   padding-top: 20px;
 }
-.slide.stats .stat-block {
-    display: flex;
-    @include for-tablet-portrait-up {
-      display: none;
-    }
-    .stat-item {
-      margin-right: 20px;
-    }
-}
 .stat-item {
   margin-right: 30px;
   h5 {
@@ -209,6 +200,9 @@ a.btn-menu {
       width: 100%;
       height: auto;
     }
+    .centered {
+      text-align: center;
+    }
     @include for-phone-only {
       padding: 1.5em 2.55em;
     }
@@ -218,10 +212,15 @@ a.btn-menu {
     @include for-tablet-landscape-up {
       flex-basis: 34%;
       flex-grow: 1;
-      padding-right: 4em;
+      padding: 0 4em;
         img {
           min-width: 680px;
         }
+    }
+  }
+  .split .img-block {
+    @include for-tablet-landscape-up {
+      padding-left: 0;
     }
   }
 }
@@ -293,54 +292,51 @@ a.btn-menu {
     width: 0.45em;
   }
 }
-
-
 .arw {
-    width: 44px;
-    background-color: rgba(53, 55, 57, 0.25);
-    height: 24px;
-    text-align: center;
-    border-radius: 2px;
-}
-.arw::before {
-	border-style: solid;
-	border-width: 0.25em 0.25em 0 0;
-	content: '';
-	display: inline-block;
-	height: 0.45em;
-	position: relative;
-	top: 0.15em;
-	transform: rotate(-45deg);
-	vertical-align: top;
-	width: 0.45em;
-}
-
-.arw.left {
-  grid-area: left;
-}
-.arw.top {
-  grid-area: top;
-}
-.arw.bottom {
-  grid-area: bottom;
-}
-.arw.right {
-  grid-area: right;
-}
-.arw.top::before {
-  top: 0.45em;
-}
-.arw.right::before {
-	top: 0.35em;
-	transform: rotate(45deg);
-}
-.arw.bottom::before {
-	transform: rotate(135deg);
-}
-.arw.left::before {
-	left: 0.25em;
-  top: 0.35em;
-	transform: rotate(-135deg);
+  width: 44px;
+  background-color: rgba(53, 55, 57, 0.25);
+  height: 24px;
+  text-align: center;
+  border-radius: 2px;
+  &:before {
+  	border-style: solid;
+  	border-width: 0.25em 0.25em 0 0;
+  	content: '';
+  	display: inline-block;
+  	height: 0.45em;
+  	position: relative;
+  	top: 0.15em;
+  	transform: rotate(-45deg);
+  	vertical-align: top;
+  	width: 0.45em;
+  }
+  .left {
+    grid-area: left;
+    &:before {
+    	left: 0.25em;
+      top: 0.35em;
+    	transform: rotate(-135deg);
+    }
+  }
+  .top {
+    grid-area: top;
+    &:before {
+      top: 0.45em;
+    }
+  }
+  .bottom {
+    grid-area: bottom;
+    &:before {
+    	transform: rotate(135deg);
+    }
+  }
+  .right {
+    grid-area: right;
+    &:before {
+    	top: 0.35em;
+    	transform: rotate(45deg);
+    }
+  }
 }
 
 #cc-website-desktop-phone {
