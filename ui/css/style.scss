@@ -297,11 +297,16 @@ a.btn-menu {
 .section.title .fp-tableCell {
     display: grid;
     grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     grid-template-areas: "title image" "scroll scroll";
+    grid-gap: 2em;
 }
 .section.title .fp-tableCell .text {
   grid-area: title;
+  padding: 0 3em;
+}
+.section.title .fp-tableCell picture {
+  padding-top: 4em;
 }
 .scroll {
   grid-area: scroll;
