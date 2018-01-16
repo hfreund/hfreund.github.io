@@ -26,6 +26,21 @@
   @media (min-width: 1800px) { @content; }
 }
 
+@mixin hide($breakpoint) {
+  @if $breakpoint == phone {
+    @include for-phone-only {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+}
+
+.hide {
+  .phone {
+    @include hide(phone);
+  }
+}
+
 /*==== HOME ====*/
 .main {
   display: grid;
@@ -186,6 +201,28 @@ body:not(.fp-viewing-0) .project .page-heading {
       grid-template-areas:  "... top ..."
                             "left bottom right";
       grid-gap: 5px;
+    }
+  }
+}
+.slide {
+  .img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, [col-start] minmax(100px, 1fr) [col-end]);
+    grid-gap: 2em;
+    margin: 2em;
+    .img-block {
+      padding: 0;
+      img {
+        min-width: initial;
+        border: 1px solid #d3d5d7;
+      }
+      h5 {
+        margin: 0 0.5em 0.5em;
+        line-height: 1;
+      }
+    }
+    @include for-tablet-portrait-up{
+      grid-template-columns: repeat(2, [col-start] minmax(100px, 1fr) [col-end]);
     }
   }
 }
