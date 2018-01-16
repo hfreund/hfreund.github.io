@@ -54,13 +54,20 @@ a.project-card#commoncensus:hover {
   @include for-phone-only {
     display: none;
   }
-  @include for-tablet-portrait-up {
+  display: flex;
+  flex-flow: row wrap;
+  border-top: 1px solid red;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+.slide.stats .stat-block {
     display: flex;
-    flex-flow: row wrap;
-    border-top: 1px solid red;
-    margin-top: 10px;
-    padding-top: 20px;
-  }
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+    .stat-item {
+      margin-right: 20px;
+    }
 }
 .stat-item {
   margin-right: 30px;
