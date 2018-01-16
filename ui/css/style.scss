@@ -186,6 +186,9 @@ a.btn-menu {
     h4 {
       margin-top: 0.5em;
     }
+    @include for-tablet-portrait-only {
+      padding: 4em;
+    }
     @include for-tablet-landscape-up {
       padding: 0 4em;
       flex-basis: 66%;
@@ -203,6 +206,9 @@ a.btn-menu {
       img {
       width: 100%;
       height: auto;
+    }
+    @include for-tablet-portrait-only {
+      padding: 4em;
     }
     @include for-tablet-landscape-up {
       flex-basis: 34%;

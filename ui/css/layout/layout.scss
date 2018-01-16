@@ -143,7 +143,7 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   @include for-tablet-portrait-only {
     flex-flow: column-reverse;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
 .section.footer {
