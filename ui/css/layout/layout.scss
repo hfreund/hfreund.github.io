@@ -207,7 +207,7 @@ body:not(.fp-viewing-0) .project .page-heading {
 .slide {
   .img-grid {
     display: grid;
-    grid-template-columns: repeat(2, [col-start] minmax(100px, 1fr) [col-end]);
+    grid-template-rows: repeat(2, [col-start] minmax(100px, 1fr) [col-end]);
     grid-gap: 2em;
     margin: 2em;
     .img-block {
@@ -223,6 +223,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     }
     @include for-tablet-portrait-up{
       grid-template-columns: repeat(2, [col-start] minmax(100px, 1fr) [col-end]);
+      grid-template-rows: initial;
     }
   }
 }
