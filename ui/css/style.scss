@@ -196,6 +196,9 @@ a.btn-menu {
       flex-grow: 1;
     }
   }
+  .title .text {
+    padding: 0 3.5em;
+  }
   .img-block {
     overflow-x: hidden;
     padding: 0 3.5em;
@@ -291,8 +294,18 @@ a.btn-menu {
   vertical-align: top;
   width: 0.45em;
 }
+.section.title .fp-tableCell {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title image" "scroll scroll";
+}
+.section.title .fp-tableCell .text {
+  grid-area: title;
+}
 .scroll {
-  align-self: flex-end;
+  grid-area: scroll;
+  justify-content: center;
   margin-bottom: 1.5em;
   display: grid;
   grid-template-areas:  "... top ..."
@@ -305,37 +318,38 @@ a.btn-menu {
 	content: '';
 	display: inline-block;
 	height: 0.45em;
-	left: 0.15em;
 	position: relative;
 	top: 0.15em;
 	transform: rotate(-45deg);
 	vertical-align: top;
 	width: 0.45em;
 }
-.arw {
-  .top {
-    grid-area: top;
-  }
-  .right {
-    grid-area: right;
-  }
-  .left {
-    grid-area: left;
-  }
-  .bottom {
-    grid-area: bottom;
-  }
+
+.arw.left {
+  grid-area: left;
+}
+.arw.top {
+  grid-area: top;
+}
+.arw.bottom {
+  grid-area: bottom;
+}
+.arw.right {
+  grid-area: right;
+}
+.arw.top::before {
+  top: 0.45em;
 }
 .arw.right::before {
-	left: 0;
+	top: 0.35em;
 	transform: rotate(45deg);
 }
 .arw.bottom::before {
-	top: 0;
 	transform: rotate(135deg);
 }
 .arw.left::before {
 	left: 0.25em;
+  top: 0.35em;
 	transform: rotate(-135deg);
 }
 
