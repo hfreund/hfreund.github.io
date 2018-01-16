@@ -242,19 +242,19 @@ a.btn-menu {
   width: auto;
   padding: 10px;
   border-radius: 2px;
-  ::after {
-    border-style: solid;
-    border-width: 0.25em 0.25em 0 0;
-    content: '';
-    display: inline-block;
-    height: 0.45em;
-    left: 0.1em;
-    position: relative;
-    top: 13px;
-    transform: rotate(-135deg);
-    vertical-align: top;
-    width: 0.45em;
-  }
+}
+.fp-controlArrow.fp-prev::after {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.45em;
+  left: 0.1em;
+  position: relative;
+  top: 13px;
+  transform: rotate(-135deg);
+  vertical-align: top;
+  width: 0.45em;
 }
 .fp-controlArrow.fp-next {
   right: 15px;
@@ -265,20 +265,21 @@ a.btn-menu {
   width: auto;
   padding: 10px;
   border-radius: 2px;
-  ::after {
-    border-style: solid;
-    border-width: 0.25em 0.25em 0 0;
-    content: '';
-    display: inline-block;
-    height: 0.45em;
-    right: 0.1em;
-    position: relative;
-    top: 13px;
-    transform: rotate(45deg);
-    vertical-align: top;
-    width: 0.45em;
-  }
 }
+.fp-controlArrow.fp-next::after {
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.45em;
+  right: 0.1em;
+  position: relative;
+  top: 13px;
+  transform: rotate(45deg);
+  vertical-align: top;
+  width: 0.45em;
+}
+
 #cc-website-desktop-phone {
   background-image: url('images/cc_website_desktop+phone-03.png');
   background-size: contain;
