@@ -100,7 +100,7 @@ a.project-card#commoncensus:hover {
 
 /*==== Navigation ====*/
 .navbar {
-  border-right: 1px solid #d3d5d7;
+  border-right: 1px solid $gray-border;
   background-color: #fff;
   height: 100%;
   display: block;
@@ -175,14 +175,8 @@ a.btn-menu {
 
 /*==== Responsive Sections & Slides ====*/
 
-.fp-responsive .section.split.fp-section {
-    height: initial !important;
-}
-.fp-responsive .section .fp-slide .fp-tableCell {
-    height: initial !important;
-}
-.fp-responsive .fp-slides .fp-slide.fp-table .fp-tableCell {
-    padding: 3.5em;
+.section {
+  border-bottom: 1px solid $gray-border;
 }
 .slide {
   .text {
