@@ -211,10 +211,11 @@ body:not(.fp-viewing-0) .project .page-heading {
     grid-gap: 2em;
     margin: 2em;
     .img-block {
-      padding: 0;
+      padding: 10px;
+      border: 1px solid $gray-border;
       img {
         min-width: initial;
-        border: 1px solid #d3d5d7;
+        border-bottom: 2px solid $gray-border;
       }
       h5 {
         margin: 0 0.5em 0.5em;
