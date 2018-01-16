@@ -238,10 +238,16 @@ a.btn-menu {
   height: 40px;
   background-color: rgba(53, 55, 57, 0.25);
   border: 0 !important;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   width: auto;
-  padding: 10px;
-  border-radius: 2px;
+  padding: 10px 15px;
+  border-radius: 0 2px 2px 0;
+  transition: 150ms ease;
+  :hover {
+    background-color: rgba(53, 55, 57, 0.45);
+    color: rgba(255, 255, 255, 1);
+    transition: 150ms ease;
+  }
 }
 .fp-controlArrow.fp-prev::after {
   border-style: solid;
@@ -261,10 +267,16 @@ a.btn-menu {
   height: 40px;
   background-color: rgba(53, 55, 57, 0.25);
   border: 0 !important;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   width: auto;
-  padding: 10px;
-  border-radius: 2px;
+  padding: 10px 15px;
+  border-radius: 2px 0 0 2px;
+  transition: 150ms ease;
+  :hover {
+    background-color: rgba(53, 55, 57, 0.45);
+    color: rgba(255, 255, 255, 1);
+    transition: 150ms ease;
+  }
 }
 .fp-controlArrow.fp-next::after {
   border-style: solid;
