@@ -200,7 +200,7 @@ a.btn-menu {
       width: 100%;
       height: auto;
     }
-    .centered {
+    & .centered {
       text-align: center;
     }
     @include for-phone-only {
@@ -310,7 +310,7 @@ a.btn-menu {
   	vertical-align: top;
   	width: 0.45em;
   }
-  .left {
+  & .left {
     grid-area: left;
     &:before {
     	left: 0.25em;
@@ -318,19 +318,19 @@ a.btn-menu {
     	transform: rotate(-135deg);
     }
   }
-  .top {
+  & .top {
     grid-area: top;
     &:before {
       top: 0.45em;
     }
   }
-  .bottom {
+  & .bottom {
     grid-area: bottom;
     &:before {
     	transform: rotate(135deg);
     }
   }
-  .right {
+  & .right {
     grid-area: right;
     &:before {
     	top: 0.35em;
