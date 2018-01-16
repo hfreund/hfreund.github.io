@@ -140,7 +140,11 @@ body:not(.fp-viewing-0) .project .page-heading {
   @include for-phone-only {
     flex-flow: column-reverse;
     justify-content: center;
-  };
+  }
+  @include for-tablet-landscape-up {
+    flex-flow: column-reverse;
+    justify-content: center;
+  }
 }
 .section.footer {
   background-color: #f3f5f7;
