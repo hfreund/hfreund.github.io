@@ -180,7 +180,7 @@ a.btn-menu {
 .slide {
   .text {
     @include for-phone-only {
-      padding: 0 2em 1.5em 2em;
+      padding: 0 2.55em 1.5em;
       h2 {
         margin: 0.5em 0 0.25em;
       }
@@ -228,7 +228,7 @@ a.btn-menu {
   @include for-phone-only {
     left: 0;
     border-radius: 0 2px 2px 0;
-    padding: 10px;
+    padding: 6px;
   }
   left: 15px;
   height: 40px;
@@ -262,7 +262,7 @@ a.btn-menu {
   @include for-phone-only {
     right: 0;
     border-radius: 2px 0 0 2px;
-    padding: 10px;
+    padding: 6px;
   }
   right: 15px;
   height: 40px;
