@@ -60,6 +60,7 @@ a.project-card#commoncensus:hover {
   }
 }
 .stat-item {
+  margin-right: 15px;
   h5 {
     margin: 0;
     font-size: 0.8em;
@@ -73,10 +74,7 @@ a.project-card#commoncensus:hover {
     font-size: 0.75em;
     line-height: 1.4;
   }
-  @include for-phone-only {
-      margin-right: 15px;
-  }
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
       margin-right: 30px;
   }
 }
@@ -181,19 +179,19 @@ a.btn-menu {
 }
 .slide {
   .text {
-    @include for-phone-only {
-      padding: 0 1em 1.5em 1em;
-      h2 {
-        margin: 0.5em 0 0.25em;
-      }
-      h4 {
-        margin-top: 0.5em;
-      }
+    padding: 0 1em 1.5em 1em;
+    h2 {
+      margin: 0.5em 0 0.25em;
     }
-    @include for-tablet-portrait-up {
-      padding: 0 3.5em;
+    h4 {
+      margin-top: 0.5em;
+    }
+    @include for-tablet-landscape-up {
+      padding: 0 4em;
       flex-basis: 66%;
       flex-grow: 1;
+      max-width: 680px;
+      margin: 0 auto;
     }
   }
   .title .text {
@@ -201,39 +199,19 @@ a.btn-menu {
   }
   .img-block {
     overflow-x: hidden;
-    padding: 0 3.5em;
+    padding: 1.5em 3.5em;
       img {
       width: 100%;
       height: auto;
     }
-    @include for-phone-only {
-    padding: 1.5em 3.5em;
-    }
-    @include for-tablet-portrait-up {
-      flex-basis: 33%;
+    @include for-tablet-landscape-up {
+      flex-basis: 34%;
       flex-grow: 1;
+      padding-right: 4em;
         img {
-          min-width: 400px;
+          min-width: 680px;
         }
     }
-  }
-}
-.fp-controlArrow.fp-next{
-  @include for-phone-only {
-    right: 1px;
-    border-width: 18.5px 0 18.5px 14px;
-  }
-  @include for-tablet-portrait-up {
-    border-width: 28.5px 0 28.5px 24px;
-  }
-}
-.fp-controlArrow.fp-prev{
-  @include for-phone-only {
-    left: 1px;
-    border-width: 18.5px 14px 18.5px 0;
-  }
-  @include for-tablet-portrait-up {
-    border-width: 28.5px 24px 28.5px 0;
   }
 }
 .fp-controlArrow.fp-prev {
