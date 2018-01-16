@@ -209,7 +209,7 @@ a.btn-menu {
       height: auto;
     }
     @include for-phone-only {
-      padding: 1.5em 2em;
+      padding: 1.5em 2.55em;
     }
     @include for-tablet-portrait-only {
       padding: 4em;
