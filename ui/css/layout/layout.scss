@@ -153,7 +153,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     grid-template-columns: 65% 35%;
     grid-template-areas: "title image" "scroll scroll";
     @include for-tablet-landscape-up {
-      grid-template-columns: 40% 60%
+      grid-template-columns: 40% 60%;
       grid-gap: 3em;
     }
     .text {
