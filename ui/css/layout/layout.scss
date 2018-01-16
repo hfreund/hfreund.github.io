@@ -187,7 +187,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       picture {
         padding-top: 4em;
         overflow: hidden;
-        max-height: calc(100vh - 4em);
+        max-height: calc(100vh - 4em - 5px);
         img {
           width: 100%;
           min-width: 580px;

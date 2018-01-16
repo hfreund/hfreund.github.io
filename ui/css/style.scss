@@ -166,10 +166,6 @@ a.btn-menu {
 
 /*==== Responsive Sections & Slides ====*/
 
-.section {
-  border-bottom: 1px solid $gray-border;
-  margin-bottom: -1px;
-}
 .slide {
   .text {
     @include for-phone-only {
