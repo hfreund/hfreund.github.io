@@ -169,9 +169,14 @@ body:not(.fp-viewing-0) .project .page-heading {
     .img-block {
       display: flex;
       align-self: center;
-    }
-    picture {
-      padding-top: 4em;
+      picture {
+        padding-top: 4em;
+        img {
+          width: 100%;
+          min-width: 580px;
+          overflow: hidden;
+        }
+      }
     }
     .scroll {
       grid-area: scroll;
