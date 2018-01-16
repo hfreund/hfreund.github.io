@@ -179,12 +179,14 @@ a.btn-menu {
 }
 .slide {
   .text {
-    padding: 0 1em 1.5em 1em;
-    h2 {
-      margin: 0.5em 0 0.25em;
-    }
-    h4 {
-      margin-top: 0.5em;
+    @include for-phone-only {
+      padding: 0 2em 1.5em 2em;
+      h2 {
+        margin: 0.5em 0 0.25em;
+      }
+      h4 {
+        margin-top: 0.5em;
+      }
     }
     @include for-tablet-portrait-only {
       padding: 4em;
@@ -202,10 +204,12 @@ a.btn-menu {
   }
   .img-block {
     overflow-x: hidden;
-    padding: 1.5em 3.5em;
       img {
       width: 100%;
       height: auto;
+    }
+    @include for-phone-only {
+      padding: 1.5em 2em;
     }
     @include for-tablet-portrait-only {
       padding: 4em;
@@ -221,6 +225,11 @@ a.btn-menu {
   }
 }
 .fp-controlArrow.fp-prev {
+  @include for-phone-only {
+    left: 0;
+    border-radius: 0 2px 2px 0;
+    padding: 10px;
+  }
   left: 15px;
   height: 40px;
   background-color: rgba(53, 55, 57, 0.25);
@@ -228,28 +237,33 @@ a.btn-menu {
   color: rgba(255, 255, 255, 0.9);
   width: auto;
   padding: 10px 15px;
-  border-radius: 0 2px 2px 0;
+  border-radius: 2px;
   transition: 150ms ease;
-  :hover {
+  &:hover {
     background-color: rgba(53, 55, 57, 0.45);
     color: rgba(255, 255, 255, 1);
     transition: 150ms ease;
   }
-}
-.fp-controlArrow.fp-prev::after {
-  border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
-  content: '';
-  display: inline-block;
-  height: 0.45em;
-  left: 0.1em;
-  position: relative;
-  top: 13px;
-  transform: rotate(-135deg);
-  vertical-align: top;
-  width: 0.45em;
+  &:after {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    left: 0.1em;
+    position: relative;
+    top: 13px;
+    transform: rotate(-135deg);
+    vertical-align: top;
+    width: 0.45em;
+  }
 }
 .fp-controlArrow.fp-next {
+  @include for-phone-only {
+    right: 0;
+    border-radius: 2px 0 0 2px;
+    padding: 10px;
+  }
   right: 15px;
   height: 40px;
   background-color: rgba(53, 55, 57, 0.25);
@@ -259,24 +273,24 @@ a.btn-menu {
   padding: 10px 15px;
   border-radius: 2px 0 0 2px;
   transition: 150ms ease;
-  :hover {
+  &:hover {
     background-color: rgba(53, 55, 57, 0.45);
     color: rgba(255, 255, 255, 1);
     transition: 150ms ease;
   }
-}
-.fp-controlArrow.fp-next::after {
-  border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
-  content: '';
-  display: inline-block;
-  height: 0.45em;
-  right: 0.1em;
-  position: relative;
-  top: 13px;
-  transform: rotate(45deg);
-  vertical-align: top;
-  width: 0.45em;
+  &:after {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    display: inline-block;
+    height: 0.45em;
+    right: 0.1em;
+    position: relative;
+    top: 13px;
+    transform: rotate(45deg);
+    vertical-align: top;
+    width: 0.45em;
+  }
 }
 .section.title .fp-tableCell {
     display: grid;
