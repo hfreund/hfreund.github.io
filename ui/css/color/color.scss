@@ -5,13 +5,30 @@ Color variables
 $solid-white: #fff;
 $gray-border: #d3d5d7;
 
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+      background: -webkit-linear-gradient(top, $start-color, $end-color);
+      background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+      background: -webkit-linear-gradient(left, $start-color, $end-color);
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+ }
+
 // Common Census
 $cc-light-blue: #066fb9;
 
-.section.title#cc {
-  background: #005C97;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//Gradient colors
+$cc-gradient-start: #363795;
+$cc-gradient-end: #005C97;
+
+.section.title#cc, .bg-cc-gradient {
+  @include background-gradient($cc-gradient-start, $cc-gradient-end, 'horizontal');
   color: $solid-white;
 }
 
