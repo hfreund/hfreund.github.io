@@ -51,16 +51,19 @@ a.project-card#commoncensus:hover {
 
 /*==== Project Stat Block ====*/
 .stat-block {
-  display: flex;
-  flex-flow: row wrap;
+  @include for-phone-only {
+    display: none;
+  }
   @include for-tablet-portrait-up {
+    display: flex;
+    flex-flow: row wrap;
     border-top: 1px solid red;
     margin-top: 10px;
     padding-top: 20px;
   }
 }
 .stat-item {
-  margin-right: 15px;
+  margin-right: 30px;
   h5 {
     margin: 0;
     font-size: 0.8em;
@@ -73,9 +76,6 @@ a.project-card#commoncensus:hover {
   li {
     font-size: 0.75em;
     line-height: 1.4;
-  }
-  @include for-tablet-landscape-up {
-      margin-right: 30px;
   }
 }
 
