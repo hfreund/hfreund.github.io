@@ -27,9 +27,13 @@ $cc-light-blue: #066fb9;
 $cc-gradient-start: #363795;
 $cc-gradient-end: #005C97;
 
-.section.title#cc, .bg-cc-gradient {
+.bg-cc-gradient {
   @include background-gradient($cc-gradient-start, $cc-gradient-end, 'horizontal');
   color: $solid-white;
+  &.reverse {
+    @include background-gradient($cc-gradient-end, $cc-gradient-start, 'horizontal');
+    color: $solid-white;
+  }
 }
 
 // Courageous
