@@ -82,14 +82,7 @@ nav {
   }
 }
 .project-wrapper {
-  height: calc(85vh - 3em);
-  padding: 1.5em;
-  border-bottom: 1px solid #d3d5d7;
-}
-.project-wrapper {
-  height: calc(85vh);
-  border-bottom: 1px solid #d3d5d7;
-  transition: 200ms ease;
+  margin-bottom: 2em;
 }
 .project-inner {
   padding: 1.5em;
@@ -97,19 +90,9 @@ nav {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 0 1.5em;
-}
-.project-inner#courageous {
-    background-color: aquamarine;
-}
-.project-inner#commoncensus {
-  background-color: darkblue;
-  color: #fff;
-}
-.project-inner#riwe {
-  background-color: orange;
-}
-.project-inner > h3 {
-  grid-area: 1 / 1 / 2 / 5;
+  h3 {
+    grid-area: 1 / 1 / 2 / 5;
+  }
 }
 .project-card.hero {
   grid-area: 1/1/2/4;
