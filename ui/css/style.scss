@@ -367,12 +367,12 @@ a.btn-menu {
   background-color: #ff0000;
 }
 
-.bg-moveable-img#cc-user-flow {
+#cc-user-flow {
   position:fixed ;
   top:0;
   width:100%;
   z-index:0;
   height:100%;
-  background-size: calc(100% + 2000px);
   background:url('../../images/cc/cbi/user-flow.png') -1000px -2000px;
+  background-size: calc(100% + 2000px);
   }
