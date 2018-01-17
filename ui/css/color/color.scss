@@ -4,6 +4,8 @@ Color variables
 
 $solid-white: #fff;
 $gray-border: #d3d5d7;
+$box-shadow-color: rgba(14, 29, 44, 0.3);
+$default-text: rgb(14, 29, 44);
 
 @mixin background-gradient($start-color, $end-color, $orientation) {
     background: $start-color;
@@ -19,6 +21,7 @@ $gray-border: #d3d5d7;
       background: radial-gradient(ellipse at center, $start-color, $end-color);
     }
  }
+
 
 // Common Census
 $cc-light-blue: #066fb9;

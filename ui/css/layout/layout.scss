@@ -93,6 +93,42 @@ nav {
   h3 {
     grid-area: 1 / 1 / 2 / 5;
   }
+  .project-list {
+    grid-area: 2 / 1 / 3 / 3;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        margin-right: 0.5em;
+        display: inline-block;
+        a.btn {
+          display: block;
+          background-color: $solid-white;
+          border: 1px solid $solid-white;
+          padding: 0.5em;
+          line-height: 1;
+          text-decoration: none;
+          border-radius: 2px;
+          transition: 150ms ease;
+          color: $default-text;
+          &:hover {
+            box-shadow: 0 1px 5px 1px $box-shadow-color;
+            transition: 150ms ease;
+          }
+          &.inverse {
+            background-color: transparent;
+            color: $solid-white;
+            transition: 150ms ease;
+            &:hover {
+              background-color: $solid-white;
+              color: $default-text;
+              transition: 150ms ease;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .project-card.hero {
   grid-area: 1/1/2/4;
@@ -104,6 +140,7 @@ nav {
   grid-auto-rows: 100px;
   grid-auto-flow: row dense;
 }
+
 
 /*==== PROJECTS ====*/
 .project {
