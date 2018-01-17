@@ -70,7 +70,11 @@ nav {
 .content {
   grid-area: content;
   padding: 2em 1.25em;
-  overflow-y: scroll;
+  @include for-tablet-portrait-up {
+    padding: 4em;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }
 .main.closed {
   .fullpage-wrapper {
