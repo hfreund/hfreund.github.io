@@ -215,7 +215,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     height: calc(100% - 4em);
     width: calc(100% - 5.1em);
     .img-block {
-      padding: 10px;
+      padding: 0.5em;
       border: 1px solid $gray-border;
       &.img-bg {
         background-size: contain;
@@ -226,9 +226,9 @@ body:not(.fp-viewing-0) .project .page-heading {
         padding: 0.5em;
         line-height: 1;
         position: relative;
-        top: calc(100% - 30px);
+        top: calc(100% - 1.75em);
         border-top: 2px solid gray;
-        margin: 5px -10px 0;
+        margin: 0.25em -0.5em 0;
         background-color: #ffffff80;
       }
     }
