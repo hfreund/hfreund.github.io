@@ -109,20 +109,22 @@ nav {
           line-height: 1;
           text-decoration: none;
           border-radius: 2px;
-          transition: 150ms ease;
+          transition: 200ms ease;
           color: $default-text;
+          box-shadow: 0 1px 4px 4px $box-shadow-color;
           &:hover {
-            box-shadow: 0 1px 5px 1px $box-shadow-color;
-            transition: 150ms ease;
+            box-shadow: 0 0 0 0 $box-shadow-color;
+            background-color: $light-gray;
+            transition: 200ms ease;
           }
           &.inverse {
             background-color: transparent;
             color: $solid-white;
-            transition: 150ms ease;
+            transition: 200ms ease;
             &:hover {
-              background-color: $solid-white;
+              background-color: $light-gray;
               color: $default-text;
-              transition: 150ms ease;
+              transition: 200ms ease;
             }
           }
         }
