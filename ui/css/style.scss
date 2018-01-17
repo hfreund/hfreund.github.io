@@ -367,12 +367,28 @@ a.btn-menu {
   background-color: #ff0000;
 }
 
-#cc-user-flow {
-  position:fixed ;
-  top:0;
-  width:100%;
-  z-index:0;
-  height:100%;
-  background:url('../../images/cc/cbi/user-flow.png') -1000px -2000px;
-  background-size: calc(100% + 2000px);
+.wrap {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  img, .cc-user-flow {
+
+
   }
+
+  .cc-user-flow {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background: url('../../images/cc/cbi/user-flow.png') no-repeat center center;
+    background-size: cover;
+
+    transform: scale(1);
+  }
+}

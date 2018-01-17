@@ -78,16 +78,37 @@
 			//$.fn.fullpage.destroyStructure('height');
 
       //movable bg
-    var movementStrength = 1000;
-    var height = movementStrength / $(window).height();
-    var width = movementStrength / $(window).width();
-    $("#cc-user-flow").mousemove(function(e){
-              var pageX = e.pageX - ($(window).width() / 2);
-              var pageY = e.pageY - ($(window).height() / 2);
-              var newvalueX = width * pageX * -1 - 1000;
-              var newvalueY = height * pageY * -1 - 2000;
-              $('#cc-user-flow').css("background-position", newvalueX+"px"+newvalueY+"px");
-    });
+      var lFollowX = 0,
+          lFollowY = 0,
+          x = 0,
+          y = 0,
+          friction = 1 / 10;
+
+      function moveBackground() {
+        x += (lFollowX - x) * friction;
+        y += (lFollowY - y) * friction;
+
+        translate = 'translate(' + x + 'px, ' + y + 'px) scale(2)';
+
+        $('.cc-user-flow').css({
+          '-webit-transform': translate,
+          '-moz-transform': translate,
+          'transform': translate
+        });
+
+        window.requestAnimationFrame(moveBackground);
+      }
+
+      $(window).on('mousemove click', function(e) {
+
+        var lMouseX = Math.max(-1000, Math.min(1000, $(window).width() / 2 - e.clientX));
+        var lMouseY = Math.max(-1000, Math.min(1000, $(window).height() / 2 - e.clientY));
+        lFollowX = (20 * lMouseX) / 10; // 100 : 12 = lMouxeX : lFollow
+        lFollowY = (10 * lMouseY) / 10;
+
+      });
+
+      moveBackground();
   });
 
   </script>
@@ -272,7 +293,7 @@
           </div>
         </div>
         <div class="slide">
-          <div id="cc-user-flow"></div>
+          <div class="cc-user-flow"></div>
         </div>
         <div class="slide bg-cc-gradient">
           <div class="text">
