@@ -154,6 +154,8 @@ body:not(.fp-viewing-0) .project .page-heading {
   align-items: center;
   flex-flow: column;
   justify-content: space-evenly;
+  max-width: 1200px;
+  margin: 0 auto;
   @include for-phone-only {
     flex-flow: column-reverse;
     justify-content: center;
