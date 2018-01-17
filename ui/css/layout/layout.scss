@@ -213,7 +213,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     grid-gap: 3em;
     margin: 3em 4em;
     height: calc(100% - 6em);
-    width: 100%;
+    width: calc(100% - 8em);
     .img-block {
       padding: 10px;
       border: 1px solid $gray-border;
