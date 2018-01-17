@@ -258,21 +258,18 @@ body:not(.fp-viewing-0) .project .page-heading {
       }
     }
   }
-
-  &.split {
-    .fp-tableCell {
-      flex-flow: row;
-      max-width: initial;
-      margin-left: 6em;
-      .text {
-        @include for-tablet-landscape-up {
+  @include for-tablet-landscape-up {
+    &.split {
+      .fp-tableCell {
+        flex-flow: row;
+        max-width: initial;
+        margin-left: 6em;
+        .text {
           flex-grow: 1;
           flex-basis: 66%
         }
       }
-    }
-    &.img-block {
-      @include for-tablet-landscape-up {
+      &.img-block {
         flex-basis: 34%;
         flex-grow: 1;
         padding-left: 0;

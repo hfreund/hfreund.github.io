@@ -350,8 +350,8 @@ a.btn-menu {
 }
 .title-box.fixed {
   position: relative;
-  margin: 2.5em auto 1em;
-  padding: 1.5em 4em;
+  margin: 1.5em auto 1em;
+  padding: 1em 1.5em;
   background-color: #fff;
   box-shadow: 0 1px 15px 2px rgba(14, 29, 44, 0.3);
   text-align: center;
@@ -363,5 +363,9 @@ a.btn-menu {
   h3 {
     margin: 0;
     line-height: 1;
+  }
+  @include for-tablet-portrait-up {
+    margin: 2.5em auto 1em;
+    padding: 1.5em 4em;
   }
 }
