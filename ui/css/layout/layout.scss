@@ -252,8 +252,6 @@ body:not(.fp-viewing-0) .project .page-heading {
       padding: 4em;
     }
     @include for-tablet-landscape-up {
-      flex-basis: 34%;
-      flex-grow: 1;
       padding: 0 4em;
       img {
         min-width: 680px;
@@ -275,8 +273,11 @@ body:not(.fp-viewing-0) .project .page-heading {
     }
     &.img-block {
       @include for-tablet-landscape-up {
+        flex-basis: 34%;
+        flex-grow: 1;
         padding-left: 0;
       }
+    }
   }
   .img-grid {
     display: grid;
@@ -311,7 +312,6 @@ body:not(.fp-viewing-0) .project .page-heading {
       height: calc(100% - 6em);
       width: calc(100% - 8em);
     }
-  }
   }
 }
 .section.footer {
