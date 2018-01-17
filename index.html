@@ -9,18 +9,43 @@
   <title>Hugh Freund</title>
   <meta name="description" content="Portfolio">
   <meta name="author" content="Hugh Freund">
-
-  <link rel="stylesheet" href="ui/css/normalize/normalize.css" type="text/css" />
-	<link rel="stylesheet" href="ui/css/style.min.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" type="text/css" href="/ui/fullpage/dist/jquery.fullpage.css" />
+	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
-	<div class="main">
-		<div class="nav">
-			<div class="content">
+	<div class="main" id="expandNav">
+    <a class="btn-menu" href="#" onclick="change()">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </a>
+    <nav class="navbar">
+      <ul>
+        <li>
+    		    <a href="#">First</a>
+        </li>
+        <li>
+            <a href="#">Second</a>
+        </li>
+        <li>
+    		    <a href="#">Third</a>
+        </li>
+        <li>
+    		    <a href="#">Fourth</a>
+        </li>
+      </ul>
+    </nav>
+		<div class="content">
+  		<div class="title-box">
 				<h1>Hi, I'm Hugh</h1>
 				<h3 class="muted">I help design websites and applications. I also <a href="http://www.teamusaone.com" target="_blank">go sailing</a>.</h3>
 				<br />
@@ -28,13 +53,12 @@
 				<a class="btn" href="mailto:hugh.freund@gmail.com">Send me an email</a>
 				<div class="btn">207.332.2590</div>
 			</div>
-		</div>
-		<div class="content">
+      <h1>Work</h1>
 			<div class="project-wrapper">
 				<div class="project-inner" id="courageous">
 					<div class="project-text">
 						<h3>Courageous Sailing</h3>
-						<p>Courageous Sailing is a non profit sailing school that uses sailing as a platform to inspire learning, personal growth and leadership. I helped clarify their brand identity, rebuilt the website and worked with a third party to deploy an online shopping and customer management experience.</p>
+						<p>Courageous Sailing is a non profit sailing school that uses sailing as a platform to inspire learning, personal growth and leadership. I resolved a fractured brand identity into a cohesive experience throughout programs, e-commerce, marketing, events, and fundraising.</p>
 					</div>
 					<div class="project-array">
 						<a class="project-card hero">
@@ -56,7 +80,7 @@
 				<div class="project-inner" id="commoncensus">
 					<div class="project-text">
 						<h3>Common Census</h3>
-						<p>Common Census is a technology company that builds employee benefit management software. As the sole designer on staff, I was responsible for working on projects ranging from the complete overhaul of the self-service online enrollment web application to rebuilding the company website to shooting and editing product videos.</p>
+						<p>Common Census is a technology company that builds employee benefit management software. Led design process and coordinated programming, client services, and sales teams to build and update web-based insurance applications for multiple user types. Built sales website & collateral to support client acquisition and retention.</p>
 					</div>
 					<div class="project-array">
 							<a class="project-card hero">
@@ -71,19 +95,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="project-wrapper">
-				<div class="project-inner" id="riwe">
-					<div class="project-text">
-						<h3>Rhode Island Workforce Education</h3>
-						<p>lorem ipsum</p>
-					</div>
-					<div class="project-array">
-						<a class="project-card hero">
-								<h4>Website</h4>
-						</a>
-					</div>
-				</div>
-			</div>
 		</div>
+    <div class="bg-fade">
+    </div>
 </body>
 </html>
