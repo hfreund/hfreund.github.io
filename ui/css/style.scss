@@ -164,65 +164,6 @@ a.btn-menu {
   }
 }
 
-/*==== Responsive Sections & Slides ====*/
-
-.slide {
-  .text {
-    @include for-phone-only {
-      padding: 0 2.55em 1.5em;
-      h2 {
-        margin: 0.5em 0 0.25em;
-      }
-      h4 {
-        margin-top: 0.5em;
-      }
-    }
-    @include for-tablet-portrait-only {
-      padding: 4em;
-    }
-    @include for-tablet-landscape-up {
-      padding: 0 4em;
-      flex-basis: 66%;
-      flex-grow: 1;
-      max-width: 680px;
-      margin: 0 auto;
-    }
-  }
-  .title .text {
-    padding: 0 3.5em;
-  }
-  .img-block {
-    overflow-x: hidden;
-    text-align: center;
-      img {
-      width: 100%;
-      height: auto;
-    }
-    &.centered {
-      text-align: center;
-    }
-    @include for-phone-only {
-      padding: 1.5em 2.55em;
-    }
-    @include for-tablet-portrait-only {
-      padding: 4em;
-    }
-    @include for-tablet-landscape-up {
-      flex-basis: 34%;
-      flex-grow: 1;
-      padding: 0 4em;
-        img {
-          min-width: 680px;
-        }
-    }
-  }
-  .split .img-block {
-    @include for-tablet-landscape-up {
-      padding-left: 0;
-    }
-  }
-}
-
 /*==== Arrows ====*/
 
 
