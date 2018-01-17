@@ -221,6 +221,10 @@ a.btn-menu {
     }
   }
 }
+
+/*==== Arrows ====*/
+
+
 .fp-controlArrow.fp-prev {
   @include for-phone-only {
     left: 0;
@@ -336,6 +340,8 @@ a.btn-menu {
   }
 }
 
+/*==== Background Images ====*/
+
 #cc-website-desktop-phone {
   background-image: url('images/cc_website_desktop+phone-03.png');
   background-size: contain;
@@ -354,6 +360,9 @@ a.btn-menu {
 #cc-sketch-dashboard {
   background-image: url('../../images/cc/cbi/sketches/dashboard-flow.png');
 }
+
+
+/*==== Helper Classes ====*/
 
 .fp-slidesNav ul {
   display: flex;
@@ -395,5 +404,19 @@ a.btn-menu {
     background: url('../../images/cc/cbi/user-flow.png') no-repeat center center;
     background-size: cover;
     transform: scale(1);
+  }
+}
+.title-box.fixed {
+  position: relative;
+  margin: 0 auto;
+  padding: 1.5em 4em;
+  background-color: #fff;
+  box-shadow: 0 1px 15px 2px #d3d5d7;
+  &.bottom {
+    top: calc(50vh - 8em);
+  }
+  h3 {
+    margin: 0;
+    line-height: 1;
   }
 }
