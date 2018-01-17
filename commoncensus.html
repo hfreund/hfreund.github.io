@@ -78,6 +78,18 @@
 
 			//$.fn.fullpage.destroyStructure('height');
   });
+  $(document).ready(function() {
+    var movementStrength = 1000;
+    var height = movementStrength / $(window).height();
+    var width = movementStrength / $(window).width();
+    $("#top-image").mousemove(function(e){
+              var pageX = e.pageX - ($(window).width() / 2);
+              var pageY = e.pageY - ($(window).height() / 2);
+              var newvalueX = width * pageX * -1 - 1000;
+              var newvalueY = height * pageY * -1 - 2000;
+              $('#top-image').css("background-position", newvalueX+"px"+newvalueY+"px");
+    });
+  });
 
   </script>
 
@@ -260,18 +272,8 @@
             <h4>Although we had control of the underlying framework, the software has to integrate with over one hundred benefit enrollment modules from different insurance carriers, each with their own compliance requirements and many which were custom made before a time of flexible modules. Here we were severely restricted since almost any change would require compliance approval which could dramatically set the project off track.</h4>
           </div>
         </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc_website_desktop+phone-03.png,
-                        ../images/cc_website_desktop+phone-03@2x.png 2x">
-              <img
-                src="../images/cc_website_desktop+phone-03.png"
-                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
-                alt="Common Census Website">
-            </picture>
-          </div>
+        <div class="slide bg-moveable-img" id="cc-user-flow">
+
         </div>
         <div class="slide bg-cc-gradient">
           <div class="text">

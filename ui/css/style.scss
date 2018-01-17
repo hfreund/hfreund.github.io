@@ -366,3 +366,15 @@ a.btn-menu {
 .slide.red {
   background-color: #ff0000;
 }
+
+.bg-moveable-img {
+  position:fixed ;
+  top:0;
+  width:100%;
+  z-index:0;
+  height:100%;
+  background-size: calc(100% + 2000px);
+  #cc-user-flow {
+    background:url('images/cc/cbi/user-flow.pdf') -1000px -2000px;
+  }
+}
