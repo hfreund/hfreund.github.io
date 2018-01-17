@@ -206,18 +206,24 @@ a.btn-menu {
     @include for-tablet-portrait-only {
       padding: 4em;
     }
+    // @include for-tablet-landscape-up {
+    //   flex-basis: 34%;
+    //   flex-grow: 1;
+    //   padding: 0 4em;
+    //     img {
+    //       min-width: 680px;
+    //     }
+    // }
+  }
+  .split .img-block {
     @include for-tablet-landscape-up {
+      padding-left: 0;
       flex-basis: 34%;
       flex-grow: 1;
       padding: 0 4em;
         img {
           min-width: 680px;
         }
-    }
-  }
-  .split .img-block {
-    @include for-tablet-landscape-up {
-      padding-left: 0;
     }
   }
 }
@@ -412,6 +418,8 @@ a.btn-menu {
   padding: 1.5em 4em;
   background-color: #fff;
   box-shadow: 0 1px 15px 2px #d3d5d7;
+  text-align: center;
+  color: $cc-light-blue;
   &.bottom {
     top: calc(50vh - 8em);
   }

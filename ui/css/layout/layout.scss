@@ -152,6 +152,8 @@ body:not(.fp-viewing-0) .project .page-heading {
 .fp-tableCell {
   display: flex;
   align-items: center;
+  flex-flow: column;
+  justify-content: space-evenly;
   @include for-phone-only {
     flex-flow: column-reverse;
     justify-content: center;
