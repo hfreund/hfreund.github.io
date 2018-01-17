@@ -258,8 +258,13 @@ body:not(.fp-viewing-0) .project .page-heading {
       }
     }
   }
-  @include for-tablet-landscape-up {
     &.split {
+    @include for-tablet-landscape-only {
+      .text {
+        padding-left: 0;
+      }
+    }
+    @include for-tablet-landscape-up {
       .fp-tableCell {
         flex-flow: row;
         max-width: initial;
@@ -268,11 +273,11 @@ body:not(.fp-viewing-0) .project .page-heading {
           flex-grow: 1;
           flex-basis: 66%
         }
-      }
-      &.img-block {
-        flex-basis: 34%;
-        flex-grow: 1;
-        padding-left: 0;
+        .img-block {
+          flex-basis: 34%;
+          flex-grow: 1;
+          padding: 0;
+        }
       }
     }
   }
