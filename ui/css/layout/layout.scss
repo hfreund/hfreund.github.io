@@ -210,8 +210,10 @@ body:not(.fp-viewing-0) .project .page-heading {
   .img-grid {
     display: grid;
     grid-template-rows: repeat(2, [col-start] minmax(100px, 1fr) [col-end]);
-    grid-gap: 2em;
-    margin: 2em;
+    grid-gap: 3em;
+    margin: 3em 4em;
+    height: calc(100% - 6em);
+    width: 100%;
     .img-block {
       padding: 10px;
       border: 1px solid $gray-border;
