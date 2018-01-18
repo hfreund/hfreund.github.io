@@ -5,7 +5,8 @@ Color variables
 $solid-white: #fff;
 $gray-border: #d3d5d7;
 $box-shadow-color: rgba(14, 29, 44, 0.3);
-$default-text: rgb(14, 29, 44);
+$default-text: #606c88;
+$default-link: #3f4c6b;
 $light-gray: #f3f5f7;
 
 @mixin background-gradient($start-color, $end-color, $orientation) {
@@ -23,6 +24,10 @@ $light-gray: #f3f5f7;
     }
  }
 
+.btn.highlight {
+  @include background-gradient($default-text, $default-link, 'vertical');
+  color: $solid-white;
+}
 
 // Common Census
 $cc-light-blue: #066fb9;

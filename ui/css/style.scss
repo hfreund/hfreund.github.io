@@ -431,13 +431,16 @@ img {
   &.inline {
     display: inline-block;
   }
+  &.big {
+    padding: 0.75em 1.25em;
+  }
 }
 .link {
   padding-bottom: 0.02em;
   transition: 200ms ease;
   opacity: 0.7;
   border-bottom: 2px solid;
-  color: inherit;
+  color: $default-link;
   text-decoration: none;
   &:hover {
     opacity: 1;

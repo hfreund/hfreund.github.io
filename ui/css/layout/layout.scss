@@ -95,10 +95,10 @@ nav {
   }
 }
 .title-box {
-  background: $solid-white;
+  background: $light-gray;
   grid-area: 1/2/2/3;
   padding: 2em;
-  box-shadow: 0 2px 4px 0px $box-shadow-color;
+  box-shadow: 0 1px 3px 0px $box-shadow-color;
   @include for-tablet-portrait-up {
     padding: 2em 4em;
   }
@@ -137,11 +137,13 @@ nav {
   }
 }
 .project-wrapper {
-  margin-bottom: 2em;
+  margin-bottom: 4em;
+  box-shadow: 0 1px 3px 0px $box-shadow-color;
 }
 .project-inner {
   display: flex;
   flex-flow: column-reverse;
+  border-radius: 3px;
   .img-bg {
     visibility: hidden;
   }
