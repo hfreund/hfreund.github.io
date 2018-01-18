@@ -107,21 +107,23 @@ nav {
     margin: 0 auto;;
     display: flex;
     flex-flow: column;
+    padding: 0 1.25em;
     @include for-phone-only {
-      padding: 0 1.25em;
       align-items: flex-start;
       .text-block {
         margin-bottom: 1em;
       }
     }
     @include for-tablet-portrait-up {
-      padding: 0 3.5em;
       flex-flow: row;
       justify-content: space-between;
       align-items: last baseline;
       .text-block {
         margin-right: 2em;
       }
+    }
+    @include for-tablet-landscape-up {
+      padding: 0 3.5em;
     }
   }
 }
