@@ -122,8 +122,8 @@ nav {
             color: $solid-white;
             transition: 200ms ease;
             &:hover {
-              background-color: $cc-gradient-end;
-              color: $default-text;
+              background-color: $cc-gradient-start;
+              color: $solid-white;
               transition: 200ms ease;
             }
           }
