@@ -403,14 +403,18 @@ img {
   text-decoration: none;
   border-radius: 2px;
   transition: 200ms ease;
-  color: $default-text;
-  box-shadow: 0 1px 4px 4px $box-shadow-color;
+  color: $link-color;
+  box-shadow: 0 1px 3px 0 $box-shadow-color;
   @include for-phone-only {
     display: block;
   }
+  &.shadow {
+    box-shadow: 0 1px 5px 4px $box-shadow-color;
+  }
   &:hover {
     box-shadow: 0 0 0 0 $box-shadow-color;
-    background-color: $light-gray;
+    background-color: $medium-gray;
+    color: $link-hover-color;
     transition: 200ms ease;
   }
   &.link {
@@ -458,7 +462,7 @@ img {
   transition: 200ms ease;
   opacity: 0.7;
   border-bottom: 2px solid;
-  color: $default-link;
+  color: $link-color;
   text-decoration: none;
   &:hover {
     opacity: 1;
