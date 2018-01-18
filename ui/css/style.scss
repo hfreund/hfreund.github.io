@@ -391,6 +391,7 @@ img {
       display: inline-block;
       @include for-phone-only {
         margin: 0.75em 0;
+        display: block;
       }
     }
   }
