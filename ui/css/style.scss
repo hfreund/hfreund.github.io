@@ -395,15 +395,17 @@ img {
 
 
 .btn {
-  display: block;
   background-color: $solid-white;
-  padding: 0.5em;
+  padding: 0.5em 0.75em;
   line-height: 1;
   text-decoration: none;
   border-radius: 2px;
   transition: 200ms ease;
   color: $default-text;
   box-shadow: 0 1px 4px 4px $box-shadow-color;
+  @include for-phone-only {
+    display: block;
+  }
   &:hover {
     box-shadow: 0 0 0 0 $box-shadow-color;
     background-color: $light-gray;
