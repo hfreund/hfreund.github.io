@@ -94,7 +94,6 @@ nav {
     grid-area: 1 / 1 / 2 / 5;
   }
   .project-list {
-    grid-area: 2 / 1 / 3 / 3;
     ul {
       list-style-type: none;
       padding: 0;
@@ -220,7 +219,6 @@ body:not(.fp-viewing-0) .project .page-heading {
         overflow: hidden;
         max-height: calc(100vh - 4em - 5px);
         img {
-          width: 100%;
           min-width: 580px;
           overflow: hidden;
         }
