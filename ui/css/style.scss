@@ -94,26 +94,32 @@ a.project-card#commoncensus:hover {
   border-right: 1px solid $gray-border;
   background-color: #fff;
   height: 100%;
-  display: block;
+  display: flex;
+  flex-flow: column;
   position: fixed;
   ul {
-      margin: 5em 0 0;
+      margin: 3em 0 0;
       list-style-type: none;
       padding: 0;
       li {
-          margin-left: 2em;
+        margin: 0.75em 3.25em;
+        font-size: 1.4em;
           a {
               text-decoration: none;
               display: block;
-              color: gray;
-              transition: 150ms ease;
+              color: $link-color;
+              transition: 200ms ease;
           }
           a:hover {
-              color: red;
-              background-color: #f3f5f7;
+              color: link-hover-color;
               transition: 200ms ease;
           }
       }
+  }
+  .nav-header {
+    border-bottom: 1px solid $gray-border;
+    padding-left: 4.55em;
+    padding-bottom: 0.25em;
   }
 }
 
