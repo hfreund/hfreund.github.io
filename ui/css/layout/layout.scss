@@ -33,11 +33,20 @@
       visibility: hidden;
     }
   }
+  @if $breakpoint == tablet-portrait-up {
+    @include for-tablet-portrait-up {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
 }
 
 .hide {
   &.phone {
     @include hide(phone);
+  }
+  &.tablet-portrait-up {
+    @include hide(tablet-portrait-up);
   }
 }
 
@@ -86,9 +95,9 @@ nav {
 }
 .project-inner {
   display: flex;
+  flex-flow: column-reverse;
   .project-text {
     padding: 5em 3.5em;
-    flex-basis: 480px;
   }
   .project-list {
     ul {
@@ -129,11 +138,18 @@ nav {
     }
   }
   .img-bg {
-    margin: 3em 0;
-    flex-grow: 1;
+    visibility: hidden;
   }
-  @include for-tablet-portrait-only {
-    flex-flow: column-reverse;
+  @include for-tablet-landscape-up {
+    flex-flow: row;
+    .project-text {
+      flex-basis: 480px;
+    }
+    .img-bg {
+      margin: 3em 0;
+      flex-grow: 1;
+      visibility: visible;
+    }
   }
 }
 
