@@ -6,16 +6,17 @@
   <meta name="robots" content="noindex">
   <meta name="googlebot" content="noindex">
 
-  <title>Courageous Sailing | Hugh Freund</title>
+  <title>Hugh Freund | Courageous Sailing</title>
   <meta name="description" content="Courageous Sailing">
   <meta name="author" content="Hugh Freund">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="/ui/fullpage/dist/jquery.fullpage.css" />
+	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
+  <script src="https://use.fontawesome.com/29fc27d329.js"></script>
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -77,6 +78,9 @@
             initialization();
 
 			//$.fn.fullpage.destroyStructure('height');
+      $('#fullpage').fullpage({
+    		anchors:['top', 'website', 'brand']
+    	});
   });
 
   </script>
@@ -90,18 +94,21 @@
       <span class="menu-bar"></span>
     </a>
     <nav class="navbar">
+      <div class="nav-header">
+        <h3>Hugh Freund</h3>
+      </div>
       <ul>
         <li>
-    		    <a href="#">First</a>
+    		    <a href="/">Work</a>
         </li>
         <li>
-            <a href="#">Second</a>
+            <a href="/resume">Resume</a>
         </li>
         <li>
-    		    <a href="#">Third</a>
+    		    <a href="mailto:hugh.freund@gmail.com" class="hover-unhide">Contact <sup><i class="fa fa-external-link" aria-hidden="true"></i></sup></a>
         </li>
-        <li>
-    		    <a href="#">Fourth</a>
+        <li class="btn-group-inline">
+          <a href="https://github.com/hfreund/hfreund.github.io" target="_blank" class="btn inverse"><i class="fa fa-github" aria-hidden="true"></i></a><a href="https://www.linkedin.com/in/hughfreund/" target="_blank" class="btn inverse"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
         </li>
       </ul>
     </nav>
@@ -109,94 +116,107 @@
       <div class="logo" id="courageous"></div>
     </div>
     <div id="fullpage">
-    	<div class="section">
-        <h1>Courageous Sailing</h1>
-      </div>
-    	<div class="section split">
-        <div class="left text">
-          <h2>Website</h2>
-          <h4>Courageous Sailing uses their website for four audiences: <strong>Parents Youth Program sailors</strong>, <strong>Lessons &amp; Memberships</strong>, <strong>Events</strong>, and <strong>Donors</strong>. Working with the Courageous staff, I redesigned the website to include an ecommerce solution (WooCommerce).</h4>
-          <div class="stat-block">
-            <div class="stat-item">
-              <h5>Technology</h5>
-              <ul>
-                <li>Wordpress</li>
-                <li>WooCommerce</li>
-              </ul>
-            </div>
-            <div class="stat-item">
-              <h5>Skills</h5>
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>PHP</li>
-              </ul>
-            </div>
-            <div class="stat-item">
-              <h5>Role</h5>
-              <ul>
-                <li>Lead Designer</li>
-              </ul>
-            </div>
-          </div>
+    	<div class="section title bg-cs-gradient" id="cs" data-anchor="top">
+        <div class="text">
+          <h1>Courageous Sailing</h1>
+          <h3>A non profit sailing school that uses sailing as a platform to inspire learning, personal growth and leadership.</h3>
         </div>
-        <div class="right">
-          <div class="slide">
-            <picture>
-              <source
-                srcset="../images/cc_website_desktop+phone-03.png,
-                        ../images/cc_website_desktop+phone-03@2x.png 2x">
-              <img
-                src="../images/cc_website_desktop+phone-03.png"
-                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
-                alt="Common Census Website">
-            </picture>
-          </div>
-        	<div class="slide">
-            <picture>
-              <source
-                srcset="../images/cc_website_desktop+phone-03.png,
-                        ../images/cc_website_desktop+phone-03@2x.png 2x">
-              <img
-                src="../images/cc_website_desktop+phone-03.png"
-                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
-                alt="Common Census Website">
-            </picture>
-          </div>
-        	<div class="slide"> Slide 3 </div>
-        	<div class="slide"> Slide 4 </div>
+        <div class="img-block">
+          <picture>
+            <source
+              srcset="../images/cc_website_desktop+phone-03.png,
+                      ../images/cc_website_desktop+phone-03@2x.png 2x">
+            <img
+              src="../images/cc_website_desktop+phone-03.png"
+              srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
+              alt="Common Census Website">
+          </picture>
+        </div>
+        <div class="scroll">
+          <!-- <div class="arw left"></div>
+          <div class="arw top"></div> -->
+          <div class="arw bottom"></div>
+          <!-- <div class="arw right"></div> -->
         </div>
       </div>
-    	<div class="section split">
-        <div class="left text">
-          <h2>Brand</h2>
-          <h4>The organization had received an in-kind rebrand a couple of years before I arrived, however brand assets were organized poorly and not well defined. I collected all the ad-hoc brand variations and developed a simple style guide and library of assets for the team to use. Then I worked with different team leaders to design marketing materials that supported the emergent brand.</h4>
-          <div class="stat-block">
-            <div class="stat-item">
-              <h5>Technology</h5>
-              <ul>
-                <li>Illustrator</li>
-                <li>InDesign</li>
-              </ul>
+    	<div class="section" data-anchor="website">
+        <div class="slide split">
+          <div class="text">
+            <h2>Website Design &amp; Build</h2>
+            <h4>Courageous Sailing uses their website for four audiences: <strong>Parents Youth Program sailors</strong>, <strong>Lessons &amp; Memberships</strong>, <strong>Events</strong>, and <strong>Donors</strong>. Working with the Courageous staff, I redesigned the website to include an ecommerce solution (WooCommerce).</h4>
+            <div class="stat-block">
+              <div class="stat-item">
+                <h5>Technology</h5>
+                <ul>
+                  <li>Wordpress</li>
+                  <li>WooCommerce</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Skills</h5>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>PHP</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Role</h5>
+                <ul>
+                  <li>Lead Designer</li>
+                </ul>
+              </div>
             </div>
-            <div class="stat-item">
-              <h5>Skills</h5>
-              <ul>
-                <li>Design</li>
-                <li>Print Layout</li>
-                <li>Vector &amp; SVG artwork</li>
-              </ul>
-            </div>
-            <div class="stat-item">
-              <h5>Role</h5>
-              <ul>
-                <li>Lead Designer</li>
-              </ul>
-            </div>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc_website_desktop+phone-03.png,
+                        ../images/cc_website_desktop+phone-03@2x.png 2x">
+              <img
+                src="../images/cc_website_desktop+phone-03.png"
+                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
+                alt="Common Census Website">
+            </picture>
           </div>
         </div>
-        <div class="right">
-          <div class="slide">
+        <div class="slide bg-cs-gradient">
+          <div class="text">
+            <h2>Overview</h2>
+            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
+          </div>
+        </div>
+      </div>
+    	<div class="section" data-anchor="brand">
+        <div class="slide split">
+          <div class="text">
+            <h2>Brand</h2>
+            <h4>The organization had received an in-kind rebrand a couple of years before I arrived, however brand assets were organized poorly and not well defined. I collected all the ad-hoc brand variations and developed a simple style guide and library of assets for the team to use. Then I worked with different team leaders to design marketing materials that supported the emergent brand.</h4>
+            <div class="stat-block">
+              <div class="stat-item">
+                <h5>Technology</h5>
+                <ul>
+                  <li>Illustrator</li>
+                  <li>InDesign</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Skills</h5>
+                <ul>
+                  <li>Design</li>
+                  <li>Print Layout</li>
+                  <li>Vector &amp; SVG artwork</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Role</h5>
+                <ul>
+                  <li>Lead Designer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="img-block">
             <picture>
               <source
                 srcset="../images/cc_website_desktop+phone-03.png,
@@ -207,19 +227,12 @@
                 alt="Common Census Website">
             </picture>
           </div>
-        	<div class="slide">
-            <picture>
-              <source
-                srcset="../images/cc_website_desktop+phone-03.png,
-                        ../images/cc_website_desktop+phone-03@2x.png 2x">
-              <img
-                src="../images/cc_website_desktop+phone-03.png"
-                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
-                alt="Common Census Website">
-            </picture>
+        </div>
+        <div class="slide bg-cs-gradient">
+          <div class="text">
+            <h2>Overview</h2>
+            <h4>. . .</h4>
           </div>
-        	<div class="slide"> Slide 3 </div>
-        	<div class="slide"> Slide 4 </div>
         </div>
       </div>
       <div class="section footer fp-auto-height">
