@@ -104,11 +104,18 @@ nav {
   }
   .inner {
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 3.5em;
+    margin: 0 auto;;
     display: flex;
-    justify-content: space-between;
-    align-items: last baseline;
+    flex-flow: column;
+    @include for-phone-only {
+      padding: 0 1.25em;
+    }
+    @include for-tablet-portrait-up {
+      padding: 0 3.5em;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: last baseline;
+    }
   }
 }
 .content {
