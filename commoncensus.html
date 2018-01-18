@@ -76,7 +76,9 @@
             initialization();
 
 			//$.fn.fullpage.destroyStructure('height');
-
+      $('#fullpage').fullpage({
+    		anchors:['firstPage', 'secondPage', 'thirdPage']
+    	});
       //movable bg
       var lFollowX = 0,
           lFollowY = 0,
@@ -112,7 +114,7 @@
   });
 
   </script>
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
       $(document).ready(function() {
           $('html, body').hide();
 
@@ -128,7 +130,7 @@
               $('html, body').show();
           }
       });
-  </script>
+  </script> -->
 
 </head>
 <body>
@@ -158,7 +160,7 @@
       <div class="logo" id="commoncensus"></div>
     </div>
     <div id="fullpage">
-    	<div class="section title bg-cc-gradient" id="cc">
+    	<div class="section title bg-cc-gradient" id="cc" data-anchor="firstPage">
         <div class="text">
           <h1>Common Census</h1>
           <h3>A technology company that builds software for financial services and HR, connecting insurance carriers, brokers, HR, employees, and individuals.</h3>
@@ -181,7 +183,7 @@
           <!-- <div class="arw right"></div> -->
         </div>
       </div>
-      <div class="section" id="web-app">
+      <div class="section" id="web-app" data-anchor="secondPage">
         <div class="slide split">
           <div class="text">
             <h2>Web App Redesign</h2>
@@ -307,7 +309,7 @@
           </div>
         </div>
       </div>
-      <div class="section" id="website">
+      <div class="section" id="website" data-anchor="thirdPage">
         <div class="slide">
           <div class="text">
             <h2>Brand</h2>
