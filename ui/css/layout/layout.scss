@@ -94,8 +94,25 @@ nav {
     transform: translateX(-256px);
   }
 }
+.title-box {
+  background: $solid-white;
+  grid-area: 1/2/2/3;
+  padding: 2em;
+  box-shadow: 0 2px 4px 0px $box-shadow-color;
+  @include for-tablet-portrait-up {
+    padding: 2em 4em;
+  }
+  .inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+  }
+}
 .content {
-  grid-area: content;
+  grid-area: 2/2/3/3;
   padding: 2em 1.25em;
   @include for-tablet-portrait-up {
     padding: 4em;
