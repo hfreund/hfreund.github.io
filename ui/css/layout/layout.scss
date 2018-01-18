@@ -85,12 +85,14 @@ nav {
   margin-bottom: 2em;
 }
 .project-inner {
-  padding: 5em 0 5em 3.5em;
   display: grid;
-  grid-template-columns: 460px auto;
-  grid-gap: 0 4.5em;
+  grid-template-columns: 480px auto;
+  grid-gap: 0 4em;
   h3 {
     grid-area: 1 / 1 / 2 / 5;
+  }
+  .project-text {
+    padding: 5em 3.5em;
   }
   .project-list {
     ul {
@@ -130,16 +132,9 @@ nav {
       }
     }
   }
-}
-.project-card.hero {
-  grid-area: 1/1/2/4;
-}
-.project-array {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-auto-rows: 100px;
-  grid-auto-flow: row dense;
+  .img-bg {
+    margin: 3em 0;
+  }
 }
 
 
