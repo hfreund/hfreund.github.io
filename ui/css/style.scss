@@ -428,6 +428,9 @@ img {
       transition: 200ms ease;
     }
   }
+  &.inline {
+    display: inline-block;
+  }
 }
 .link {
   padding-bottom: 0.02em;
@@ -440,4 +443,10 @@ img {
     opacity: 1;
     transition: 200ms ease;
   }
+}
+.nowrap {
+  white-space: nowrap;
+}
+.noshrink {
+  flex-shrink: 0;
 }
