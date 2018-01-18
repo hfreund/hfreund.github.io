@@ -120,6 +120,8 @@ a.project-card#commoncensus:hover {
     border-bottom: 1px solid $gray-border;
     padding-left: 4.55em;
     padding-bottom: 0.25em;
+    visibility: hidden;
+    transition: 150ms ease;
   }
 }
 
@@ -167,6 +169,10 @@ a.btn-menu {
     opacity: 1;
     transform:rotate(135deg) translateY(7px) translateX(-6px);
     transition: 300ms ease;
+  }
+  .nav-header {
+    visibility: visible;
+    transition: 150ms ease;
   }
 }
 
