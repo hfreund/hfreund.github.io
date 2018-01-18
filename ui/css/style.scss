@@ -434,6 +434,24 @@ img {
   &.big {
     padding: 0.75em 1.25em;
   }
+  &.inverse {
+    border: 1px solid #d3d5d7;
+    background-color: transparent;
+    box-shadow: none;
+    &:hover {
+      background-color: $solid-white;
+    }
+  }
+}
+.btn-group-inline {
+  display: flex;
+  flex-flow: row;
+  .btn {
+    margin-right: 1em;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
 }
 .link {
   padding-bottom: 0.02em;
