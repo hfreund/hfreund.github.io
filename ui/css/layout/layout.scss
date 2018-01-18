@@ -33,13 +33,19 @@
       visibility: hidden;
     }
   }
-  @if $breakpoint == tablet-portrait-up {
+  @if $breakpoint == tabletPortraitOnly{
+    @include for-tablet-portrait-only {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+  @if $breakpoint == tabletPortraitUp {
     @include for-tablet-portrait-up {
       display: none !important;
       visibility: hidden;
     }
   }
-  @if $breakpoint == tablet-landscape-up {
+  @if $breakpoint == tabletLandscapeUp {
     @include for-tablet-landscape-up {
       display: none !important;
       visibility: hidden;
@@ -51,11 +57,14 @@
   &.phone {
     @include hide(phone);
   }
+  &.tablet {
+    @include hide(tabletPortraitOnly);
+  }
   &.tablet-portrait-up {
-    @include hide(tablet-portrait-up);
+    @include hide(tabletPortraitUp);
   }
   &.tablet-landscape-up {
-    @include hide(table-landscape-up);
+    @include hide(tableLandscapeUp);
   }
 }
 
