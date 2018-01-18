@@ -2,13 +2,13 @@
 TYPOGRAPHY
 ================================*/
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
-$text-color: #606c88;
+$text-color: rgb(63, 76, 107); //#606c88;
 $quiet-color: #ccc;
 $loud-color: #000;
 $heading-color: #111;
 
-$link-color: desaturate(#3f4c6b, 50%);
-$link-hover-color: saturate(#3f4c6b, 30%);
+$link-color: rgba($text-color, 0.5);
+$link-hover-color: saturate($text-color, 50%);
 $link-visited-color: purple;
 
 $base-font-family: 'Nunito', sans-serif;
