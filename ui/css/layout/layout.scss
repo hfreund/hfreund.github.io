@@ -103,20 +103,12 @@ nav {
     margin: 0 auto;
   }
 }
-.main.closed {
-  .fullpage-wrapper {
-
-  }
-}
 .project-wrapper {
   margin-bottom: 2em;
 }
 .project-inner {
   display: flex;
   flex-flow: column-reverse;
-  .project-text {
-    padding: 5em 3.5em;
-  }
   .project-list {
     ul {
       list-style-type: none;
@@ -158,10 +150,27 @@ nav {
   .img-bg {
     visibility: hidden;
   }
+  @include for-phone-only {
+    .project-text {
+      padding: 0 2em 3em;
+    }
+    .img-block {
+      padding: 4em 2em 2em;
+    }
+  }
+  @include for-tablet-portrait-only {
+    .project-text {
+      padding: 0 3.5em 4em;
+    }
+    .img-block {
+      padding: 4em 3.5em;
+    }
+  }
   @include for-tablet-landscape-up {
     flex-flow: row;
     .project-text {
-      flex-basis: 480px;
+      flex-basis: 440px;
+        padding: 5em 3.5em;
     }
     .img-bg {
       margin: 3em 0;
