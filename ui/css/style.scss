@@ -92,7 +92,7 @@ a.project-card#commoncensus:hover {
 /*==== Navigation ====*/
 .navbar {
   border-right: 1px solid $gray-border;
-  background-color: #fff;
+  background-color: $solid-white;
   height: 100%;
   display: flex;
   flex-flow: column;
@@ -111,7 +111,7 @@ a.project-card#commoncensus:hover {
           transition: 200ms ease;
       }
       a:hover {
-          color: link-hover-color;
+          color: $link-hover-color;
           transition: 200ms ease;
       }
       .btn.inverse {
