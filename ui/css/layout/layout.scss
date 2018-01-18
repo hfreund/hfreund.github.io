@@ -39,6 +39,12 @@
       visibility: hidden;
     }
   }
+  @if $breakpoint == tablet-landscape-up {
+    @include for-tablet-landscape-up {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
 }
 
 .hide {
@@ -47,6 +53,9 @@
   }
   &.tablet-portrait-up {
     @include hide(tablet-portrait-up);
+  }
+  &.tablet-landscape-up {
+    @include hide(table-landscape-up);
   }
 }
 
