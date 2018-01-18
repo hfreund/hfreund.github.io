@@ -488,12 +488,10 @@ img {
 .link {
   padding-bottom: 0.02em;
   transition: 200ms ease;
-  opacity: 0.7;
   border-bottom: 2px solid;
   color: $link-color;
   text-decoration: none;
   &:hover {
-    opacity: 1;
     transition: 200ms ease;
   }
 }
