@@ -5,8 +5,6 @@ Color variables
 $solid-white: #fff;
 $gray-border: #d3d5d7;
 $box-shadow-color: rgba(14, 29, 44, 0.3);
-$text-color: #606c88;
-$link-color: #3f4c6b;
 $light-gray: #f3f5f7;
 $medium-gray: #c2c2c2;
 
@@ -24,11 +22,6 @@ $medium-gray: #c2c2c2;
       background: radial-gradient(ellipse at center, $start-color, $end-color);
     }
  }
-
-.btn.highlight {
-  @include background-gradient($text-color, $link-color, 'vertical');
-  color: $solid-white;
-}
 
 // Common Census
 $cc-light-blue: #066fb9;

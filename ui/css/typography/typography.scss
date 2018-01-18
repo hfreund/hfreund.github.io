@@ -7,7 +7,7 @@ $quiet-color: #ccc;
 $loud-color: #000;
 $heading-color: #111;
 
-$link-color: #3f4c6b;
+$link-color: desaturate(#3f4c6b, 20%);
 $link-hover-color: saturate(#3f4c6b, 20%);
 $link-visited-color: purple;
 
