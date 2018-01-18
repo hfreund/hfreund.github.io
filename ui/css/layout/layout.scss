@@ -104,7 +104,6 @@ nav {
         a.btn {
           display: block;
           background-color: $solid-white;
-          border: 1px solid $solid-white;
           padding: 0.5em;
           line-height: 1;
           text-decoration: none;
@@ -118,11 +117,13 @@ nav {
             transition: 200ms ease;
           }
           &.inverse {
-            background-color: $cc-gradient-start;
+            background-color: transparent;
             color: $solid-white;
             transition: 200ms ease;
+            box-shadow: 0 0 0 0;
+            opacity: 0.7;
             &:hover {
-              background-color: $cc-gradient-start;
+              background-color: transparent;
               color: $solid-white;
               transition: 200ms ease;
             }
