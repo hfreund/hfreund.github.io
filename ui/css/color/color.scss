@@ -44,3 +44,16 @@ $cc-gradient-end: #005C97;
 $cs-yellow: yellow;
 $cs-orange: orange;
 $cs-blue: blue;
+
+//Gradient colors
+$cs-gradient-start: #fe8c00;
+$cs-gradient-end: #f83600;
+
+.bg-cs-gradient {
+  @include background-gradient($cs-gradient-start, $cs-gradient-end, 'horizontal');
+  color: $solid-white;
+  &.reverse {
+    @include background-gradient($cs-gradient-end, $cs-gradient-start, 'horizontal');
+    color: $solid-white;
+  }
+}
