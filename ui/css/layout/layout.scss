@@ -237,7 +237,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       overflow: hidden;
       justify-content: space-between;
       grid-template-areas: "empty title image" "scroll scroll scroll";
-      min-width: 100%
+      max-width: initial;
     }
     .text {
       grid-area: title;
