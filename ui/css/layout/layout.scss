@@ -392,14 +392,24 @@ body:not(.fp-viewing-0) .project .page-heading {
       padding: 0;
       border: 1px solid $gray-border;
       border-radius: 2px;
-      flex-basis: 300px;
+      flex-basis: 350px;
       flex-grow: 1;
       margin: 1em;
       line-height: 0;
+      height: calc(50vh - 4em);
+      overflow: hidden;
+      position: relative;
+      top: -1em;
+      img {
+        min-width: 115%;
+      }
       .title-box.fixed {
         display: block;
         margin: 0px auto;
         padding: 0.75em 1.5em;
+        width: calc(100% - 3em);
+        bottom: 0;
+        position: absolute;
       }
     }
   }
