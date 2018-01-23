@@ -237,16 +237,16 @@ body:not(.fp-viewing-0) .project .page-heading {
       overflow: hidden;
       justify-content: space-between;
       grid-template-areas: "empty title image" "scroll scroll scroll";
-      min-width: 100%;
+      min-width: 100%
     }
     .text {
       grid-area: title;
-      padding: 0 2em 0 0;
+      padding: 2em 1em 0;
       display: flex;
       flex-flow: column;
       justify-content: center;
       @include for-tablet-landscape-up {
-        padding: 0 3em;
+        padding: 0 2em 0 0;
       }
     }
     .img-block {
@@ -254,11 +254,14 @@ body:not(.fp-viewing-0) .project .page-heading {
       display: flex;
       align-self: center;
       picture {
-        padding-top: 4em;
+        padding: 4em 0;
         overflow: hidden;
         max-height: calc(100vh - 4em - 5px);
+        @include for-tablet-landscape-up {
+          padding: 0;
+        };
         img {
-          min-width: 780px;
+          min-width: 900px;
           overflow: hidden;
         }
       }
