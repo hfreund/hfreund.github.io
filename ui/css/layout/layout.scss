@@ -124,27 +124,27 @@ nav {
 .title-box {
   background: $light-gray;
   grid-area: 1/2/2/3;
-  padding: 2em;
+  padding: 2em 1.25em;
   box-shadow: 0 1px 3px 0px $box-shadow-color;
   @include for-tablet-portrait-up {
     padding: 2em 4em;
   }
   .inner {
     max-width: 1400px;
-    margin: 0 auto;;
+    margin: 0 auto;
     display: flex;
     flex-flow: column;
-    padding: 0 1.25em;
     @include for-phone-only {
       align-items: flex-start;
       .text-block {
-        margin-bottom: 1em;
+        margin-top: 1em;
       }
     }
     @include for-tablet-portrait-up {
       flex-flow: row;
       justify-content: space-between;
       align-items: last baseline;
+      padding: 0 1.25em;
       .text-block {
         margin-right: 2em;
       }
