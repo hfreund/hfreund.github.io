@@ -228,11 +228,11 @@ body:not(.fp-viewing-0) .project .page-heading {
 .section.title {
   .fp-tableCell {
     display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 65% 35%;
-    grid-template-areas: "title image" "scroll scroll";
+    grid-template-rows: 1fr auto 50px;
+    grid-template-areas: "image" "title" "scroll";
     @include for-tablet-landscape-up {
       grid-template-columns: 1fr 450px 5fr;
+      grid-template-rows: 1fr auto;
       grid-gap: 3em 6em;
       overflow: hidden;
       justify-content: space-between;
@@ -241,7 +241,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     }
     .text {
       grid-area: title;
-      padding: 2em 1em 0;
+      padding: 1em 3.55em;
       display: flex;
       flex-flow: column;
       justify-content: center;
@@ -254,7 +254,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       display: flex;
       align-self: center;
       picture {
-        padding: 4em 0;
+        padding: 3em 3.55em;
         overflow: hidden;
         max-height: calc(100vh - 4em - 5px);
         @include for-tablet-landscape-up {
