@@ -241,7 +241,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     }
     .text {
       grid-area: title;
-      padding: 1em 2.55em;
+      padding: 0 2.55em;
       @include for-tablet-landscape-up {
         padding: 0 2em 0 0;
         display: flex;
@@ -255,7 +255,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       align-self: center;
       overflow: hidden;
       picture {
-        padding: 2em 2.55em;
+        padding: 3em 2.55em 1em;
         overflow: hidden;
         max-height: calc(100vh - 4em - 5px);
         @include for-tablet-landscape-up {
