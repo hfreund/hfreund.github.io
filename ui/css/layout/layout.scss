@@ -389,6 +389,9 @@ body:not(.fp-viewing-0) .project .page-heading {
       padding: 0;
       border: 1px solid $gray-border;
       border-radius: 2px;
+      flex-basis: 300px;
+      flex-grow: 1;
+      margin: 1em;
       picture {
         line-height: 0;
       }
