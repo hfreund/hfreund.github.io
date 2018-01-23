@@ -286,19 +286,19 @@ body:not(.fp-viewing-0) .project .page-heading {
         padding: 1em 2.55em;
         overflow: hidden;
         max-height: calc(100vh - 4em - 5px);
-        @include for-tablet-landscape-up {
-          padding: 0;
-          align-self: center;
-          img {
-            min-width: 900px;
-            overflow: hidden;
-          }
-        }
       }
-      &.two-up {
+      @include for-tablet-landscape-up {
+        padding: 0;
+        align-self: center;
         img {
-          min-width: initial;
-          overflow: inherit;
+          min-width: 900px;
+          overflow: hidden;
+        }
+        &.two-up {
+          img {
+            min-width: initial;
+            overflow: inherit;
+          }
         }
       }
       @include for-tablet-landscape-up {
