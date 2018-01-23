@@ -289,7 +289,7 @@ body:not(.fp-viewing-0) .project .page-heading {
         @include for-tablet-landscape-up {
           padding: 0;
           align-self: center;
-          img {
+          img:not(.two-up) {
             min-width: 900px;
             overflow: hidden;
           }
