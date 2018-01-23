@@ -244,14 +244,6 @@ body:not(.fp-viewing-0) .project .page-heading {
   justify-content: space-evenly;
   max-width: 1200px;
   margin: 0 auto;
-  @include for-phone-only {
-    flex-flow: column-reverse;
-    justify-content: center;
-  }
-  @include for-tablet-portrait-only {
-    flex-flow: column-reverse;
-    justify-content: space-evenly;
-  }
 }
 .section.title {
   .fp-tableCell {
@@ -363,6 +355,16 @@ body:not(.fp-viewing-0) .project .page-heading {
     }
   }
     &.split {
+      .fp-tableCell {
+        @include for-phone-only {
+          flex-flow: column-reverse;
+          justify-content: center;
+        }
+        @include for-tablet-portrait-only {
+          flex-flow: column-reverse;
+          justify-content: space-evenly;
+        }
+      }
     @include for-tablet-landscape-only {
       .text {
         padding-left: 0;
