@@ -40,7 +40,9 @@
     left: 0;
   }
   .orientation-overlay {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     visibility: visible;
     position: fixed;
     height: 100%;
