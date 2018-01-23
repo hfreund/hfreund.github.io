@@ -268,7 +268,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     }
     .text {
       grid-area: title;
-      padding: 0 2.55em;
+      padding: 2em 2.55em;
       @include for-tablet-landscape-up {
         padding: 0 2em 0 0;
         display: flex;
@@ -293,6 +293,9 @@ body:not(.fp-viewing-0) .project .page-heading {
             overflow: hidden;
           }
         }
+      }
+      @include for-tablet-landscape-up {
+        align-self: center;
       }
     }
     .scroll {
