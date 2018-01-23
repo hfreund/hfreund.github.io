@@ -282,6 +282,10 @@ body:not(.fp-viewing-0) .project .page-heading {
       display: flex;
       align-self: end;
       overflow: hidden;
+      &.two-up img{
+        min-width: initial;
+        overflow: inherit;
+      }
       picture {
         padding: 1em 2.55em;
         overflow: hidden;
@@ -289,7 +293,7 @@ body:not(.fp-viewing-0) .project .page-heading {
         @include for-tablet-landscape-up {
           padding: 0;
           align-self: center;
-          img:not(.two-up) {
+          img {
             min-width: 900px;
             overflow: hidden;
           }
