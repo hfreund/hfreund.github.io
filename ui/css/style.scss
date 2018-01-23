@@ -391,15 +391,17 @@ img {
     transform: scale(1);
   }
 }
-.title-box.fixed {
-  position: relative;
+.title-box {
   margin: 1.5em auto 1em;
   padding: 1em 1.5em;
-  background-color: #fff;
+  background-color: $solid-white;
   box-shadow: 0 1px 15px 2px $box-shadow-color;
   text-align: center;
   color: $cc-light-blue;
   display: inline-block;
+  &.fixed {
+    position: relative;
+  }
   &.bottom {
     top: calc(50vh - 8em);
   }

@@ -341,6 +341,10 @@ body:not(.fp-viewing-0) .project .page-heading {
       width: 100%;
       height: auto;
     }
+    &.two-up {
+      display: flex;
+      flex-flow: row;
+    }
     &.centered {
       text-align: center;
     }
