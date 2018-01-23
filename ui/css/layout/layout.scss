@@ -253,6 +253,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       grid-area: image;
       display: flex;
       align-self: center;
+      overflow: hidden;
       picture {
         padding: 3em 3.55em;
         overflow: hidden;
