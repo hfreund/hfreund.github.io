@@ -259,10 +259,10 @@ body:not(.fp-viewing-0) .project .page-heading {
         max-height: calc(100vh - 4em - 5px);
         @include for-tablet-landscape-up {
           padding: 0;
-        }
-        img {
-          min-width: 900px;
-          overflow: hidden;
+          img {
+            min-width: 900px;
+            overflow: hidden;
+          }
         }
       }
     }
