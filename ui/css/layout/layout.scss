@@ -386,12 +386,13 @@ body:not(.fp-viewing-0) .project .page-heading {
     height: calc(100% - 4em);
     width: calc(100% - 5.1em);
     .img-block {
-      padding: 0.5em;
+      padding: 0;
       border: 1px solid $gray-border;
+      border-radius: 2px;
       picture {
         line-height: 0;
       }
-      .title-box {
+      .title-box.fixed {
         display: block;
         margin: 0px auto;
         padding: 0.75em 1.5em;
