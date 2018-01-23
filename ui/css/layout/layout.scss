@@ -252,14 +252,15 @@ body:not(.fp-viewing-0) .project .page-heading {
     .img-block {
       grid-area: image;
       display: flex;
-      align-self: center;
+      align-self: end;
       overflow: hidden;
       picture {
-        padding: 3em 2.55em 1em;
+        padding: 1em 2.55em;
         overflow: hidden;
         max-height: calc(100vh - 4em - 5px);
         @include for-tablet-landscape-up {
           padding: 0;
+          align-self: center;
           img {
             min-width: 900px;
             overflow: hidden;
