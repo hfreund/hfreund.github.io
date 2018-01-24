@@ -98,12 +98,28 @@ a.project-card#commoncensus:hover {
   flex-flow: column;
   position: fixed;
   ul {
-    margin: 3em 0 0;
+    margin: 4.5em 0 0;
     list-style-type: none;
     padding: 0;
+    ul {
+      margin: 1em 0;
+      font-size: 0.8em;
+      li {
+        a {
+          padding: 0 0.5em;
+          border-left: 2px solid transparent;
+          &:hover {
+            border-left: 2px solid;
+          }
+        }
+      }
+    }
     li {
-      margin: 0.75em 3.25em;
-      font-size: 1.4em;
+      margin: 0.25em 3.25em;
+      font-size: 1em;
+      &.title {
+        font-weight: 900;
+      }
       a {
           text-decoration: none;
           display: block;
