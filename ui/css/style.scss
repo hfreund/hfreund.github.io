@@ -121,6 +121,18 @@ a.project-card#commoncensus:hover {
       &.title {
         font-weight: 900;
       }
+      &.btn-group-inline {
+        margin-top: 3em;
+        a {
+          display: inline;
+        }
+        .btn {
+          margin-right: 1em;
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+      }
       a {
           text-decoration: none;
           display: block;
@@ -518,15 +530,6 @@ img {
     box-shadow: none;
     &:hover {
       background-color: $solid-white;
-    }
-  }
-}
-.btn-group-inline {
-  margin-top: 3em;
-  .btn {
-    margin-right: 1em;
-    &:last-of-type {
-      margin: 0;
     }
   }
 }
