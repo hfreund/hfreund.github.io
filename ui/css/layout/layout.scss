@@ -441,7 +441,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       height: calc(50vh - 5em);
       overflow: hidden;
       picture {
-        align-items: stretch;
+        align-items: flex-start;
       }
       img {
         min-width: 115%;
