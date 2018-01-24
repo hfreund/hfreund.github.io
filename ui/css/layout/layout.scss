@@ -250,9 +250,9 @@ body:not(.fp-viewing-0) .project .page-heading {
     grid-template-rows: 1fr auto 50px;
     grid-template-areas: "image" "title" "scroll";
     @include for-tablet-landscape-up {
-      grid-template-columns: 1fr 450px 5fr;
+      grid-template-columns: 1fr 450px 6fr;
       grid-template-rows: 1fr auto;
-      grid-gap: 3em 6em;
+      grid-gap: 0 5em;
       overflow: hidden;
       justify-content: space-between;
       grid-template-areas: "empty title image" "scroll scroll scroll";
