@@ -78,7 +78,7 @@
 
 			//$.fn.fullpage.destroyStructure('height');
       $('#fullpage').fullpage({
-    		anchors:['top', 'webapp', 'website', 'brand']
+    		anchors:['top', 'webapp', 'patterns', 'cba-future', 'website']
     	});
       //movable bg
       var lFollowX = 0,
@@ -129,11 +129,42 @@
     </a>
     <nav class="navbar">
       <div class="nav-header">
-        <h3>Hugh Freund</h3>
+        <h3><a href="/">Hugh Freund</a></h3>
       </div>
       <ul>
         <li>
-    		    <a href="/">Work</a>
+    		    <a href="/">Home</a>
+        </li>
+        <li>
+          Work
+          <ul>
+            <li>
+              <strong><a href="/commoncensus">Common Census</a></strong>
+            </li>
+            <li>
+              <a href="/commoncensus#webapp" class="btn link">Web App</a>
+            </li>
+            <li>
+              <a href="/commoncensus#patterns" class="btn link">UI Patterns</a>
+            </li>
+            <li>
+              <a href="/commoncensus#cba-future" class="btn link">Admin App</a>
+            </li>
+            <li>
+              <a href="/commoncensus#website" class="btn link">Website</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <strong><a href="/commoncensus">Courageous Sailing</a></strong>
+            </li>
+            <li>
+              <a href="/courageous#website" class="btn link">Website</a>
+            </li>
+            <li>
+              <a href="/courageous#brand" class="btn link">Brand + Marketing</a>
+            </li>
+          </ul>
         </li>
         <li>
             <a href="/resume">Resume</a>
@@ -387,6 +418,260 @@
           </div>
         </div>
       </div>
+      <div class="section" data-anchor="patterns">
+        <div class="slide split">
+          <div class="text">
+            <h2>Web App UI Patterns</h2>
+            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
+            <div class="stat-block">
+              <div class="stat-item">
+                <h5>Technology</h5>
+                <ul>
+                  <li>IA/Sketching</li>
+                  <li>Mockups</li>
+                  <li>Coding</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Skills</h5>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Bootstrap</li>
+                  <li>Git</li>
+                  <li>ASP.NET</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Role</h5>
+                <ul>
+                  <li>Lead Designer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc/cba/newui/cba_ee-browse.png">
+              <img
+                src="../images/cc/cba/newui/cba_ee-browse.png"
+                srcset="../images/cc/cba/newui/cba_ee-browse.png"
+                alt="Common Benefits Administrator">
+            </picture>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient">
+          <div class="text">
+            <h2>Overview</h2>
+            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient reverse">
+            <div class="title-box fixed">
+              <h3>Existing Condition</h3>
+            </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc_website_desktop+phone-03.png,
+                        ../images/cc_website_desktop+phone-03@2x.png 2x">
+              <img
+                src="../images/cc_website_desktop+phone-03.png"
+                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
+                alt="Common Census Website">
+            </picture>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient">
+          <div class="text">
+            <h2>Approach</h2>
+            <h4>Working with the development team, sales team, and client services team, we created an all new enrollment platform that met current needs of our clients while maintaining flexibility for future development we anticiapted would occure over the next 24-36 months. It was important to strike a balance between updating the UI to modern standards that would also dovetail with existing modules while not disrupting a user experience that many clients had become accustomed to.</h4>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="img-grid">
+            <div class="img-block img-bg" id="cc-sketch-login">
+              <h5>
+                Login Flow
+              </h5>
+            </div>
+            <div class="img-block img-bg" id="cc-sketch-login-2">
+              <h5>
+                Login Flow
+              </h5>
+            </div>
+            <div class="img-block img-bg hide phone" id="cc-sketch-mode-switching">
+              <h5>
+                Mode Switching Flow
+              </h5>
+            </div>
+            <div class="img-block img-bg hide phone" id="cc-sketch-dashboard">
+              <h5>
+                4th h5
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient">
+          <div class="text">
+            <h2>Challenges</h2>
+            <h4>Although we had control of the underlying framework, the software has to integrate with over one hundred benefit enrollment modules from different insurance carriers, each with their own compliance requirements and many which were custom made before a time of flexible modules. Here we were severely restricted since almost any change would require compliance approval which could dramatically set the project off track.</h4>
+          </div>
+        </div>
+        <div class="slide wrap">
+          <div class="title-box fixed bottom">
+            <h3>User Flow</h3>
+          </div>
+          <div class="cc-user-flow"></div>
+        </div>
+        <div class="slide bg-cc-gradient">
+          <div class="text">
+            <h2>Solution</h2>
+            <h4>The final solution was rolled out in phases to individual cases for user testing and feedback.</h4>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient reverse">
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc_website_desktop+phone-03.png,
+                        ../images/cc_website_desktop+phone-03@2x.png 2x">
+              <img
+                src="../images/cc_website_desktop+phone-03.png"
+                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
+                alt="Common Census Website">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="section" data-anchor="cba-future">
+        <div class="slide split">
+          <div class="text">
+            <h2>Web App UI Patterns</h2>
+            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
+            <div class="stat-block">
+              <div class="stat-item">
+                <h5>Technology</h5>
+                <ul>
+                  <li>IA/Sketching</li>
+                  <li>Mockups</li>
+                  <li>Coding</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Skills</h5>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Bootstrap</li>
+                  <li>Git</li>
+                  <li>ASP.NET</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Role</h5>
+                <ul>
+                  <li>Lead Designer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc/cba/newui/cba_ee-browse.png">
+              <img
+                src="../images/cc/cba/newui/cba_ee-browse.png"
+                srcset="../images/cc/cba/newui/cba_ee-browse.png"
+                alt="Common Benefits Administrator">
+            </picture>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient">
+          <div class="text">
+            <h2>Overview</h2>
+            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient reverse">
+            <div class="title-box fixed">
+              <h3>Existing Condition</h3>
+            </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc_website_desktop+phone-03.png,
+                        ../images/cc_website_desktop+phone-03@2x.png 2x">
+              <img
+                src="../images/cc_website_desktop+phone-03.png"
+                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
+                alt="Common Census Website">
+            </picture>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient">
+          <div class="text">
+            <h2>Approach</h2>
+            <h4>Working with the development team, sales team, and client services team, we created an all new enrollment platform that met current needs of our clients while maintaining flexibility for future development we anticiapted would occure over the next 24-36 months. It was important to strike a balance between updating the UI to modern standards that would also dovetail with existing modules while not disrupting a user experience that many clients had become accustomed to.</h4>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="img-grid">
+            <div class="img-block img-bg" id="cc-sketch-login">
+              <h5>
+                Login Flow
+              </h5>
+            </div>
+            <div class="img-block img-bg" id="cc-sketch-login-2">
+              <h5>
+                Login Flow
+              </h5>
+            </div>
+            <div class="img-block img-bg hide phone" id="cc-sketch-mode-switching">
+              <h5>
+                Mode Switching Flow
+              </h5>
+            </div>
+            <div class="img-block img-bg hide phone" id="cc-sketch-dashboard">
+              <h5>
+                4th h5
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient">
+          <div class="text">
+            <h2>Challenges</h2>
+            <h4>Although we had control of the underlying framework, the software has to integrate with over one hundred benefit enrollment modules from different insurance carriers, each with their own compliance requirements and many which were custom made before a time of flexible modules. Here we were severely restricted since almost any change would require compliance approval which could dramatically set the project off track.</h4>
+          </div>
+        </div>
+        <div class="slide wrap">
+          <div class="title-box fixed bottom">
+            <h3>User Flow</h3>
+          </div>
+          <div class="cc-user-flow"></div>
+        </div>
+        <div class="slide bg-cc-gradient">
+          <div class="text">
+            <h2>Solution</h2>
+            <h4>The final solution was rolled out in phases to individual cases for user testing and feedback.</h4>
+          </div>
+        </div>
+        <div class="slide bg-cc-gradient reverse">
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc_website_desktop+phone-03.png,
+                        ../images/cc_website_desktop+phone-03@2x.png 2x">
+              <img
+                src="../images/cc_website_desktop+phone-03.png"
+                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
+                alt="Common Census Website">
+            </picture>
+          </div>
+        </div>
+      </div>
       <div class="section" data-anchor="website">
         <div class="slide split">
           <div class="text">
@@ -507,133 +792,6 @@
           </div>
         </div>
         <div class="slide bg-cc-gradient">
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc_website_desktop+phone-03.png,
-                        ../images/cc_website_desktop+phone-03@2x.png 2x">
-              <img
-                src="../images/cc_website_desktop+phone-03.png"
-                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
-                alt="Common Census Website">
-            </picture>
-          </div>
-        </div>
-      </div>
-      <div class="section" data-anchor="brand">
-        <div class="slide split">
-          <div class="text">
-            <h2>Web App UI Patterns</h2>
-            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
-            <div class="stat-block">
-              <div class="stat-item">
-                <h5>Technology</h5>
-                <ul>
-                  <li>IA/Sketching</li>
-                  <li>Mockups</li>
-                  <li>Coding</li>
-                </ul>
-              </div>
-              <div class="stat-item">
-                <h5>Skills</h5>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Bootstrap</li>
-                  <li>Git</li>
-                  <li>ASP.NET</li>
-                </ul>
-              </div>
-              <div class="stat-item">
-                <h5>Role</h5>
-                <ul>
-                  <li>Lead Designer</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/newui/cba_ee-browse.png">
-              <img
-                src="../images/cc/cba/newui/cba_ee-browse.png"
-                srcset="../images/cc/cba/newui/cba_ee-browse.png"
-                alt="Common Benefits Administrator">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="text">
-            <h2>Overview</h2>
-            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-            <div class="title-box fixed">
-              <h3>Existing Condition</h3>
-            </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc_website_desktop+phone-03.png,
-                        ../images/cc_website_desktop+phone-03@2x.png 2x">
-              <img
-                src="../images/cc_website_desktop+phone-03.png"
-                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
-                alt="Common Census Website">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="text">
-            <h2>Approach</h2>
-            <h4>Working with the development team, sales team, and client services team, we created an all new enrollment platform that met current needs of our clients while maintaining flexibility for future development we anticiapted would occure over the next 24-36 months. It was important to strike a balance between updating the UI to modern standards that would also dovetail with existing modules while not disrupting a user experience that many clients had become accustomed to.</h4>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="img-grid">
-            <div class="img-block img-bg" id="cc-sketch-login">
-              <h5>
-                Login Flow
-              </h5>
-            </div>
-            <div class="img-block img-bg" id="cc-sketch-login-2">
-              <h5>
-                Login Flow
-              </h5>
-            </div>
-            <div class="img-block img-bg hide phone" id="cc-sketch-mode-switching">
-              <h5>
-                Mode Switching Flow
-              </h5>
-            </div>
-            <div class="img-block img-bg hide phone" id="cc-sketch-dashboard">
-              <h5>
-                4th h5
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="text">
-            <h2>Challenges</h2>
-            <h4>Although we had control of the underlying framework, the software has to integrate with over one hundred benefit enrollment modules from different insurance carriers, each with their own compliance requirements and many which were custom made before a time of flexible modules. Here we were severely restricted since almost any change would require compliance approval which could dramatically set the project off track.</h4>
-          </div>
-        </div>
-        <div class="slide wrap">
-          <div class="title-box fixed bottom">
-            <h3>User Flow</h3>
-          </div>
-          <div class="cc-user-flow"></div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="text">
-            <h2>Solution</h2>
-            <h4>The final solution was rolled out in phases to individual cases for user testing and feedback.</h4>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
           <div class="img-block">
             <picture>
               <source
