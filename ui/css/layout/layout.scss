@@ -378,18 +378,6 @@ body:not(.fp-viewing-0) .project .page-heading {
         margin-bottom: 0;
       }
     }
-    @include for-tablet-landscape-only {
-      .fp-tableCell {
-        .text {
-          flex-basis: 45%;
-          padding-left: 0;
-        }
-        .img-block {
-          flex-basis: 50%;
-          padding: 0;
-        }
-      }
-    }
     @include for-tablet-landscape-up {
       .fp-tableCell {
         flex-flow: row;
@@ -401,6 +389,18 @@ body:not(.fp-viewing-0) .project .page-heading {
         }
         .img-block {
           flex-basis: 34%;
+          padding: 0;
+        }
+      }
+    }
+    @include for-tablet-landscape-only {
+      .fp-tableCell {
+        .text {
+          flex-basis: 45%;
+          padding-left: 0;
+        }
+        .img-block {
+          flex-basis: 50%;
           padding: 0;
         }
       }
