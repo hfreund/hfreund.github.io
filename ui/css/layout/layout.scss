@@ -381,6 +381,7 @@ body:not(.fp-viewing-0) .project .page-heading {
         flex-flow: row;
         max-width: initial;
         margin-left: 6em;
+        align-items: center;
         .text {
           flex-grow: 1;
           flex-basis: 66%
