@@ -34,6 +34,55 @@
         open = true;
     }
   }
+
+  $(document).ready(function() {
+      function initialization(){
+    	   $('#fullpage').fullpage({
+    		//Navigation
+    		slidesNavigation: true,
+    		slidesNavPosition: 'bottom',
+
+    		//Scrolling
+    		fitToSectionDelay: 1000,
+    		scrollBar: false,
+    		dragAndMove: false,
+    		offsetSections: false,
+    		scrollOverflow: false,
+    		touchSensitivity: 2,
+
+    		//Accessibility
+    		recordHistory: false,
+
+    		//Design
+    		sectionsColor : ['#fff'],
+    		responsiveWidth: 900,
+    		responsiveHeight: 768,
+
+    		//Custom selectors
+    		sectionSelector: '.section',
+    		slideSelector: '.slide'
+
+    		//Events
+    		/*
+        onLeave: function(index, nextIndex, direction){},
+    		afterLoad: function(anchorLink, index){},
+    		afterRender: function(){},
+    		afterResize: function(){},
+    		afterResponsive: function(isResponsive){},
+    		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        */
+    	});
+      }
+      //fullPage.js initialization
+            initialization();
+
+			//$.fn.fullpage.destroyStructure('height');
+      $('#fullpage').fullpage({
+    		anchors:['top', 'commoncensus', 'courageous']
+    	});
+  });
+
   </script>
 
 </head>
@@ -93,20 +142,24 @@
         </li>
       </ul>
     </nav>
-    <div class="title-box header">
-      <div class="inner">
-        <div class="text-block">
-          <h1>Hi, I'm Hugh</h1>
-          <h4 class="muted">I help design websites and applications. <span class="nowrap" />I also <a href="http://www.teamusaone.com" target="_blank" class="link">go sailing</a> sometimes.</span></h4>
-        </div>
-        <div class="noshrink btn-group-inline">
-          <a class="btn inverse" href="#work">View work</a>
-          <a class="btn inverse" href="mailto:hugh.freund@gmail.com">Contact</a>
+		<div class="content" id="fullPage">
+      <div class="section" data-anchor="top">
+        <div class="title" id="bg-title">
+          <div class="inner">
+            <div class="text-block">
+              <h1>Hugh</h1>
+              <h4 class="muted">I'm a digital designer from Maine with a background in architecture. Currently based out of Providence, RI working for several organizations on application design, websites, and brand identity.</h4>
+              <h4>I also <a href="http://www.teamusaone.com" target="_blank" class="link">go sailing</a> sometimes - let me know if you'd like to come on the boat and talk about <a href="/contact">hiring me.</a></h4>
+            </div>
+            <div class="noshrink btn-group-inline">
+              <a class="btn inverse" href="#work">View work</a>
+              <a class="btn inverse" href="mailto:hugh.freund@gmail.com">Contact</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-		<div class="content" id="work">
-			<div class="project-wrapper">
+      <div class="section" data-anchor="commoncensus">
+			     <div class="project-wrapper">
         <div class="project-inner bg-cc-gradient">
 					<div class="project-text">
 						<h2>Common Census</h2>
@@ -145,7 +198,9 @@
           </div>
 				</div>
 			</div>
-			<div class="project-wrapper">
+      </div>
+      <div class="section">
+			     <div class="project-wrapper" data-anchor="courageous">
 				<div class="project-inner bg-cs-gradient">
 					<div class="project-text">
 						<h2>Courageous Sailing</h2>
@@ -177,6 +232,7 @@
           </div>
 				</div>
 			</div>
+      </div>
 		</div>
     <div class="bg-fade">
     </div>
