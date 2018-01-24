@@ -392,8 +392,8 @@ img {
   }
 }
 .title-box {
-  margin: 1.5em auto 1em;
-  padding: 1em 1.5em;
+  margin: 0 auto 1.5em;
+  padding: 0.75em 1.5em;
   background-color: $solid-white;
   box-shadow: 0 1px 15px 2px $box-shadow-color;
   text-align: center;
@@ -410,8 +410,7 @@ img {
     line-height: 1;
   }
   @include for-tablet-portrait-up {
-    margin: 2.5em auto 1em;
-    padding: 1.5em 4em;
+    padding: 0.75em 3em;
   }
   &.header {
     margin: 0;
