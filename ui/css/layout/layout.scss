@@ -165,13 +165,22 @@ nav {
   }
 }
 .project-wrapper {
+  @include for-phone-only {
+    margin: 0;
+    height: 100vh;
+    border-radius: 0;
+  }
   box-shadow: 0 5px 30px 10px $box-shadow-color;
   height: calc(100vh - 8em);
+  margin: 0 4em;
   display: flex;
   justify-content: center;
   flex-flow: column;
   border-radius: 4px;
   .project-inner {
+    @include for-phone-only {
+      padding: 0 1em;
+    }
     display: flex;
     flex-flow: column-reverse;
     .img-bg {
