@@ -363,7 +363,6 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   &.split {
     .fp-tableCell {
-      margin-bottom: 0;
       @include for-phone-only {
         flex-flow: column-reverse;
         justify-content: center;
@@ -371,6 +370,9 @@ body:not(.fp-viewing-0) .project .page-heading {
       @include for-tablet-portrait-only {
         flex-flow: column-reverse;
         justify-content: space-evenly;
+      }
+      .img-block {
+        margin-bottom: 0;
       }
     }
     @include for-tablet-landscape-only {
