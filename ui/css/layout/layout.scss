@@ -331,7 +331,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     overflow-x: hidden;
     text-align: center;
     flex-grow: 1;
-    margin-bottom: 5em;
+    margin-bottom: 4em;
       picture {
         display: flex;
         flex-basis: auto;
@@ -363,6 +363,7 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   &.split {
     .fp-tableCell {
+      margin-bottom: 0;
       @include for-phone-only {
         flex-flow: column-reverse;
         justify-content: center;
