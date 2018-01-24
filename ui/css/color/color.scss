@@ -26,8 +26,8 @@ $medium-gray: #c2c2c2;
 
 // Site
 // Gradient colors
-$site-gradient-start: #2c3e50;
-$site-gradient-end: #bdc3c7;
+$site-gradient-start: #243b55;
+$site-gradient-end: #141e30;
 
 .bg-title-gradient {
   @include background-gradient($site-gradient-start, rgba( $site-gradient-end, 0.8 ), 'horizontal');
