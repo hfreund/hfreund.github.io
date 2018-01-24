@@ -185,8 +185,14 @@ nav {
     flex-flow: column-reverse;
     &.column {
       flex-flow: column;
+      flex-basis: auto;
       .project-text {
         flex-basis: auto;
+        max-width: 580px;
+        align-self: left;
+        h4 {
+          line-height: 1.6;
+        }
       }
     }
     .img-bg {
