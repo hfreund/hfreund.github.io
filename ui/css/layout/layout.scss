@@ -183,6 +183,12 @@ nav {
     }
     display: flex;
     flex-flow: column-reverse;
+    &.column {
+      flex-flow: column;
+      .project-text {
+        flex-basis: auto;
+      }
+    }
     .img-bg {
       visibility: hidden;
     }

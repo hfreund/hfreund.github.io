@@ -504,8 +504,7 @@ img {
   }
 }
 .btn-group-inline {
-  display: flex;
-  flex-flow: row;
+  align-self: center;
   .btn {
     margin-right: 1em;
     &:last-of-type {
