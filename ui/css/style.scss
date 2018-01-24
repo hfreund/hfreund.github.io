@@ -413,6 +413,10 @@ img {
     margin: 2.5em auto 1em;
     padding: 1.5em 4em;
   }
+  &.header {
+    margin: 0;
+    text-align: left;
+  }
 }
 
 .project-list {
