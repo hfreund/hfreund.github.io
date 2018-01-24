@@ -331,6 +331,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     overflow-x: hidden;
     text-align: center;
     flex-grow: 1;
+    margin-bottom: 5em;
       picture {
         display: flex;
         flex-basis: auto;
@@ -397,23 +398,23 @@ body:not(.fp-viewing-0) .project .page-heading {
   .img-grid {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     align-content: center;
-    margin: 3em 4em;
-    height: calc(100% - 4em);
-    width: calc(100% - 5.1em);
+    margin: 0;
+    height: calc(100% - 6em);
+    width: calc(100% - 6em);
+    @include for-tablet-portrait-up {
+      margin: 0 4em 1em 3em;
+    };
     .img-block {
       padding: 0;
-      border: 1px solid $gray-border;
       border-radius: 2px;
       flex-basis: 350px;
       flex-grow: 1;
       margin: 1em;
       line-height: 0;
-      height: calc(50vh - 4em);
+      height: calc(50vh - 5em);
       overflow: hidden;
-      position: relative;
-      top: -1em;
       img {
         min-width: 115%;
       }
