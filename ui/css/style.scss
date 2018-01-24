@@ -286,6 +286,12 @@ a.btn-menu {
   height: 24px;
   text-align: center;
   border-radius: 2px;
+  color: $solid-white;
+  transition: 200ms ease;
+  &:hover {
+    background-color: rgba(53, 55, 57, 0.4);
+    transition: 200ms ease;
+  }
   &:before {
   	border-style: solid;
   	border-width: 0.25em 0.25em 0 0;
