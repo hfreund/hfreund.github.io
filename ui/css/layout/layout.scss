@@ -361,7 +361,10 @@ body:not(.fp-viewing-0) .project .page-heading {
       picture {
         display: flex;
         flex-basis: auto;
-        align-items: center;
+        align-items: flex-start;
+        @include for-phone-only {
+          align-items: center;
+        }
       }
       img {
       width: 100%;
@@ -446,14 +449,6 @@ body:not(.fp-viewing-0) .project .page-heading {
       img {
         min-width: 115%;
       }
-      // .title-box.fixed {
-      //   display: block;
-      //   margin: 0px auto;
-      //   padding: 0.75em 1.5em;
-      //   width: calc(100% - 3em);
-      //   bottom: 0;
-      //   position: absolute;
-      // }
     }
   }
 }
