@@ -165,42 +165,47 @@ nav {
   }
 }
 .project-wrapper {
-  margin-bottom: 4em;
-  box-shadow: 0 1px 3px 0px $box-shadow-color;
-}
-.project-inner {
+  box-shadow: 0 5px 30px 10px $box-shadow-color;
+  height: calc(100vh - 8em);
   display: flex;
-  flex-flow: column-reverse;
-  border-radius: 3px;
-  .img-bg {
-    visibility: hidden;
-  }
-  @include for-phone-only {
-    .project-text {
-      padding: 0 2em 3em;
-    }
-    .img-block {
-      padding: 4em 2em 2em;
-    }
-  }
-  @include for-tablet-portrait-only {
-    .project-text {
-      padding: 0 3.5em 4em;
-    }
-    .img-block {
-      padding: 4em 3.5em;
-    }
-  }
-  @include for-tablet-landscape-up {
-    flex-flow: row;
-    .project-text {
-      flex-basis: 440px;
-        padding: 5em 3.5em;
-    }
+  justify-content: center;
+  flex-flow: column;
+  border-radius: 4px;
+  .project-inner {
+    display: flex;
+    flex-flow: column-reverse;
     .img-bg {
-      margin: 3em 0;
-      flex-grow: 1;
-      visibility: visible;
+      visibility: hidden;
+    }
+    @include for-phone-only {
+      .project-text {
+        padding: 0 2em 3em;
+      }
+      .img-block {
+        padding: 4em 2em 2em;
+      }
+    }
+    @include for-tablet-portrait-only {
+      .project-text {
+        padding: 0 3.5em 4em;
+      }
+      .img-block {
+        padding: 4em 3.5em;
+      }
+    }
+    @include for-tablet-landscape-up {
+      flex-flow: row;
+      flex-basis: 720px;
+      .project-text {
+        flex-basis: 450px;
+        padding: 5em 6.5em;
+        align-self: center;
+      }
+      .img-bg {
+        margin: 3em 0;
+        flex-grow: 1;
+        visibility: visible;
+      }
     }
   }
 }
@@ -241,7 +246,7 @@ body:not(.fp-viewing-0) .project .page-heading {
   display: flex;
   justify-content: center;
   flex-flow: column;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 .section.title {
