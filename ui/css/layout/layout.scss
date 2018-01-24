@@ -415,6 +415,9 @@ body:not(.fp-viewing-0) .project .page-heading {
       line-height: 0;
       height: calc(50vh - 5em);
       overflow: hidden;
+      picture {
+        align-items: stretch;
+      }
       img {
         min-width: 115%;
       }
