@@ -398,14 +398,14 @@ body:not(.fp-viewing-0) .project .page-heading {
   .img-grid {
     display: flex;
     flex-flow: row wrap;
-    // justify-content: space-around;
     align-content: center;
-    margin: 0;
-    height: calc(100% - 6em);
-    width: calc(100% - 6em);
+    margin: 0 1em ;
+    flex-grow: 1;
     @include for-tablet-portrait-up {
       margin: 0 4em 1em 3em;
-    };
+      height: calc(100% - 6em);
+      width: calc(100% - 6em);
+    }
     .img-block {
       padding: 0;
       border-radius: 2px;

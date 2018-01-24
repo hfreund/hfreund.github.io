@@ -402,8 +402,8 @@ img {
   &.fixed {
     position: relative;
   }
-  &.bottom {
-    top: calc(50vh - 8em);
+  &.top {
+    bottom: calc(50vh - 3em);
   }
   h3 {
     margin: 0;
