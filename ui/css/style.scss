@@ -358,6 +358,11 @@ a.btn-menu {
 }
 
 .img-bg {
+  &.contain {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
   &.cover {
     background-size: cover;
     background-position: center center;
