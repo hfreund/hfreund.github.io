@@ -468,6 +468,15 @@ body:not(.fp-viewing-0) .project .page-heading {
       }
     }
   }
+  &.auto {
+    img {
+      @include for-tablet-landscape-up {
+      margin: 0 auto;
+      width: auto;
+      min-width: initial;
+      }
+    }
+  }
   &.split {
     .fp-tableCell {
       @include for-phone-only {
