@@ -126,9 +126,6 @@ a.project-card#commoncensus:hover {
         a {
           display: inline;
           &.btn {
-            @include for-phone-only {
-              margin-bottom: 0.75em;
-            }
             margin-right: 1em;
             &:last-of-type {
               margin: 0;
@@ -534,6 +531,11 @@ img {
     &:hover {
       background-color: $solid-white;
     }
+  }
+}
+.btn-group-inline.btn {
+  @include for-phone-only{
+    margin-bottom: 0.75em;
   }
 }
 .link {
