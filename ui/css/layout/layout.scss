@@ -356,12 +356,14 @@ body:not(.fp-viewing-0) .project .page-heading {
     display: flex;
     overflow-x: hidden;
     text-align: center;
+    justify-content: center;
     flex-grow: 1;
     margin-bottom: 4em;
       picture {
         display: flex;
         flex-basis: auto;
         align-items: flex-start;
+        overflow: hidden;
         @include for-phone-only {
           align-items: center;
         }
