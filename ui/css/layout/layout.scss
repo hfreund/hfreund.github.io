@@ -450,6 +450,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     &.two-up {
       display: flex;
       flex-flow: row;
+      align-items: center;
     }
     &.centered {
       text-align: center;
