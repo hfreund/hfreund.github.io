@@ -186,7 +186,7 @@ nav {
       justify-content: space-around;
     }
     .text {
-      margin: 3em 3em 5em;
+      margin: 0 3em 4em;
       @include for-tablet-landscape-up {
         flex-basis: 450px;
         margin: 3em;
@@ -202,9 +202,6 @@ nav {
       max-width: 220px;
       @include for-tablet-portrait-up {
         max-height: 300px;
-      }
-      @include for-tablet-landscape-up {
-        max-height: 400px;
       }
       img {
         max-width: 300px;
