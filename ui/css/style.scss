@@ -125,11 +125,14 @@ a.project-card#commoncensus:hover {
         margin-top: 3em;
         a {
           display: inline;
-        }
-        .btn {
-          margin-right: 1em;
-          &:last-of-type {
-            margin: 0;
+          &.btn {
+            @include for-phone-only {
+              margin-bottom: 0.75em;
+            }
+            margin-right: 1em;
+            &:last-of-type {
+              margin: 0;
+            }
           }
         }
       }
