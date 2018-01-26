@@ -286,7 +286,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     }
     .text {
       grid-area: title;
-      padding: 2em 2.55em;
+      padding: 0 2.55em;
       @include for-tablet-landscape-up {
         padding: 0 2em 0 0;
         display: flex;
@@ -319,11 +319,13 @@ body:not(.fp-viewing-0) .project .page-heading {
     .scroll {
       grid-area: scroll;
       justify-content: center;
-      margin-bottom: 1.5em;
       display: grid;
       grid-template-areas:  "... top ..."
                             "left bottom right";
       grid-gap: 5px;
+      @include for-tablet-portrait-up {
+        margin-bottom: 1.5em;
+      }
     }
   }
 }
