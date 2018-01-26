@@ -186,9 +186,12 @@ nav {
       justify-content: space-around;
     }
     .text {
-      flex-basis: 450px;
-      margin: 3em;
-      align-self: center;
+      margin: 3em 3em 5em;
+      @include for-tablet-landscape-up {
+        flex-basis: 450px;
+        margin: 3em;
+        align-self: center;
+      }
     }
     .img-block.circle {
       overflow: hidden;
@@ -196,6 +199,7 @@ nav {
       border-radius: 100em;
       align-self: center;
       margin: 3em;
+      max-width: 220px;
       @include for-tablet-portrait-up {
         max-height: 300px;
       }
