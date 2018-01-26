@@ -6,49 +6,6 @@
 Elements
 ================================*/
 
-/*==== Project Card ====*/
-.project-card-wrapper {
-  display: flex;
-}
-a.project-card {
-    border: 1px solid;
-    padding: 2em 0 2em 2em;
-    display: block;
-    background-color: #fff;
-    transition: 150ms ease;
-    display: flex;
-    width: 48%;
-    text-decoration: none;
-    border-radius: 2px;
-    h3 {
-        margin: 0.5em 1em 0.5em 0;
-        font-weight: 100;
-        color: $text-color;
-        font-size: 2em;
-        line-height: 1.1;
-        align-self: center;
-    }
-}
-a.project-card#commoncensus {
-  border-color: $cc-light-blue;
-  .project-card-image {
-    width: 100%;
-    height: 10em;
-    background-image: url(/images/cc_website_desktop+phone-03.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left center;
-  }
-}
-a.project-card#commoncensus:hover {
-  background-color: $cc-light-blue;
-  color: #fff;
-  transition: 150ms ease;
-  h3 {
-    color: #fff;
-  }
-}
-
 /*==== Project Stat Block ====*/
 .stat-block {
   @include for-phone-only {
