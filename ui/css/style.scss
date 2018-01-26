@@ -533,7 +533,7 @@ img {
     }
   }
 }
-.btn-group-inline.btn {
+.btn-group-inline .btn {
   @include for-phone-only{
     margin-bottom: 0.75em;
   }
