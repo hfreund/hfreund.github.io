@@ -203,10 +203,11 @@ nav {
       max-height: 200px;
       border-radius: 100em;
       align-self: center;
-      margin: 3em;
-      max-width: 220px;
+      margin: 3em auto 1em;
+      max-width: 160px;
       @include for-tablet-portrait-up {
         max-height: 300px;
+        margin: 3em;
       }
       img {
         max-width: 300px;
