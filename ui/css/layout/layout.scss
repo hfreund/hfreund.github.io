@@ -428,6 +428,7 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   .img-block {
     display: flex;
+    flex-flow: column;
     overflow-x: hidden;
     text-align: center;
     justify-content: center;
