@@ -467,13 +467,13 @@ body:not(.fp-viewing-0) .project .page-heading {
         min-width: 680px;
       }
     }
-  }
-  &.auto {
-    img {
-      @include for-tablet-landscape-up {
-      margin: 0 auto;
-      width: auto;
-      min-width: initial;
+    &.auto {
+      img {
+        @include for-tablet-landscape-up {
+        margin: 0 auto;
+        width: auto;
+        min-width: initial;
+        }
       }
     }
   }
