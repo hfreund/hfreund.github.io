@@ -174,11 +174,11 @@ nav {
   .inner {
     display: flex;
     @include for-phone-only {
-      flex-flow: column;
+      flex-flow: column-reverse;
       flex-basis: auto;
     }
     @include for-tablet-portrait-only {
-      flex-flow: column;
+      flex-flow: column-reverse;
       flex-basis: auto;
     }
     @include for-tablet-landscape-up {
