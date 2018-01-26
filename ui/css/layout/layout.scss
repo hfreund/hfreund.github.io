@@ -183,10 +183,13 @@ nav {
     flex-flow: column-reverse;
     .img-block.circle {
       overflow: hidden;
-      height: 400px;
+      max-height: 260px;
       border-radius: 100em;
       align-self: center;
       margin: 3em;
+      @include for-tablet-landscape-up {
+        max-height: 400px;
+      }
       img {
         max-width: 300px;
       }
