@@ -206,7 +206,10 @@ nav {
       align-self: center;
       margin: 3em auto 1em;
       max-width: 160px;
-      @include for-tablet-portrait-up {
+      @include for-tablet-portrait-only {
+        max-height: 240px;
+      }
+      @include for-tablet-landscape-up {
         max-height: 300px;
         margin: 3em;
       }
