@@ -172,8 +172,19 @@ nav {
   flex-flow: column;
   border-radius: 4px;
   .inner {
-    flex-basis: 600px;
     display: flex;
+    @include for-phone-only {
+      flex-flow: column;
+      flex-basis: auto;
+    }
+    @include for-tablet-portrait-only {
+      flex-flow: column;
+      flex-basis: auto;
+    }
+    @include for-tablet-landscape-up {
+      flex-basis: 600px;
+      justify-content: space-around;
+    }
     .text {
       flex-basis: 450px;
       margin: 3em;
@@ -185,6 +196,12 @@ nav {
       border-radius: 100em;
       align-self: center;
       margin: 3em;
+      @include for-tablet-portrait-up {
+        max-height: 300px;
+      }
+      @include for-tablet-landscape-up {
+        max-height: 400px;
+      }
       img {
         max-width: 300px;
       }
