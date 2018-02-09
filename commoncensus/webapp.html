@@ -44,7 +44,7 @@
   anchors:['firstPage', 'secondPage'],
   navigation: true,
   navigationPosition: 'left',
-  navigationTooltips: ['firstSlide', 'secondSlide'],
+  navigationTooltips: ['top', 'summary', 'overview', 'existing', 'approach', 'sketches', 'user-flow', 'challenges', 'wireframe','wireframe-2', 'mobile-wireframe', 'deployment', 'deployment-2'],
   showActiveTooltip: false,
   slidesNavigation: false,
   slidesNavPosition: 'bottom',
@@ -237,7 +237,7 @@
           <a class="arw bottom" href="#webapp"></a>
         </div>
       </div>
-      <div class="section split">
+      <div class="section split" data-anchor="summary">
         <div class="text">
           <h2>Web App Redesign</h2>
           <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
@@ -277,13 +277,13 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient">
+      <div class="section bg-cc-gradient" data-anchor="overview">
         <div class="text">
           <h2>Overview</h2>
           <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
         </div>
       </div>
-      <div class="section bg-cc-gradient reverse">
+      <div class="section bg-cc-gradient reverse" data-anchor="existing">
         <div class="title-box fixed">
           <h3>Existing Condition</h3>
         </div>
@@ -298,13 +298,13 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient">
+      <div class="section bg-cc-gradient" data-anchor="approach">
         <div class="text">
           <h2>Approach</h2>
           <h4>Working with the development team, sales team, and client services team, we created an all new enrollment platform that met current needs of our clients while maintaining flexibility for future development. It was important to strike a balance between updating the UI to modern standards that would also dovetail with existing modules while not disrupting a user experience that many clients had become accustomed to.</h4>
         </div>
       </div>
-      <div class="section bg-cc-gradient reverse">
+      <div class="section bg-cc-gradient reverse" data-anchor="sketches">
         <div class="title-box fixed">
           <h3>Concept Sketches</h3>
         </div>
@@ -351,19 +351,19 @@
           </div>
         </div>
       </div>
-      <div class="section wrap">
+      <div class="section wrap" data-anchor="user-flow">
         <div class="title-box fixed top">
           <h3>User Flow</h3>
         </div>
         <div class="cc-user-flow"></div>
       </div>
-      <div class="section bg-cc-gradient">
+      <div class="section bg-cc-gradient" data-anchor="challenges">
         <div class="text">
           <h2>Challenges</h2>
           <h4>Although we had control of the underlying framework, the software has to integrate with over one hundred benefit enrollment modules from different insurance carriers, each with their own compliance requirements and many which were custom made before a time of flexible modules. Here we were severely restricted since almost any change would require compliance approval which could dramatically set the project off track.</h4>
         </div>
       </div>
-      <div class="section bg-cc-gradient reverse">
+      <div class="section bg-cc-gradient reverse" data-anchor="wireframe">
         <div class="title-box fixed">
           <h3>Desktop Wireframe</h3>
         </div>
@@ -378,7 +378,7 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient">
+      <div class="section bg-cc-gradient" data-anchor="wireframe-2">
         <div class="title-box fixed">
           <h3>Desktop Wireframe</h3>
         </div>
@@ -393,7 +393,7 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient reverse">
+      <div class="section bg-cc-gradient reverse" data-anchor="mobile-wireframe">
         <div class="title-box fixed">
           <h3>Mobile Wireframes</h3>
         </div>
@@ -416,7 +416,7 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient">
+      <div class="section bg-cc-gradient" data-anchor="deployment">
         <div class="title-box m-0">
           <h3>Phase 1 Deployment</h3>
         </div>
@@ -431,7 +431,7 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient reverse">
+      <div class="section bg-cc-gradient reverse" data-anchor="deployment-2">
         <div class="title-box m-0">
           <h3>Phase 1 Deployment</h3>
         </div>
@@ -444,437 +444,6 @@
               srcset="../images/cc/cbi/newui/cbi_benefits-list.png"
               alt="Common Census Website">
           </picture>
-        </div>
-      </div>
-      <div class="section" data-anchor="patterns">
-        <div class="slide split">
-          <div class="text">
-            <h2>Web App UI Patterns</h2>
-            <h4>Both the administrative and enrollment web apps suffered from several generations of dischordant UI elements. One of my first tasks was to catalogue all the variations, discover the true functionality they were intended to convey, and create a cohesive pattern library that would be familiar to both existing users and the developer team.</h4>
-            <div class="stat-block">
-              <div class="stat-item">
-                <h5>Technology</h5>
-                <ul>
-                  <li>Illustrator</li>
-                  <li>Visual Studio</li>
-                </ul>
-              </div>
-              <div class="stat-item">
-                <h5>Skills</h5>
-                <ul>
-                  <li>IA/Sketching</li>
-                  <li>Mockups</li>
-                  <li>Development</li>
-                  <li>Git</li>
-                </ul>
-              </div>
-              <div class="stat-item">
-                <h5>Role</h5>
-                <ul>
-                  <li>Lead Designer</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-anatomy.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-buttons-anatomy.png"
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-anatomy.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Buttons - Existing Condition</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-existing.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-buttons-existing.png"
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-existing.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="title-box fixed">
-            <h3>Buttons - Proposed Changes</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-proposed.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-buttons-proposed.png"
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-proposed.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Buttons - Anatomy</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-anatomy.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-buttons-anatomy.png"
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-anatomy.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="title-box fixed">
-            <h3>Buttons - Comparison</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-comparison.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-buttons-comparison.png"
-                srcset="../images/cc/cba/ui_patterns/cba-buttons-comparison.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Modals - Existing Condition</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-modals-types.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-modals-types.png"
-                srcset="../images/cc/cba/ui_patterns/cba-modals-types.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="title-box fixed">
-            <h3>Modals - Existing Condition</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-modals-position.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-modals-position.png"
-                srcset="../images/cc/cba/ui_patterns/cba-modals-position.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Modals - Existing Condition</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-modals-tone.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-modals-tone.png"
-                srcset="../images/cc/cba/ui_patterns/cba-modals-tone.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="title-box fixed">
-            <h3>Modals - Proposed Condition</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-modals-proposed.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-modals-proposed.png"
-                srcset="../images/cc/cba/ui_patterns/cba-modals-proposed.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Modals - Comparison</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-modals-proposed-help.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-modals-proposed-help.png"
-                srcset="../images/cc/cba/ui_patterns/cba-modals-proposed-help.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="title-box fixed">
-            <h3>Modals - Comparison</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-modals-proposed-reports.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-modals-proposed-reports.png"
-                srcset="../images/cc/cba/ui_patterns/cba-modals-proposed-reports.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Modals - Comparison</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/ui_patterns/cba-modals-proposed-search.png">
-              <img
-                src="../images/cc/cba/ui_patterns/cba-modals-proposed-search.png"
-                srcset="../images/cc/cba/ui_patterns/cba-modals-proposed-search.png"
-                alt="CBA UI Pattern">
-            </picture>
-          </div>
-        </div>
-      </div>
-      <div class="section" data-anchor="cba-future">
-        <div class="slide split">
-          <div class="text">
-            <h2>Administrative Web App Redesign</h2>
-            <h4>Common Benefits Administrator is a core piece of software for Common Census and it's been around for a long time. As the company worked out how this application would grow, I led the design exercise to help envision a bridge from present to future.</h4>
-            <div class="stat-block">
-              <div class="stat-item">
-                <h5>Technology</h5>
-                <ul>
-                  <li>Adobe XD</li>
-                  <li>InVision</li>
-                </ul>
-              </div>
-              <div class="stat-item">
-                <h5>Skills</h5>
-                <ul>
-                  <li>IA/Sketching</li>
-                  <li>Mockups</li>
-                </ul>
-              </div>
-              <div class="stat-item">
-                <h5>Role</h5>
-                <ul>
-                  <li>Lead Designer</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/newui/cba_ee-browse.png">
-              <img
-                src="../images/cc/cba/newui/cba_ee-browse.png"
-                srcset="../images/cc/cba/newui/cba_ee-browse.png"
-                alt="Common Benefits Administrator">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="text">
-            <h2>Administrative Mode</h2>
-            <h4>The majority of the application contains administrative functionality. Most of the features that had been added were poorly organized and buried deep inside of menus. This vision addressed the lack of a planned architecture and also createc a better framework for future feature development.</h4>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-            <div class="title-box fixed">
-              <h3>Administrative Mode</h3>
-            </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/newui/cba_ee-browse.png">
-              <img
-                src="../images/cc/cba/newui/cba_ee-browse.png"
-                srcset="../images/cc/cba/newui/cba_ee-browse.png"
-                alt="CBA Future - Admin">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="text">
-            <h2>Interview Mode</h2>
-            <h4>The other side of this application is a one-on-one interview between an enroller and an individual either in person or over the phone. In this case, providing the best user experience meant improving the time each task takes for the enroller, and also reducing insider jargon for the enrollee.</h4>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-            <div class="title-box fixed">
-              <h3>Interview Mode</h3>
-            </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/cba/newui/Interview_enrollments_overview.png">
-              <img
-                src="../images/cc/cba/newui/Interview_enrollments_overview.png"
-                srcset="../images/cc/cba/newui/Interview_enrollments_overview.png"
-                alt="CBA Future - Admin">
-            </picture>
-          </div>
-        </div>
-      </div>
-      <div class="section" data-anchor="website">
-        <div class="slide split">
-          <div class="text">
-            <h2>Brochure Website</h2>
-            <h4>I designed and built the company sales website to suit the needs of the sales and support teams. This included building a custom PDF generator for forms submitted through the website.</h4>
-            <div class="stat-block">
-              <div class="stat-item">
-                <h5>Technology</h5>
-                <ul>
-                  <li>Wordpress</li>
-                  <li>Gravity Forms</li>
-                  <li>Gravity PDF</li>
-                </ul>
-              </div>
-              <div class="stat-item">
-                <h5>Skills</h5>
-                <ul>
-                  <li>IA/Sketching</li>
-                  <li>Wireframes</li>
-                  <li>Development</li>
-                </ul>
-              </div>
-              <div class="stat-item">
-                <h5>Role</h5>
-                <ul>
-                  <li>Lead Designer</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc_website_desktop+phone-03.png,
-                        ../images/cc_website_desktop+phone-03@2x.png 2x">
-              <img
-                src="../images/cc_website_desktop+phone-03.png"
-                srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
-                alt="Common Census Website">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="text">
-            <h2>Selling from the Website</h2>
-            <h4>A key objective in this build was to help the sales team move away from static PDF's which were time consuming to createa and often out of date within months. I worked with them to organize the website so they had all the information necessary to orchastrate a webinar. Additionally, the site was built so they could update content on the fly as more products and services became available.</h4>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Products &amp; Pricing</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/website/cc-products-pricing.png">
-              <img
-                src="../images/cc/website/cc-products-pricing.png"
-                srcset="../images/cc/website/cc-products-pricing.png"
-                alt="Common Census Website">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="text">
-            <h2>Form to PDF</h2>
-            <h4>The sales team used a PDF case intake form that was difficult for clients to navigate and required frequent updates as services changed. By transitioning this form online, I gave the sales team a tool they could keep up to date so clients could submit complete case information. I also developed a custom generated PDF output that could be incorporated into the final contract.</h4>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Case Intake Form</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/website/cc-case-summary-online.png">
-              <img
-                src="../images/cc/website/cc-case-summary-online.png"
-                srcset="../images/cc/website/cc-case-summary-online.png"
-                alt="Common Census Case Summary Form">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="title-box fixed">
-            <h3>Case Intake Form</h3>
-          </div>
-          <div class="img-block auto">
-            <picture>
-              <source
-                srcset="../images/cc/website/cc-case-summary-pdf.png">
-              <img
-                src="../images/cc/website/cc-case-summary-pdf.png"
-                srcset="../images/cc/website/cc-case-summary-pdf.png"
-                alt="Common Census Case Summary Form">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="text">
-            <h2>Better Support Tools</h2>
-            <h4>The client services team had a good setup for phone support, but lacked an online knowledgebase for users to help themselves. I setup a knowledgebase in Help Scout and provided the team with a template that aligned with the company brand guidelines.</h4>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="title-box fixed">
-            <h3>Knowledgebase Article</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/website/cc-knowledgebase.png">
-              <img
-                src="../images/cc/website/cc-knowledgebase.png"
-                srcset="../images/cc/website/cc-knowledgebase.png"
-                alt="Common Census Knowledgebase">
-            </picture>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient reverse">
-          <div class="text">
-            <h2>Brand Identity</h2>
-            <h4>The company last had a branding consultant in the early 2000's, which meant there was both a lack of brand consistency and the brand assets had not been redeveloped for current standards. I refined the previous style guidelines and expanded them to meet current web standards. I also rebuilt the logo and icon sets using SVG.</h4>
-          </div>
-        </div>
-        <div class="slide bg-cc-gradient">
-          <div class="title-box fixed">
-            <h3>Style Guide</h3>
-          </div>
-          <div class="img-block">
-            <picture>
-              <source
-                srcset="../images/cc/website/cc-brand-guidelines.jpg">
-              <img
-                src="../images/cc/website/cc-brand-guidelines.jpg"
-                srcset="../images/cc/website/cc-brand-guidelines.jpg"
-                alt="Common Census Brand Assets">
-            </picture>
-          </div>
         </div>
       </div>
     </div>
