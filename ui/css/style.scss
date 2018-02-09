@@ -350,7 +350,15 @@ a.btn-menu {
 .overlay.bg-title-gradient {
     height: 100%;
 }
-
+#fp-nav {
+  opacity: 1;
+  transition: 200ms ease;
+  &.hidden {
+    opacity: 0;
+    transition: 200ms ease;
+    display: none;
+  }
+}
 .fp-slidesNav ul {
   display: flex;
   justify-content: center;
