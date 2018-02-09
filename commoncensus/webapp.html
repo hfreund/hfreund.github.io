@@ -27,9 +27,11 @@
   function change() {
     if (open) {
         document.getElementById("expandNav").className = "main";
+        document.getElementById("fp-nav").className = "left";
         open = false;
     } else {
         document.getElementById("expandNav").className = "main open";
+        document.getElementById("fp-nav").className = "left hidden";
         open = true;
     }
   }
