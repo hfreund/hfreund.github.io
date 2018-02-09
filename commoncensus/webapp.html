@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+
+  <title>Hugh Freund</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Hugh Freund">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" type="text/css" href="/ui/fullpage/dist/jquery.fullpage.css" />
+	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
+  <script src="https://use.fontawesome.com/29fc27d329.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script>
+  var open = false;
+
+  function change() {
+    if (open) {
+        document.getElementById("expandNav").className = "main";
+        open = false;
+    } else {
+        document.getElementById("expandNav").className = "main open";
+        open = true;
+    }
+  }
+
+  $(document).ready(function() {
+      function initialization(){
+    	   $('#fullpage').fullpage({
+    		//Navigation
+        navigation: false,
+		    navigationPosition: 'left'
+    		//slidesNavigation: true,
+    		//slidesNavPosition: 'bottom',
+
+    		//Scrolling
+    		fitToSectionDelay: 1000,
+    		scrollBar: false,
+    		dragAndMove: false,
+    		offsetSections: false,
+    		scrollOverflow: true,
+    		touchSensitivity: 2,
+
+    		//Accessibility
+    		recordHistory: false,
+
+    		//Design
+    		sectionsColor : ['#fff'],
+    		responsiveWidth: 0,//600,
+    		responsiveHeight: 0,//600,
+
+    		//Custom selectors
+    		sectionSelector: '.section',
+    		slideSelector: '.slide'
+
+    		//Events
+    		/*
+        onLeave: function(index, nextIndex, direction){},
+    		afterLoad: function(anchorLink, index){},
+    		afterRender: function(){},
+    		afterResize: function(){},
+    		afterResponsive: function(isResponsive){},
+    		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        */
+    	});
+      }
+      //fullPage.js initialization
+            initialization();
+
+			//$.fn.fullpage.destroyStructure('height');
+      //$('#fullpage').fullpage({
+    	//	anchors:['top', 'commoncensus', 'courageous']
+    	//});
+  });
+
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-40419309-4');
+</script>
+
+
+</head>
+<body>
+  <div class="orientation-overlay">
+    <h3>Rotate your device to portrait mode.</h3>
+  </div>
+	<div class="main" id="expandNav">
+    <a class="btn-menu" href="#" onclick="change()">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </a>
+    <nav class="navbar">
+      <ul>
+        <li>
+  		    <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="https://www.dropbox.com/s/459cg6o5ip9k7ni/Resume%202.1.pdf?raw=1" target="_blank">Resume</a>
+        </li>
+        <li>
+          Work
+          <ul>
+            <li class="title">
+              <a href="/commoncensus">Common Census</a>
+            </li>
+            <li>
+              <a href="/commoncensus#webapp">Web App</a>
+            </li>
+            <li>
+              <a href="/commoncensus#patterns">UI Patterns</a>
+            </li>
+            <li>
+              <a href="/commoncensus#cba-future">Admin App</a>
+            </li>
+            <li>
+              <a href="/commoncensus#website">Website</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="title">
+              <a href="/courageous">Courageous Sailing</a>
+            </li>
+            <li>
+              <a href="/courageous#website">Website</a>
+            </li>
+            <li>
+              <a href="/courageous#brand">Brand + Marketing</a>
+            </li>
+          </ul>
+        </li>
+        <li class="btn-group-inline">
+          <a href="https://github.com/hfreund/hfreund.github.io" target="_blank" class="btn inverse"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/hughfreund/" target="_blank" class="btn inverse"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="mailto:hugh.freund@gmail.com" target="_blank" class="btn inverse"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </nav>
+		<div id="fullpage">
+      <div class="section" data-anchor="commoncensus">
+        <div class="project-wrapper full-height bg-cc-gradient">
+          <div class="project-inner">
+  					<div class="project-text">
+  						<h2>Common Census</h2>
+  						<h4>Common Census is a technology company that builds employee benefit management software.</h4>
+              <p class="muted hide phone">I led the design process and coordinated programming, client services, and sales teams to build and update web-based insurance applications for multiple user types.</p>
+              <div class="project-list">
+                <a href="/commoncensus" class="btn shadow">All Projects</a>
+                <ul class="hide phone">
+               		<li>
+               			<a href="/commoncensus#webapp" class="btn link">Web App</a>
+               		</li>
+               		<li>
+               			<a href="/commoncensus#patterns" class="btn link">UI Patterns</a>
+               		</li>
+               		<li>
+               			<a href="/commoncensus#cba-future" class="btn link">Admin App</a>
+               		</li>
+               		<li>
+               			<a href="/commoncensus#website" class="btn link">Website</a>
+               		</li>
+               	</ul>
+              </div>
+  					</div>
+  					<div class="img-block img-bg cover left hide phone tablet" id="cc-website-desktop-phone"></div>
+            <div class="img-block hide tablet-landscape-up">
+              <picture>
+                <source
+                  srcset="../images/cc_website_desktop+phone-03.png,
+                          ../images/cc_website_desktop+phone-03@2x.png 2x">
+                <img
+                  src="../images/cc_website_desktop+phone-03.png"
+                  srcset="../images/cc_website_desktop+phone-03@2x.png 2x"
+                  alt="Common Census Website">
+              </picture>
+            </div>
+  				</div>
+  			</div>
+      </div>
+      <div class="section" data-anchor="webapp">
+        <div class="section split">
+          <div class="text">
+            <h2>Web App Redesign</h2>
+            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
+            <div class="stat-block">
+              <div class="stat-item">
+                <h5>Technology</h5>
+                <ul>
+                  <li>Illustrator</li>
+                  <li>Visual Studio</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Skills</h5>
+                <ul>
+                  <li>IA/Sketching</li>
+                  <li>Wireframe</li>
+                  <li>Mockups</li>
+                  <li>Development</li>
+                </ul>
+              </div>
+              <div class="stat-item">
+                <h5>Role</h5>
+                <ul>
+                  <li>Lead Designer</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc/cbi/newui/cbi_benefits-list.png">
+              <img
+                src="../images/cc/cbi/newui/cbi_benefits-list.png"
+                srcset="../images/cc/cbi/newui/cbi_benefits-list.png"
+                alt="Common Census Website">
+            </picture>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient">
+          <div class="text">
+            <h2>Overview</h2>
+            <h4>Common Benefits for Individuals was one of the first online self service applications for benefit enrollment. It was forward thinking in capability, however, in order to stay competitive with a bustling marketplace after the passage of the Affordable Care Act, the entire user experience and user interface needed to be refreshed.</h4>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient reverse">
+          <div class="title-box fixed">
+            <h3>Existing Condition</h3>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc/cbi/oldui/CBI_Benefits-crop.jpg">
+              <img
+                src="../images/cc/cbi/oldui/CBI_Benefits-crop.jpg"
+                srcset="../images/cc/cbi/oldui/CBI_Benefits-crop.jpg"
+                alt="Common Census Website">
+            </picture>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient">
+          <div class="text">
+            <h2>Approach</h2>
+            <h4>Working with the development team, sales team, and client services team, we created an all new enrollment platform that met current needs of our clients while maintaining flexibility for future development. It was important to strike a balance between updating the UI to modern standards that would also dovetail with existing modules while not disrupting a user experience that many clients had become accustomed to.</h4>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient reverse">
+          <div class="title-box fixed">
+            <h3>Concept Sketches</h3>
+          </div>
+          <div class="img-grid">
+            <div class="img-block">
+              <picture>
+                <source
+                  srcset="../images/cc/cbi/sketches/login-flow.png">
+                <img
+                  src="../images/cc/cbi/sketches/login-flow.png"
+                  srcset="../images/cc/cbi/sketches/login-flow.png"
+                  alt="Login Flow">
+              </picture>
+            </div>
+            <div class="img-block hide phone tablet">
+              <picture>
+                <source
+                  srcset="../images/cc/cbi/sketches/login-flow-2.png">
+                <img
+                  src="../images/cc/cbi/sketches/login-flow-2.png"
+                  srcset="../images/cc/cbi/sketches/login-flow-2.png"
+                  alt="Login Flow">
+              </picture>
+            </div>
+            <div class="img-block">
+              <picture>
+                <source
+                  srcset="../images/cc/cbi/sketches/mode-switching-flow.png">
+                <img
+                  src="../images/cc/cbi/sketches/mode-switching-flow.png"
+                  srcset="../images/cc/cbi/sketches/mode-switching-flow.png"
+                  alt="Mode Switching Flow">
+              </picture>
+            </div>
+            <div class="img-block hide phone tablet">
+              <picture>
+                <source
+                  srcset="../images/cc/cbi/sketches/dashboard-flow.png">
+                <img
+                  src="../images/cc/cbi/sketches/dashboard-flow.png"
+                  srcset="../images/cc/cbi/sketches/dashboard-flow.png"
+                  alt="Dashboard Flow">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="section wrap">
+          <div class="title-box fixed top">
+            <h3>User Flow</h3>
+          </div>
+          <div class="cc-user-flow"></div>
+        </div>
+        <div class="section bg-cc-gradient">
+          <div class="text">
+            <h2>Challenges</h2>
+            <h4>Although we had control of the underlying framework, the software has to integrate with over one hundred benefit enrollment modules from different insurance carriers, each with their own compliance requirements and many which were custom made before a time of flexible modules. Here we were severely restricted since almost any change would require compliance approval which could dramatically set the project off track.</h4>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient reverse">
+          <div class="title-box fixed">
+            <h3>Desktop Wireframe</h3>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc/cbi/newui/04.01.03_benefits_hmo_enroll.png">
+              <img
+                src="../images/cc/cbi/newui/04.01.03_benefits_hmo_enroll.png"
+                srcset="../images/cc/newui/04.01.03_benefits_hmo_enroll.png"
+                alt="Wireframe - Enroll">
+            </picture>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient">
+          <div class="title-box fixed">
+            <h3>Desktop Wireframe</h3>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc/cbi/newui/04.03.01_benefits_coreMed_selectCoverage.png">
+              <img
+                src="../images/cc/cbi/newui/04.03.01_benefits_coreMed_selectCoverage.png"
+                srcset="../images/cc/newui/04.03.01_benefits_coreMed_selectCoverage.png"
+                alt="Wireframe - Select Coverage">
+            </picture>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient reverse">
+          <div class="title-box fixed">
+            <h3>Mobile Wireframes</h3>
+          </div>
+          <div class="img-block two-up">
+            <picture>
+              <source
+                srcset="../images/cc/cbi/newui/cbi_wm_basic-information.png">
+              <img
+                src="../images/cc/cbi/newui/cbi_wm_basic-information.png"
+                srcset="../images/cc/newui/cbi_wm_basic-information.png"
+                alt="Wireframe - Mobile">
+            </picture>
+            <picture>
+              <source
+                srcset="../images/cc/cbi/newui/cbi_wm_nav-coach.png">
+              <img
+                src="../images/cc/cbi/newui/cbi_wm_nav-coach.png"
+                srcset="../images/cc/newui/cbi_wm_nav-coach.png"
+                alt="Wireframe - Mobile">
+            </picture>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient">
+          <div class="title-box m-0">
+            <h3>Phase 1 Deployment</h3>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc/cbi/newui/cbi_benefits-list.png">
+              <img
+                src="../images/cc/cbi/newui/cbi_benefits-list.png"
+                srcset="../images/cc/cbi/newui/cbi_benefits-list.png"
+                alt="Common Census Website">
+            </picture>
+          </div>
+        </div>
+        <div class="section bg-cc-gradient reverse">
+          <div class="title-box m-0">
+            <h3>Phase 1 Deployment</h3>
+          </div>
+          <div class="img-block">
+            <picture>
+              <source
+                srcset="../images/cc/cbi/newui/cbi_benefits-list.png">
+              <img
+                src="../images/cc/cbi/newui/cbi_benefits-list.png"
+                srcset="../images/cc/cbi/newui/cbi_benefits-list.png"
+                alt="Common Census Website">
+            </picture>
+          </div>
+        </div>
+      </div>
+		</div>
+    <div class="bg-fade">
+    </div>
+  </div>
+</body>
+</html>
