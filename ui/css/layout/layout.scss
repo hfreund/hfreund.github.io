@@ -403,7 +403,7 @@ body:not(.fp-viewing-0) .project .page-heading {
 }
 /*==== Responsive Sections & Slides ====*/
 
-.slide {
+.slide, .section {
   .text {
     @include for-phone-only {
       padding: 0 2.55em 1.5em;
