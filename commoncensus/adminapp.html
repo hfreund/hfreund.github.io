@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+
+  <title>Hugh Freund | Common Census</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Hugh Freund">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" type="text/css" href="/ui/fullpage/dist/jquery.fullpage.css" />
+	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
+  <script src="https://use.fontawesome.com/29fc27d329.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script>
+  var open = false;
+
+  function change() {
+    if (open) {
+        document.getElementById("expandNav").className = "main";
+        document.getElementById("fp-nav").className = "left";
+        open = false;
+    } else {
+        document.getElementById("expandNav").className = "main open";
+        document.getElementById("fp-nav").className = "left hidden";
+        open = true;
+    }
+  }
+
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+  //Navigation
+  menu: '#menu',
+  lockAnchors: false,
+  anchors:['summary', 'admin', 'admin-img', 'interview', 'interview-img'],
+  navigation: true,
+  navigationPosition: 'left',
+  navigationTooltips: ['Summary', 'Admin Mode', 'Admin Mode Img', 'Interview Mode', 'Interview Mode Img'],
+  showActiveTooltip: false,
+  slidesNavigation: false,
+  slidesNavPosition: 'bottom',
+
+  //Scrolling
+  css3: true,
+  scrollingSpeed: 700,
+  autoScrolling: true,
+  fitToSection: true,
+  fitToSectionDelay: 1000,
+  scrollBar: false,
+  easing: 'easeInOutCubic',
+  easingcss3: 'ease',
+  loopBottom: false,
+  loopTop: false,
+  loopHorizontal: true,
+  continuousVertical: false,
+  continuousHorizontal: false,
+  scrollHorizontally: false,
+  interlockedSlides: false,
+  dragAndMove: false,
+  offsetSections: false,
+  resetSliders: false,
+  fadingEffect: false,
+  //normalScrollElements: '#element1, .element2',
+  scrollOverflow: false,
+  scrollOverflowReset: false,
+  scrollOverflowOptions: null,
+  touchSensitivity: 5,
+  normalScrollElementTouchThreshold: 5,
+  //bigSectionsDestination: null,
+
+  //Accessibility
+  keyboardScrolling: true,
+  animateAnchor: true,
+  recordHistory: false,
+
+  //Design
+  controlArrows: true,
+  verticalCentered: true,
+  //sectionsColor : ['#ccc', '#fff'],
+  //paddingTop: '3em',
+  //paddingBottom: '10px',
+  //fixedElements: '#header, .footer',
+  responsiveWidth: 0,
+  responsiveHeight: 0,
+  responsiveSlides: false,
+  //parallax: false,
+  //parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+  //Custom selectors
+  sectionSelector: '.section',
+  slideSelector: '.slide',
+
+  lazyLoading: true,
+
+  //events
+  onLeave: function(index, nextIndex, direction){},
+  afterLoad: function(anchorLink, index){},
+  afterRender: function(){},
+  afterResize: function(){},
+  afterResponsive: function(isResponsive){},
+  afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+  onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+});
+      //movable bg
+      var lFollowX = 0,
+          lFollowY = 0,
+          x = 0,
+          y = 0,
+          friction = 1 / 10;
+
+      function moveBackground() {
+        x += (lFollowX - x) * friction;
+        y += (lFollowY - y) * friction;
+
+        translate = 'translate(' + x + 'px, ' + y + 'px) scale(2)';
+
+        $('.cc-user-flow').css({
+          '-webit-transform': translate,
+          '-moz-transform': translate,
+          'transform': translate
+        });
+
+        window.requestAnimationFrame(moveBackground);
+      }
+
+      $(window).on('mousemove click', function(e) {
+
+        var lMouseX = Math.max(-1000, Math.min(1000, $(window).width() / 2 - e.clientX));
+        var lMouseY = Math.max(-1000, Math.min(1000, $(window).height() / 2 - e.clientY));
+        lFollowX = (20 * lMouseX) / 20; // 100 : 12 = lMouxeX : lFollow
+        lFollowY = (10 * lMouseY) / 10;
+
+      });
+
+      moveBackground();
+  });
+
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-40419309-4');
+</script>
+
+
+</head>
+<body>
+  <div class="orientation-overlay">
+    <h3>Rotate your device to portrait mode.</h3>
+  </div>
+  <div class="main" id="expandNav">
+    <a class="btn-menu" href="#" onclick="change()">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </a>
+    <nav class="navbar">
+      <ul>
+        <li>
+  		    <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="https://www.dropbox.com/s/459cg6o5ip9k7ni/Resume%202.1.pdf?raw=1" target="_blank">Resume</a>
+        </li>
+        <li>
+          Work
+          <ul>
+            <li class="title">
+              <a href="/commoncensus">Common Census</a>
+            </li>
+            <li>
+              <a href="/commoncensus#webapp">Web App</a>
+            </li>
+            <li>
+              <a href="/commoncensus#patterns">UI Patterns</a>
+            </li>
+            <li>
+              <a href="/commoncensus#cba-future">Admin App</a>
+            </li>
+            <li>
+              <a href="/commoncensus#website">Website</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="title">
+              <a href="/courageous">Courageous Sailing</a>
+            </li>
+            <li>
+              <a href="/courageous#website">Website</a>
+            </li>
+            <li>
+              <a href="/courageous#brand">Brand + Marketing</a>
+            </li>
+          </ul>
+        </li>
+        <li class="btn-group-inline">
+          <a href="https://github.com/hfreund/hfreund.github.io" target="_blank" class="btn inverse"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/hughfreund/" target="_blank" class="btn inverse"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="mailto:hugh.freund@gmail.com" target="_blank" class="btn inverse"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-heading">
+      <div class="logo" id="commoncensus"></div>
+    </div>
+    <div id="fullpage">
+      <div class="slide split" data-anchor="summary">
+        <div class="text">
+          <h2>Administrative Web App Redesign</h2>
+          <h4>Common Benefits Administrator is a core piece of software for Common Census and it's been around for a long time. As the company worked out how this application would grow, I led the design exercise to help envision a bridge from present to future.</h4>
+          <div class="stat-block">
+            <div class="stat-item">
+              <h5>Technology</h5>
+              <ul>
+                <li>Adobe XD</li>
+                <li>InVision</li>
+              </ul>
+            </div>
+            <div class="stat-item">
+              <h5>Skills</h5>
+              <ul>
+                <li>IA/Sketching</li>
+                <li>Mockups</li>
+              </ul>
+            </div>
+            <div class="stat-item">
+              <h5>Role</h5>
+              <ul>
+                <li>Lead Designer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="img-block">
+          <picture>
+            <source
+              srcset="../images/cc/cba/newui/cba_ee-browse.png">
+            <img
+              src="../images/cc/cba/newui/cba_ee-browse.png"
+              srcset="../images/cc/cba/newui/cba_ee-browse.png"
+              alt="Common Benefits Administrator">
+          </picture>
+        </div>
+      </div>
+      <div class="slide bg-cc-gradient" data-anchor="admin">
+        <div class="text">
+          <h2>Administrative Mode</h2>
+          <h4>The majority of the application contains administrative functionality. Most of the features that had been added were poorly organized and buried deep inside of menus. This vision addressed the lack of a planned architecture and also createc a better framework for future feature development.</h4>
+        </div>
+      </div>
+      <div class="slide bg-cc-gradient reverse" data-anchor="admin-img">
+          <div class="title-box fixed">
+            <h3>Administrative Mode</h3>
+          </div>
+        <div class="img-block">
+          <picture>
+            <source
+              srcset="../images/cc/cba/newui/cba_ee-browse.png">
+            <img
+              src="../images/cc/cba/newui/cba_ee-browse.png"
+              srcset="../images/cc/cba/newui/cba_ee-browse.png"
+              alt="CBA Future - Admin">
+          </picture>
+        </div>
+      </div>
+      <div class="slide bg-cc-gradient" data-anchor="interview">
+        <div class="text">
+          <h2>Interview Mode</h2>
+          <h4>The other side of this application is a one-on-one interview between an enroller and an individual either in person or over the phone. In this case, providing the best user experience meant improving the time each task takes for the enroller, and also reducing insider jargon for the enrollee.</h4>
+        </div>
+      </div>
+      <div class="slide bg-cc-gradient reverse" data-anchor="interview-img">
+          <div class="title-box fixed">
+            <h3>Interview Mode</h3>
+          </div>
+        <div class="img-block">
+          <picture>
+            <source
+              srcset="../images/cc/cba/newui/Interview_enrollments_overview.png">
+            <img
+              src="../images/cc/cba/newui/Interview_enrollments_overview.png"
+              srcset="../images/cc/cba/newui/Interview_enrollments_overview.png"
+              alt="CBA Future - Admin">
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="bg-fade">
+    </div>
+  </div>
+</body>
+</html>
