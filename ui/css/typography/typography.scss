@@ -1,7 +1,8 @@
 /*================================
 TYPOGRAPHY
 ================================*/
-@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+//@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700');
 $text-color: rgb(63, 76, 107); //#606c88;
 $quiet-color: #ccc;
 $loud-color: #000;
@@ -11,17 +12,13 @@ $link-color: rgba($text-color, 0.5);
 $link-hover-color: saturate($text-color, 50%);
 $link-visited-color: purple;
 
-$base-font-family: 'Nunito', sans-serif;
+$base-font-family: 'Merriweather', sans-serif;
 $base-font-size: 18px;
 $base-font-weight: 300;
-$base-line-height: 1.8em;
+$base-line-height: 1.6;
 
-$fixed-font-family: 'Andale Mono', AndaleMono, monospace;
-$fixed-font-size: 15px;
-$fixed-line-height: 1.2;
-
-$heading-font-family: 'Nunito', sans-serif;
-$heading-font-weight: 100;
+$heading-font-family: 'Montserrat', sans-serif;
+$heading-font-weight: 400;
 
 body {
   font-family: $base-font-family;
@@ -36,8 +33,9 @@ h1, h2, h3, h4 {
   line-height: 1.4;
 }
 p {
-  font-size: 0.85em;
-  line-height: 1.6;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
 }
 .muted {
   opacity: 0.8;
