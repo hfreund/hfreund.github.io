@@ -2,7 +2,7 @@
 TYPOGRAPHY
 ================================*/
 //@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Nunito:300,400,700');
 $text-color: rgb(63, 76, 107); //#606c88;
 $quiet-color: #ccc;
 $loud-color: #000;
@@ -17,7 +17,7 @@ $base-font-size: 18px;
 $base-font-weight: 300;
 $base-line-height: 1.6;
 
-$heading-font-family: 'Montserrat', sans-serif;
+$heading-font-family: 'Nunito', sans-serif;
 $heading-font-weight: 400;
 
 body {
