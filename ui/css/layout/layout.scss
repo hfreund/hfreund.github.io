@@ -425,6 +425,7 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   &.title {
     justify-content: space-between;
+    min-width: 400px;
   }
   .title .text {
     padding: 0 3.5em;
