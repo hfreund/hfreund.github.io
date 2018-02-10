@@ -15,7 +15,7 @@ $link-visited-color: purple;
 $base-font-family: 'Merriweather', sans-serif;
 $base-font-size: 1.6rem;
 $base-font-weight: 300;
-$base-line-height: 1;
+$base-line-height: 1.4;
 
 $heading-font-family: 'Nunito', sans-serif;
 $heading-font-weight: 400;
@@ -54,10 +54,12 @@ h6 {
   font-size: 1.2rem;
 }
 p {
+  font-size: 1rem;
+  font-weight: 300;
   &.lead {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     opacity: 0.8;
-    line-height: 1.4;
+    line-height: 1.6;
     margin: 1em 0 0;
 }
 }
