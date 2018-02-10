@@ -13,15 +13,18 @@ Elements
   }
   display: flex;
   flex-flow: row wrap;
-  border-top: 1px solid red;
-  margin: 4em 0 2em;
-  padding-top: 1em;
+  border-top: 3px solid rgba(255, 255, 255, 0.22);
+  margin: 0 2em;
 }
 .stat-item {
-  margin-right: 30px;
+  margin-bottom: 2em;
+  flex-grow: 1;
   h5 {
-    margin: 0;
-    font-size: 0.8em;
+    margin: 0 0 0.65em;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.22);
+    padding: 0 0 0.15em 0;
   }
   ul {
     list-style-type: none;
