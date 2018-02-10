@@ -425,7 +425,6 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   &.title {
     justify-content: space-between;
-    min-width: 400px;
   }
   .title .text {
     padding: 0 3.5em;
@@ -534,6 +533,7 @@ body:not(.fp-viewing-0) .project .page-heading {
             flex-flow: column;
             height: 100%;
             justify-content: space-between;
+            min-width: 400px;
           }
         }
         .img-block {
