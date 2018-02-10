@@ -423,8 +423,32 @@ body:not(.fp-viewing-0) .project .page-heading {
       margin: 0 auto;
     }
   }
+  &.title {
+    justify-content: space-between;
+  }
   .title .text {
     padding: 0 3.5em;
+  }
+  .title-block {
+    height: 100%;
+    align-self: last baseline;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    h2 {
+      font-size: 3em;
+      margin: 0.5em 0 0;
+      }
+  }
+  .pre-title {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.22);
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 0.5em;
+    padding-right: 2em;
+    align-self: left;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
   }
   .img-block {
     display: flex;
