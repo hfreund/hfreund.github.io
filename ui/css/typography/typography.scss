@@ -20,11 +20,11 @@ $base-line-height: 1;
 $heading-font-family: 'Nunito', sans-serif;
 $heading-font-weight: 400;
 html {
-  font-size: 10px;
+  font-size: 16px;
+  line-height: 1.4;
 }
 body {
   font-family: $base-font-family;
-  font-size: $base-font-size;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
   margin: 0;
@@ -54,9 +54,6 @@ h6 {
   font-size: 1.2rem;
 }
 p {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  font-weight: $base-font-weight;
   &.lead {
     font-size: 1.8rem;
     opacity: 0.8;
