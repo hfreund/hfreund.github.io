@@ -431,7 +431,6 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   .title-block {
     height: 100%;
-    align-self: last baseline;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -462,7 +461,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       picture {
         display: flex;
         flex-basis: auto;
-        align-items: flex-start;
+        justify-content: center;
         overflow: hidden;
         @include for-phone-only {
           align-items: center;
@@ -470,6 +469,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       }
       img {
       width: 100%;
+      max-width: 1080px;
       height: auto;
     }
     &.two-up {
