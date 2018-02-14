@@ -523,11 +523,10 @@ body:not(.fp-viewing-0) .project .page-heading {
       .fp-tableCell {
         flex-flow: row;
         max-width: initial;
-        margin-left: 6em;
         align-items: center;
         .text {
           max-width: 580px;
-          padding-left: 0;
+          padding-left: 6em;
           &.title {
             display: flex;
             flex-flow: column;
