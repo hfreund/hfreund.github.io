@@ -463,10 +463,12 @@ img {
   }
 }
 .btn {
-  background-color: $solid-white;
-  padding: 0.5em 0.75em;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
   line-height: 1;
   text-decoration: none;
+  background-color: $solid-white;
+  padding: 0.75em 1.25em;
   border-radius: 2px;
   transition: 200ms ease;
   color: $text-color;
@@ -503,7 +505,7 @@ img {
     display: inline-block;
   }
   &.big {
-    padding: 0.75em 1.25em;
+    font-size: 1.2rem;
   }
   &.inverse {
     border: 1px solid #d3d5d7;
