@@ -38,7 +38,6 @@ $site-gradient-end: #141e30;
   }
 }
 
-
 // Common Census
 $cc-light-blue: #066fb9;
 
@@ -53,6 +52,11 @@ $cc-gradient-end: #005C97;
     @include background-gradient($cc-gradient-end, $cc-gradient-start, 'horizontal');
     color: $solid-white;
   }
+}
+
+.bg-dark-purple-gradient {
+  @include background-gradient(#53346D, #000000, 'vertical');
+  color: #000000;
 }
 
 // Courageous
