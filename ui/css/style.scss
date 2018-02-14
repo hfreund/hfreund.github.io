@@ -64,10 +64,11 @@ Elements
     padding: 0;
     ul {
       margin: 1em 0;
-      font-size: 0.8em;
       li {
         margin: 0;
         a {
+          font-size: 1rem;
+          line-height: 1.8;
           padding: 0 0.5em;
           border-left: 2px solid transparent;
           &:hover {
@@ -78,7 +79,7 @@ Elements
     }
     li {
       margin: 0.25em 3.25em;
-      font-size: 1em;
+      font-size: 1.2rem;
       &.title {
         font-weight: 700;
       }
@@ -462,10 +463,12 @@ img {
   }
 }
 .btn {
-  background-color: $solid-white;
-  padding: 0.5em 0.75em;
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
   line-height: 1;
   text-decoration: none;
+  background-color: $solid-white;
+  padding: 0.75em 1.25em;
   border-radius: 2px;
   transition: 200ms ease;
   color: $text-color;
@@ -502,7 +505,7 @@ img {
     display: inline-block;
   }
   &.big {
-    padding: 0.75em 1.25em;
+    font-size: 1.2rem;
   }
   &.inverse {
     border: 1px solid #d3d5d7;
