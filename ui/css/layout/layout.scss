@@ -342,65 +342,65 @@ body:not(.fp-viewing-0) .project .page-heading {
   max-width: 1600px;
   margin: 0 auto;
 }
-// .section.title {
-//   .fp-tableCell {
-//     display: grid;
-//     grid-template-rows: 1fr auto 50px;
-//     grid-template-areas: "image" "title" "scroll";
-//     @include for-tablet-landscape-up {
-//       grid-template-columns: 1fr 450px 6fr;
-//       grid-template-rows: 1fr auto;
-//       grid-gap: 0 5em;
-//       overflow: hidden;
-//       justify-content: space-between;
-//       grid-template-areas: "empty title image" "scroll scroll scroll";
-//       max-width: initial;
-//     }
-//     .text {
-//       grid-area: title;
-//       padding: 0 2.55em;
-//       @include for-tablet-landscape-up {
-//         padding: 0 2em 0 0;
-//         display: flex;
-//         flex-flow: column;
-//         justify-content: center;
-//       }
-//     }
-//     .img-block {
-//       grid-area: image;
-//       display: flex;
-//       align-self: end;
-//       overflow: hidden;
-//       picture {
-//         padding: 1em 2.55em;
-//         overflow: hidden;
-//         max-height: calc(100vh - 4em - 5px);
-//         @include for-tablet-landscape-up {
-//           padding: 0;
-//           align-self: center;
-//           img {
-//             min-width: 900px;
-//             overflow: hidden;
-//           }
-//         }
-//       }
-//       @include for-tablet-landscape-up {
-//         align-self: center;
-//       }
-//     }
-//     .scroll {
-//       grid-area: scroll;
-//       justify-content: center;
-//       display: grid;
-//       grid-template-areas:  "... top ..."
-//                             "left bottom right";
-//       grid-gap: 5px;
-//       @include for-tablet-portrait-up {
-//         margin-bottom: 1.5em;
-//       }
-//     }
-//   }
-// }
+.section.title {
+  .fp-tableCell {
+    display: grid;
+    grid-template-rows: 1fr auto 50px;
+    grid-template-areas: "image" "title" "scroll";
+    @include for-tablet-landscape-up {
+      grid-template-columns: 1fr 450px 6fr;
+      grid-template-rows: 1fr auto;
+      grid-gap: 0 5em;
+      overflow: hidden;
+      justify-content: space-between;
+      grid-template-areas: "empty title image" "scroll scroll scroll";
+      max-width: initial;
+    }
+    .text {
+      grid-area: title;
+      padding: 0 2.55em;
+      @include for-tablet-landscape-up {
+        padding: 0 2em 0 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+      }
+    }
+    .img-block {
+      grid-area: image;
+      display: flex;
+      align-self: end;
+      overflow: hidden;
+      picture {
+        padding: 1em 2.55em;
+        overflow: hidden;
+        max-height: calc(100vh - 4em - 5px);
+        @include for-tablet-landscape-up {
+          padding: 0;
+          align-self: center;
+          img {
+            min-width: 900px;
+            overflow: hidden;
+          }
+        }
+      }
+      @include for-tablet-landscape-up {
+        align-self: center;
+      }
+    }
+    .scroll {
+      grid-area: scroll;
+      justify-content: center;
+      display: grid;
+      grid-template-areas:  "... top ..."
+                            "left bottom right";
+      grid-gap: 5px;
+      @include for-tablet-portrait-up {
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+}
 /*==== Responsive Sections & Slides ====*/
 
 .slide, .section {
@@ -450,11 +450,7 @@ body:not(.fp-viewing-0) .project .page-heading {
   }
   .img-block {
     display: flex;
-    flex-flow: column;
-    overflow-x: hidden;
-    text-align: center;
     justify-content: center;
-    flex-grow: 1;
     margin-bottom: 4em;
       picture {
         display: flex;
@@ -519,8 +515,13 @@ body:not(.fp-viewing-0) .project .page-heading {
         }
       }
       .img-block {
+        @include for-phone-only {
+          max-height: 38%;
+        }
+        @include for-tablet-portrait-only {
+          max-height: 42%;
+        }
         margin-bottom: 0;
-        flex-grow: initial;
         padding: 2em 4em;
       }
     }
@@ -543,7 +544,6 @@ body:not(.fp-viewing-0) .project .page-heading {
         }
         .img-block {
           padding: 0;
-          flex-grow: 1;
         }
       }
     }
