@@ -435,7 +435,6 @@ body:not(.fp-viewing-0) .project .page-heading {
     flex-flow: column;
     justify-content: center;
     h2 {
-      font-size: 2.6rem;
       margin: 0.5em 0 0;
       }
   }
@@ -506,17 +505,14 @@ body:not(.fp-viewing-0) .project .page-heading {
     .fp-tableCell {
       @include for-phone-only {
         flex-flow: column-reverse;
-        justify-content: center;
       }
       @include for-tablet-portrait-only {
         flex-flow: column-reverse;
         justify-content: space-evenly;
       }
-      .text {
-        flex-grow: 1;
-      }
       .img-block {
         margin-bottom: 0;
+        flex-grow: initial;
       }
     }
     @include for-tablet-landscape-up {
@@ -527,6 +523,7 @@ body:not(.fp-viewing-0) .project .page-heading {
         .text {
           max-width: 580px;
           padding-left: 6em;
+          flex-grow: 1;
           &.title {
             display: flex;
             flex-flow: column;
@@ -537,6 +534,7 @@ body:not(.fp-viewing-0) .project .page-heading {
         }
         .img-block {
           padding: 0;
+          flex-grow: 1;
         }
       }
     }

@@ -76,11 +76,14 @@ p {
   font-size: 1rem;
   font-weight: 300;
   &.lead {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     opacity: 0.8;
     line-height: 1.6;
     margin: 1em 0 0;
-}
+    @include for-tablet-portrait-up {
+      font-size: 1.4rem;
+    }
+  }
 }
 .muted {
   opacity: 0.8;

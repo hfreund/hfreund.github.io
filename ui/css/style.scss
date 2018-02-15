@@ -136,7 +136,7 @@ Elements
 a.btn-menu {
   position: fixed;
   z-index: 102;
-  top: 20px;
+  top: 10px;
   left: 10px;
   height: 44px;
   width: 44px;
@@ -372,6 +372,11 @@ a.btn-menu {
     top: -9px;
     &.left {
       left: 20px;
+    }
+  }
+  @include for-phone-only {
+    &.left {
+      left: 5px;
     }
   }
 }
