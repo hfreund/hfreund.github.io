@@ -500,7 +500,6 @@ body:not(.fp-viewing-0) .project .page-heading {
     .fp-tableCell {
       @include for-phone-only {
         flex-flow: column-reverse;
-
       }
       @include for-tablet-portrait-only {
         flex-flow: column-reverse;
@@ -508,19 +507,21 @@ body:not(.fp-viewing-0) .project .page-heading {
       }
       .text {
         @include for-phone-only {
-          padding: 2em 4em;
+          padding: 1em 4em 2em;
         }
         @include for-tablet-portrait-only {
-          padding: 1.5em 6em;
+          padding: 1.5em 6em 2em;
         }
       }
       .img-block {
         @include for-phone-only {
           max-height: 38%;
+          margin-bottom: 0;
         }
         @include for-tablet-portrait-only {
           max-height: 42%;
-          padding: 2em 4em;
+          padding: 0em 4em;
+          margin-bottom: 0;
         }
         @include for-tablet-landscape-up {
           overflow: hidden;
