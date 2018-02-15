@@ -14,7 +14,7 @@ Elements
   display: flex;
   flex-flow: row wrap;
   margin-top: 2em;
-  @include for-tablet-landscape-up {
+  @include for-tablet-portrait-up {
     margin-top: 3.5em;
   }
 }

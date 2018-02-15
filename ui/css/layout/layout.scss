@@ -504,17 +504,24 @@ body:not(.fp-viewing-0) .project .page-heading {
     .fp-tableCell {
       @include for-phone-only {
         flex-flow: column-reverse;
+
       }
       @include for-tablet-portrait-only {
         flex-flow: column-reverse;
         justify-content: space-evenly;
       }
       .text {
-        padding: 2em 4em;
+        @include for-phone-only {
+          padding: 2em 4em;
+        }
+        @include for-tablet-portrait-only {
+          padding: 1.5em 2.85em;
+        }
       }
       .img-block {
         margin-bottom: 0;
         flex-grow: initial;
+        padding: 2em 4em;
       }
     }
     @include for-tablet-landscape-up {
