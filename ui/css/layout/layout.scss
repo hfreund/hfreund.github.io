@@ -430,7 +430,6 @@ body:not(.fp-viewing-0) .project .page-heading {
     padding: 0 3.5em;
   }
   .title-block {
-    height: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -510,6 +509,9 @@ body:not(.fp-viewing-0) .project .page-heading {
         flex-flow: column-reverse;
         justify-content: space-evenly;
       }
+      .text {
+        padding: 2em 4em;
+      }
       .img-block {
         margin-bottom: 0;
         flex-grow: initial;
@@ -528,7 +530,7 @@ body:not(.fp-viewing-0) .project .page-heading {
             display: flex;
             flex-flow: column;
             height: 100%;
-            justify-content: space-between;
+            justify-content: center;
             min-width: 400px;
           }
         }

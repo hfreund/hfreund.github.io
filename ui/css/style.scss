@@ -13,10 +13,13 @@ Elements
   }
   display: flex;
   flex-flow: row wrap;
-  margin: 2em 0;
+  margin-top: 2em;
+  @include for-tablet-landscape-up {
+    margin-top: 3.5em;
+  }
 }
 .stat-item {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   flex-grow: 1;
   h5 {
     margin: 0 0 0.65em;
