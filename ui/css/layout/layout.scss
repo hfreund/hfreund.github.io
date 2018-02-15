@@ -358,7 +358,7 @@ body:not(.fp-viewing-0) .project .page-heading {
     }
     .text {
       grid-area: title;
-      padding: 0 2.55em;
+      padding: 0 2.85em;
       @include for-tablet-landscape-up {
         padding: 0 2em 0 0;
         display: flex;
@@ -372,7 +372,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       align-self: end;
       overflow: hidden;
       picture {
-        padding: 1em 2.55em;
+        padding: 1em 2.85em;
         overflow: hidden;
         max-height: calc(100vh - 4em - 5px);
         @include for-tablet-landscape-up {
@@ -406,7 +406,7 @@ body:not(.fp-viewing-0) .project .page-heading {
 .slide, .section {
   .text {
     @include for-phone-only {
-      padding: 0 2.55em 1.5em;
+      padding: 0 2em 1.5em 2.85em;
       h2 {
         margin: 0.5em 0 0.25em;
       }
@@ -475,7 +475,7 @@ body:not(.fp-viewing-0) .project .page-heading {
       text-align: center;
     }
     @include for-phone-only {
-      padding: 1.5em 2.55em;
+      padding: 1.5em 2.85em;
     }
     @include for-tablet-portrait-only {
       padding: 4em;
@@ -511,7 +511,7 @@ body:not(.fp-viewing-0) .project .page-heading {
           padding: 2em 4em;
         }
         @include for-tablet-portrait-only {
-          padding: 1.5em 2.85em;
+          padding: 1.5em 6em;
         }
       }
       .img-block {
@@ -520,9 +520,12 @@ body:not(.fp-viewing-0) .project .page-heading {
         }
         @include for-tablet-portrait-only {
           max-height: 42%;
+          padding: 2em 4em;
         }
-        margin-bottom: 0;
-        padding: 2em 4em;
+        @include for-tablet-landscape-up {
+          overflow: hidden;
+          justify-content: left;
+        }
       }
     }
     @include for-tablet-landscape-up {
