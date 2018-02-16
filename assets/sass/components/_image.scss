@@ -1,0 +1,12 @@
+$list: pranav shah
+
+=author-images
+  @each $author in $list
+.photo-#{$author}
+  background-image: image-url("avatars/#{$author}.png") no-repeat
+
+   .author-bio
++author-images
+
+
+$image:e

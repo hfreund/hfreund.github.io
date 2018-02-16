@@ -1,0 +1,93 @@
+
+/*================================
+TYPOGRAPHY
+================================*/
+//@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Nunito:300,400,700');
+@import "variables";
+$text-color: rgb(63, 76, 107); //#606c88;
+$quiet-color: #ccc;
+$loud-color: #000;
+$heading-color: #111;
+
+$link-color: rgba($text-color, 0.5);
+$link-hover-color: saturate($text-color, 50%);
+$link-visited-color: purple;
+
+$base-font-family: 'Merriweather', sans-serif;
+$base-font-size: 1.6rem;
+$base-font-weight: 300;
+$base-line-height: 1.6;
+
+$heading-font-family: 'Nunito', sans-serif;
+$heading-font-weight: 400;
+html {
+  font-size: 16px;
+  line-height: 1.4;
+}
+body {
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: 1.4;
+}
+h1 {
+  font-size: 2.6rem;
+  @include for-tablet-landscape-up {
+    font-size: 3.4rem;
+  }
+}
+h2 {
+  font-size: 2.2rem;
+  @include for-tablet-landscape-up {
+    font-size: 2.6rem;
+  }
+}
+h3 {
+  font-size: 1.8rem;
+  @include for-tablet-landscape-up {
+    font-size: 2.2rem;
+  }
+}
+h4 {
+  font-size: 1.4rem;
+  @include for-tablet-landscape-up {
+    font-size: 1.8rem;
+  }
+}
+h5 {
+  font-size: 1.2rem;
+  @include for-tablet-landscape-up {
+    font-size: 1.4rem;
+  }
+}
+h6 {
+  font-size: 1rem;
+  @include for-tablet-landscape-up {
+    font-size: 1.2rem;
+  }
+}
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  &.lead {
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 1em 0 0;
+    @include for-phone-only {
+      font-size: 1.1rem;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 1.4rem;
+    }
+  }
+}
+.muted {
+  opacity: 0.8;
+}
