@@ -250,6 +250,7 @@ nav {
       .img-block {
         padding: 0 3.5em;
         margin: 4em 0 2em;
+        object-fit: contain;
       }
     }
     @include for-tablet-landscape-up {
