@@ -1,0 +1,17 @@
+.project-list {
+  @include for-tablet-portrait-up {
+    margin-top: 3em;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin: 0.5em 0.5em 0 0;
+      display: inline-block;
+      @include for-phone-only {
+        margin: 0.75em 0;
+        display: block;
+      }
+    }
+  }
+}

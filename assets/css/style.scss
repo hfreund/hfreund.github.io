@@ -1,0 +1,29 @@
+//compile
+
+@charset 'utf-8';
+
+@import "../sass/vendor/normalize";
+
+@import "/vendors/fullpage/jquery.fullpage.min.css";
+
+@import "../sass/abstracts/mixins";
+@import "../sass/abstracts/variables";
+@import "../sass/themes/color";
+@import "../sass/themes/typography";
+
+@import "../sass/base/base";
+@import "../sass/base/helpers";
+
+@import "../sass/layout/nav";
+@import "../sass/layout/main";
+@import "../sass/layout/sections";
+
+@import "../sass/components/arrows";
+@import "../sass/components/button";
+@import "../sass/components/image";
+@import "../sass/components/list";
+@import "../sass/components/projectCard";
+@import "../sass/components/stats";
+@import "../sass/components/title";
+
+@import "../sass/base/shame";

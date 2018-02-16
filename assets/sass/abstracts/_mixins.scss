@@ -1,5 +1,5 @@
-//Layout
 
+//Breakpoints
 @mixin for-phone-only {
   @media (max-width: 599px) { @content; }
 }
@@ -24,3 +24,47 @@
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) { @content; }
 }
+
+//Hide
+@mixin hide($breakpoint) {
+  @if $breakpoint == phone {
+    @include for-phone-only {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+  @if $breakpoint == tabletPortraitOnly{
+    @include for-tablet-portrait-only {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+  @if $breakpoint == tabletPortraitUp {
+    @include for-tablet-portrait-up {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+  @if $breakpoint == tabletLandscapeUp {
+    @include for-tablet-landscape-up {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+}
+
+//Gradients
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+      background: -webkit-linear-gradient(top, $start-color, $end-color);
+      background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+      background: -webkit-linear-gradient(left, $start-color, $end-color);
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+ }

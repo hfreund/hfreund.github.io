@@ -1,0 +1,32 @@
+.stat-block {
+  @include for-phone-only {
+    display: none;
+  }
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 2em;
+  @include for-tablet-portrait-up {
+    margin-top: 3.5em;
+  }
+}
+.stat-item {
+  margin-bottom: 1em;
+  flex-grow: 1;
+  h5 {
+    margin: 0 0 0.65em;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.22);
+    padding: 0 0 0.15em 0;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+}

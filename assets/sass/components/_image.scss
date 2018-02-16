@@ -1,12 +1,54 @@
-$list: pranav shah
 
-=author-images
-  @each $author in $list
-.photo-#{$author}
-  background-image: image-url("avatars/#{$author}.png") no-repeat
+// $list: pranav shah
+//
+// =author-images
+//   @each $author in $list
+// .photo-#{$author}
+//   background-image: image-url("avatars/#{$author}.png") no-repeat
+//
+//    .author-bio
+// +author-images
+//
+//
+// $image:e
 
-   .author-bio
-+author-images
+#bg-title {
+  background-image: url('../../images/hf-headshot.jpg');
+}
+#cc-website-desktop-phone {
+  background-image: url('../../images/cc_website_desktop+phone-03.png');
+}
+#cc-sketch-login {
+  background-image: url('../../images/cc/cbi/sketches/login-flow.png');
+}
+#cc-sketch-login-2 {
+  background-image: url('../../images/cc/cbi/sketches/login-flow-2.png');
+}
+#cc-sketch-mode-switching {
+  background-image: url('../../images/cc/cbi/sketches/mode-switching-flow.png');
+}
+#cc-sketch-dashboard {
+  background-image: url('../../images/cc/cbi/sketches/dashboard-flow.png');
+}
+#cs-website-desktop-phone {
+  background-image: url('../../images/cs-index-collage.png');
+}
 
-
-$image:e
+.img-bg {
+  &.contain {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &.cover {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &.left {
+    background-position: left;
+  }
+  &.right {
+    background-position: right;
+  }
+}
