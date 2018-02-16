@@ -229,7 +229,7 @@ nav {
       visibility: hidden;
     }
     @include for-phone-only {
-      padding: 0 1em;
+      padding: 0;
       flex-grow: 1;
       justify-content: space-evenly;
       .project-text {
