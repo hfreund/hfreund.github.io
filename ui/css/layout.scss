@@ -188,7 +188,7 @@ nav {
     }
     @include for-tablet-landscape-up {
       flex-basis: 600px;
-      justify-content: space-around;
+      justify-content: space-between;
     }
     .text {
       margin: 0 3em 3em;
