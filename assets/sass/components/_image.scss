@@ -45,24 +45,20 @@
 //   background-image: url('../../map-get($cmcs, cmcs-brand)')
 // }
 
-$client: cmcs;
-$project: cbi;
-$images: benefits medical-enrollment paychecker personal-information;
-
 @each $image in $images {
   .img-bg {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  &##{$client}-#{$project}-#{$image} {
+  &##{$project}-#{$image} {
     @include for-phone-only {
-      background-image: url('/assets/images/#{$client}/#{$project}/#{$image}.png');
+      background-image: url('/assets/images/#{$project}/#{$image}.png');
     }
     @include for-tablet-portrait-only {
-      background-image: url('/assets/images/#{$client}/#{$project}/#{$image}@2x.png');
+      background-image: url('/assets/images/#{$project}/#{$image}@2x.png');
     }
     @include for-tablet-landscape-up {
-      background-image: url('/assets/images/#{$client}/#{$project}/#{$image}@3x.png');
+      background-image: url('/assets/images/#{$project}/#{$image}@3x.png');
     }
   }
   &.cover {
