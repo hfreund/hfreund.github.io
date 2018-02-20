@@ -63,7 +63,7 @@ $cmcs-cbi: (
 // }
 
 @each $key, $value in $cmcs-cbi {
-  .img-bg.cmcs-cbi {
+  .img-bg.#{$cmcs-cbi} {
     &##{$key} {
       @include for-phone-only {
         background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}.png');
