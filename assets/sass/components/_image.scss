@@ -53,8 +53,10 @@ $image: Benefits;
   background-position: center center;
   background-repeat: no-repeat;
   &##{$client}-#{$project}-#{$image} {
-    background-image: url('/assets/images/#{$client}/#{$project}/#{$image}.png');
-    @include for-tablet-portrait-up {
+    @include for-phone-only {
+      background-image: url('/assets/images/#{$client}/#{$project}/#{$image}.png');
+    }
+    @include for-tablet-portrait-only {
       background-image: url('/assets/images/#{$client}/#{$project}/#{$image}@2x.png');
     }
     @include for-tablet-landscape-up {
