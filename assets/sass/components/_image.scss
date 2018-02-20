@@ -34,33 +34,54 @@
   background-image: url('../../images/cs-index-collage.png');
 }
 
-// $cmcs: (
-//   brand: cmcs-brand,
-//   cba: cmcs-cba,
-//   cbi: cmcs-cbi,
-//   web: cmcs-web
+// $project-maps: (
+//   cmcs-cbi
 // );
+$cmcs-cbi: (
+  benefits: benefits,
+  medical-enrollment: medical-enrollment,
+  paychecker: paychecker,
+  personal-information: personal-information
+);
 // $client: cmcs;
 // .img-bg {
 //   background-image: url('../../map-get($cmcs, cmcs-brand)')
 // }
 
-@each $image in $images {
-  .img-bg {
+// .img-bg {
+//   &##{$cmcs-cbi}-#{map-get($cmcs-cbi, $value)} {
+//     @include for-phone-only {
+//       background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}.png');
+//     }
+//     @include for-tablet-portrait-only {
+//       background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@2x.png');
+//     }
+//     @include for-tablet-landscape-up {
+//       background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@3x.png');
+//     }
+//   }
+// }
+
+@each $key, $value in $cmcs-cbi {
+  .img-bg.cmcs-cbi {
+    &##{$key} {
+      @include for-phone-only {
+        background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}.png');
+      }
+      @include for-tablet-portrait-only {
+        background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@2x.png');
+      }
+      @include for-tablet-landscape-up {
+        background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@3x.png');
+      }
+    }
+  }
+}
+
+.img-bg {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  &##{$project}-#{$image} {
-    @include for-phone-only {
-      background-image: url('/assets/images/#{$project}/#{$image}.png');
-    }
-    @include for-tablet-portrait-only {
-      background-image: url('/assets/images/#{$project}/#{$image}@2x.png');
-    }
-    @include for-tablet-landscape-up {
-      background-image: url('/assets/images/#{$project}/#{$image}@3x.png');
-    }
-  }
   &.cover {
     background-size: cover;
     background-position: center center;
@@ -72,5 +93,4 @@
   &.right {
     background-position: right;
   }
-}
 }
