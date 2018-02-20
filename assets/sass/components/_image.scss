@@ -34,49 +34,77 @@
   background-image: url('../../images/cs-index-collage.png');
 }
 
-// $project-maps: (
-//   cmcs-cbi
-// );
-$cmcs-cbi: (
-  benefits: benefits,
-  medical-enrollment: medical-enrollment,
-  paychecker: paychecker,
-  personal-information: personal-information
-);
-// $client: cmcs;
-// .img-bg {
-//   background-image: url('../../map-get($cmcs, cmcs-brand)')
-// }
+@function setImage($map, $object, $image) {
+  @if map-has-key($map, $object) {
+    @return map-get(map-get($map, $object), $image);
+  }
+  @warn "The key ´#{$object} is not available in the map.";
+  @return null;
+}
 
-// .img-bg {
-//   &##{$cmcs-cbi}-#{map-get($cmcs-cbi, $value)} {
-//     @include for-phone-only {
-//       background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}.png');
-//     }
-//     @include for-tablet-portrait-only {
-//       background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@2x.png');
-//     }
-//     @include for-tablet-landscape-up {
-//       background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@3x.png');
+$projects: (
+  cmcs-cbi: cmcs-cbi,
+  cmcs-cba: cmcs-cba
+);
+
+$config: (
+  cmcs-cbi: (
+    benefits: benefits,
+    medical-enrollment: medical-enrollment,
+    paychecker: paychecker,
+    personal-information: personal-information
+  )
+  // cmcs-cba: {
+  //
+  // }
+);
+
+.img-bg {
+  @each $key, $value in $projects {
+    @if map-has-key($config, $key) {
+      ##{$value}-#{$config, $key} & {
+        background-image: url('/assets/images/#{$value}/#{$config, $key}.png');
+      }
+    } //@else {
+//      @warn "The key ´#{$key} isn’t defined in the map $config´"
+    //}
+  }
+}
+
+// @each $key in $project-maps {
+//   .img-bg.#{map-get($project-maps, $key)} {
+//     &#{map-get($project-maps, map-get($key))} {
+//       @include for-phone-only {
+//         background-image: url('/assets/images/#{$project-maps, $value}/#{map-get(map-get($key, $value))}.png');
+//       }
+//       @include for-tablet-portrait-only {
+//         background-image: url('/assets/images/#{$project}/#{map-get($project, $key)}@2x.png');
+//       }
+//       @include for-tablet-landscape-up {
+//         background-image: url('/assets/images/#{$project}/#{map-get($project, $key)}@3x.png');
+//       }
 //     }
 //   }
 // }
 
-@each $key, $value in $cmcs-cbi {
-  .img-bg.#{$cmcs-cbi} {
-    &##{$key} {
-      @include for-phone-only {
-        background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}.png');
-      }
-      @include for-tablet-portrait-only {
-        background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@2x.png');
-      }
-      @include for-tablet-landscape-up {
-        background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@3x.png');
-      }
-    }
-  }
-}
+//**
+//** The one that works **
+
+// @each $key, $value in $cmcs-cbi {
+//   .img-bg.#{$cmcs-cbi} {
+//     &##{$key} {
+//       @include for-phone-only {
+//         background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}.png');
+//       }
+//       @include for-tablet-portrait-only {
+//         background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@2x.png');
+//       }
+//       @include for-tablet-landscape-up {
+//         background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@3x.png');
+//       }
+//     }
+//   }
+// }
 
 .img-bg {
   background-size: contain;
