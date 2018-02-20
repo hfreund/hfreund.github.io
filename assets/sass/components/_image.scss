@@ -47,8 +47,10 @@
 
 $client: cmcs;
 $project: cbi;
-$image: Benefits;
-.img-bg {
+$images: benefits medical-enrollment paychecker personal-information;
+
+@each $image in $images {
+  .img-bg {
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -74,4 +76,5 @@ $image: Benefits;
   &.right {
     background-position: right;
   }
+}
 }
