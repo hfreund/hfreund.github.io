@@ -34,11 +34,26 @@
   background-image: url('../../images/cs-index-collage.png');
 }
 
+// $cmcs: (
+//   brand: cmcs-brand,
+//   cba: cmcs-cba,
+//   cbi: cmcs-cbi,
+//   web: cmcs-web
+// );
+// $client: cmcs;
+// .img-bg {
+//   background-image: url('../../map-get($cmcs, cmcs-brand)')
+// }
+
+$client: cmcs;
+$project: cbi;
+$image: Benefits MedicalEnrollment Paychecker PersonalInformation;
 .img-bg {
-  &.contain {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  &##{$client}-#{$project}-#{$image} {
+    background-image: url('../../#{$client}/#{$project}/#{$image}.png');
   }
   &.cover {
     background-size: cover;
