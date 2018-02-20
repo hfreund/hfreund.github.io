@@ -53,7 +53,7 @@ $image: Benefits;
   background-position: center center;
   background-repeat: no-repeat;
   &##{$client}-#{$project}-#{$image} {
-    background-image: url('../../#{$client}/#{$project}/#{$image}.png');
+    background-image: url('assets/images/#{$client}/#{$project}/#{$image}.png');
   }
   &.cover {
     background-size: cover;
