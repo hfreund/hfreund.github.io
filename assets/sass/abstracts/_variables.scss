@@ -1,5 +1,15 @@
 
 //Image Lists
-
-$project: crgs-brand crgs-web cmcs-cba cmcs-cbi cmcs-web site;
-$images: benefits medical-enrollment paychecker personal-information;
+$project-images:
+  ( cmcs
+    ( (cbi, benefits)               // CBI
+    , (cbi, medical-enrollment)     // CBI
+    , (cbi, paychecker)             // CBI
+    , (cbi, personal-information)   // CBI
+    , (cba, new-ui)                 // CBA
+    )
+  , crgs
+    ( (web, site)
+    , (brand, assets)
+    )
+  );

@@ -21,19 +21,7 @@
   background-image: url('../../images/cs-index-collage.png');
 }
 
-$project-images:
-  ( cmcs
-    ( (cbi, benefits)               // CBI
-    , (cbi, medical-enrollment)     // CBI
-    , (cbi, paychecker)             // CBI
-    , (cbi, personal-information)   // CBI
-    , (cba, new-ui)                 // CBA
-    )
-  , crgs
-    ( (web, site)
-    , (brand, assets)
-    )
-  );
+
 
 @each $project-image in $project-images {
     $clients: nth($project-image, 1);   //cmcs
@@ -44,7 +32,15 @@ $project-images:
         $project: nth($x, 1);           //cbi
         $image: nth($x, 2);             //benefits
         &##{$project}-#{$image} {
-          background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
+          @include for-phone-only {
+            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
+          }
+          @include for-tablet-portrait-only {
+            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@2x.png');
+          }
+          @include for-tablet-landscape-up {
+            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@3x.png');
+          }
         }
       }
     }
@@ -54,6 +50,8 @@ $project-images:
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
   &.cover {
     background-size: cover;
     background-position: center center;
