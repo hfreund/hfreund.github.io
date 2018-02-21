@@ -45,7 +45,10 @@
       }
     }
 }
-
+// .split > .fp-tableCell > .img-bg {
+//     max-width: calc(100% - 5.7em);
+//     margin: 3em 2.85em 0;
+// }
 .img-bg {
   background-size: contain;
   background-position: center center;
@@ -62,5 +65,9 @@
   }
   &.right {
     background-position: right;
+  }
+  .split .fp-tableCell & {
+    max-width: calc(100% - 5.7em);
+    margin: 3em 2.85em 0;
   }
 }
