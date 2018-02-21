@@ -34,42 +34,71 @@
   background-image: url('../../images/cs-index-collage.png');
 }
 
-@function setImage($map, $object, $image) {
-  @if map-has-key($map, $object) {
-    @return map-get(map-get($map, $object), $image);
-  }
-  @warn "The key ´#{$object} is not available in the map.";
-  @return null;
-}
+$project-images:
+  ( cmcs
+    ( (cbi, benefits)
+    , (cbi, medical-enrollment)
+    )
+  , crgs
+    ( (web, site)
+    , (brand, assets)
+    )
+  );
 
-$projects: (
-  cmcs-cbi: cmcs-cbi,
-  cmcs-cba: cmcs-cba
-);
+@each $project-image in $project-images {
+    $projects: nth($project-image, 1);  //5
+    $images: nth($project-image, 2);
 
-$config: (
-  cmcs-cbi: (
-    benefits: benefits,
-    medical-enrollment: medical-enrollment,
-    paychecker: paychecker,
-    personal-information: personal-information
-  )
-  // cmcs-cba: {
-  //
-  // }
-);
-
-.img-bg {
-  @each $key, $value in $projects {
-    @if map-has-key($config, $key) {
-      &##{$value}-#{$config, $key} {
-        background-image: url('/assets/images/#{$value}/#{$config, $key}.png');
+    .img-bg.#{$projects} {
+      @each $x in $images {
+        $project: nth($x, 1); //1
+        $image: nth($x, 2); //-70
+        &##{$project}-#{$image} {
+          background-image: url('/assets/images/#{$project}/#{$image}.png');
+        }
       }
-    } //@else {
-//      @warn "The key ´#{$key} isn’t defined in the map $config´"
-    //}
-  }
+    }
 }
+
+
+// $projects: (
+//   cmcs-cbi: cmcs-cbi,
+//   cmcs-cba: cmcs-cba
+// );
+//
+// @function setImage($map, $object, $image) {
+//   @if map-has-key($map, $object) {
+//     @return map-get(map-get($map, $object), $image);
+//   }
+//   @warn "The key ´#{$object} is not available in the map.";
+//   @return null;
+// }
+//
+// $config: (
+//   cmcs-cbi: (
+//     benefits: benefits,
+//     medical-enrollment: medical-enrollment,
+//     paychecker: paychecker,
+//     personal-information: personal-information
+//   ),
+//   cmcs-cba: (
+//     benefits: 'benefits@2x',
+//     medical-enrollment: 'medical-enrollment@2x',
+//     paychecker: 'paychecker@2x',
+//     personal-information: 'personal-information@2x'
+//   )
+// );
+//
+// .img-bg {
+//   @each $key, $value in $projects {
+//     @if map-has-key($config, $key) {
+//       &.#{$value}.#{map-get(map-get($map, $object), $image)} {
+//         background: setImage($config, $key, $key);
+//         //background-image: url('/assets/images/#{$value}/#{setImage($config, $key, benefits)}.png');
+//       }
+//     }
+//   }
+// }
 
 // @each $key in $project-maps {
 //   .img-bg.#{map-get($project-maps, $key)} {
