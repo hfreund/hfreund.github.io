@@ -1,17 +1,4 @@
 
-// $list: pranav shah
-//
-// =author-images
-//   @each $author in $list
-// .photo-#{$author}
-//   background-image: image-url("avatars/#{$author}.png") no-repeat
-//
-//    .author-bio
-// +author-images
-//
-//
-// $image:e
-
 #bg-title {
   background-image: url('../../images/hf-headshot.jpg');
 }
@@ -36,8 +23,11 @@
 
 $project-images:
   ( cmcs
-    ( (cbi, benefits)
-    , (cbi, medical-enrollment)
+    ( (cbi, benefits)               // CBI
+    , (cbi, medical-enrollment)     // CBI
+    , (cbi, paychecker)             // CBI
+    , (cbi, personal-information)   // CBI
+    , (cba, new-ui)                 // CBA
     )
   , crgs
     ( (web, site)
@@ -46,94 +36,19 @@ $project-images:
   );
 
 @each $project-image in $project-images {
-    $projects: nth($project-image, 1);  //5
-    $images: nth($project-image, 2);
+    $clients: nth($project-image, 1);   //cmcs
+    $images: nth($project-image, 2);    //cbi
 
-    .img-bg.#{$projects} {
+    .img-bg.#{$clients} {
       @each $x in $images {
-        $project: nth($x, 1); //1
-        $image: nth($x, 2); //-70
+        $project: nth($x, 1);           //cbi
+        $image: nth($x, 2);             //benefits
         &##{$project}-#{$image} {
-          background-image: url('/assets/images/#{$project}/#{$image}.png');
+          background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
         }
       }
     }
 }
-
-
-// $projects: (
-//   cmcs-cbi: cmcs-cbi,
-//   cmcs-cba: cmcs-cba
-// );
-//
-// @function setImage($map, $object, $image) {
-//   @if map-has-key($map, $object) {
-//     @return map-get(map-get($map, $object), $image);
-//   }
-//   @warn "The key ´#{$object} is not available in the map.";
-//   @return null;
-// }
-//
-// $config: (
-//   cmcs-cbi: (
-//     benefits: benefits,
-//     medical-enrollment: medical-enrollment,
-//     paychecker: paychecker,
-//     personal-information: personal-information
-//   ),
-//   cmcs-cba: (
-//     benefits: 'benefits@2x',
-//     medical-enrollment: 'medical-enrollment@2x',
-//     paychecker: 'paychecker@2x',
-//     personal-information: 'personal-information@2x'
-//   )
-// );
-//
-// .img-bg {
-//   @each $key, $value in $projects {
-//     @if map-has-key($config, $key) {
-//       &.#{$value}.#{map-get(map-get($map, $object), $image)} {
-//         background: setImage($config, $key, $key);
-//         //background-image: url('/assets/images/#{$value}/#{setImage($config, $key, benefits)}.png');
-//       }
-//     }
-//   }
-// }
-
-// @each $key in $project-maps {
-//   .img-bg.#{map-get($project-maps, $key)} {
-//     &#{map-get($project-maps, map-get($key))} {
-//       @include for-phone-only {
-//         background-image: url('/assets/images/#{$project-maps, $value}/#{map-get(map-get($key, $value))}.png');
-//       }
-//       @include for-tablet-portrait-only {
-//         background-image: url('/assets/images/#{$project}/#{map-get($project, $key)}@2x.png');
-//       }
-//       @include for-tablet-landscape-up {
-//         background-image: url('/assets/images/#{$project}/#{map-get($project, $key)}@3x.png');
-//       }
-//     }
-//   }
-// }
-
-//**
-//** The one that works **
-
-// @each $key, $value in $cmcs-cbi {
-//   .img-bg.#{$cmcs-cbi} {
-//     &##{$key} {
-//       @include for-phone-only {
-//         background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}.png');
-//       }
-//       @include for-tablet-portrait-only {
-//         background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@2x.png');
-//       }
-//       @include for-tablet-landscape-up {
-//         background-image: url('/assets/images/#{map-get($cmcs-cbi, $key)}@3x.png');
-//       }
-//     }
-//   }
-// }
 
 .img-bg {
   background-size: contain;
