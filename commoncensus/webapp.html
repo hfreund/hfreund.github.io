@@ -40,10 +40,10 @@
   //Navigation
   menu: '#menu',
   lockAnchors: false,
-  anchors:['summary', 'overview', 'existing', 'approach', 'sketches', 'user-flow', 'challenges', 'wireframe','wireframe-2', 'mobile-wireframe', 'deployment', 'deployment-2'],
+  anchors:['summary', 'overview', 'approach', 'user-flow', 'challenges-objectives', 'wireframe','login', 'deployment'],
   navigation: true,
   navigationPosition: 'left',
-  navigationTooltips: ['Summary', 'Overview', 'Existing', 'Approach', 'Sketches', 'User Flow', 'Challenges', 'Wireframe','Wireframe 2', 'Mobile Wireframe', 'Deployment', 'Deployment 2'],
+  navigationTooltips: ['Summary', 'Overview', 'Approach', 'User Flow', 'Challenges & Objectives', 'Wireframes', 'Universal Login', 'Deployment'],
   showActiveTooltip: false,
   slidesNavigation: false,
   slidesNavPosition: 'bottom',
@@ -329,16 +329,64 @@
           </div>
         </div>
       </div>
-      <div class="section wrap fp-auto-height" data-anchor="user-flow">
+      <div class="section wrap" data-anchor="user-flow">
         <div class="title-box fixed top">
           <h3>User Flow</h3>
         </div>
         <div class="cc-user-flow"></div>
       </div>
-      <div class="section fp-auto-height bg-lt-gray" data-anchor="challenges-objectives">
+      <div class="section split fp-auto-height bg-lt-gray" data-anchor="challenges-objectives">
         <div class="text">
-          <h2>Approach</h2>
-          <h4>Working with the development team, sales team, and client services team, we created an all new enrollment platform that met current needs of our clients while maintaining flexibility for future development. It was important to strike a balance between updating the UI to modern standards that would also dovetail with existing modules while not disrupting a user experience that many clients had become accustomed to.</h4>
+          <h2>Challenges</h2>
+          <dl>
+            <dt>
+              Keeping it in scope
+            </dt>
+            <dd>
+              There were many new features desired by some or all members of the team
+            </dd>
+            <dt>
+              New development skills
+            </dt>
+            <dd>
+              As the only UI/UX team member, I had to design and implement a large part of the UI
+            </dd>
+            <dt>
+              Legacy Modules
+            </dt>
+            <dd>
+              Some modules could not be updated in phase 1. I planned their integration in a way that allowed for future redevelopment
+            </dd>
+            <dt>
+              Cohesion
+            </dt>
+            <dd>
+              Enrollment modules have widely varying functionality. Each use case must be accounted for
+            </dd>
+          </dl>
+        </div>
+        <div class="text">
+          <h2>Objectives</h2>
+          <dl>
+            <dt>
+              Update code base
+            </dt>
+            <dd>
+              Reuse UI elements as much as possible and create a UI toolkit for future development
+            </dd>
+            <dt>
+              Responsive UI
+            </dt>
+            <dd>
+              The app must be both accessible and functional on any browsing experience
+            </dd>
+            <dt>
+              Empower users
+            </dt>
+            <dd>
+              The new platform would go beyond the traditional broker-employer-employee relationship. Individuals would have less support, so the app needed to pick up the slack
+            </dd>
+          </dl>
         </div>
       </div>
       <div class="section fp-auto-height" data-anchor="wireframe">
