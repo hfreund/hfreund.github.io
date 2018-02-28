@@ -20,6 +20,10 @@
       left: 20px;
     }
   }
+  ul li a {
+    padding: 0 6px;
+    margin-left: -6px;
+  }
   @include for-phone-only {
     &.left {
       left: 5px;
