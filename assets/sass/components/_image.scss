@@ -71,7 +71,7 @@
       max-width: calc(100% - 5.7em);
       margin: 3em 2.85em 0;
     }
-    @include for-tablet-landscape-only {
+    @include for-tablet-portrait-only {
       max-width: calc(100% - 10em);
       margin: 0 5em;
     }
