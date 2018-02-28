@@ -70,6 +70,8 @@
     @include for-phone-only {
       max-width: calc(100% - 5.7em);
       margin: 3em 2.85em 0;
+
+
     }
     @include for-tablet-portrait-only {
       max-width: calc(100% - 10em);
@@ -79,6 +81,53 @@
       min-width: 500px;
       margin-left: 2.85em;
       overflow-x: hidden;
+    }
+  }
+}
+
+.img-block {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4em;
+    img {
+    width: 100%;
+    max-width: 1080px;
+    height: auto;
+  }
+  &.centered {
+    text-align: center;
+  }
+  @include for-phone-only {
+    padding: 1.5em 2.85em;
+  }
+  @include for-tablet-portrait-only {
+    padding: 4em;
+  }
+  @include for-tablet-landscape-up {
+    padding: 0 4em;
+  }
+}
+
+.img-grid {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  margin: 0 1em ;
+  flex-grow: 1;
+  @include for-tablet-portrait-up {
+    margin: 0 4em 1em 3em;
+    height: calc(100% - 6em);
+    width: calc(100% - 6em);
+  }
+  .img-block {
+    padding: 0;
+    flex-basis: 350px;
+    flex-grow: 1;
+    margin: 1em;
+    line-height: 0;
+    height: calc(50vh - 5em);
+    &.bordered img{
+      border: 1px solid $gray-border;
     }
   }
 }

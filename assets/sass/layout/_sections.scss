@@ -43,54 +43,6 @@
     letter-spacing: 0.07em;
     font-size: 1rem;
   }
-  .img-block {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4em;
-      picture {
-        display: flex;
-        flex-basis: auto;
-        justify-content: center;
-        overflow: hidden;
-        @include for-phone-only {
-          align-items: center;
-        }
-      }
-      img {
-      width: 100%;
-      max-width: 1080px;
-      height: auto;
-    }
-    &.two-up {
-      display: flex;
-      flex-flow: row;
-      align-items: center;
-    }
-    &.centered {
-      text-align: center;
-    }
-    @include for-phone-only {
-      padding: 1.5em 2.85em;
-    }
-    @include for-tablet-portrait-only {
-      padding: 4em;
-    }
-    @include for-tablet-landscape-up {
-      padding: 0 4em;
-      &:not(.two-up) img {
-        min-width: 680px;
-      }
-    }
-    &.auto {
-      img {
-        @include for-tablet-landscape-up {
-        margin: 0 auto;
-        width: auto;
-        min-width: initial;
-        }
-      }
-    }
-  }
   &.split {
     .fp-tableCell {
       @include for-phone-only {
@@ -146,34 +98,6 @@
         .img-block {
           padding: 0;
         }
-      }
-    }
-  }
-  .img-grid {
-    display: flex;
-    flex-flow: row wrap;
-    align-content: center;
-    margin: 0 1em ;
-    flex-grow: 1;
-    @include for-tablet-portrait-up {
-      margin: 0 4em 1em 3em;
-      height: calc(100% - 6em);
-      width: calc(100% - 6em);
-    }
-    .img-block {
-      padding: 0;
-      border-radius: 2px;
-      flex-basis: 350px;
-      flex-grow: 1;
-      margin: 1em;
-      line-height: 0;
-      height: calc(50vh - 5em);
-      overflow: hidden;
-      picture {
-        align-items: flex-start;
-      }
-      img {
-        min-width: 115%;
       }
     }
   }
