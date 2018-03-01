@@ -84,7 +84,8 @@
 
 .img-block {
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
   margin-bottom: 4em;
     img {
     width: 100%;
@@ -123,10 +124,9 @@
   }
   .img-block {
     padding: 0;
-    flex-basis: 350px;
-    flex-grow: 1;
-    margin: 0 0 1.5em 0;
-    line-height: 0;
+    //flex-basis: 350px;
+    //flex-grow: 1;
+    margin: 0 0 3.5em 0;
     &.bordered img{
       border: 1px solid $gray-border;
     }

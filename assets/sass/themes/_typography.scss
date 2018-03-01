@@ -77,3 +77,10 @@ p {
 .muted {
   opacity: 0.8;
 }
+.img-caption {
+    opacity: 0.6;
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-rendering: optimizelegibility;
+    margin-top: 0.25em;
+}
