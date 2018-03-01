@@ -1,7 +1,7 @@
 .slide, .section {
   .text {
     @include for-phone-only {
-      padding: 0 2em 1.5em 2.85em;
+      margin: 0 2em 1.5em 2.85em;
       h2 {
         margin: 0.5em 0 0.25em;
       }
@@ -10,10 +10,10 @@
       }
     }
     @include for-tablet-portrait-only {
-      padding: 4em;
+      margin: 4em;
     }
     @include for-tablet-landscape-up {
-      padding: 0 4em;
+      margin: 6em 4em;
       max-width: 680px;
       margin: 0 auto;
     }
@@ -54,11 +54,11 @@
       }
       .text {
         @include for-phone-only {
-          padding: 1em 3em 2em;
+          margin: 2em 3em;
           flex-basis: 100%;
         }
         @include for-tablet-portrait-only {
-          padding: 1.5em 6em 2em;
+          margin: 2em 6em;
         }
       }
       .img-block {
@@ -85,12 +85,10 @@
         justify-content: flex-start;
         .text {
           max-width: 580px;
-          padding-left: 6em;
-          flex-grow: 1;
+          margin-left: 6em;
           &.title {
             display: flex;
             flex-flow: column;
-            height: 100%;
             justify-content: center;
             min-width: 400px;
           }
