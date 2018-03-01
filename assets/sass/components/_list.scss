@@ -27,11 +27,11 @@
   }
   @include for-tablet-portrait-up {
     margin: 0 3.5em;
-  }
-  .list {
-    padding: 1.5em 2.5em;
-    flex-basis: 50%;
-    max-width: 540px;
+    .list {
+      padding: 1.5em 2.5em;
+      flex-basis: 50%;
+      max-width: 540px;
+    }
   }
 }
 .list {
