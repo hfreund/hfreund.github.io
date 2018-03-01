@@ -124,8 +124,6 @@
     width: calc(100% - 8em);
   }
   .img-block {
-    flex-basis: 350px;
-    flex-grow: 1;
     &.bordered img{
       border: 1px solid $gray-border;
     }
@@ -137,6 +135,8 @@
     }
     @include for-tablet-landscape-up {
       margin: 1em;
+      flex-basis: 350px;
+      flex-grow: 1;
       &:first-of-type {
         margin-left: 0;
       }
