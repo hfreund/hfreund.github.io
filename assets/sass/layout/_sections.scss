@@ -21,9 +21,6 @@
   &.title {
     justify-content: space-between;
   }
-  .title .text {
-    padding: 0 3.5em;
-  }
   .title-block {
     display: flex;
     flex-flow: column;
@@ -54,11 +51,11 @@
       }
       .text {
         @include for-phone-only {
-          margin: 0 3em;
+          margin: 2.5 3em;
           flex-basis: 100%;
         }
         @include for-tablet-portrait-only {
-          margin: 0 6em;
+          margin: 3em 6em;
         }
       }
       .img-block {
