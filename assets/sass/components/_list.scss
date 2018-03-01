@@ -21,6 +21,13 @@
   flex-flow: row;
   align-items: stretch;
   justify-content: space-evenly;
+  @include for-phone-only {
+    flex-flow: column;
+    margin: 0 2em 2em 3.25em;
+  }
+  @include for-tablet-portrait-up {
+    margin: 0 3.5em;
+  }
   .list {
     padding: 1.5em 2.5em;
     flex-basis: 50%;

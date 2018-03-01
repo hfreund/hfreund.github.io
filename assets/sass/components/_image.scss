@@ -86,7 +86,6 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin-bottom: 4em;
     img {
     width: 100%;
     max-width: 1080px;
@@ -96,13 +95,13 @@
     text-align: center;
   }
   @include for-phone-only {
-    padding: 1.5em 3.25em;
+    margin: 1.5em 2em 1.5em 3.25em;
   }
   @include for-tablet-portrait-only {
-    padding: 4em;
+    margin: 4em 6em 0;
   }
   @include for-tablet-landscape-up {
-    padding: 0 4em;
+    margin: 6em 4em 0;
   }
 }
 
@@ -125,7 +124,6 @@
     width: calc(100% - 8em);
   }
   .img-block {
-    padding: 0;
     flex-basis: 350px;
     flex-grow: 1;
     &.bordered img{
