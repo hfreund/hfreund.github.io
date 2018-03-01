@@ -147,4 +147,12 @@
       }
     }
   }
+  &.vertical {
+    flex-flow: column;
+    .img-block {
+      @include for-tablet-landscape-up {
+        margin: 0 0 3.5em 0;
+      }
+    }
+  }
 }
