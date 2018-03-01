@@ -111,19 +111,33 @@
   align-content: center;
   margin: 0 1em ;
   flex-grow: 1;
-  @include for-tablet-portrait-up {
+  @include for-tablet-portrait-only {
+    margin: 4em 6em;
+    height: calc(100% - 8em);
+    width: calc(100% - 12em);
+  }
+  @include for-tablet-landscape-up {
     margin: 6em 4em;
-    height: calc(100% - 6em);
-    width: calc(100% - 6em);
+    height: calc(100% - 12em);
+    width: calc(100% - 8em);
   }
   .img-block {
     padding: 0;
     flex-basis: 350px;
     flex-grow: 1;
-    margin: 1em;
+    margin: 0 0 1.5em 0;
     line-height: 0;
     &.bordered img{
       border: 1px solid $gray-border;
+    }
+    @include for-tablet-landscape-up {
+      margin: 1em;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }
