@@ -17,17 +17,17 @@
     line-height: 1;
     top: -9px;
     &.left {
-      left: 20px;
+      @include for-phone-only {
+        left: 10px;
+      }
+      @include for-tablet-portrait-up {
+        left: 20px;
+      }
     }
   }
   ul li a {
     padding: 0 6px;
     margin-left: -6px;
-  }
-  @include for-phone-only {
-    &.left {
-      left: 5px;
-    }
   }
 }
 .fp-slidesNav ul {
