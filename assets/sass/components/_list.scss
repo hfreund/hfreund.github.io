@@ -15,3 +15,27 @@
     }
   }
 }
+
+.list-compare {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-evenly;
+  .list {
+    padding: 1.5em 2.5em;
+    flex-basis: 50%;
+    max-width: 540px;
+  }
+}
+.list {
+  dd {
+    margin: 0 0 1em;
+  }
+  dt {
+    font-weight: 600;
+    font-family: "Nunito",sans-serif;
+  }
+  dl {
+    margin: 2em 0 0;
+  }
+}
