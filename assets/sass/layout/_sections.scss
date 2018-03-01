@@ -1,7 +1,7 @@
 .slide, .section {
   .text {
     @include for-phone-only {
-      margin: 0 2em 1.5em 2.85em;
+      margin: 0 2em 0 2.85em;
       h2 {
         margin: 0.5em 0 0.25em;
       }
@@ -10,10 +10,10 @@
       }
     }
     @include for-tablet-portrait-only {
-      margin: 4em 6em;
+      margin: 0 6em;
     }
     @include for-tablet-landscape-up {
-      margin: 6em 4em;
+      margin: 0 4em;
       max-width: 680px;
       margin: 0 auto;
     }
@@ -54,11 +54,11 @@
       }
       .text {
         @include for-phone-only {
-          margin: 2em 3em;
+          margin: 0 3em;
           flex-basis: 100%;
         }
         @include for-tablet-portrait-only {
-          margin: 2em 6em;
+          margin: 0 6em;
         }
       }
       .img-block {
@@ -86,7 +86,7 @@
         overflow-x: hidden;
         .text {
           max-width: 580px;
-          margin: 4em 6em 4em 7em;
+          margin: 0 6em 0 7em;
           &.title {
             display: flex;
             flex-flow: column;

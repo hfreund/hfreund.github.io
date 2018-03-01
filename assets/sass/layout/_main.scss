@@ -83,7 +83,12 @@ body:not(.fp-viewing-0) .project .page-heading {
   align-items: center;
   flex-flow: column;
   max-width: 1600px;
-  margin: 0 auto;
+  @include for-phone-only {
+    margin: 2.5em auto;
+  }
+  @include for-tablet-portrait-up {
+    margin: 6em auto;
+  }
 }
 
 //Projects
