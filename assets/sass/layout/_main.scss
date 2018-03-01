@@ -13,6 +13,7 @@
     transition: 200ms ease;
   }
 }
+
 nav {
   grid-area: nav;
   width: 320px;
@@ -23,6 +24,7 @@ nav {
     transform: translateX(-256px);
   }
 }
+
 .title-box {
   background: $light-gray;
   grid-area: 1/2/2/3;
@@ -56,6 +58,7 @@ nav {
     }
   }
 }
+
 .content {
   grid-area: 2/2/3/3;
   padding: 2em 1.25em;
@@ -65,7 +68,6 @@ nav {
     margin: 0 auto;
   }
 }
-
 
 body:not(.fp-viewing-0) .project .page-heading {
   visibility: visible;
@@ -78,7 +80,7 @@ body:not(.fp-viewing-0) .project .page-heading {
 }
 .fp-tableCell {
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-flow: column;
   max-width: 1600px;
   margin: 0 auto;
