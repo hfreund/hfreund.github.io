@@ -33,20 +33,14 @@
       visibility: hidden;
     }
   }
-  @if $breakpoint == tabletPortraitOnly{
+  @if $breakpoint == tablet-portrait{
     @include for-tablet-portrait-only {
       display: none !important;
       visibility: hidden;
     }
   }
-  @if $breakpoint == tabletPortraitUp {
-    @include for-tablet-portrait-up {
-      display: none !important;
-      visibility: hidden;
-    }
-  }
-  @if $breakpoint == tabletLandscapeUp {
-    @include for-tablet-landscape-up {
+  @if $breakpoint == tablet-landscape {
+    @include for-tablet-landscape-only {
       display: none !important;
       visibility: hidden;
     }

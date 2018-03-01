@@ -124,8 +124,8 @@
   }
   .img-block {
     padding: 0;
-    //flex-basis: 350px;
-    //flex-grow: 1;
+    flex-basis: 350px;
+    flex-grow: 1;
     margin: 0 0 3.5em 0;
     &.bordered img{
       border: 1px solid $gray-border;

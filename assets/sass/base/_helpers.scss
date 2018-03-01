@@ -127,12 +127,9 @@ img {
     @include hide(phone);
   }
   &.tablet {
-    @include hide(tabletPortraitOnly);
+    @include hide(tablet-portrait);
   }
-  &.tablet-portrait-up {
-    @include hide(tabletPortraitUp);
-  }
-  &.tablet-landscape-up {
-    @include hide(tabletLandscapeUp);
+  &.tablet-landscape {
+    @include hide(tablet-landscape);
   }
 }
