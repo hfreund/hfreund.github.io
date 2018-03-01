@@ -110,8 +110,10 @@
   display: flex;
   flex-flow: row wrap;
   align-content: center;
-  margin: 0 2em 0 3.25em;
   flex-grow: 1;
+  @include for-phone-only {
+    margin: 2em 2em 0 3.25em;
+  }
   @include for-tablet-portrait-only {
     margin: 4em 6em 0;
     height: calc(100% - 8em);
@@ -126,9 +128,14 @@
     padding: 0;
     flex-basis: 350px;
     flex-grow: 1;
-    margin: 0 0 3.5em 0;
     &.bordered img{
       border: 1px solid $gray-border;
+    }
+    @include for-phone-only {
+      margin: 0 0 2em 0;
+    }
+    @include for-tablet-portrait-only {
+      margin: 0 0 3.5em 0;
     }
     @include for-tablet-landscape-up {
       margin: 1em;
