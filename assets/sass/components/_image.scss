@@ -1,28 +1,4 @@
 
-#bg-title {
-  background-image: url('../../images/hf-headshot.jpg');
-}
-#cc-website-desktop-phone {
-  background-image: url('../../images/cc_website_desktop+phone-03.png');
-}
-#cc-sketch-login {
-  background-image: url('../../images/cc/cbi/sketches/login-flow.png');
-}
-#cc-sketch-login-2 {
-  background-image: url('../../images/cc/cbi/sketches/login-flow-2.png');
-}
-#cc-sketch-mode-switching {
-  background-image: url('../../images/cc/cbi/sketches/mode-switching-flow.png');
-}
-#cc-sketch-dashboard {
-  background-image: url('../../images/cc/cbi/sketches/dashboard-flow.png');
-}
-#cs-website-desktop-phone {
-  background-image: url('../../images/cs-index-collage.png');
-}
-
-
-
 @each $project-image in $project-images {
     $clients: nth($project-image, 1);   //cmcs
     $images: nth($project-image, 2);    //cbi
