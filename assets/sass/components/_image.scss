@@ -73,7 +73,14 @@
     @include for-phone-only {
       flex-basis: 75vh;
     }
+    @include for-tablet-portrait-only {
       flex-basis: 85vh;
+    }
+    @include for-tablet-landscape-up {
+      img {
+        max-height: 85vh;
+      }
+    }
   }
   &.centered {
     text-align: center;
