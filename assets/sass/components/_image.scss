@@ -73,9 +73,7 @@
     @include for-phone-only {
       flex-basis: 75vh;
     }
-    @include for-tablet-portrait-only {
-      flex-basis: 86vh;
-    }
+      flex-basis: 85vh;
   }
   &.centered {
     text-align: center;
