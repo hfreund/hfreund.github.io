@@ -68,7 +68,14 @@
     width: 100%;
     max-width: 1080px;
     height: auto;
-    max-height: 85vh;
+  }
+  :not(.vertical) & {
+    @include for-phone-only {
+      flex-basis: 75vh;
+    }
+    @include for-tablet-portrait-only {
+      flex-basis: 86vh;
+    }
   }
   &.centered {
     text-align: center;
