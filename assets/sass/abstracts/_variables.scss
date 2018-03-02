@@ -2,10 +2,7 @@
 //Image Lists
 $project-images:
   ( cmcs
-    ( (cbi, benefits)               // CBI
-    , (cbi, medical-enrollment)     // CBI
-    , (cbi, paychecker)             // CBI
-    , (cbi, personal-information)   // CBI
+    ( (cbi, hero)   // CBI
     , (cba, new-ui)                 // CBA
     )
   , crgs

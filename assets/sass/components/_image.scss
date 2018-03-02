@@ -1,4 +1,6 @@
 
+// For Background Image Mapping
+// Add new images via '_variables.scss'
 @each $project-image in $project-images {
     $clients: nth($project-image, 1);   //cmcs
     $images: nth($project-image, 2);    //cbi
