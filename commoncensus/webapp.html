@@ -486,12 +486,20 @@
         <div class="img-block">
           <picture>
             <source
+              media="(min-width: 800px)"
               srcset="../assets/images/cmcs-cbi/personal-information.png 1x,
                       ../assets/images/cmcs-cbi/personal-information@2x.png 2x,
-                      ../assets/images/cmcs-cbi/personal-information@3x.png 3x" />
+                      ../assets/images/cmcs-cbi/personal-information@3x.png 3x">
+            <source
+              media="(min-width: 450px)"
+              srcset="../assets/images/cmcs-cbi/paychecker.png 1x,
+                      ../assets/images/cmcs-cbi/paychecker@2x.png 2x,
+                      ../assets/images/cmcs-cbi/paychecker@3x.png 3x">
             <img
-              src="../assets/images/cmcs-cbi/personal-information@3x.png"
-              alt="Common Benefits" />
+              src="../assets/images/cmcs-cbi/benefits.png"
+              srcset="../assets/images/cmcs-cbi/benefits@2x.png 2x,
+                      ../assets/images/cmcs-cbi/benefits@3x.png 3x"
+              alt="Common Benefits">
           </picture>
           <p class="img-caption">Common Benefits: Benefits Overview</p>
         </div>
