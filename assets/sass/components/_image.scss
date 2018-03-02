@@ -69,17 +69,15 @@
     max-width: 1080px;
     height: auto;
   }
-  :not(.vertical) & {
-    @include for-phone-only {
-      flex-basis: 75vh;
-    }
-    @include for-tablet-portrait-only {
-      flex-basis: 85vh;
-    }
-    @include for-tablet-landscape-up {
-      img {
-        max-height: 85vh;
-      }
+  @include for-phone-only {
+    flex-basis: 75vh;
+  }
+  @include for-tablet-portrait-only {
+    flex-basis: 85vh;
+  }
+  @include for-tablet-landscape-up {
+    img {
+      max-height: 85vh;
     }
   }
   &.centered {
