@@ -13,19 +13,19 @@
     transition: 200ms ease;
     display: none;
   }
+  &.left {
+    @include for-phone-only {
+      left: 10px;
+    }
+    @include for-tablet-portrait-up {
+      left: 20px;
+    }
   ul li .fp-tooltip {
     background-color: #0b0a17;
     border-radius: 2px;
     padding: 8px 12px;
     line-height: 1;
     top: -9px;
-    &.left {
-      @include for-phone-only {
-        left: 10px;
-      }
-      @include for-tablet-portrait-up {
-        left: 20px;
-      }
     }
   }
   ul li a {
