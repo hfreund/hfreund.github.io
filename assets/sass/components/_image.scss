@@ -68,17 +68,7 @@
     width: 100%;
     max-width: 1080px;
     height: auto;
-  }
-  @include for-phone-only {
-    flex-basis: 75vh;
-  }
-  @include for-tablet-portrait-only {
-    flex-basis: 85vh;
-  }
-  @include for-tablet-landscape-up {
-    img {
-      max-height: 85vh;
-    }
+    max-height: 85vh;
   }
   &.centered {
     text-align: center;
@@ -98,7 +88,6 @@
   display: flex;
   flex-flow: row wrap;
   align-content: center;
-  justify-content: center;
   flex-grow: 1;
   @include for-phone-only {
     margin: 2em 2em 0 3.25em;
