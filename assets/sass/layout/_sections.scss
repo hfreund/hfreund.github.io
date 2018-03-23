@@ -1,6 +1,5 @@
 .slide, .section {
   .text {
-    width: 100%;
     @include for-phone-only {
       margin: 0 2em 0 3.25em;
       h2 {
@@ -14,6 +13,7 @@
       margin: 0 6em;
     }
     @include for-tablet-landscape-up {
+      width: 100%;
       max-width: 680px;
       margin: 0 auto;
     }

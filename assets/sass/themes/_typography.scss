@@ -92,10 +92,19 @@ p {
 .text-grid {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
-  max-width: 680px;
   justify-content: space-between;
   margin: 2em 0;
+  @include for-phone-only {
+    margin: 0 2em 0 3.25em;
+  }
+  @include for-tablet-portrait-only {
+    margin: 0 6em;
+  }
+  @include for-tablet-landscape-up {
+  width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
 }
 .text-grid-item {
   margin-bottom: 1.5em;
