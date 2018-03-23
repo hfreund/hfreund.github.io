@@ -416,7 +416,9 @@
   </div>
   <script type="text/javascript" src="/assets/js/vendors/cocoen.js"></script>
   <script>
-			new Cocoen(document.querySelector('.cocoen'));
+			document.addEventListener('DOMContentLoaded', function(){
+				new Cocoen();
+			});
 		</script>
 </body>
 </html>
