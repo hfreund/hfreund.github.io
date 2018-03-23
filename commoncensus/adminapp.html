@@ -148,9 +148,6 @@
               <a href="/commoncensus#webapp">Web App</a>
             </li>
             <li>
-              <a href="/commoncensus#patterns">UI Patterns</a>
-            </li>
-            <li>
               <a href="/commoncensus#cba-future">Admin App</a>
             </li>
             <li>
@@ -176,27 +173,30 @@
         </li>
       </ul>
     </nav>
-    <div class="page-heading">
-      <div class="logo" id="commoncensus"></div>
-    </div>
     <div id="fullpage">
-      <div class="section split" data-anchor="summary">
-        <div class="text">
-          <h2>Administrative Web App Redesign</h2>
-          <h4>Common Benefits Administrator is a core piece of software for Common Census and it's been around for a long time. As the company worked out how this application would grow, I led the design exercise to help envision a bridge from present to future.</h4>
+      <div class="section split bg-cc-gradient" data-anchor="summary">
+        <div class="text title">
+          <div class="title-block">
+            <h5 class="pre-title">Common Census</h5>
+            <h2>Admin Web App Redesign</h2>
+            <p class="lead">Unifying and planning the future UI of a complex webapp.</p>
+          </div>
           <div class="stat-block">
             <div class="stat-item">
               <h5>Technology</h5>
               <ul>
                 <li>Adobe XD</li>
                 <li>InVision</li>
+                <li>Visual Studio</li>
               </ul>
             </div>
             <div class="stat-item">
               <h5>Skills</h5>
               <ul>
                 <li>IA/Sketching</li>
+                <li>Wireframe</li>
                 <li>Mockups</li>
+                <li>Development</li>
               </ul>
             </div>
             <div class="stat-item">
@@ -207,26 +207,156 @@
             </div>
           </div>
         </div>
+        <div id="cbi-hero" class="img-bg cmcs">
+        </div>
+      </div>
+      <div class="section fp-auto-height" data-anchor="overview">
+        <div class="text">
+          <h2>Application overview + existing condition</h2>
+          <p class="lead muted">Built out of an evolution of a desktop application, this benefits administration webapp for human resource departments and insurance brokers was a challenge to navigate in even the best of conditions. The problems came from a few areas:
+            <ol>
+              <li><strong>Architecture: </strong>The system architecture and navigational structure were not designed to accomodate continuous additions of function and modules. Without formal training, new users were often unable to locate even basic tools.</li>
+              <li><strong>User Interface: </strong>Divergent efforts by a series of developers to create new layouts or update UI components resulted in a fractured user experience. Where module archetypes did exist, they tended to be many years out of step with contemporary practices.</li>
+              <li><strong>Dependencies: </strong>Many modules that integrated into the system could not be changed or updated easily due to dependencies or compliance requirements. Therefore, new development was frequently hamstrung to advance in a new direction, which would deviate from the dependent modules.</li>
+            </ol>
+          </p>
+          <p>Working with the development team, I helped create a method for bringing the user interface up to date and designed the future system UI to work towards. The update would take place in two phases:</p>
+          <div class="img-grid">
+            <div class="img-block bordered">
+              <h4>Phase I</h4>
+              <p>Establish a common denominator for the UI, allowing for system-wide changes in the future.</p>
+            </div>
+            <div class="img-block bordered">
+              <h4>Phase II</h4>
+              <p>Progressively transition from the old UI to the new UI.</p>
+            </div>
+          </div>
+        </div>
+        <div class="img-grid">
+          <div class="img-block bordered">
+            <picture>
+              <source
+                srcset="../assets/images/cmcs-cbi/oldui-personal-info.png">
+              <img
+                src="../assets/images/cmcs-cbi/oldui-personal-info.png"
+                srcset="../assets/images/cmcs-cbi/oldui-personal-info.png"
+                alt="Common Benefits Legacy">
+            </picture>
+            <p class="img-caption">Legacy UI - Personal Information</p>
+          </div>
+          <div class="img-block bordered">
+            <picture>
+              <source
+                srcset="../assets/images/cmcs-cbi/oldui-benefits.png">
+              <img
+                src="../assets/images/cmcs-cbi/oldui-benefits.png"
+                srcset="../assets/images/cmcs-cbi/oldui-benefits.png"
+                alt="Common Benefits Legacy">
+            </picture>
+            <p class="img-caption">Legacy UI - Benefits Summary</p>
+          </div>
+          <div class="img-block bordered hide phone tablet tablet-landscape">
+            <picture>
+              <source
+                srcset="../assets/images/cmcs-cbi/oldui-benefit-quote.png">
+              <img
+                src="../assets/images/cmcs-cbi/oldui-benefit-quote.png"
+                srcset="../assets/images/cmcs-cbi/oldui-benefit-quote.png"
+                alt="Common Benefits Legacy">
+            </picture>
+            <p class="img-caption">Legacy UI - Benefit Quote</p>
+          </div>
+        </div>
+      </div>
+      <div class="section fp-auto-height bg-lt-gray" data-anchor="research">
+        <div class="text">
+          <h2>Establishing a common denominator in UI</h2>
+          <p class="lead muted">The first part of phase one was to identify and catalogue the myriad variations of UI elements. This gave me a good idea of how many element variations existed, which occured most frequently, and under what conditions they were used.</p>
+          <p>It turned out to be more complicated than merely identifying them in the front end, as some older ASP controls used entiely different implementations. It wasn't uncommon to find a button styled by the code behind instead of a class.
+          </p>
+        </div>
+        <div class="img-grid">
+          <div class="img-block bordered">
+            <picture>
+              <source
+                srcset="../assets/images/cmcs-cbi/oldui-personal-info.png">
+              <img
+                src="../assets/images/cmcs-cbi/oldui-personal-info.png"
+                srcset="../assets/images/cmcs-cbi/oldui-personal-info.png"
+                alt="Common Benefits Legacy">
+            </picture>
+            <p class="img-caption">Legacy UI - Personal Information</p>
+          </div>
+          <div class="img-block bordered">
+            <picture>
+              <source
+                srcset="../assets/images/cmcs-cbi/oldui-benefits.png">
+              <img
+                src="../assets/images/cmcs-cbi/oldui-benefits.png"
+                srcset="../assets/images/cmcs-cbi/oldui-benefits.png"
+                alt="Common Benefits Legacy">
+            </picture>
+            <p class="img-caption">Legacy UI - Benefits Summary</p>
+          </div>
+          <div class="img-block bordered hide phone tablet tablet-landscape">
+            <picture>
+              <source
+                srcset="../assets/images/cmcs-cbi/oldui-benefit-quote.png">
+              <img
+                src="../assets/images/cmcs-cbi/oldui-benefit-quote.png"
+                srcset="../assets/images/cmcs-cbi/oldui-benefit-quote.png"
+                alt="Common Benefits Legacy">
+            </picture>
+            <p class="img-caption">Legacy UI - Benefit Quote</p>
+          </div>
+        </div>
+      </div>
+      <div class="section fp-auto-height" data-anchor="phase-1">
+        <div class="text">
+          <h2>Phase I: Conversion to Bootstrap 3</h2>
+          <p class="lead muted">The decision to use Bootstrap 3 as the baseline was driven by two factors. First, a large portion of the webapp had already been developed in Bootstrap 2. Second, the companion enrollment application was built in Bootstrap 3 and these two applications would ultimately share most of their modules, so having a common language made sense and would save development effort in the near and long terms.</p>
+          <p>The goal of this conversion was to create the least amount of noticeable impact on the user while giving our development team a solid platform off of which to build future modules. Therefore, any functional changes to the navigation flow or significant changes to master page layouts were off limits. I did keep in mind the future direction of the platform, using mockups for guideance during this first phase so there would be less of a gap to span with phase two.</p>
+        </div>
         <div class="img-block">
           <picture>
             <source
-              srcset="../images/cc/cba/newui/cba_ee-browse.png">
+              srcset="../assets/images/cmcs-cbi/personal-information.png 1x,
+                      ../assets/images/cmcs-cbi/personal-information@2x.png 2x,
+                      ../assets/images/cmcs-cbi/personal-information@3x.png 3x">
             <img
-              src="../images/cc/cba/newui/cba_ee-browse.png"
-              srcset="../images/cc/cba/newui/cba_ee-browse.png"
-              alt="Common Benefits Administrator">
+              src="../assets/images/cmcs-cbi/personal-information.png"
+              alt="Common Benefits">
           </picture>
+          <p class="img-caption">Common Benefits: Benefits Overview</p>
+        </div>
+        <div class="img-block">
+          <picture>
+            <source
+              srcset="../assets/images/cmcs-cbi/paychecker.png 1x,
+                      ../assets/images/cmcs-cbi/paychecker@2x.png 2x,
+                      ../assets/images/cmcs-cbi/paychecker@3x.png 3x">
+            <img
+              src="../assets/images/cmcs-cbi/paychecker.png"
+              alt="Common Benefits">
+          </picture>
+          <p class="img-caption">Common Benefits: Benefits Overview</p>
+        </div>
+        <div class="img-block">
+          <picture>
+            <source
+              srcset="../assets/images/cmcs-cbi/benefits.png 1x,
+                      ../assets/images/cmcs-cbi/benefits@2x.png 2x,
+                      ../assets/images/cmcs-cbi/benefits@3x.png 3x">
+            <img
+              src="../assets/images/cmcs-cbi/benefits.png"
+              alt="Common Benefits">
+          </picture>
+          <p class="img-caption">Common Benefits: Benefits Overview</p>
         </div>
       </div>
-      <div class="section bg-cc-gradient" data-anchor="admin">
-        <div class="text">
-          <h2>Administrative Mode</h2>
-          <h4>The majority of the application contains administrative functionality. Most of the features that had been added were poorly organized and buried deep inside of menus. This vision addressed the lack of a planned architecture and also createc a better framework for future feature development.</h4>
-        </div>
-      </div>
-      <div class="section bg-cc-gradient reverse" data-anchor="admin-img">
+      <div class="section fp-auto-height" data-anchor="phase-2">
           <div class="title-box fixed">
-            <h3>Administrative Mode</h3>
+            <h2>Phase II: Improving the architecture &amp; layout</h2>
           </div>
         <div class="img-block">
           <picture>
@@ -237,18 +367,8 @@
               srcset="../images/cc/cba/newui/cba_ee-browse.png"
               alt="CBA Future - Admin">
           </picture>
+          <p class="img-caption">Browse for employees</p>
         </div>
-      </div>
-      <div class="section bg-cc-gradient" data-anchor="interview">
-        <div class="text">
-          <h2>Interview Mode</h2>
-          <h4>The other side of this application is a one-on-one interview between an enroller and an individual either in person or over the phone. In this case, providing the best user experience meant improving the time each task takes for the enroller, and also reducing insider jargon for the enrollee.</h4>
-        </div>
-      </div>
-      <div class="section bg-cc-gradient reverse" data-anchor="interview-img">
-          <div class="title-box fixed">
-            <h3>Interview Mode</h3>
-          </div>
         <div class="img-block">
           <picture>
             <source
@@ -258,6 +378,7 @@
               srcset="../images/cc/cba/newui/Interview_enrollments_overview.png"
               alt="CBA Future - Admin">
           </picture>
+          <p class="img-caption">The other side of this application is a one-on-one interview between an enroller and an individual either in person or over the phone. In this case, providing the best user experience meant improving the time each task takes for the enroller, and also reducing insider jargon for the enrollee.</p>
         </div>
       </div>
     </div>
