@@ -112,7 +112,6 @@
   onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
   });
 });
-new Cocoen(document.querySelector('.cocoen'));
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
@@ -418,5 +417,10 @@ new Cocoen(document.querySelector('.cocoen'));
     <div class="bg-fade">
     </div>
   </div>
+  <script>
+			document.addEventListener('DOMContentLoaded', function(){
+				new Cocoen();
+			});
+		</script>
 </body>
 </html>
