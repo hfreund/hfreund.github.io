@@ -74,7 +74,7 @@
   }
   &.portrait {
     img {
-      max-width: 48vh;
+      max-width: 40vh;
     }
   }
   @include for-phone-only {
