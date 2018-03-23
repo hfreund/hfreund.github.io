@@ -1,6 +1,6 @@
 .slide-comparison {
-  width: 600px;
-  height: 345px;
+  //width: 600px;
+  //height: 345px;
   position: relative;
   overflow: hidden;
   img {
@@ -17,7 +17,7 @@
     overflow: hidden;
   }
   .divider {
-    position: absolute; 
+    position: absolute;
     left: 50%;
     top: 0;
     bottom: 0;
@@ -27,9 +27,19 @@
   }
 }
 
-@media (max-width: 767px) {
+@include for-phone-only {
   .slide-comparison {
     width: 300px;
-    height: 200px;
+    //height: 200px;
+  }
+}
+@include for-tablet-portrait-only {
+  .slide-comparison {
+    width: 600px;
+  }
+}
+@include for-tablet-landscape-up {
+  .slide-comparison {
+    width: 900px
   }
 }
