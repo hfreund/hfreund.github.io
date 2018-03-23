@@ -93,17 +93,16 @@ p {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  margin: 2em 0;
   @include for-phone-only {
-    margin: 0 2em 0 3.25em;
+    margin: 2em 2em 2em 3.25em;
   }
   @include for-tablet-portrait-only {
-    margin: 0 6em;
+    margin: 3em 6em;
   }
   @include for-tablet-landscape-up {
   width: 100%;
     max-width: 680px;
-    margin: 0 auto;
+    margin: 2em auto;
   }
 }
 .text-grid-item {
