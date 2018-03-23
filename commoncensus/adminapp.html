@@ -15,6 +15,7 @@
   <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery.twentytwenty.js"></script>
   <script src="https://use.fontawesome.com/29fc27d329.js"></script>
 
   <!--[if lt IE 9]>
@@ -111,86 +112,6 @@
   });
 });
 
-</script>
-<script>
-// Call & init
-$(document).ready(function(){
-  $('.ba-slider').each(function(){
-    var cur = $(this);
-    // Adjust the slider
-    var width = cur.width()+'px';
-    cur.find('.resize img').css('width', width);
-    // Bind dragging events
-    drags(cur.find('.handle'), cur.find('.resize'), cur);
-  });
-});
-
-// Update sliders on resize.
-// Because we all do this: i.imgur.com/YkbaV.gif
-$(window).resize(function(){
-  $('.ba-slider').each(function(){
-    var cur = $(this);
-    var width = cur.width()+'px';
-    cur.find('.resize img').css('width', width);
-  });
-});
-
-function drags(dragElement, resizeElement, container) {
-
-  // Initialize the dragging event on mousedown.
-  dragElement.on('mousedown touchstart', function(e) {
-
-    dragElement.addClass('draggable');
-    resizeElement.addClass('resizable');
-
-    // Check if it's a mouse or touch event and pass along the correct value
-    var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
-
-    // Get the initial position
-    var dragWidth = dragElement.outerWidth(),
-        posX = dragElement.offset().left + dragWidth - startX,
-        containerOffset = container.offset().left,
-        containerWidth = container.outerWidth();
-
-    // Set limits
-    minLeft = containerOffset + 10;
-    maxLeft = containerOffset + containerWidth - dragWidth - 10;
-
-    // Calculate the dragging distance on mousemove.
-    dragElement.parents().on("mousemove touchmove", function(e) {
-
-      // Check if it's a mouse or touch event and pass along the correct value
-      var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
-
-      leftValue = moveX + posX - dragWidth;
-
-      // Prevent going off limits
-      if ( leftValue < minLeft) {
-        leftValue = minLeft;
-      } else if (leftValue > maxLeft) {
-        leftValue = maxLeft;
-      }
-
-      // Translate the handle's left value to masked divs width.
-      widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
-
-      // Set the new values for the slider and the handle.
-      // Bind mouseup events to stop dragging.
-      $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
-        $(this).removeClass('draggable');
-        resizeElement.removeClass('resizable');
-      });
-      $('.resizable').css('width', widthValue);
-    }).on('mouseup touchend touchcancel', function(){
-      dragElement.removeClass('draggable');
-      resizeElement.removeClass('resizable');
-    });
-    e.preventDefault();
-  }).on('mouseup touchend touchcancel', function(e){
-    dragElement.removeClass('draggable');
-    resizeElement.removeClass('resizable');
-  });
-}
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
@@ -312,13 +233,14 @@ function drags(dragElement, resizeElement, container) {
         </div>
         <div class="img-grid">
           <div class="img-block bordered">
-            <div class="ba-slider">
-              <img src="http://egegorgulu.com/assets/img/beforeafter/after.jpg" alt="">       
-              <div class="resize">
-                <img src="http://egegorgulu.com/assets/img/beforeafter/before.jpg" alt="">
-              </div>
-              <span class="handle"></span>
-            </div>
+            <picture>
+              <source
+                srcset="../assets/images/cmcs-cbi/oldui-personal-info.png">
+              <img
+                src="../assets/images/cmcs-cbi/oldui-personal-info.png"
+                srcset="../assets/images/cmcs-cbi/oldui-personal-info.png"
+                alt="Common Benefits Legacy">
+            </picture>
             <p class="img-caption">Legacy UI - Personal Information</p>
           </div>
           <div class="img-block bordered">
@@ -395,15 +317,10 @@ function drags(dragElement, resizeElement, container) {
           <p>The goal of this conversion was to create the least amount of noticeable impact on the user while giving our development team a solid platform off of which to build future modules. Therefore, any functional changes to the navigation flow or significant changes to master page layouts were off limits. I did keep in mind the future direction of the platform, using mockups for guideance during this first phase so there would be less of a gap to span with phase two.</p>
         </div>
         <div class="img-block">
-          <picture>
-            <source
-              srcset="../assets/images/cmcs-cbi/personal-information.png 1x,
-                      ../assets/images/cmcs-cbi/personal-information@2x.png 2x,
-                      ../assets/images/cmcs-cbi/personal-information@3x.png 3x">
-            <img
-              src="../assets/images/cmcs-cbi/personal-information.png"
-              alt="Common Benefits">
-          </picture>
+          <div id="container1">
+            <img src="sample-before.png">
+            <img src="sample-after.png">
+          </div>
           <p class="img-caption">Common Benefits: Benefits Overview</p>
         </div>
         <div class="img-block">
@@ -498,5 +415,10 @@ function drags(dragElement, resizeElement, container) {
     <div class="bg-fade">
     </div>
   </div>
+  <script>
+  $(window).load(function() {
+    $("#container1").twentytwenty();
+  });
+  </script>
 </body>
 </html>
