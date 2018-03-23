@@ -10,8 +10,7 @@
   <meta name="description" content="Portfolio">
   <meta name="author" content="Hugh Freund">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <link rel="stylesheet" type="text/css" href="/ui/fullpage/dist/jquery.fullpage.css" />
-	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/style.min.css" type="text/css" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
@@ -109,43 +108,11 @@
   afterResponsive: function(isResponsive){},
   afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
   onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-});
-      //movable bg
-      var lFollowX = 0,
-          lFollowY = 0,
-          x = 0,
-          y = 0,
-          friction = 1 / 10;
-
-      function moveBackground() {
-        x += (lFollowX - x) * friction;
-        y += (lFollowY - y) * friction;
-
-        translate = 'translate(' + x + 'px, ' + y + 'px) scale(2)';
-
-        $('.cc-user-flow').css({
-          '-webit-transform': translate,
-          '-moz-transform': translate,
-          'transform': translate
-        });
-
-        window.requestAnimationFrame(moveBackground);
-      }
-
-      $(window).on('mousemove click', function(e) {
-
-        var lMouseX = Math.max(-1000, Math.min(1000, $(window).width() / 2 - e.clientX));
-        var lMouseY = Math.max(-1000, Math.min(1000, $(window).height() / 2 - e.clientY));
-        lFollowX = (20 * lMouseX) / 20; // 100 : 12 = lMouxeX : lFollow
-        lFollowY = (10 * lMouseY) / 10;
-
-      });
-
-      moveBackground();
   });
+});
 
-  </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -155,12 +122,8 @@
   gtag('config', 'UA-40419309-4');
 </script>
 
-
 </head>
 <body>
-  <div class="orientation-overlay">
-    <h3>Rotate your device to portrait mode.</h3>
-  </div>
   <div class="main" id="expandNav">
     <a class="btn-menu" href="#" onclick="change()">
       <span class="menu-bar"></span>
