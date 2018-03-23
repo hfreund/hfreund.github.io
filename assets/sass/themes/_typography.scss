@@ -89,3 +89,26 @@ p {
     border-top: 1px solid;
     margin: 4em 0 2.5em;
 }
+.text-grid {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: 680px;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+.text-grid-item {
+  margin-bottom: 1.5em;
+  h5 {
+    margin: 0.5em 0 0;
+  }
+  p {
+    margin: 0.35em 0;
+  }
+  @include for-phone-only {
+    flex-basis: 100%;
+  }
+  @include for-tablet-portrait-up {
+    flex-basis: calc(50% - 1em);
+  }
+}
