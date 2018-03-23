@@ -15,7 +15,8 @@
   <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
-  <script type="text/javascript" src="/assets/js/jquery.twentytwenty.js"></script>
+  <script type="text/javascript" src="/assets/js/vendors/cocoen.js"></script>
+  <script type="text/javascript" src="/assets/js/vendors/cocoen-jquery.js"></script>
   <script src="https://use.fontawesome.com/29fc27d329.js"></script>
 
   <!--[if lt IE 9]>
@@ -111,7 +112,7 @@
   onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
   });
 });
-
+new Cocoen(document.querySelector('.cocoen'));
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
@@ -317,10 +318,12 @@
           <p>The goal of this conversion was to create the least amount of noticeable impact on the user while giving our development team a solid platform off of which to build future modules. Therefore, any functional changes to the navigation flow or significant changes to master page layouts were off limits. I did keep in mind the future direction of the platform, using mockups for guideance during this first phase so there would be less of a gap to span with phase two.</p>
         </div>
         <div class="img-block">
-          <div id="container1">
-            <img src="http://egegorgulu.com/assets/img/beforeafter/after.jpg">
-            <img src="http://egegorgulu.com/assets/img/beforeafter/before.jpg">
+
+          <div class="cocoen">
+            <img src="http://egegorgulu.com/assets/img/beforeafter/after.jpg" alt="">
+            <img src="http://egegorgulu.com/assets/img/beforeafter/before.jpg" alt="">
           </div>
+
           <p class="img-caption">Common Benefits: Benefits Overview</p>
         </div>
         <div class="img-block">
@@ -415,10 +418,5 @@
     <div class="bg-fade">
     </div>
   </div>
-  <script>
-  $(window).load(function() {
-    $("#container1").twentytwenty();
-  });
-  </script>
 </body>
 </html>
