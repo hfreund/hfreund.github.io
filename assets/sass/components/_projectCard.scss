@@ -1,36 +1,16 @@
-.title-card {
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  @include for-phone-only {
-    margin: 0;
+.main-top {
+  background-color: rgb(32, 23, 45);
+  .text {
+    color: $transparent-white;
   }
-  @include for-tablet-portrait-up {
-    box-shadow: 0 3px 15px 5px $box-shadow-color;
-    margin: 0 4em;
-    border-radius: 4px;
+  .link {
+    color: rgba(144, 158, 191, 0.85);
+    &:hover {
+      color: $solid-white;
+    }
   }
-  .inner {
-    display: flex;
-    @include for-phone-only {
-      flex-flow: column-reverse;
-      flex-basis: auto;
-    }
-    @include for-tablet-portrait-only {
-      flex-flow: column-reverse;
-      flex-basis: auto;
-    }
-    @include for-tablet-landscape-up {
-      flex-basis: 600px;
-      justify-content: space-between;
-    }
-    .text {
-      @include for-tablet-landscape-up {
-        flex-basis: 450px;
-        margin: 3em;
-        align-self: center;
-      }
-    }
+  .btn.inverse {
+    color: $transparent-white;
   }
 }
 .project-wrapper {
