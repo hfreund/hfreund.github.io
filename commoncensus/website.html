@@ -10,8 +10,8 @@
   <meta name="description" content="Portfolio">
   <meta name="author" content="Hugh Freund">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <link rel="stylesheet" type="text/css" href="/ui/fullpage/dist/jquery.fullpage.css" />
-	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" />
+	<link rel="stylesheet" href="/assets/css/style.min.css" type="text/css" />
+  <link rel="stylesheet" href="/assets/sass/vendor/cocoen.min.css" type="text/css" />
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
   <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
@@ -41,10 +41,10 @@
   //Navigation
   menu: '#menu',
   lockAnchors: false,
-  anchors:['summary', 'selling', 'products', 'case-intake', 'case-intake-img', 'support', 'knowledgebase', 'brand-identity', 'style-guide'],
+  anchors:['summary', 'selling', 'forms', 'support', 'brand-identity'],
   navigation: true,
   navigationPosition: 'left',
-  navigationTooltips: ['Summary', 'Selling', 'Products', 'Case Intake', 'Case Intake Img', 'Support', 'Knowledgebase', 'Brand Identity', 'Style Guide'],
+  navigationTooltips: ['Summary', 'Selling', 'Online Forms', 'Support', 'Knowledgebase', 'Brand Identity'],
   showActiveTooltip: false,
   slidesNavigation: false,
   slidesNavPosition: 'bottom',
@@ -52,8 +52,8 @@
   //Scrolling
   css3: true,
   scrollingSpeed: 700,
-  autoScrolling: true,
-  fitToSection: true,
+  autoScrolling: false,
+  fitToSection: false,
   fitToSectionDelay: 1000,
   scrollBar: false,
   easing: 'easeInOutCubic',
@@ -109,43 +109,10 @@
   afterResponsive: function(isResponsive){},
   afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
   onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-});
-      //movable bg
-      var lFollowX = 0,
-          lFollowY = 0,
-          x = 0,
-          y = 0,
-          friction = 1 / 10;
-
-      function moveBackground() {
-        x += (lFollowX - x) * friction;
-        y += (lFollowY - y) * friction;
-
-        translate = 'translate(' + x + 'px, ' + y + 'px) scale(2)';
-
-        $('.cc-user-flow').css({
-          '-webit-transform': translate,
-          '-moz-transform': translate,
-          'transform': translate
-        });
-
-        window.requestAnimationFrame(moveBackground);
-      }
-
-      $(window).on('mousemove click', function(e) {
-
-        var lMouseX = Math.max(-1000, Math.min(1000, $(window).width() / 2 - e.clientX));
-        var lMouseY = Math.max(-1000, Math.min(1000, $(window).height() / 2 - e.clientY));
-        lFollowX = (20 * lMouseX) / 20; // 100 : 12 = lMouxeX : lFollow
-        lFollowY = (10 * lMouseY) / 10;
-
-      });
-
-      moveBackground();
   });
-
-  </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -155,12 +122,8 @@
   gtag('config', 'UA-40419309-4');
 </script>
 
-
 </head>
 <body>
-  <div class="orientation-overlay">
-    <h3>Rotate your device to portrait mode.</h3>
-  </div>
   <div class="main" id="expandNav">
     <a class="btn-menu" href="#" onclick="change()">
       <span class="menu-bar"></span>
@@ -183,9 +146,6 @@
             </li>
             <li>
               <a href="/commoncensus#webapp">Web App</a>
-            </li>
-            <li>
-              <a href="/commoncensus#patterns">UI Patterns</a>
             </li>
             <li>
               <a href="/commoncensus#cba-future">Admin App</a>
@@ -217,7 +177,7 @@
       <div class="logo" id="commoncensus"></div>
     </div>
     <div id="fullpage">
-      <div class="section split" data-anchor="summary">
+      <div class="section split bg-cc-gradient" data-anchor="summary">
         <div class="text">
           <h2>Brochure Website</h2>
           <h4>I designed and built the company sales website to suit the needs of the sales and support teams. This included building a custom PDF generator for forms submitted through the website.</h4>
@@ -258,15 +218,10 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient reverse" data-anchor="selling">
+      <div class="section fp-auto-height" data-anchor="selling">
         <div class="text">
           <h2>Selling from the Website</h2>
           <h4>A key objective in this build was to help the sales team move away from static PDF's which were time consuming to createa and often out of date within months. I worked with them to organize the website so they had all the information necessary to orchastrate a webinar. Additionally, the site was built so they could update content on the fly as more products and services became available.</h4>
-        </div>
-      </div>
-      <div class="section bg-cc-gradient" data-anchor="products">
-        <div class="title-box fixed">
-          <h3>Products &amp; Pricing</h3>
         </div>
         <div class="img-block">
           <picture>
@@ -279,15 +234,10 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient reverse" data-anchor="forms">
+      <div class="section fp-auto-height" data-anchor="forms">
         <div class="text">
           <h2>Form to PDF</h2>
           <h4>The sales team used a PDF case intake form that was difficult for clients to navigate and required frequent updates as services changed. By transitioning this form online, I gave the sales team a tool they could keep up to date so clients could submit complete case information. I also developed a custom generated PDF output that could be incorporated into the final contract.</h4>
-        </div>
-      </div>
-      <div class="section bg-cc-gradient" data-anchor="case-intake">
-        <div class="title-box fixed">
-          <h3>Case Intake Form</h3>
         </div>
         <div class="img-block">
           <picture>
@@ -299,12 +249,7 @@
               alt="Common Census Case Summary Form">
           </picture>
         </div>
-      </div>
-      <div class="section bg-cc-gradient reverse" data-anchor="case-intake-img">
-        <div class="title-box fixed">
-          <h3>Case Intake Form</h3>
-        </div>
-        <div class="img-block auto">
+        <div class="img-block">
           <picture>
             <source
               srcset="../images/cc/website/cc-case-summary-pdf.png">
@@ -315,15 +260,10 @@
           </picture>
         </div>
       </div>
-      <div class="section bg-cc-gradient" data-anchor="support">
+      <div class="section fp-auto-height" data-anchor="support">
         <div class="text">
           <h2>Better Support Tools</h2>
           <h4>The client services team had a good setup for phone support, but lacked an online knowledgebase for users to help themselves. I setup a knowledgebase in Help Scout and provided the team with a template that aligned with the company brand guidelines.</h4>
-        </div>
-      </div>
-      <div class="section bg-cc-gradient reverse" data-anchor="knowledgebase">
-        <div class="title-box fixed">
-          <h3>Knowledgebase Article</h3>
         </div>
         <div class="img-block">
           <picture>
@@ -340,11 +280,6 @@
         <div class="text">
           <h2>Brand Identity</h2>
           <h4>The company last had a branding consultant in the early 2000's, which meant there was both a lack of brand consistency and the brand assets had not been redeveloped for current standards. I refined the previous style guidelines and expanded them to meet current web standards. I also rebuilt the logo and icon sets using SVG.</h4>
-        </div>
-      </div>
-      <div class="section bg-cc-gradient" data-anchor="style-guide">
-        <div class="title-box fixed">
-          <h3>Style Guide</h3>
         </div>
         <div class="img-block">
           <picture>
