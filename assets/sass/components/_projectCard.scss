@@ -13,6 +13,9 @@
     color: $transparent-white;
   }
 }
+.project-card .fp-tableCell{
+  margin: 0 auto;
+}
 .project-wrapper {
   @include for-phone-only {
     margin: 0;

@@ -46,7 +46,7 @@ body:not(.fp-viewing-0) .project .page-heading {
 }
 .fp-tableCell {
   display: flex;
-  align-items: center;
+  justify-content: center;
   flex-flow: column;
   max-width: 1600px;
   .section:not(.split) & {
