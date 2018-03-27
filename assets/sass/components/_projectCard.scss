@@ -13,13 +13,18 @@
     color: $transparent-white;
   }
 }
+
 .section.project-card .fp-tableCell{
   margin: 0 auto;
 }
 .project-wrapper {
   @include for-phone-only {
     margin: 0;
+    height: 100vh;
     border-radius: 0;
+  }
+  @include for-tablet-portrait-up {
+    height: calc(100vh - 8em);
   }
   box-shadow: 0 5px 30px 10px $box-shadow-color;
   margin: 0 4em;
@@ -30,24 +35,24 @@
   .project-inner {
     display: flex;
     flex-flow: column-reverse;
-    &.column {
-      flex-flow: column;
-      flex-basis: auto;
-      .project-text {
-        flex-basis: auto;
-        max-width: 580px;
-        align-self: left;
-        h4 {
-          line-height: 1.6;
-        }
-      }
-    }
+    // &.column {
+    //   flex-flow: column;
+    //   flex-basis: auto;
+    //   .project-text {
+    //     flex-basis: auto;
+    //     max-width: 580px;
+    //     align-self: left;
+    //     h4 {
+    //       line-height: 1.6;
+    //     }
+    //   }
+    // }
     .img-bg {
-    height: initial;
-    width: initial;
-    background-position: left;
-    background-size: cover;
-  }
+      height: initial;
+      width: initial;
+      background-position: left;
+      background-size: cover;
+    }
     @include for-phone-only {
       padding: 0;
       flex-grow: 1;
@@ -68,9 +73,14 @@
         flex-grow: 1;
       }
       .img-block {
-        padding: 0 3.5em;
-        margin: 4em 0 2em;
+        margin: 4em 3.5 2em;
         object-fit: contain;
+      }
+      .img-bg {
+        max-height: 35vh;
+        width: calc(100% - 7em);
+        background-position: center;
+        background-size: contain;
       }
     }
     @include for-tablet-landscape-up {
@@ -86,12 +96,6 @@
         flex-grow: 1;
         visibility: visible;
       }
-    }
-  }
-  &.full-height {
-    height: 100vh;
-    @include for-tablet-portrait-up {
-      height: calc(100vh - 8em);
     }
   }
 }
