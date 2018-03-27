@@ -38,18 +38,9 @@
   .project-inner {
     display: flex;
     flex-flow: column-reverse;
-    // &.column {
-    //   flex-flow: column;
-    //   flex-basis: auto;
-    //   .project-text {
-    //     flex-basis: auto;
-    //     max-width: 580px;
-    //     align-self: left;
-    //     h4 {
-    //       line-height: 1.6;
-    //     }
-    //   }
-    // }
+    .img-block {
+      object-fit: contain;
+    }
     .img-bg {
       background-position: left;
       background-size: cover;
@@ -59,14 +50,7 @@
       flex-grow: 1;
       justify-content: space-evenly;
       .project-text {
-        padding: 0 2.85em;
-      }
-      .img-block {
-        margin: 0 2.85em;
-      }
-      .img-bg {
-        max-height: 30vh;
-        width: calc (100% - 5.7em);
+        padding: 0 2.85em 2em;
       }
     }
     @include for-tablet-portrait-only {
@@ -78,13 +62,9 @@
       }
       .img-block {
         margin: 4em 3.5em 2em;
-        object-fit: contain;
       }
       .img-bg {
-        max-height: 35vh;
-        width: calc(100% - 7em);
-        background-position: center;
-        background-size: contain;
+        width: calc(100% - 3.5em);
       }
     }
     @include for-tablet-landscape-up {
