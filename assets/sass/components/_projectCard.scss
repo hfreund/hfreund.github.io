@@ -1,5 +1,8 @@
 .main-top {
   background-color: rgb(32, 23, 45);
+  .fp-tableCell {
+    margin: 0 auto;
+  }
   .text {
     color: $transparent-white;
   }
@@ -48,8 +51,6 @@
     //   }
     // }
     .img-bg {
-      height: initial;
-      width: initial;
       background-position: left;
       background-size: cover;
     }
@@ -73,7 +74,7 @@
         flex-grow: 1;
       }
       .img-block {
-        margin: 4em 3.5 2em;
+        margin: 4em 3.5em 2em;
         object-fit: contain;
       }
       .img-bg {
@@ -92,6 +93,8 @@
         align-self: center;
       }
       .img-bg {
+        height: initial;
+        width: initial;
         margin: 3em 0;
         flex-grow: 1;
         visibility: visible;
