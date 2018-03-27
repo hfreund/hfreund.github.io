@@ -67,6 +67,7 @@
       margin-right: 0;
     }
     @include for-phone-only{
+      display: block;
       margin-bottom: 1em;
       margin-right: 0;
       text-align: center;

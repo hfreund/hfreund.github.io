@@ -5,6 +5,9 @@
   }
   .text {
     color: $transparent-white;
+    @include for-phone-only {
+      margin: 0 2em 0 2.85em;
+    }
   }
   .link {
     color: rgba(144, 158, 191, 0.85);
@@ -48,7 +51,7 @@
       flex-grow: 1;
       justify-content: space-evenly;
       .project-text {
-        padding: 0 1em 2em;
+        padding: 0 2em 2em 2.85em;
       }
       .img-block {
         margin: 3.25em 0 0 2.85em;
