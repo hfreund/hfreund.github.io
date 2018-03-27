@@ -38,9 +38,6 @@
   .project-inner {
     display: flex;
     flex-flow: column-reverse;
-    .img-block {
-      object-fit: contain;
-    }
     .img-bg {
       background-position: left;
       background-size: cover;
