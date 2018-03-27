@@ -6,7 +6,7 @@
   .text {
     color: $transparent-white;
     @include for-phone-only {
-      margin: 0 2em 0 2.85em;
+      margin: 2.5em 2em 1em 2.85em;
     }
   }
   .link {

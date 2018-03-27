@@ -43,7 +43,12 @@
     display: inline-block;
   }
   &.big {
-    font-size: 1.2rem;
+    @include for-phone-only {
+      font-size: 1.1rem;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 1.2rem;
+    }
   }
   &.inverse {
     border: 1px solid #d3d5d7;
@@ -67,9 +72,9 @@
       margin-right: 0;
     }
     @include for-phone-only{
-      display: block;
+      display: inline-block;
       margin-bottom: 1em;
-      margin-right: 0;
+      margin-right: 0.5em;
       text-align: center;
     }
   }
