@@ -10,7 +10,7 @@
       }
     }
     @include for-tablet-portrait-only {
-      margin: 0 6em;
+      margin: 0 5em;
     }
     @include for-tablet-landscape-up {
       width: 100%;
@@ -42,12 +42,12 @@
   }
   &.split {
     .fp-tableCell {
-      @include for-phone-only {
-        flex-flow: column-reverse;
-      }
-      @include for-tablet-portrait-only {
-        flex-flow: column-reverse;
-        justify-content: space-evenly;
+      flex-flow: column-reverse;
+      @include for-tablet-landscape-up {
+        flex-flow: row;
+        max-width: initial;
+        overflow-x: hidden;
+        justify-content: initial;
       }
       .text {
         @include for-phone-only {
@@ -55,7 +55,17 @@
           flex-basis: 100%;
         }
         @include for-tablet-portrait-only {
-          margin: 3em 6em;
+          margin: 3em 5em;
+        }
+        @include for-tablet-landscape-up {
+          max-width: 580px;
+          margin: 0 6em 0 7em;
+          &.title {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            min-width: 400px;
+          }
         }
       }
       .img-block {
@@ -71,25 +81,6 @@
         @include for-tablet-landscape-up {
           overflow: hidden;
           justify-content: left;
-        }
-      }
-    }
-    @include for-tablet-landscape-up {
-      .fp-tableCell {
-        flex-flow: row;
-        max-width: initial;
-        overflow-x: hidden;
-        .text {
-          max-width: 580px;
-          margin: 0 6em 0 7em;
-          &.title {
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            min-width: 400px;
-          }
-        }
-        .img-block {
           padding: 0;
         }
       }
