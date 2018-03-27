@@ -41,6 +41,7 @@
     .img-bg {
       background-position: left;
       background-size: cover;
+      flex-grow: 1;
     }
     @include for-phone-only {
       padding: 0;
@@ -79,7 +80,6 @@
         height: initial;
         width: initial;
         margin: 3em 0;
-        flex-grow: 1;
         visibility: visible;
       }
     }
