@@ -50,14 +50,17 @@
       flex-grow: 1;
       justify-content: space-evenly;
       .project-text {
-        padding: 0 2.85em 2em;
+        padding: 1em 2.85em 3em;
+      }
+      .img-block {
+        margin-top: 4em;
       }
     }
     @include for-tablet-portrait-only {
       flex-grow: 1;
       justify-content: space-evenly;
       .project-text {
-        padding: 0 3.5em;
+        padding: 1em 3.5em 3em;
         flex-grow: 1;
       }
       .img-block {
