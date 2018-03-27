@@ -62,8 +62,11 @@
         padding: 0 2.85em;
       }
       .img-block {
-        padding: 0 2.85em;
-        margin-bottom: 0;
+        margin: 0 2.85em;
+      }
+      .img-bg {
+        max-height: 30vh;
+        width: calc (100% - 5.7em);
       }
     }
     @include for-tablet-portrait-only {
