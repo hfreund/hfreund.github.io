@@ -55,7 +55,12 @@
   }
 }
 .btn-group-inline {
-  margin: 1em 0;
+  @include for-phone-only {
+    margin: 2em 0
+  }
+  @include for-tablet-portrait-up {
+    margin: 1em 0;
+  }
   .btn {
     margin-right: 0.75em;
     &:last-of-type {

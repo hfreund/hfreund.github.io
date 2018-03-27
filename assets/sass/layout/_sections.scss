@@ -11,8 +11,6 @@
     }
     @include for-tablet-portrait-only {
       margin: 0 6em;
-      width: 100%;
-      max-width: 680px;
     }
     @include for-tablet-landscape-up {
       width: 100%;
