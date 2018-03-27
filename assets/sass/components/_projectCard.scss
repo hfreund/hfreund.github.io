@@ -43,8 +43,11 @@
       }
     }
     .img-bg {
-      visibility: hidden;
-    }
+    height: initial;
+    width: initial;
+    background-position: left;
+    background-size: cover;
+  }
     @include for-phone-only {
       padding: 0;
       flex-grow: 1;
