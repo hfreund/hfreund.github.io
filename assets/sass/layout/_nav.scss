@@ -4,7 +4,17 @@
   font-weight: 600;
   line-height: 0.8;
   text-align: right;
+  .main & {
+    left: -10em;
+    position: relative;
+    transition: 200ms ease-in;
+  }
+  .main.open & {
+    left: 0;
+    transition: 300ms ease-out;
+  }
 }
+
 .navbar {
   border-right: 1px solid $gray-border;
   background-color: $solid-white;
