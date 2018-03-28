@@ -19,9 +19,13 @@ $light-gray: #f3f5f7;
 $medium-gray: #c2c2c2;
 
 // Site
+.bg-white {
+  background-color: $solid-white;
+  color: $text-color;
+}
 .bg-lt-gray {
   background-color: #edf0f8;
-  color: #636778;
+  color: $text-color;
 }
 // Gradient colors
 $site-gradient-start: #243b55;
