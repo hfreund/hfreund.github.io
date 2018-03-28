@@ -10,14 +10,15 @@
         $project: nth($x, 1);           //cbi
         $image: nth($x, 2);             //benefits
         &##{$project}-#{$image} {
-          @include for-phone-only {
-            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
-          }
-          @include for-tablet-portrait-only {
-            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@2x.png');
-          }
-          @include for-tablet-landscape-up {
-            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@3x.png');
+          background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
+          // @include for-phone-only {
+          //   background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
+          // }
+          // @include for-tablet-portrait-only {
+          //   background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@2x.png');
+          // }
+          // @include for-tablet-landscape-up {
+          //   background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@3x.png');
           }
         }
       }
