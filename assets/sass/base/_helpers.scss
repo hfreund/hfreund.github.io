@@ -107,3 +107,22 @@ img {
     @include hide(tablet-landscape);
   }
 }
+
+//Borders
+.border {
+  &.top {
+    border-top: 1px solid $gray-border;
+  }
+  &.right {
+    border-right: 1px solid $gray-border;
+  }
+  &.bottom {
+    border-bottom: 1px solid $gray-border;
+  }
+  &.left {
+    border-left: 1px solid $gray-border;
+  }
+  &.thick {
+    border-width: 2px;
+  }
+}
