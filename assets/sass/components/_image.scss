@@ -138,4 +138,33 @@
       }
     }
   }
+  &.grid-3 {
+    justify-content: space-around;
+    .img-block{
+      @include for-tablet-portrait-up {
+        flex-basis: calc(50% - 2em);
+        flex-grow: 0;
+        margin: 0 0 2em;
+        &:last-of-type {
+          flex-basis: 100%;
+        }
+      }
+      @include for-desktop-up {
+        flex-basis: calc(33.33% - 2em);
+      }
+    }
+  }
+  &.grid-4 {
+    justify-content: space-around;
+    .img-block{
+      @include for-tablet-portrait-up {
+        flex-basis: calc(50% - 2em);
+        flex-grow: 0;
+        margin: 0 0 2em;
+      }
+      @include for-desktop-up {
+        flex-basis: calc(25% - 2em);
+      }
+    }
+  }
 }
