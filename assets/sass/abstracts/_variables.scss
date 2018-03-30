@@ -5,10 +5,11 @@ $project-images:
     ( (cbi, hero)       // CBI
     , (cba, new-ui)     // CBA
     , (web, home)       // Web
+    , (site, hero)
     )
   , crgs
-    ( (web, site)
-    , (brand, assets)
+    ( (web, hero)
     , (identity, hero)
+    , (site, hero)
     )
   );
