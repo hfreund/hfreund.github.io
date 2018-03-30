@@ -93,9 +93,13 @@
   border-top: 1px solid $gray-border;
   .fp-tableCell {
     margin: 0;
-    @include for-tablet-portrait-up {
-      flex-flow: row;
-      justify-content: space-between;
+    .project-block {
+      @include for-phone-only {
+        flex-flow: column;
+      }
+      @include for-tablet-portrait-up {
+        justify-content: space-between;
+      }
     }
   }
   .project-wrapper {
