@@ -98,6 +98,7 @@
         flex-flow: column;
       }
       @include for-tablet-portrait-up {
+        display: flex;
         justify-content: space-between;
       }
     }
@@ -122,9 +123,10 @@
   }
   .project-card {
     @include for-phone-only {
-      margin-bottom: 2em;
+      margin-top: 2em;
     }
     @include for-tablet-portrait-up {
+      margin-top: 0.75em;
       flex-basis: calc(50% - 2em);
     }
   }
