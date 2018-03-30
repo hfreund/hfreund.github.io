@@ -88,7 +88,32 @@
   }
 }
 .section.footer {
-  background-color: #f3f5f7;
+  background-color: $light-gray;
   padding: 3.5em;
-  border-top: 1px solid #d3d5d7;
+  border-top: 1px solid $gray-border;
+  .fp-tableCell {
+    flex-flow: row;
+    margin: 0;
+    justify-content: space-between;
+  }
+  .project-wrapper {
+    margin: 0;
+    height: initial;
+    align-content: baseline;
+    .project-inner {
+      flex-basis: initial;
+      .project-text {
+        margin: 2em;
+        h6 {
+          margin: 0.5em 0;
+        }
+        .project-list {
+          margin: 1em 0;
+        }
+      }
+    }
+  }
+  .project-card {
+    flex-basis: calc(50% - 2em);
+  }
 }
