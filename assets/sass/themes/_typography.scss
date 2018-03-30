@@ -69,8 +69,11 @@ p {
     @include for-phone-only {
       font-size: 1.1rem;
     }
-    @include for-tablet-portrait-up {
-      font-size: 1.4rem;
+    @include for-tablet-portrait-only {
+      font-size: 1.15rem;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 1.3rem;
     }
   }
 }
