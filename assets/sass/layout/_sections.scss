@@ -92,9 +92,11 @@
   padding: 3.5em;
   border-top: 1px solid $gray-border;
   .fp-tableCell {
-    flex-flow: row;
-    margin: 0;
-    justify-content: space-between;
+    @include for-tablet-portrait-up {
+      flex-flow: row;
+      margin: 0;
+      justify-content: space-between;
+    }
   }
   .project-wrapper {
     margin: 0;
@@ -104,6 +106,7 @@
       flex-basis: initial;
       .project-text {
         margin: 2em;
+        padding: 0;
         h6 {
           margin: 0.5em 0;
         }
