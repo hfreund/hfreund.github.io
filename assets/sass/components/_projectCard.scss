@@ -5,6 +5,10 @@
   }
   .text {
     color: $transparent-white;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
     @include for-phone-only {
       margin: 2.5em 2em 1em 2.85em;
     }
