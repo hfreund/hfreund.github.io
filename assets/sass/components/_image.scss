@@ -10,16 +10,16 @@
         $project: nth($x, 1);           //cbi
         $image: nth($x, 2);             //benefits
         &##{$project}-#{$image} {
-          background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
-          // @include for-phone-only {
-          //   background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
-          // }
-          // @include for-tablet-portrait-only {
-          //   background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@2x.png');
-          // }
-          // @include for-tablet-landscape-up {
-          //   background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@3x.png');
-          //}
+          //background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
+          @include for-phone-only {
+            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}.png');
+          }
+          @include for-tablet-portrait-only {
+            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@2x.png');
+          }
+          @include for-tablet-landscape-up {
+            background-image: url('/assets/images/#{$clients}-#{$project}/#{$image}@3x.png');
+          }
         }
       }
     }
@@ -78,6 +78,9 @@
       max-width: 40vh;
     }
   }
+  &.bordered img{
+    border: 1px solid $gray-border;
+  }
   @include for-phone-only {
     margin: 1.5em 2em 1.5em 3.25em;
   }
@@ -110,9 +113,6 @@
     width: calc(100% - 8em);
   }
   .img-block {
-    &.bordered img{
-      border: 1px solid $gray-border;
-    }
     @include for-phone-only {
       margin: 0 0 2em 0;
     }
