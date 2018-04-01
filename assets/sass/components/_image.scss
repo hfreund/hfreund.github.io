@@ -78,7 +78,7 @@
       max-width: 40vh;
     }
   }
-  &.bordered {
+  &.bordered img{
     border: 1px solid $gray-border;
   }
   @include for-phone-only {
