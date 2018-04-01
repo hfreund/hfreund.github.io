@@ -78,8 +78,13 @@
       max-width: 40vh;
     }
   }
-  &.bordered img{
-    border: 1px solid $gray-border;
+  &.bordered {
+    img, .slide-comparison{
+      border: 1px solid $gray-border;
+    }
+    .slide-comparison img {
+      border: 0;
+    }
   }
   @include for-phone-only {
     margin: 1.5em 2em 1.5em 3.25em;
