@@ -37,78 +37,78 @@
 
   $(document).ready(function() {
     $('#fullpage').fullpage({
-  //Navigation
-  menu: '#menu',
-  lockAnchors: false,
-  anchors:['summary', 'overview', 'approach', 'user-flow', 'challenges-objectives', 'wireframe','login', 'deployment', 'more-projects'],
-  navigation: true,
-  navigationPosition: 'left',
-  navigationTooltips: ['Summary', 'Overview', 'Approach', 'User Flow', 'Challenges & Objectives', 'Wireframes', 'Universal Login', 'Deployment'],
-  showActiveTooltip: false,
-  slidesNavigation: false,
-  slidesNavPosition: 'bottom',
+    //Navigation
+    menu: '#menu',
+    lockAnchors: false,
+    anchors:['summary', 'overview', 'approach', 'user-flow', 'challenges-objectives', 'wireframe','login', 'deployment', 'more-projects'],
+    navigation: true,
+    navigationPosition: 'left',
+    navigationTooltips: ['Summary', 'Overview', 'Approach', 'User Flow', 'Challenges & Objectives', 'Wireframes', 'Universal Login', 'Deployment'],
+    showActiveTooltip: false,
+    slidesNavigation: false,
+    slidesNavPosition: 'bottom',
 
-  //Scrolling
-  css3: true,
-  scrollingSpeed: 700,
-  autoScrolling: false,
-  fitToSection: false,
-  fitToSectionDelay: 1000,
-  scrollBar: false,
-  easing: 'easeInOutCubic',
-  easingcss3: 'ease',
-  loopBottom: false,
-  loopTop: false,
-  loopHorizontal: true,
-  continuousVertical: false,
-  continuousHorizontal: false,
-  scrollHorizontally: false,
-  interlockedSlides: false,
-  dragAndMove: false,
-  offsetSections: false,
-  resetSliders: false,
-  fadingEffect: false,
-  //normalScrollElements: '#element1, .element2',
-  scrollOverflow: false,
-  scrollOverflowReset: false,
-  scrollOverflowOptions: null,
-  touchSensitivity: 5,
-  normalScrollElementTouchThreshold: 5,
-  //bigSectionsDestination: null,
+    //Scrolling
+    css3: true,
+    scrollingSpeed: 700,
+    autoScrolling: false,
+    fitToSection: false,
+    fitToSectionDelay: 1000,
+    scrollBar: false,
+    easing: 'easeInOutCubic',
+    easingcss3: 'ease',
+    loopBottom: false,
+    loopTop: false,
+    loopHorizontal: true,
+    continuousVertical: false,
+    continuousHorizontal: false,
+    scrollHorizontally: false,
+    interlockedSlides: false,
+    dragAndMove: false,
+    offsetSections: false,
+    resetSliders: false,
+    fadingEffect: false,
+    //normalScrollElements: '#element1, .element2',
+    scrollOverflow: false,
+    scrollOverflowReset: false,
+    scrollOverflowOptions: null,
+    touchSensitivity: 5,
+    normalScrollElementTouchThreshold: 5,
+    //bigSectionsDestination: null,
 
-  //Accessibility
-  keyboardScrolling: true,
-  animateAnchor: true,
-  recordHistory: false,
+    //Accessibility
+    keyboardScrolling: true,
+    animateAnchor: true,
+    recordHistory: false,
 
-  //Design
-  controlArrows: true,
-  verticalCentered: true,
-  //sectionsColor : ['#ccc', '#fff'],
-  //paddingTop: '3em',
-  //paddingBottom: '10px',
-  //fixedElements: '#header, .footer',
-  responsiveWidth: 0,
-  responsiveHeight: 0,
-  responsiveSlides: false,
-  //parallax: false,
-  //parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+    //Design
+    controlArrows: true,
+    verticalCentered: true,
+    //sectionsColor : ['#ccc', '#fff'],
+    //paddingTop: '3em',
+    //paddingBottom: '10px',
+    //fixedElements: '#header, .footer',
+    responsiveWidth: 0,
+    responsiveHeight: 0,
+    responsiveSlides: false,
+    //parallax: false,
+    //parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 
-  //Custom selectors
-  sectionSelector: '.section',
-  slideSelector: '.slide',
+    //Custom selectors
+    sectionSelector: '.section',
+    slideSelector: '.slide',
 
-  lazyLoading: true,
+    lazyLoading: true,
 
-  //events
-  onLeave: function(index, nextIndex, direction){},
-  afterLoad: function(anchorLink, index){},
-  afterRender: function(){},
-  afterResize: function(){},
-  afterResponsive: function(isResponsive){},
-  afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-  onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-});
+    //events
+    onLeave: function(index, nextIndex, direction){},
+    afterLoad: function(anchorLink, index){},
+    afterRender: function(){},
+    afterResize: function(){},
+    afterResponsive: function(isResponsive){},
+    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+    onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+  });
       //movable bg
       var lFollowX = 0,
           lFollowY = 0,
@@ -141,18 +141,18 @@
       });
 
       moveBackground();
-  });
+    });
 
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-40419309-4');
   </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-40419309-4');
-</script>
 
 </head>
 <body>
@@ -189,7 +189,7 @@
           </ul>
         </li>
         <li>
-          <a href="https://www.dropbox.com/s/459cg6o5ip9k7ni/Resume%202.1.pdf?raw=1" target="_blank">Resume</a>
+          <a href="https://www.dropbox.com/s/35ycichhdcoyfmm/Hugh%20Freund%20Resume.pdf?raw=1" target="_blank">Resume</a>
         </li>
         <li class="btn-group-inline">
           <a href="https://github.com/hfreund/hfreund.github.io" target="_blank" class="btn inverse"><i class="fa fa-github" aria-hidden="true"></i></a>
