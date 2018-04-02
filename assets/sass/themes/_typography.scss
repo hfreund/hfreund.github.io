@@ -100,8 +100,8 @@ p {
     margin: 2em 2em 2em 3.25em;
   }
   @include for-tablet-portrait-only {
-    margin: 3em 6em;
-    width: 100%;
+    margin: 3em 5em;
+    width: calc(100% - 10em);
     max-width: 680px;
   }
   @include for-tablet-landscape-up {
