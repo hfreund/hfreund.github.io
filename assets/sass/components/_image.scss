@@ -108,13 +108,13 @@
   }
   @include for-tablet-portrait-only {
     margin: 4em 6em 0;
-    height: calc(100% - 8em);
+    //height: calc(100% - 8em);
     width: calc(100% - 12em);
     justify-content: center;
   }
   @include for-tablet-landscape-up {
     margin: 6em 4em 0;
-    height: calc(100% - 12em);
+    //height: calc(100% - 12em);
     width: calc(100% - 8em);
   }
   .img-block {
