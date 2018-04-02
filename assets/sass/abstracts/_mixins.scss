@@ -45,6 +45,12 @@
       visibility: hidden;
     }
   }
+  @if $breakpoint == desktop-up {
+    @include for-desktop-up {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
 }
 
 //Gradients
