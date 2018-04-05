@@ -45,7 +45,7 @@
       visibility: hidden;
     }
   }
-  @if $breakpoint == desktop-up {
+  @if $breakpoint == desktopUp {
     @include for-desktop-up {
       display: none !important;
       visibility: hidden;
