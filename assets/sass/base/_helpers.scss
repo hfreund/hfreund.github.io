@@ -126,3 +126,17 @@ img {
     border-width: 2px;
   }
 }
+
+//Disclaimer
+.main.open .navbar .disclaimer {
+    position: absolute;
+    bottom: 0;
+    padding: 2em;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: #888;
+    visibility: visible;
+}
+.main .navbar .disclaimer {
+  visibility: hidden;
+}
