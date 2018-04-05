@@ -103,6 +103,9 @@ img {
   &.tablet-landscape {
     @include hide(tablet-landscape);
   }
+  &.desktop-up {
+    @include hide(desktop-up);
+  }
 }
 
 //Borders
