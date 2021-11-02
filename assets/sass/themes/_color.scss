@@ -40,6 +40,18 @@ $site-gradient-end: #141e30;
   }
 }
 
+// MassChallenge
+$mc-blue: #0eabbc;
+
+.bg {
+  .mc {
+    background-color: $mc-blue;
+    color: $solid-white;
+    .gradient {
+
+    }
+  }
+}
 // Common Census
 $cc-light-blue: #066fb9;
 
