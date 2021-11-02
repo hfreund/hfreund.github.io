@@ -26,10 +26,6 @@ nav {
 .content {
   grid-area: 2/2/3/3;
   padding: 0;
-  @include for-tablet-portrait-up {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
 }
 
 body:not(.fp-viewing-0) .project .page-heading {
