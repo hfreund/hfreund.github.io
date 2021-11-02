@@ -1,7 +1,7 @@
 .slide, .section {
   .text {
     @include for-phone-only {
-      margin: 0 2em 0 3.25em;
+      padding: 4em 2em 2em 3.25em;
       h2 {
         margin: 0.5em 0 0.25em;
       }
@@ -10,12 +10,13 @@
       }
     }
     @include for-tablet-portrait-only {
-      margin: 0 5em;
+      margin: 4em 5em 2em;
     }
     @include for-tablet-landscape-up {
       width: 100%;
       max-width: 680px;
       margin: 0 auto;
+      padding: 4em 2em;
     }
   }
   &.title {
