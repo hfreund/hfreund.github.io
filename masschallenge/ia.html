@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all">
+  <meta name="googlebot" content="all">
+
+  <title>Hugh Freund | MassChallenge - Information Architecture</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Hugh Freund">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" href="/assets/css/style.min.css" type="text/css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
+  <script src="https://use.fontawesome.com/29fc27d329.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script>
+  var open = false;
+
+  function change() {
+    if (open) {
+        document.getElementById("expandNav").className = "main";
+        document.getElementById("fp-nav").className = "left";
+        open = false;
+    } else {
+        document.getElementById("expandNav").className = "main open";
+        document.getElementById("fp-nav").className = "left hidden";
+        open = true;
+    }
+  }
+
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+  //Navigation
+  menu: '#menu',
+  lockAnchors: false,
+  anchors:['summary', 'overview', 'research', 'phase-1', 'phase-2', 'more-projects'],
+  navigation: true,
+  navigationPosition: 'left',
+  navigationTooltips: ['Summary', 'Overview + Condition', 'Research', 'Phase I', 'Phase II'],
+  showActiveTooltip: false,
+  slidesNavigation: false,
+  slidesNavPosition: 'bottom',
+
+  //Scrolling
+  css3: true,
+  scrollingSpeed: 700,
+  autoScrolling: false,
+  fitToSection: false,
+  fitToSectionDelay: 1000,
+  scrollBar: false,
+  easing: 'easeInOutCubic',
+  easingcss3: 'ease',
+  loopBottom: false,
+  loopTop: false,
+  loopHorizontal: true,
+  continuousVertical: false,
+  continuousHorizontal: false,
+  scrollHorizontally: false,
+  interlockedSlides: false,
+  dragAndMove: false,
+  offsetSections: false,
+  resetSliders: false,
+  fadingEffect: false,
+  //normalScrollElements: '#element1, .element2',
+  scrollOverflow: false,
+  scrollOverflowReset: false,
+  scrollOverflowOptions: null,
+  touchSensitivity: 5,
+  normalScrollElementTouchThreshold: 5,
+  //bigSectionsDestination: null,
+
+  //Accessibility
+  keyboardScrolling: true,
+  animateAnchor: true,
+  recordHistory: false,
+
+  //Design
+  controlArrows: true,
+  verticalCentered: true,
+  //sectionsColor : ['#ccc', '#fff'],
+  //paddingTop: '3em',
+  //paddingBottom: '10px',
+  //fixedElements: '#header, .footer',
+  responsiveWidth: 0,
+  responsiveHeight: 0,
+  responsiveSlides: false,
+  //parallax: false,
+  //parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+  //Custom selectors
+  sectionSelector: '.section',
+  slideSelector: '.slide',
+
+  lazyLoading: true,
+
+  //events
+  onLeave: function(index, nextIndex, direction){},
+  afterLoad: function(anchorLink, index){},
+  afterRender: function(){},
+  afterResize: function(){},
+  afterResponsive: function(isResponsive){},
+  afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+  onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+  });
+});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-40419309-4');
+</script>
+
+</head>
+<body>
+  <div class="main" id="expandNav">
+    <a class="btn-menu" href="#" onclick="change()">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </a>
+    <nav class="navbar">
+      <div class="nav-title"><a href="/">Hugh Freund</a></div>
+      <ul>
+        <li>
+          <ul>
+            <li class="title">MassChallenge</li>
+            <li>
+              <a href="/mc/navigation">Information Architecture</a>
+            </li>
+            <li>
+              <a href="/mc/staffportal">Staff Portal</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="title">Common Census</li>
+            <li>
+              <a href="/commoncensus/webapp">Web App</a>
+            </li>
+            <li>
+              <a href="/commoncensus/adminapp">Admin App</a>
+            </li>
+            <li>
+              <a href="/commoncensus/website">Website</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="title">Courageous Sailing</li>
+            <li>
+              <a href="/courageous/website">Website</a>
+            </li>
+            <li>
+              <a href="/courageous/identity">Identity</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://www.dropbox.com/s/m570kzhfts0zogv/Hugh%20Freund%20Resume.pdf?raw=1" target="_blank">Resume</a>
+        </li>
+        <li class="btn-group-inline">
+          <a href="https://github.com/hfreund/hfreund.github.io" target="_blank" class="btn inverse"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/hughfreund/" target="_blank" class="btn inverse"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="mailto:hugh.freund@gmail.com" target="_blank" class="btn inverse"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+      <div class="disclaimer">
+        All client work is subject to their copyright and trademark privelages and therefore may not be copied, reused, or distributed without the owner's expressed consent.
+      </div>
+    </nav>
+    <div id="fullpage" class="content">
+      <div class="section split bg-cc-gradient" data-anchor="summary">
+        <div class="text title">
+          <div class="title-block">
+            <h5 class="pre-title">MassChallenge</h5>
+            <h2>Information Architecture</h2>
+            <p class="lead">A ground-up overhaul of a decade old information architecture.</p>
+          </div>
+        </div>
+        <div id="cba-ee-search" class="img-bg cmcs">
+        </div>
+      </div>
+      <div class="section fp-auto-height" data-anchor="overview">
+        <div class="text">
+          <h2>Application overview + condition</h2>
+          <p class="lead muted">Built out of an evolution of a desktop application, this benefits administration webapp for human resource departments and insurance brokers was a challenge to navigate in even the best of conditions. The problems came from a few areas:
+            <ol>
+              <li><strong>Architecture: </strong>The system architecture and navigational structure were not designed to accomodate continuous additions of function and modules. Without formal training, new users were often unable to locate even basic tools.</li>
+              <li><strong>User Interface: </strong>Divergent efforts by a series of developers to create new layouts or update UI components resulted in a fractured user experience. Where module archetypes did exist, they tended to be many years out of step with contemporary practices.</li>
+              <li><strong>Dependencies: </strong>Many modules that integrated into the system could not be changed or updated easily due to dependencies or compliance requirements. Therefore, new development was frequently hamstrung to advance in a new direction, which would deviate from the dependent modules.</li>
+            </ol>
+          </p>
+          <p>Working with the development team, I helped create a method for bringing the user interface up to date and designed the future system UI to work towards. The update would take place in two phases:</p>
+          <div class="callout bg-lt-gray">
+            <h5>Phase I</h5>
+            <p>Establish a common denominator for the UI, allowing for system-wide changes in the future.</p>
+          </div>
+          <div class="callout bg-lt-gray">
+            <h5>Phase II</h5>
+            <p>A future plan to progressively transition from the old UI to the new UI. While I was part of the planning for this phase and maintained it as an end goal while working on Phase I, work on Phase II has progressed only through medium-fidelity wireframes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-fade"></div>
+  </div>
+</body>
+</html>
