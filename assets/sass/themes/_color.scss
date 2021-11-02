@@ -44,10 +44,10 @@ $site-gradient-end: #141e30;
 $mc-blue: #0eabbc;
 
 .bg {
-  .mc {
+  &.mc {
     background-color: $mc-blue;
     color: $solid-white;
-    .gradient {
+    &.gradient {
 
     }
   }
