@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="all">
+  <meta name="googlebot" content="all">
+
+  <title>Hugh Freund | MassChallenge - Staff Portal</title>
+  <meta name="description" content="Portfolio">
+  <meta name="author" content="Hugh Freund">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" href="/assets/css/style.min.css" type="text/css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
+  <script src="https://use.fontawesome.com/29fc27d329.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script>
+  var open = false;
+
+  function change() {
+    if (open) {
+        document.getElementById("expandNav").className = "main";
+        document.getElementById("fp-nav").className = "left";
+        open = false;
+    } else {
+        document.getElementById("expandNav").className = "main open";
+        document.getElementById("fp-nav").className = "left hidden";
+        open = true;
+    }
+  }
+
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+  //Navigation
+  menu: '#menu',
+  lockAnchors: false,
+  anchors:['summary', 'overview', 'research', 'phase-1', 'phase-2', 'more-projects'],
+  navigation: true,
+  navigationPosition: 'left',
+  navigationTooltips: ['Summary', 'Overview + Condition', 'Research', 'Phase I', 'Phase II'],
+  showActiveTooltip: false,
+  slidesNavigation: false,
+  slidesNavPosition: 'bottom',
+
+  //Scrolling
+  css3: true,
+  scrollingSpeed: 700,
+  autoScrolling: false,
+  fitToSection: false,
+  fitToSectionDelay: 1000,
+  scrollBar: false,
+  easing: 'easeInOutCubic',
+  easingcss3: 'ease',
+  loopBottom: false,
+  loopTop: false,
+  loopHorizontal: true,
+  continuousVertical: false,
+  continuousHorizontal: false,
+  scrollHorizontally: false,
+  interlockedSlides: false,
+  dragAndMove: false,
+  offsetSections: false,
+  resetSliders: false,
+  fadingEffect: false,
+  //normalScrollElements: '#element1, .element2',
+  scrollOverflow: false,
+  scrollOverflowReset: false,
+  scrollOverflowOptions: null,
+  touchSensitivity: 5,
+  normalScrollElementTouchThreshold: 5,
+  //bigSectionsDestination: null,
+
+  //Accessibility
+  keyboardScrolling: true,
+  animateAnchor: true,
+  recordHistory: false,
+
+  //Design
+  controlArrows: true,
+  verticalCentered: true,
+  //sectionsColor : ['#ccc', '#fff'],
+  //paddingTop: '3em',
+  //paddingBottom: '10px',
+  //fixedElements: '#header, .footer',
+  responsiveWidth: 0,
+  responsiveHeight: 0,
+  responsiveSlides: false,
+  //parallax: false,
+  //parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+
+  //Custom selectors
+  sectionSelector: '.section',
+  slideSelector: '.slide',
+
+  lazyLoading: true,
+
+  //events
+  onLeave: function(index, nextIndex, direction){},
+  afterLoad: function(anchorLink, index){},
+  afterRender: function(){},
+  afterResize: function(){},
+  afterResponsive: function(isResponsive){},
+  afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+  onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+  });
+});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-40419309-4');
+</script>
+
+</head>
+<body>
+  <div class="main" id="expandNav">
+    <a class="btn-menu" href="#" onclick="change()">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </a>
+    <nav class="navbar">
+      <div class="nav-title"><a href="/">Hugh Freund</a></div>
+      <ul>
+        <li>
+          <ul>
+            <li class="title">MassChallenge</li>
+            <li>
+              <a href="/masschallenge/ia">Information Architecture</a>
+            </li>
+            <li>
+              <a href="/masschallenge/staffportal">Staff Portal</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="title">Common Census</li>
+            <li>
+              <a href="/commoncensus/webapp">Web App</a>
+            </li>
+            <li>
+              <a href="/commoncensus/adminapp">Admin App</a>
+            </li>
+            <li>
+              <a href="/commoncensus/website">Website</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="title">Courageous Sailing</li>
+            <li>
+              <a href="/courageous/website">Website</a>
+            </li>
+            <li>
+              <a href="/courageous/identity">Identity</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://www.dropbox.com/s/m570kzhfts0zogv/Hugh%20Freund%20Resume.pdf?raw=1" target="_blank">Resume</a>
+        </li>
+        <li class="btn-group-inline">
+          <a href="https://github.com/hfreund/hfreund.github.io" target="_blank" class="btn inverse"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/hughfreund/" target="_blank" class="btn inverse"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a href="mailto:hugh.freund@gmail.com" target="_blank" class="btn inverse"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+      <div class="disclaimer">
+        All client work is subject to their copyright and trademark privelages and therefore may not be copied, reused, or distributed without the owner's expressed consent.
+      </div>
+    </nav>
+    <div id="fullpage" class="content">
+      <div class="section split bg mc" data-anchor="summary">
+        <div class="text title">
+          <div class="title-block">
+            <h5 class="pre-title">MassChallenge</h5>
+            <h2>Staff Portal</h2>
+            <p class="lead">A dedicated webportal for staff to administer all aspects of the MC innovation community.</p>
+          </div>
+          <div class="stat-block">
+            <div class="stat-item">
+              <h5>Technology</h5>
+              <ul>
+                <li>Figma</li>
+                <li>Asana</li>
+                <li>Jira</li>
+                <li>Github</li>
+              </ul>
+            </div>
+            <div class="stat-item">
+              <h5>Skills</h5>
+              <ul>
+                <li>Roadmapping</li>
+                <li>User interviews</li>
+                <li>User journey mapping</li>
+                <li>Business process mapping</li>
+                <li>SCRUM</li>
+              </ul>
+            </div>
+            <div class="stat-item">
+              <h5>Role</h5>
+              <ul>
+                <li>Product Manager &amp; UX Designer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section fp-auto-height" data-anchor="overview">
+        <div class="text">
+          <h2>The Problem</h2>
+          <p class="lead muted">All data flows through the Accelerate web application, but there are few tools for staff to view and manage that data.</p>
+          <p>Much of the workflows depend on direct database access augmented by .csv downloads, manipulation in Excel, and then engineering support to add the changed data to the database. This was neither maintainable nor scalable for future initiatives such as expanding profile and improving staff management of bulk changes.
+</p>
+          <div class="callout bg-lt-gray">
+            <h5>Contact for a full writeup of the project</h5>
+            <a href="mailto:hugh.freund@gmail.com">hugh.freund@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-fade"></div>
+  </div>
+</body>
+</html>
