@@ -215,10 +215,107 @@
         <div class="text">
           <h2>The Problem</h2>
           <p class="lead muted">The organization had expanded 7x since the original information architecture was laid down. The result was duplicated navigation structures, hyper-specific content buried down a navigation tunnel, and irrelevant navigation links.</p>
-          <p>Usability was low and maintenance costs were high. The process for adding content was tricky, prone to error, and generally not well-suited for the type of users. The result was a Baskin Robbins menu nearly 40 items long which was difficult to use on a desktop browser and practically impossible on mobile.</p>
+          <p>Usability was low and maintenance costs were high. The process for adding content was tricky, prone to error, and generally not well-suited for the type of users. The result was a Baskin Robbins menu nearly 40 items long which was difficult to use on a desktop browser and practically impossible on mobile. Only 20% of traffic came from mobile devices, but over 80% of bounces came from mobile. And while some users experienced duplicate navigation structures, others were provided no navigation at all.</p>
           <div class="callout bg-lt-gray">
             <h5>Contact for a full writeup of the project</h5>
             <a href="mailto:hugh.freund@gmail.com">hugh.freund@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="section fp-auto-height" data-anchor="research">
+        <div class="text">
+          <h2>The Research Method</h2>
+          <p class="lead muted">The organization had expanded 7x since the original information architecture was laid down. The result was duplicated navigation structures, hyper-specific content buried down a navigation tunnel, and irrelevant navigation links.</p>
+          <ul>
+            <li>
+              Interviews with staff and community users
+            </li>
+            <li>
+              Open card sorting with all current menu items
+            </li>
+            <li>
+              Analyze page traffic and card sorting results in a dendrogram
+            </li>
+            <li>
+              Test new navigation paths in a tree-testing scenario with staff and community users
+            </li>
+            <li>
+              Test a high-fidelity prototype with staff and community users
+            </li>
+          </ul>
+          <div class="callout bg-lt-gray">
+            <h4>Key Findings</h4>
+            <ul>
+                <li>
+                  20% of traffic is from mobile but 84% of bounces is from mobile. Improvements to mobile usability will have the largest impact on our users.
+                </li>
+                <li>
+                  Certain core pages (events, office hours, directories, room booking) do not need to be program-specific. These could be eliminated to reduce complexity and improve maintainability and user experience across the board.
+                </li>
+                <li>
+                  Community users experience an overload of information on day one, then relatively static information for the remaining 3.5 months. HMW progressively onboard users so they have the appropriate data at reasonable milestones [this was not part of the IA MVP, but it was noted for future investigation].
+                </li>
+                <li>
+                  Users often get lost and have little support documentation. We should provide a dedicated knowledgebase.
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section fp-auto-height" data-anchor="solution">
+        <div class="text">
+          <h2>The Solution</h2>
+          <p class="lead muted">A common menu structure across all programs with the ability for programs to turn on/off certain elements and for us to easily expand as new programs spin up.</p>
+          <ul>
+              <li>
+                Create a new top nav bar with a proper user menu, always visible for all users
+              </li>
+              <li>
+                A primary navigation bar on the left for desktop and at the bottom of the view for mobile that always includes a home button for all users
+              </li>
+              <li>
+                An optional secondary nav bar at the top of each view as required
+              </li>
+              <li>
+                More shared content across programs and user types; clarified global and local governance for fine-tuned content control
+              </li>
+          </ul>
+        </div>
+        <div class="img-grid">
+          <div class="img-block bordered">
+            <picture>
+              <source
+                srcset="../assets/images/mc/ia/legacy-desktop.png">
+              <img
+                src="../assets/images/mc/ia/legacy-desktop.png"
+                srcset="../assets/images/mc/ia/legacy-desktop.png"
+                alt="New Desktop Navigation">
+            </picture>
+            <p class="img-caption">Legacy desktop navigation and layout</p>
+          </div>
+        </div>
+        <div class="img-grid">
+          <div class="img-block bordered">
+            <picture>
+              <source
+                srcset="../assets/images/mc/ia/desktop.png">
+              <img
+                src="../assets/images/mc/ia/desktop.png"
+                srcset="../assets/images/mc/ia/desktop.png"
+                alt="New Desktop Navigation">
+            </picture>
+            <p class="img-caption">New desktop navigation and layout</p>
+          </div>
+          <div class="img-block bordered">
+            <picture>
+              <source
+                srcset="../assets/images/mc/ia/mobile.png">
+              <img
+                src="../assets/images/mc/ia/mobile.png"
+                srcset="../assets/images/mc/ia/mobile.png"
+                alt="New Mobile Navigation">
+            </picture>
+            <p class="img-caption">New mobile navigation and layout</p>
           </div>
         </div>
       </div>
