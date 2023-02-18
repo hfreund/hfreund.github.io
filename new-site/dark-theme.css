@@ -2,9 +2,12 @@
 
 body {
     color: #eee;
-    background: #121212;
+    background-color: #121212;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
   }
   
   body a {
     color: #809fff;
+    transition: color 0.5s ease;
   }
