@@ -1,0 +1,14 @@
+
+//Base
+$common-white: #fff;
+$common-black: #000;
+$primary: #000B1F;
+$secondary: #E5E0D2;
+
+//Typography
+$text-color: $primary;
+$link-hover-color: saturate($text-color, 50%);
+
+//Site
+$background-color: $secondary;
+$border-color: $primary;
