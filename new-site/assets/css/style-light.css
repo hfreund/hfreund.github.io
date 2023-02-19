@@ -411,6 +411,13 @@ p {
   font-size: 1.1rem;
 }
 
+.button {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.21;
+  text-decoration: none;
+}
+
 .main {
   display: grid;
   grid-template-areas: "nav content";
@@ -489,4 +496,12 @@ body:not(.fp-viewing-0) .project .page-heading {
 .btn:hover {
   background-color: #000d24;
   transition: 200ms ease;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75em, 1.24em;
+  color: #E5E0D2;
+  border: 0.25em solid;
+  border-radius: 0.5em;
 }/*# sourceMappingURL=style-light.css.map */

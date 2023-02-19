@@ -14,3 +14,11 @@
     transition: 200ms ease;
   }
 }
+
+.button {
+  display: inline-block;
+  padding: 0.75em, 1.24em;
+  color: $text-color;
+  border: .25em solid;
+  border-radius: 0.5em;
+}
