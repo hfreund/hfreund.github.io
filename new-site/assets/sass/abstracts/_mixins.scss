@@ -1,0 +1,70 @@
+
+//Breakpoints
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portrait-only {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+//Hide
+@mixin hide($breakpoint) {
+  @if $breakpoint == phone {
+    @include for-phone-only {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+  @if $breakpoint == tablet-portrait{
+    @include for-tablet-portrait-only {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+  @if $breakpoint == tablet-landscape {
+    @include for-tablet-landscape-only {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+  @if $breakpoint == desktop-up {
+    @include for-desktop-up {
+      display: none !important;
+      visibility: hidden;
+    }
+  }
+}
+
+//Gradients
+@mixin background-gradient($start-color, $end-color, $orientation) {
+    background: $start-color;
+
+    @if $orientation == 'vertical' {
+      background: -webkit-linear-gradient(top, $start-color, $end-color);
+      background: linear-gradient(to bottom, $start-color, $end-color);
+    } @else if $orientation == 'horizontal' {
+      background: -webkit-linear-gradient(left, $start-color, $end-color);
+      background: linear-gradient(to right, $start-color, $end-color);
+    } @else {
+      background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+      background: radial-gradient(ellipse at center, $start-color, $end-color);
+    }
+ }
