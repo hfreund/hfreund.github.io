@@ -3,7 +3,7 @@
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Inter:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Inter");
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -375,60 +375,6 @@ textarea {
   font: inherit; /* 2 */
 }
 
-.bg-white {
-  background-color: #fff;
-  color: rgb(63, 76, 107);
-}
-
-.bg-lt-gray {
-  background-color: #edf0f8;
-  color: rgb(63, 76, 107);
-}
-
-.bg-title-gradient {
-  background: #243b55;
-  background: linear-gradient(to right, #243b55, rgba(20, 30, 48, 0.8));
-  color: rgba(255, 255, 255, 0.95);
-}
-.bg-title-gradient.reverse {
-  background: #141e30;
-  background: linear-gradient(to right, #141e30, #243b55);
-  color: rgba(255, 255, 255, 0.95);
-}
-
-.bg.mc {
-  background-color: #0eabbc;
-  color: #fff;
-}
-
-.bg-cc-gradient {
-  background: #363795;
-  background: linear-gradient(to right, #363795, #005C97);
-  color: #fff;
-}
-.bg-cc-gradient.reverse {
-  background: #005C97;
-  background: linear-gradient(to right, #005C97, #363795);
-  color: #fff;
-}
-
-.bg-dark-purple-gradient {
-  background: #53346D;
-  background: linear-gradient(to bottom, #53346D, #000000);
-  color: #000000;
-}
-
-.bg-cs-gradient {
-  background: #fe8c00;
-  background: linear-gradient(to right, #fe8c00, #f83600);
-  color: #fff;
-}
-.bg-cs-gradient.reverse {
-  background: #f83600;
-  background: linear-gradient(to right, #f83600, #fe8c00);
-  color: #fff;
-}
-
 html {
   font-size: 16px;
   line-height: 1.4;
@@ -532,103 +478,15 @@ body:not(.fp-viewing-0) .project .page-heading {
 .btn {
   line-height: 1;
   text-decoration: none;
-  background-color: #fff;
+  background-color: #000B1F;
   padding: 0.75em 1.25em;
-  border: 1px solid #fff;
-  border-radius: 2px;
+  border: 4px solid;
+  border-radius: 8px;
   transition: 200ms ease;
-  color: rgb(63, 76, 107);
-  box-shadow: 0 1px 3px 0 rgba(14, 29, 44, 0.3);
+  color: #E5E0D2;
   display: inline-block;
-}
-@media (max-width: 599px) {
-  .btn {
-    display: block;
-  }
-}
-.btn.shadow {
-  box-shadow: 0 2px 8px 4px rgba(14, 29, 44, 0.3);
 }
 .btn:hover {
-  box-shadow: 0 0 0 0 rgba(14, 29, 44, 0.3);
-  color: #153b96;
-  background-color: rgba(255, 255, 255, 0.85);
-  transition: 200ms ease;
-}
-.btn.link {
-  background-color: transparent;
-  padding: 0.25em;
-  margin: 0.25em;
-  color: #fff;
-  transition: 200ms ease;
-  box-shadow: none;
-  border: none;
-  border-radius: 0;
-  opacity: 0.7;
-  border-bottom: 2px solid #fff;
-}
-.btn.link:hover {
-  color: #fff;
-  opacity: 1;
-  transition: 200ms ease;
-}
-.btn.inline {
-  display: inline-block;
-}
-@media (max-width: 599px) {
-  .btn.big {
-    font-size: 1.1rem;
-  }
-}
-@media (min-width: 600px) {
-  .btn.big {
-    font-size: 1.2rem;
-  }
-}
-.btn.inverse {
-  border: 1px solid #d3d5d7;
-  background-color: transparent;
-  box-shadow: none;
-  color: rgba(255, 255, 255, 0.85);
-}
-.btn.inverse:hover {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #153b96;
-}
-
-@media (max-width: 599px) {
-  .btn-group-inline {
-    margin: 2em 0;
-  }
-}
-@media (min-width: 600px) {
-  .btn-group-inline {
-    margin: 1em 0;
-  }
-}
-.btn-group-inline .btn {
-  margin-right: 0.75em;
-}
-.btn-group-inline .btn:last-of-type {
-  margin-right: 0;
-}
-@media (max-width: 599px) {
-  .btn-group-inline .btn {
-    display: inline-block;
-    margin-bottom: 1em;
-    margin-right: 0.5em;
-    text-align: center;
-  }
-}
-
-.link {
-  padding-bottom: 0.02em;
-  transition: 200ms ease;
-  border-bottom: 2px solid;
-  color: rgba(63, 76, 107, 0.5);
-  text-decoration: none;
-}
-.link:hover {
-  color: #153b96;
+  background-color: #000d24;
   transition: 200ms ease;
 }/*# sourceMappingURL=style-light.css.map */
