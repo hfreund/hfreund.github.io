@@ -435,9 +435,9 @@ a:visited {
 body {
   background-color: #000B1F;
   display: grid;
-  grid-template-columns: 400px minmax(auto, 640px);
+  grid-template-columns: 400px 1fr;
   grid-gap: 2em;
-  padding: 2.5em 0;
+  padding: 0 2.5em;
   height: 100vh;
   overflow-y: hidden;
 }
@@ -480,6 +480,11 @@ body {
   border: 4px solid;
   border-radius: 2em;
   margin: 3em 0 6em;
+  max-width: 640px;
+}
+.project-card .title-block {
+  display: flex;
+  padding: 3em 2.5em;
 }
 .project-card .content {
   padding: 3em 2.5em;
