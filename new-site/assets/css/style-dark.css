@@ -440,4 +440,7 @@ body {
 }
 .button.ghost {
   border-color: #000B1F;
+}
+.button i {
+  margin-left: 0.25em;
 }/*# sourceMappingURL=style-dark.css.map */
