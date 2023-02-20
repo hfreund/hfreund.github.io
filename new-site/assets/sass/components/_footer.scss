@@ -1,5 +1,6 @@
 
 .footer {
+    border: 4px solid;
     border-radius: 2em;
     margin: 3em 0 6em;
     max-width: 640px;
@@ -7,10 +8,19 @@
     color: $secondary;
     display: block;
     a {
-        color: $primary;
+        color: $secondary;
         &:hover {
-            color: lighten($color: $primary, $amount: 0.1)
+            color: lighten($color: $secondary, $amount: 0.1)
         }
+    }
+    ul {
+        padding: 0;
+        list-style-type: none;
+        font-size: 1.2em;
+        color: #000;
+    }
+    li {
+        padding: 0.25em 0;
     }
     
 }
