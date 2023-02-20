@@ -426,7 +426,20 @@ body {
   display: grid;
   grid-template-columns: 400px minmax(auto, 640px);
   grid-gap: 2em;
-  padding: 3.5 2.5;
+  padding: 3.5em 0;
+}
+
+.about {
+  padding: 2em 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.about .content {
+  align-self: center;
+}
+
+.content {
+  padding: 12.5em 0 3em;
 }
 
 .button {
@@ -447,4 +460,31 @@ body {
 }
 .button i {
   margin-left: 0.5em;
+}
+
+.project-card {
+  border: 4px solid;
+  border-radius: 2em;
+  margin: 3em 0 6em;
+}
+.project-card .content {
+  padding: 3em 2.5em;
+}
+.project-card .meta {
+  border-top: 4px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.project-card .meta .left {
+  padding: 1.5em 2em 2em 2.5em;
+}
+.project-card .meta .right {
+  padding: 1.5em 2.5em 2em 2em;
+}
+
+.divider.horizontal {
+  border-top: 4px solid;
+}
+.divider.vertical {
+  border-right: 4px solid;
 }/*# sourceMappingURL=style-light.css.map */
