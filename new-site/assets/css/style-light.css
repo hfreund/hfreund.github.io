@@ -446,4 +446,6 @@ body {
   border: 0.125em solid;
   border-radius: 0.5em;
   background-color: #000B1F;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
 }/*# sourceMappingURL=style-light.css.map */
