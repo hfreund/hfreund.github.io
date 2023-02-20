@@ -386,6 +386,8 @@ body {
   line-height: 1.21;
   margin: 0;
   color: #E5E0D2;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -423,22 +425,6 @@ body {
   background-color: #000B1F;
 }
 
-.btn {
-  line-height: 1;
-  text-decoration: none;
-  background-color: #000B1F;
-  padding: 0.75em 1.25em;
-  border: 4px solid;
-  border-radius: 8px;
-  transition: 200ms ease;
-  color: #E5E0D2;
-  display: inline-block;
-}
-.btn:hover {
-  background-color: #000d24;
-  transition: 200ms ease;
-}
-
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
@@ -448,4 +434,10 @@ body {
   background-color: #000B1F;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
+}
+.button:hover {
+  background-color: #000d24;
+}
+.button.ghost {
+  border-color: #000B1F;
 }/*# sourceMappingURL=style-dark.css.map */
