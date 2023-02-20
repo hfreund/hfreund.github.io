@@ -54,7 +54,7 @@ p {
 a {
   color: $text-color;
   &:hover {
-    color: lighten($color: $text, $amount: 0.25);
+    color: lighten($color: $text-color, $amount: 0.25);
   }
   &:visited {
     color: $text-color;
