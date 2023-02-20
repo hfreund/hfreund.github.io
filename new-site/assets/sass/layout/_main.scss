@@ -3,7 +3,9 @@ body {
   display: grid;
   grid-template-columns: 400px minmax(auto, 640px);
   grid-gap: 2em;
-  padding: 3.5em 0;
+  padding: 2.5em 0;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .about {
@@ -17,4 +19,5 @@ body {
 
 .content {
   padding: 12.5em 0 3em;
+  overflow-y: scroll;
 }
