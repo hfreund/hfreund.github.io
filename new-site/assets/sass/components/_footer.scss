@@ -5,6 +5,7 @@
     max-width: 640px;
     background-color: $primary;
     color: $secondary;
+    display: block;
     a {
         color: $primary;
         &:hover {

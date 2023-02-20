@@ -489,6 +489,9 @@ body {
 .project-card .content {
   padding: 3em 2.5em;
 }
+.project-card .project-snippet {
+  padding: 1em 0;
+}
 .project-card .meta {
   border-top: 4px solid;
   display: grid;
@@ -515,4 +518,19 @@ body {
 }
 .divider.vertical {
   border-right: 4px solid;
+}
+
+.footer {
+  border-radius: 2em;
+  margin: 3em 0 6em;
+  max-width: 640px;
+  background-color: #000B1F;
+  color: #E5E0D2;
+  display: block;
+}
+.footer a {
+  color: #000B1F;
+}
+.footer a:hover {
+  color: #000b20;
 }/*# sourceMappingURL=style-light.css.map */
