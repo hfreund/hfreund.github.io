@@ -441,9 +441,9 @@ body {
 
 .button {
   display: inline-block;
-  padding: 0.75em, 1.24em;
+  padding: 0.75em 1.24em;
   color: #E5E0D2;
-  border: 0.25em solid;
+  border: 0.125em solid;
   border-radius: 0.5em;
   background-color: #000B1F;
 }/*# sourceMappingURL=style-dark.css.map */
