@@ -30,16 +30,21 @@
 
 <body>
   <!-- About -->
-  <div>
-    <p>Hi, I'm Hugh</p>
-    <p>A human experience designer,<br>
-      aspiring environmentalist,<br>
-      and <a href="http://teamusaone.com" target="_blank">Paralympian</a>.</p>
-    <button class="button ghost">Resume<i class="fa-solid fa-arrow-right"></i></button>
+  <div class="about">
+    <div class="theme-wrapper">
+      <button class="button ghost btn-toggle"><i class="fa-regular fa-sun"></i></button>
+    </div>
+    <div class="content">
+      <p>Hi, I'm Hugh</p>
+      <p>A human experience designer,<br>
+        aspiring environmentalist,<br>
+        and <a href="http://teamusaone.com" target="_blank">Paralympian</a>.</p>
+      <button class="button ghost">Resume<i class="fa-solid fa-arrow-right"></i></button>
+    </div>
   </div>
 
   <!-- Content -->
-  <div>
+  <div class="content">
     <span class="divider horizontal"></span>
     <h1>Recent Work</h1>
     <div class="project-card">
@@ -99,7 +104,7 @@
     <span class="divider horizontal"></span>
     <h1>Work History</h1>
   </div>
-  <button class="btn-toggle">Toggle Dark-Mode</button>
+  <!-- <button class="btn-toggle">Toggle Dark-Mode</button> -->
     <script>
       const btn = document.querySelector(".btn-toggle");
       const theme = document.querySelector("#theme-link");

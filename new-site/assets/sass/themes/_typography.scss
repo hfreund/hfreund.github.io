@@ -38,6 +38,7 @@ h2 {
   font-weight: 600;
   font-size: 1.1rem;
   line-height: 1.21;
+  margin: 0;
 }
 p {
   font-size: 1.1rem;
@@ -48,5 +49,15 @@ p {
   font-size: 1.1rem;
   line-height: 1.21;
   text-decoration: none;
+}
+
+a {
+  color: $text-color;
+  &:hover {
+    color: lighten($color: $text, $amount: 0.25);
+  }
+  &:visited {
+    color: $text-color;
+  }
 }
 

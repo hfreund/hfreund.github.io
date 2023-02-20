@@ -3,5 +3,18 @@ body {
   display: grid;
   grid-template-columns: 400px minmax(auto, 640px);
   grid-gap: 2em;
-  padding: 3.5 2.5;
+  padding: 3.5em 0;
+}
+
+.about {
+  padding: 2em 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  .content {
+    align-self: center;
+  }
+}
+
+.content {
+  padding: 12.5em 0 3em;
 }
