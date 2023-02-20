@@ -1,0 +1,19 @@
+
+.project-card {
+    border: 4px solid;
+    border-radius: 2em;
+    .content {
+        padding: 3em 2.5em;
+    }
+    .meta {
+        border-top: 4px solid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .left {
+            padding: 1.5em 2em 2em 2.5em;
+        }
+        .right {
+            padding: 1.5em 2.5em 2em 2em;
+        }
+    }
+}
