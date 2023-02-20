@@ -1,9 +1,9 @@
 body {
   background-color: $background-color;
   display: grid;
-  grid-template-columns: 400px minmax(auto, 640px);
+  grid-template-columns: 400px 1fr;
   grid-gap: 2em;
-  padding: 2.5em 0;
+  padding: 0 2.5em;
   height: 100vh;
   overflow-y: hidden;
 }

@@ -1,0 +1,15 @@
+
+.footer {
+    border-radius: 2em;
+    margin: 3em 0 6em;
+    max-width: 640px;
+    background-color: $primary;
+    color: $secondary;
+    a {
+        color: $primary;
+        &:hover {
+            color: lighten($color: $primary, $amount: 0.1)
+        }
+    }
+    
+}
