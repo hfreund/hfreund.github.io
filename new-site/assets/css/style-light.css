@@ -424,7 +424,7 @@ p {
 body {
   background-color: #E5E0D2;
   display: grid;
-  grid-template-columns: 400px minmax(auto 640px);
+  grid-template-columns: 400px minmax(auto, 640px);
   grid-gap: 2em;
   padding: 3.5 2.5;
 }
@@ -446,5 +446,5 @@ body {
   border-color: #E5E0D2;
 }
 .button i {
-  margin-left: 0.25em;
+  margin-left: 0.5em;
 }/*# sourceMappingURL=style-light.css.map */
