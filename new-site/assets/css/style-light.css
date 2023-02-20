@@ -408,6 +408,7 @@ h2 {
   font-weight: 600;
   font-size: 1.1rem;
   line-height: 1.21;
+  margin: 0;
 }
 
 p {
@@ -421,12 +422,24 @@ p {
   text-decoration: none;
 }
 
+a {
+  color: #000B1F;
+}
+a:hover {
+  color: #000b20;
+}
+a:visited {
+  color: #000B1F;
+}
+
 body {
   background-color: #E5E0D2;
   display: grid;
   grid-template-columns: 400px minmax(auto, 640px);
   grid-gap: 2em;
-  padding: 3.5em 0;
+  padding: 2.5em 0;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .about {
@@ -440,6 +453,7 @@ body {
 
 .content {
   padding: 12.5em 0 3em;
+  overflow-y: scroll;
 }
 
 .button {
@@ -473,7 +487,7 @@ body {
 .project-card .meta {
   border-top: 4px solid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto 1fr;
 }
 .project-card .meta .left {
   padding: 1.5em 2em 2em 2.5em;
@@ -481,7 +495,16 @@ body {
 .project-card .meta .right {
   padding: 1.5em 2.5em 2em 2em;
 }
+.project-card .meta p {
+  margin: 0.25em 0 0;
+}
+.project-card h2 {
+  margin-top: 0;
+}
 
+.divider {
+  display: block;
+}
 .divider.horizontal {
   border-top: 4px solid;
 }
