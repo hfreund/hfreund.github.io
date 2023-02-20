@@ -423,6 +423,10 @@ p {
 
 body {
   background-color: #000B1F;
+  display: grid;
+  grid-template-columns: 400px minmax(auto 640px);
+  grid-gap: 2em;
+  padding: 3.5 2.5;
 }
 
 .button {
