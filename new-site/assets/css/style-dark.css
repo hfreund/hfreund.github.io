@@ -385,6 +385,7 @@ body {
   font-weight: 400;
   line-height: 1.21;
   margin: 0;
+  color: #E5E0D2;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -418,68 +419,8 @@ p {
   text-decoration: none;
 }
 
-.main {
-  display: grid;
-  grid-template-areas: "nav content";
-  grid-template-columns: 0 1fr;
-  transition: 200ms ease;
-}
-@media (min-width: 900px) {
-  .main {
-    grid-template-columns: 64px 1fr;
-  }
-}
-
-.main.open nav {
-  transform: translateX(0);
-  transition: 200ms ease;
-}
-
-nav {
-  grid-area: nav;
-  width: 320px;
-  z-index: 100;
-  transform: translateX(-321px);
-  transition: 200ms ease;
-}
-@media (min-width: 900px) {
-  nav {
-    transform: translateX(-256px);
-  }
-}
-
-.content {
-  grid-area: 2/2/3/3;
-  padding: 0;
-}
-
-body:not(.fp-viewing-0) .project .page-heading {
-  visibility: visible;
-}
-
-.fp-viewing-0 .page-heading {
-  transform: translateY(-80px);
-}
-
-.fullpage-wrapper {
-  grid-area: content;
-}
-
-.fp-tableCell {
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-  max-width: 1600px;
-}
-@media (max-width: 599px) {
-  .section:not(.split) .fp-tableCell {
-    margin: 2.5em auto;
-  }
-}
-@media (min-width: 600px) {
-  .section:not(.split) .fp-tableCell {
-    margin: 6em auto;
-  }
+body {
+  background-color: #000B1F;
 }
 
 .btn {
