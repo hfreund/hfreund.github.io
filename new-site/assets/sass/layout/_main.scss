@@ -1,5 +1,8 @@
-.layout {
+
+body {
   background-color: $background-color;
+}
+.layout {
   @media (min-width: 1024px) {
     display: grid;
     grid-template-columns: 400px 1fr;

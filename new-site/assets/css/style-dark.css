@@ -440,9 +440,10 @@ a:visited {
   color: #E5E0D2;
 }
 
-.layout {
+body {
   background-color: #000B1F;
 }
+
 @media (min-width: 1024px) {
   .layout {
     display: grid;
