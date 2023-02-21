@@ -1,0 +1,46 @@
+/*================================
+Color variables
+================================*/
+.bg-lt-gray {
+  background-color: #edf0f8;
+  color: #636778;
+}
+
+.bg-title-gradient {
+  background: #243b55;
+  background: linear-gradient(to right, #243b55, rgba(20, 30, 48, 0.8));
+  color: rgba(255, 255, 255, 0.95);
+}
+.bg-title-gradient.reverse {
+  background: #141e30;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.bg-cc-gradient {
+  background: #363795;
+  background: linear-gradient(to right, #363795, #005C97);
+  color: #fff;
+}
+.bg-cc-gradient.reverse {
+  background: #005C97;
+  background: linear-gradient(to right, #005C97, #363795);
+  color: #fff;
+}
+
+.bg-dark-purple-gradient {
+  background: #53346D;
+  background: linear-gradient(to bottom, #53346D, #000000);
+  color: #000000;
+}
+
+.bg-cs-gradient {
+  background: #fe8c00;
+  background: linear-gradient(to right, #fe8c00, #f83600);
+  color: #fff;
+}
+.bg-cs-gradient.reverse {
+  background: #f83600;
+  background: linear-gradient(to right, #f83600, #fe8c00);
+  color: #fff;
+}/*# sourceMappingURL=color.css.map */
