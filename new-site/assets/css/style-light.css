@@ -420,6 +420,7 @@ p .callout {
   font-size: 1.5em;
   font-weight: 200;
   line-height: 1.4;
+  margin-bottom: 2em;
 }
 
 .button {
@@ -460,14 +461,24 @@ a:visited {
 .about .content {
   align-self: center;
 }
+@media (max-width: 599px) {
+  .about {
+    padding: 1.5em;
+  }
+}
 
 .content {
   padding: 2.5em 4em 3em;
   overflow-y: scroll;
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .content {
     padding-top: 12.5em;
+  }
+}
+@media (max-width: 599px) {
+  .content {
+    padding: 1.5em;
   }
 }
 
@@ -553,12 +564,13 @@ a:visited {
 .footer {
   border: 4px solid;
   border-radius: 2em;
-  margin: 3em 0 6em;
-  padding: 2em 2.5em;
+  margin-top: 3em;
   max-width: 640px;
   background-color: #000B1F;
   color: #E5E0D2;
-  display: block;
+}
+.footer .inner {
+  padding: 2em 2.5em;
 }
 .footer a {
   color: #E5E0D2;
