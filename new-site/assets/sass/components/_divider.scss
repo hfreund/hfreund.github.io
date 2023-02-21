@@ -3,8 +3,14 @@
     display: block;
     &.horizontal {
         border-top: 4px solid;
+        @media (max-width: 599px) {
+            border-top: 4px solid;
+        }
     }
     &.vertical {
         border-right: 4px solid;
+        @media (max-width: 599px) {
+            border-top: 4px solid;
+        }
     }
 }

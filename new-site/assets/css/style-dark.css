@@ -579,8 +579,18 @@ body {
 .divider.horizontal {
   border-top: 4px solid;
 }
+@media (max-width: 599px) {
+  .divider.horizontal {
+    border-top: 4px solid;
+  }
+}
 .divider.vertical {
   border-right: 4px solid;
+}
+@media (max-width: 599px) {
+  .divider.vertical {
+    border-top: 4px solid;
+  }
 }
 
 .footer {
