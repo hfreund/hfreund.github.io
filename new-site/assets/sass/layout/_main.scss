@@ -19,6 +19,9 @@
 }
 
 .content {
-  padding: 12.5em 4em 3em 0;
+  padding: 2.5em 4em 3em;
   overflow-y: scroll;
+  @media (max-width: 1024px) {
+    padding-top: 12.5em;
+  }
 }
