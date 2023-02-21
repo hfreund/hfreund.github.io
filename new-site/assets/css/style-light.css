@@ -460,6 +460,11 @@ a:visited {
 .about .content {
   align-self: center;
 }
+@media (max-width: 599px) {
+  .about {
+    padding: 1.5em;
+  }
+}
 
 .content {
   padding: 2.5em 4em 3em;
@@ -468,6 +473,11 @@ a:visited {
 @media (max-width: 1024px) {
   .content {
     padding-top: 12.5em;
+  }
+}
+@media (max-width: 599px) {
+  .content {
+    padding: 1.5em;
   }
 }
 

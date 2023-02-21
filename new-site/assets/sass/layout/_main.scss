@@ -16,6 +16,9 @@
   .content {
     align-self: center;
   }
+  @media (max-width: 599px) {
+    padding: 1.5em;
+  }
 }
 
 .content {
@@ -23,5 +26,8 @@
   overflow-y: scroll;
   @media (max-width: 1024px) {
     padding-top: 12.5em;
+  }
+  @media (max-width: 599px) {
+    padding: 1.5em;
   }
 }
