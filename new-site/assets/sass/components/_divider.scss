@@ -10,7 +10,7 @@
     &.vertical {
         border-right: 4px solid;
         @media (max-width: 599px) {
-            border-top: 2px solid;
+            border-right: 2px solid;
         }
     }
 }
