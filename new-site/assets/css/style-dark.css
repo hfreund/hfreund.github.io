@@ -479,7 +479,7 @@ body {
 }
 @media (max-width: 599px) {
   .content {
-    padding: 1.5em;
+    padding: 1.1em;
   }
 }
 
@@ -519,10 +519,20 @@ body {
   margin: 3em 0 6em;
   max-width: 640px;
 }
+@media (max-width: 599px) {
+  .project-card {
+    border: 2px solid;
+  }
+}
 .project-card .title-block {
   display: grid;
   grid-template-columns: 1fr auto;
   padding: 3em 2.5em;
+}
+@media (max-width: 599px) {
+  .project-card .title-block {
+    padding: 3em 2em;
+  }
 }
 .project-card .content {
   padding: 3em 2.5em;
@@ -538,8 +548,18 @@ body {
 .project-card .meta .left {
   padding: 1.5em 2em 2em 2.5em;
 }
+@media (max-width: 599px) {
+  .project-card .meta .left {
+    padding: 1.5em;
+  }
+}
 .project-card .meta .right {
   padding: 1.5em 2.5em 2em 2em;
+}
+@media (max-width: 599px) {
+  .project-card .meta .right {
+    padding: 1.5em;
+  }
 }
 .project-card .meta p {
   margin: 0.25em 0 0;
