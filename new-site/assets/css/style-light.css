@@ -586,7 +586,7 @@ body {
 }
 @media (max-width: 599px) {
   .divider.horizontal {
-    border-top: 4px solid;
+    border-top: 2px solid;
   }
 }
 .divider.vertical {
@@ -594,7 +594,7 @@ body {
 }
 @media (max-width: 599px) {
   .divider.vertical {
-    border-top: 4px solid;
+    border-top: 2px solid;
   }
 }
 
