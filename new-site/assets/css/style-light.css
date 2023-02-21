@@ -461,6 +461,7 @@ body {
 }
 .about .content {
   align-self: center;
+  padding: 0;
 }
 @media (max-width: 599px) {
   .about {
