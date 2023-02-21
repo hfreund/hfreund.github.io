@@ -4,6 +4,7 @@
   padding: 0.75em 1.24em;
   color: $secondary;
   border-radius: 0.5em;
+  border: none;
   background-color: $primary;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
@@ -11,7 +12,8 @@
     background-color: lighten($color: $primary, $amount: 0.9);
   }
   .ghost {
-    color: $text-color;
+    background-color: transparent;
+    color: $text-color
   }
   .outline {
     border-color: $text-color;

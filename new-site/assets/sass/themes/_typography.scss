@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 
 
-$base-font-family: 'IBM+Plex+Sans', Arial, sans-serif;
+$base-font-family: 'IBM Plex Sans', Arial, sans-serif;
 $base-font-size: 1.125rem;
 $base-font-weight: 400;
 $base-line-height: 1.21;
@@ -45,6 +45,11 @@ h2 {
 }
 p {
   font-size: 1.1rem;
+  .callout {
+    font-size: 1.5em;
+    font-weight: 200;
+    line-height: 1.4;
+  }
 }
 
 .button {
