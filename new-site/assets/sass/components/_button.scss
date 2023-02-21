@@ -2,17 +2,22 @@
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
-  color: $text-color;
-  border: .125em solid;
+  color: $primary;
   border-radius: 0.5em;
-  background-color: $background-color;
+  background-color: $secondary;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
   &:hover {
-    background-color: lighten($color: $background-color, $amount: 0.9);
+    background-color: lighten($color: $secondary, $amount: 0.9);
   }
-  &.ghost {
-    border-color: $background-color;
+  .ghost {
+    border-color: $text-color;
+    color: $text-color;
+    border: 2px solid;
+    background-color: transparent;
+    &:hover {
+      background-color: transparentize($color: $primary, $amount: 0.9);
+    }
   }
   i {
     margin-left: .5em;
