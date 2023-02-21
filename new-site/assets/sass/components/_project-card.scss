@@ -12,7 +12,7 @@
         grid-template-columns: 1fr auto;
         padding: 3em 2.5em;
         @media (max-width: 599px) {
-            padding: 3em 2em;
+            padding: 3em 1.5em;
         }
     }
     .content {
@@ -20,6 +20,9 @@
     }
     .project-snippet {
         padding: 1.25em 0;
+        @media (max-width: 599px) {
+            padding: 3em 1.5em;
+        }
     }
     .meta {
         border-top: 4px solid;
@@ -28,13 +31,13 @@
         .left {
             padding: 1.5em 2em 2em 2.5em;
             @media (max-width: 599px) {
-                padding: 1.5em;
+                padding: 1em 1.5em 1.5em;
             }
         }
         .right {
             padding: 1.5em 2.5em 2em 2em;
             @media (max-width: 599px) {
-                padding: 1.5em;
+                padding: 1em 1.5em 1.5em;
             }
         }
         p {

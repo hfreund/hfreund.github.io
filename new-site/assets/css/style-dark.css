@@ -532,7 +532,7 @@ body {
 }
 @media (max-width: 599px) {
   .project-card .title-block {
-    padding: 3em 2em;
+    padding: 3em 1.5em;
   }
 }
 .project-card .content {
@@ -540,6 +540,11 @@ body {
 }
 .project-card .project-snippet {
   padding: 1.25em 0;
+}
+@media (max-width: 599px) {
+  .project-card .project-snippet {
+    padding: 3em 1.5em;
+  }
 }
 .project-card .meta {
   border-top: 4px solid;
@@ -551,7 +556,7 @@ body {
 }
 @media (max-width: 599px) {
   .project-card .meta .left {
-    padding: 1.5em;
+    padding: 1em 1.5em 1.5em;
   }
 }
 .project-card .meta .right {
@@ -559,7 +564,7 @@ body {
 }
 @media (max-width: 599px) {
   .project-card .meta .right {
-    padding: 1.5em;
+    padding: 1em 1.5em 1.5em;
   }
 }
 .project-card .meta p {
