@@ -461,7 +461,6 @@ body {
   display: inline-block;
   padding: 0.75em 1.24em;
   color: #E5E0D2;
-  border: 0.125em solid;
   border-radius: 0.5em;
   background-color: #000B1F;
   transition: background-color 0.5s ease;
@@ -470,8 +469,14 @@ body {
 .button:hover {
   background-color: #000d24;
 }
-.button.ghost {
-  border-color: #000B1F;
+.button .ghost {
+  border-color: #E5E0D2;
+  color: #E5E0D2;
+  border: 2px solid;
+  background-color: transparent;
+}
+.button .ghost:hover {
+  background-color: rgba(229, 224, 210, 0.1);
 }
 .button i {
   margin-left: 0.5em;
@@ -492,7 +497,7 @@ body {
   padding: 3em 2.5em;
 }
 .project-card .project-snippet {
-  padding: 1em 0;
+  padding: 1.25em 0;
 }
 .project-card .meta {
   border-top: 4px solid;
@@ -510,6 +515,10 @@ body {
 }
 .project-card h2 {
   margin-top: 0;
+  margin-bottom: 0.25em;
+}
+.project-card p {
+  margin-top: 0.25em;
 }
 
 .divider {
