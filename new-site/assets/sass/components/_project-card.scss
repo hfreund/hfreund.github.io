@@ -5,7 +5,8 @@
     margin: 3em 0 6em;
     max-width: 640px;
     .title-block {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr auto;
         padding: 3em 2.5em;
     }
     .content {

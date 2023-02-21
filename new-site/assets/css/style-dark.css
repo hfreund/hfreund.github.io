@@ -409,6 +409,8 @@ h2 {
   font-size: 1.1rem;
   line-height: 1.21;
   margin: 0;
+  margin: 0 0 0.25em;
+  opacity: 0.85;
 }
 
 p {
@@ -482,7 +484,8 @@ body {
   max-width: 640px;
 }
 .project-card .title-block {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   padding: 3em 2.5em;
 }
 .project-card .content {
@@ -523,6 +526,7 @@ body {
   border: 4px solid;
   border-radius: 2em;
   margin: 3em 0 6em;
+  padding: 2em 2.5em;
   max-width: 640px;
   background-color: #E5E0D2;
   color: #000B1F;
