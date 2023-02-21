@@ -460,25 +460,28 @@ body {
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
-  color: #000B1F;
+  color: #E5E0D2;
   border-radius: 0.5em;
-  background-color: #E5E0D2;
+  background-color: #000B1F;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
 }
 .button:hover {
-  background-color: #e7e2d5;
+  background-color: #000d24;
 }
 .button .ghost {
+  color: #000B1F;
+}
+.button .outline {
   border-color: #000B1F;
   color: #000B1F;
   border: 2px solid;
   background-color: transparent;
 }
-.button .ghost:hover {
+.button .outline:hover {
   background-color: rgba(0, 11, 31, 0.1);
 }
-.button i {
+.button i.right {
   margin-left: 0.5em;
 }
 

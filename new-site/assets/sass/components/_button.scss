@@ -2,15 +2,18 @@
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
-  color: $primary;
+  color: $secondary;
   border-radius: 0.5em;
-  background-color: $secondary;
+  background-color: $primary;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
   &:hover {
-    background-color: lighten($color: $secondary, $amount: 0.9);
+    background-color: lighten($color: $primary, $amount: 0.9);
   }
   .ghost {
+    color: $text-color;
+  }
+  .outline {
     border-color: $text-color;
     color: $text-color;
     border: 2px solid;
@@ -19,7 +22,7 @@
       background-color: transparentize($color: $primary, $amount: 0.9);
     }
   }
-  i {
+  i.right {
     margin-left: .5em;
   }
 }
