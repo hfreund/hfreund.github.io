@@ -532,7 +532,7 @@ body {
 }
 @media (max-width: 599px) {
   .project-card .title-block {
-    padding: 3em 1.5em;
+    padding: 2.5em 1.5em;
   }
 }
 .project-card .content {
@@ -575,6 +575,9 @@ body {
   margin-bottom: 0.25em;
 }
 .project-card p {
+  margin-top: 1.25em;
+}
+.project-card p .subtitle {
   margin-top: 0.25em;
 }
 
