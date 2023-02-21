@@ -466,6 +466,7 @@ body {
 @media (max-width: 599px) {
   .about {
     padding: 5em 2.5em;
+    height: calc(100vh - 12em);
   }
 }
 
@@ -532,19 +533,19 @@ body {
 }
 @media (max-width: 599px) {
   .project-card .title-block {
-    padding: 3em 1.5em;
+    padding: 2.5em 1.5em;
   }
 }
 .project-card .content {
   padding: 3em 2.5em;
 }
-.project-card .project-snippet {
-  padding: 1.25em 0;
-}
 @media (max-width: 599px) {
-  .project-card .project-snippet {
+  .project-card .content {
     padding: 3em 1.5em;
   }
+}
+.project-card .project-snippet {
+  padding: 1.25em 0;
 }
 .project-card .meta {
   border-top: 4px solid;
@@ -575,6 +576,9 @@ body {
   margin-bottom: 0.25em;
 }
 .project-card p {
+  margin-top: 1.25em;
+}
+.project-card p .subtitle {
   margin-top: 0.25em;
 }
 
@@ -586,7 +590,7 @@ body {
 }
 @media (max-width: 599px) {
   .divider.horizontal {
-    border-top: 4px solid;
+    border-top: 2px solid;
   }
 }
 .divider.vertical {
@@ -594,7 +598,7 @@ body {
 }
 @media (max-width: 599px) {
   .divider.vertical {
-    border-top: 4px solid;
+    border-top: 2px solid;
   }
 }
 
