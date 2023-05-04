@@ -554,7 +554,7 @@ body {
 }
 @media (max-width: 599px) {
   .project-card .meta {
-    border-top: 4px solid;
+    border-top: 2px solid;
   }
 }
 .project-card .meta .left {
