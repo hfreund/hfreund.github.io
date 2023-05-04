@@ -559,6 +559,9 @@ img {
 .project-card-outlined .project-snippet {
   padding: 1.25em 0;
 }
+.project-card-outlined img {
+  margin-bottom: 1em;
+}
 
 .divider {
   display: block;
