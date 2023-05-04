@@ -536,8 +536,8 @@ img {
   border: 1px solid;
 }
 .project-card-outlined:hover {
-  background: #000B1F;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+  background: #002f85;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.3);
   transition: 200ms ease;
 }
 .project-card-outlined .title-block {
