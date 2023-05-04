@@ -15,11 +15,8 @@
     .content {
         padding: 3em 2.5em;
         @media (max-width: 599px) {
-            padding: 2.5em 1.5em;
+            padding: 1.5em;
         }
-    }
-    .project-snippet {
-        padding: 1.25em 0;
     }
     img {
         margin-bottom: 1em;
