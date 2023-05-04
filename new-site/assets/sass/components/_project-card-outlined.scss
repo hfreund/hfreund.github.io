@@ -4,7 +4,7 @@
     max-width: 800px;
     border: 1px solid;
     border-radius: 3em;
-    @media screen(max-width:599px) {
+    @media (max-width:599px) {
         border-radius: 2em;
     }
     &:hover {
