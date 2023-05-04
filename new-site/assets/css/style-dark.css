@@ -484,14 +484,9 @@ body {
   padding: 2.5em 4em 3em;
   overflow-y: scroll;
 }
-@media (min-width: 1024px) {
-  .content {
-    padding-top: 4em;
-  }
-}
 @media (max-width: 599px) {
   .content {
-    padding: 1.5em;
+    padding: 1em;
   }
 }
 
@@ -550,11 +545,8 @@ img {
 }
 @media (max-width: 599px) {
   .project-card-outlined .content {
-    padding: 2.5em 1.5em;
+    padding: 1.5em;
   }
-}
-.project-card-outlined .project-snippet {
-  padding: 1.25em 0;
 }
 .project-card-outlined img {
   margin-bottom: 1em;

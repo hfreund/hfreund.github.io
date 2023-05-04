@@ -29,11 +29,8 @@ body {
 .content {
   padding: 2.5em 4em 3em;
   overflow-y: scroll;
-  @media (min-width: 1024px) {
-    padding-top: 4em;
-  }
   @media (max-width: 599px) {
-    padding: 1.5em;
+    padding: 1em;
   }
 }
 
