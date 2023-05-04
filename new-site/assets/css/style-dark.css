@@ -440,6 +440,14 @@ a:visited {
   color: #E5E0D2;
 }
 
+.tag {
+  padding: 0.25em 0.5em;
+  border-radius: 0.5em;
+  display: inline-block;
+  font-size: 0.8em;
+  background: #e7e2d5;
+}
+
 body {
   background-color: #000B1F;
 }
@@ -515,76 +523,35 @@ body {
   margin-left: 0.5em;
 }
 
-.project-card {
-  border: 4px solid;
-  border-radius: 2em;
+.project-card-outlined {
+  border-radius: 3em;
   margin: 3em 0 6em;
-  max-width: 640px;
+  max-width: 800px;
+  border: 1px solid;
 }
-@media (max-width: 599px) {
-  .project-card {
-    border: 2px solid;
-  }
+.project-card-outlined:hover {
+  background: #000B1F;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+  transition: 200ms ease;
 }
-.project-card .title-block {
-  display: grid;
-  grid-template-columns: 1fr auto;
+.project-card-outlined .title-block {
   padding: 3em 2.5em;
 }
 @media (max-width: 599px) {
-  .project-card .title-block {
+  .project-card-outlined .title-block {
     padding: 2.5em 1.5em;
   }
 }
-.project-card .content {
+.project-card-outlined .content {
   padding: 3em 2.5em;
 }
 @media (max-width: 599px) {
-  .project-card .content {
+  .project-card-outlined .content {
     padding: 3em 1.5em;
   }
 }
-.project-card .project-snippet {
+.project-card-outlined .project-snippet {
   padding: 1.25em 0;
-}
-.project-card .meta {
-  border-top: 4px solid;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-}
-@media (max-width: 599px) {
-  .project-card .meta {
-    border-top: 2px solid;
-  }
-}
-.project-card .meta .left {
-  padding: 1.5em 2em 2em 2.5em;
-}
-@media (max-width: 599px) {
-  .project-card .meta .left {
-    padding: 1em 1.5em 1.5em;
-  }
-}
-.project-card .meta .right {
-  padding: 1.5em 2.5em 2em 2em;
-}
-@media (max-width: 599px) {
-  .project-card .meta .right {
-    padding: 1em 1.5em 1.5em;
-  }
-}
-.project-card .meta p {
-  margin: 0.25em 0 0;
-}
-.project-card h2 {
-  margin-top: 0;
-  margin-bottom: 0.25em;
-}
-.project-card p {
-  margin-top: 1.25em;
-}
-.project-card p .subtitle {
-  margin-top: 0.25em;
 }
 
 .divider {
