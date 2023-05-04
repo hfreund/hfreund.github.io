@@ -1,27 +1,27 @@
 
 .project-card-outlined {
-    border-radius: 3em;
     margin: 3em 0 6em;
     max-width: 800px;
     border: 1px solid;
+    border-radius: 3em;
+    @media (max-width:599px) {
+        border-radius: 2em;
+    }
     &:hover {
         background: lighten($secondary, 5%);
         box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.3);
         transition: 200ms ease;
     }
-    .title-block {
+    .content {
         padding: 3em 2.5em;
         @media (max-width: 599px) {
             padding: 2.5em 1.5em;
         }
     }
-    .content {
-        padding: 3em 2.5em;
-        @media (max-width: 599px) {
-            padding: 3em 1.5em;
-        }
-    }
     .project-snippet {
         padding: 1.25em 0;
+    }
+    img {
+        margin-bottom: 1em;
     }
 }
