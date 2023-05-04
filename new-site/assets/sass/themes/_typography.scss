@@ -70,3 +70,11 @@ a {
   }
 }
 
+.tag {
+  padding: 0.25em 0.5em;
+  border-radius: 0.5em;
+  display: inline-block;
+  font-size: 0.8em;
+  background: lighten($color: $primary, $amount: 0.85)
+}
+
