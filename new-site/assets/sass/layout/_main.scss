@@ -36,4 +36,14 @@ body {
 
 img {
   width: 100%;
+  margin-top: 2.5em;
+}
+
+.avatar {
+  max-width: 8em;
+  height: 100%;
+  display: inline-block;
+  background-image: url("/images/Headshot.png");
+  border-radius: 10em;
+  margin-bottom: 2em;
 }
