@@ -497,7 +497,7 @@ img {
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
-  color: #E5E0D2;
+  color: #E5E0D2 !important;
   border-radius: 0.5em;
   border: none;
   background-color: #000B1F;
@@ -547,9 +547,6 @@ img {
   .project-card-outlined .content {
     padding: 1.5em;
   }
-}
-.project-card-outlined img {
-  margin-bottom: 1em;
 }
 
 .divider {
