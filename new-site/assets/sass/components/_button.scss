@@ -2,18 +2,19 @@
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
-  color: $secondary;
+  color: $secondary !important;
   border-radius: 0.5em;
   border: none;
   background-color: $primary;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
+  cursor: pointer;
   &:hover {
-    background-color: lighten($color: $primary, $amount: 0.9);
+    background-color: lighten($primary, $amount: 0.9);
   }
   .ghost {
     background-color: $secondary;
-    color: $text-color
+    color: $text-color;
   }
   .outline {
     border-color: $text-color;

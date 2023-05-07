@@ -497,12 +497,13 @@ img {
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
-  color: #000B1F;
+  color: #000B1F !important;
   border-radius: 0.5em;
   border: none;
   background-color: #E5E0D2;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
+  cursor: pointer;
 }
 .button:hover {
   background-color: #e7e2d5;
@@ -547,9 +548,6 @@ img {
   .project-card-outlined .content {
     padding: 1.5em;
   }
-}
-.project-card-outlined img {
-  margin-bottom: 1em;
 }
 
 .divider {
