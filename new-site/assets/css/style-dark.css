@@ -501,8 +501,7 @@ img {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 6em;
-  height: 6em;
+  max-width: 8em;
   border-radius: 50%;
   overflow: hidden;
   width: 100%;
@@ -516,7 +515,7 @@ img {
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
-  color: #000B1F !important;
+  color: #000B1F;
   border-radius: 0.5em;
   border: none;
   background-color: #E5E0D2;
@@ -528,8 +527,11 @@ img {
   background-color: #e7e2d5;
 }
 .button.ghost {
-  background-color: #000B1F;
-  color: #E5E0D2;
+  background-color: transparent;
+  color: #E5E0D2 !important;
+}
+.button.ghost:hover {
+  background-color: #e5e0d2;
 }
 .button.outline {
   border-color: #E5E0D2;
