@@ -430,13 +430,13 @@ p .callout {
   text-decoration: none;
 }
 
-a {
+.link {
   color: #E5E0D2;
 }
-a:hover {
+.link:hover {
   color: #e5e1d3;
 }
-a:visited {
+.link:visited {
   color: #E5E0D2;
 }
 
@@ -492,6 +492,16 @@ body {
 
 img {
   width: 100%;
+  margin-top: 2.5em;
+}
+
+.avatar {
+  max-width: 8em;
+  height: 100%;
+  display: inline-block;
+  background-image: url("/images/Headshot.png");
+  border-radius: 10em;
+  margin-bottom: 2em;
 }
 
 .button {
