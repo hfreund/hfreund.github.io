@@ -501,24 +501,24 @@ img {
   border-radius: 0.5em;
   border: none;
   background-color: #E5E0D2;
+  cursor: pointer;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
-  cursor: pointer;
 }
 .button:hover {
   background-color: #e7e2d5;
 }
-.button .ghost {
+.button.ghost {
   background-color: #000B1F;
   color: #E5E0D2;
 }
-.button .outline {
+.button.outline {
   border-color: #E5E0D2;
   color: #E5E0D2;
   border: 2px solid;
   background-color: #000B1F;
 }
-.button .outline:hover {
+.button.outline:hover {
   background-color: rgba(229, 224, 210, 0.1);
 }
 .button i.right {

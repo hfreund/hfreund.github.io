@@ -6,17 +6,17 @@
   border-radius: 0.5em;
   border: none;
   background-color: $primary;
+  cursor: pointer;
   transition: background-color 0.5s ease;
   transition: color 0.5s ease;
-  cursor: pointer;
   &:hover {
     background-color: lighten($primary, $amount: 0.9);
   }
-  .ghost {
+  &.ghost {
     background-color: $secondary;
     color: $text-color;
   }
-  .outline {
+  &.outline {
     border-color: $text-color;
     color: $text-color;
     border: 2px solid;
