@@ -430,13 +430,13 @@ p .callout {
   text-decoration: none;
 }
 
-a {
+.link {
   color: #000B1F;
 }
-a:hover {
+.link:hover {
   color: #000b20;
 }
-a:visited {
+.link:visited {
   color: #000B1F;
 }
 

@@ -60,7 +60,7 @@ p {
   text-decoration: none;
 }
 
-a {
+.link {
   color: $text-color;
   &:hover {
     color: lighten($color: $text-color, $amount: 0.25);
