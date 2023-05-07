@@ -47,8 +47,7 @@ img {
   -webkit-box-pack: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 6em;
-  height: 6em;
+  max-width: 8em;
   border-radius: 50%;
   overflow: hidden;
   width: 100%;

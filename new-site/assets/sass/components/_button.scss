@@ -2,7 +2,7 @@
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
-  color: $secondary !important;
+  color: $secondary;
   border-radius: 0.5em;
   border: none;
   background-color: $primary;
@@ -13,8 +13,11 @@
     background-color: lighten($primary, $amount: 0.9);
   }
   &.ghost {
-    background-color: $secondary;
-    color: $text-color;
+    background-color: transparent;
+    color: $text-color !important;
+    &:hover {
+      background-color: lighten($primary, $amount: 0.15);
+    }
   }
   &.outline {
     border-color: $text-color;
