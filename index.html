@@ -1,242 +1,123 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="robots" content="all">
-  <meta name="googlebot" content="all">
-
-  <title>Hugh Freund | Product Design & Management</title>
-  <meta name="description" content="Portfolio">
-  <meta name="author" content="Hugh Freund">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <!-- <link rel="stylesheet" type="text/css" href="/ui/fullpage/dist/jquery.fullpage.css" />
-	<link rel="stylesheet" href="/ui/css/style.min.css" type="text/css" /> -->
-	<link rel="stylesheet" href="/assets/css/style.min.css" type="text/css" />
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="/ui/fullpage/vendors/jquery.easings.min.js"></script>
-  <script type="text/javascript" src="/ui/fullpage/vendors/scrolloverflow.min.js"></script>
-  <script type="text/javascript" src="/ui/fullpage/dist/jquery.fullpage.js"></script>
-  <script src="https://use.fontawesome.com/29fc27d329.js"></script>
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-  <script>
-  var open = false;
-
-  function change() {
-    if (open) {
-        document.getElementById("expandNav").className = "main";
-        open = false;
-    } else {
-        document.getElementById("expandNav").className = "main open";
-        open = true;
-    }
-  }
-
-  $(document).ready(function() {
-      function initialization(){
-    	   $('#fullpage').fullpage({
-    		//Navigation
-    		slidesNavigation: true,
-    		slidesNavPosition: 'bottom',
-
-    		//Scrolling
-    		fitToSectionDelay: 1000,
-    		scrollBar: false,
-    		dragAndMove: false,
-    		offsetSections: false,
-    		scrollOverflow: true,
-    		touchSensitivity: 2,
-
-    		//Accessibility
-    		recordHistory: false,
-
-    		//Design
-    		//sectionsColor : ['#fff'],
-    		responsiveWidth: 0,//600,
-    		responsiveHeight: 0,//600,
-
-    		//Custom selectors
-    		sectionSelector: '.section',
-    		slideSelector: '.slide'
-
-    		//Events
-    		/*
-        onLeave: function(index, nextIndex, direction){},
-    		afterLoad: function(anchorLink, index){},
-    		afterRender: function(){},
-    		afterResize: function(){},
-    		afterResponsive: function(isResponsive){},
-    		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-    		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-        */
-    	});
-      }
-      //fullPage.js initialization
-            initialization();
-
-			//$.fn.fullpage.destroyStructure('height');
-      $('#fullpage').fullpage({
-    		anchors:['top', 'commoncensus', 'courageous']
-    	});
-  });
-
-  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="all" />
+  <meta name="googlebot" content="all" />
+  <title>Hugh | Experience Design</title>
+  <meta name="description" content="UX Portfolio" />
+  <meta name="author" content="Hugh Freund" />
+  <link href="/new-site/assets/css/style-light.css" rel="stylesheet" id="theme-link">
+  <script src="https://kit.fontawesome.com/fccd76eeda.js" crossorigin="anonymous"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-40419309-4"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag('config', 'UA-40419309-4');
+    gtag("config", "UA-40419309-4");
   </script>
-
 </head>
+
+</html>
+
 <body>
-	<div class="main" id="expandNav">
-    <a class="btn-menu" href="#" onclick="change()">
-      <span class="menu-bar"></span>
-      <span class="menu-bar"></span>
-      <span class="menu-bar"></span>
-    </a>
-    <nav class="navbar">
-      <div class="nav-title"><a href="/">Hugh Freund</a></div>
-      <ul>
-        <li>
-          <ul>
-            <li class="title">MassChallenge</li>
-            <li>
-              <a href="/masschallenge/ia">Information Architecture</a>
-            </li>
-            <li>
-              <a href="/masschallenge/staffportal">Staff Portal</a>
-            </li>
-          </ul>
-          <ul>
-            <li class="title">Common Census</li>
-            <li>
-              <a href="/commoncensus/webapp">Web App</a>
-            </li>
-            <li>
-              <a href="/commoncensus/adminapp">Admin App</a>
-            </li>
-            <li>
-              <a href="/commoncensus/website">Website</a>
-            </li>
-          </ul>
-          <ul>
-            <li class="title">Courageous Sailing</li>
-            <li>
-              <a href="/courageous/website">Website</a>
-            </li>
-            <li>
-              <a href="/courageous/identity">Identity</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="https://www.dropbox.com/s/m570kzhfts0zogv/Hugh%20Freund%20Resume.pdf?raw=1" target="_blank">Resume</a>
-        </li>
-        <li class="btn-group-inline">
-          <a href="https://github.com/hfreund/hfreund.github.io" target="_blank" class="btn inverse"><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/hughfreund/" target="_blank" class="btn inverse"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          <a href="mailto:hugh.freund@gmail.com" target="_blank" class="btn inverse"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        </li>
-      </ul>
-      <div class="disclaimer">
-        All client work is subject to their copyright and trademark privelages and therefore may not be copied, reused, or distributed without the owner's expressed consent.
+  <div class="layout">
+    <!-- About -->
+    <div class="about">
+      <div class="theme-wrapper">
+        <button class="button ghost btn-toggle" role="button"><i class="fa-solid fa-circle-half-stroke"></i></button>
       </div>
-    </nav>
-		<div id="fullpage" class="content">
-      <div class="section main-top" data-anchor="top">
-        <div class="text">
-            <h1>Hugh</h1>
-            <p class="lead muted">I'm a digital designer with a background in architecture.</p>
-            <p class="muted">Since 2011 I've helped build web apps for people and businesses, facilitate design and planning workshops, influence strategic vision, and drive process improvements for delivery. Currently I manage and design product at MassChallenge to accelerate the next generation of entrepreneurs. On the side I spend my free time outside in the woods or <a href="http://www.teamusaone.com" target="_blank" class="link">on the ocean</a>.</p>
-            <div class="btn-group-inline">
-              <a class="btn big" href="#mc">View work</a>
-              <a class="btn big inverse" href="mailto:hugh.freund@gmail.com">Contact</a>
-            </div>
-          </div>
-        <!-- <div class="scroll">
-          <a href="#mc">down</a>
-        </div> -->
+      <div class="content">
+        <img alt="Hugh" src="/images/Headshot.png" class="avatar"></img>
+        <div>
+        <p class="callout">Hi, I'm Hugh.</p>
+        <p class="callout">A human experience designer, aspiring environmentalist, and <a class="link" href="http://teamusaone.com" target="_blank">Paralympian</a>.</p>
+        <a class="button outline" href="https://www.dropbox.com/s/zmc61lsjgbousua/Hugh%20Freund%20Resume.pdf?dl=0" target="_blank">Resume<i class="fa-solid fa-arrow-right right"></i></a>
       </div>
-      <div class="section project-card" data-anchor="mc">
-	<div class="project-wrapper full-height bg-mc-gradient" style="background:#0eabbc;">
-		<div class="project-inner">
-		<div class="project-text">
-  			<h2>MassChallenge</h2>
-  			<p class="hide phone">MassChallenge is a global nonprofit startup accelerator.</p>
-              		<p class="hide phone lead muted">I worked as both their UX designer and later as Product Manager to build community-focused technology that supported startup acceleration.</p>
-              		<div class="project-list">
-                	<ul>
-               			<li>
-               			<a href="/masschallenge/ia" class="btn link">Information Architecture</a>
-               			</li>
-               			<li>
-               			<a href="/masschallenge/staffportal" class="btn link">Staff Portal</a>
-               			</li>
-               		</ul>
-              </div>
-	</div>
-<!--	<div id="mc-hero" class="img-block img-bg mc"></div> -->
-  				</div>
-  			</div>
       </div>
-      <div class="section project-card" data-anchor="commoncensus">
-        <div class="project-wrapper full-height bg-cc-gradient">
-          <div class="project-inner">
-  					<div class="project-text">
-  						<h2>Common Census</h2>
-  						<p class="hide phone">Common Census is a technology company that builds employee benefit management software.</p>
-              <p class="hide phone lead muted">I led the design process and coordinated programming, client services, and sales teams to build web-based insurance applications for multiple user types.</p>
-              <div class="project-list">
-                <ul>
-               		<li>
-               			<a href="/commoncensus/webapp" class="btn link">Web App</a>
-               		</li>
-               		<li>
-               			<a href="/commoncensus/adminapp" class="btn link">Admin App</a>
-               		</li>
-               		<li>
-               			<a href="/commoncensus/website" class="btn link">Website</a>
-               		</li>
-               	</ul>
-              </div>
-  					</div>
-            <div id="cbi-hero" class="img-block img-bg cmcs"></div>
-  				</div>
-  			</div>
-      </div>
-      <div class="section project-card" data-anchor="courageous">
-        <div class="project-wrapper full-height bg-cs-gradient">
-  				<div class="project-inner">
-  					<div class="project-text">
-  						<h2>Courageous Sailing</h2>
-              <p class="hide phone">A non profit sailing school that uses sailing as a platform to inspire learning, personal growth and leadership.</p>
-  						<p class="hide phone lead muted">I resolved a fractured brand identity into a cohesive experience throughout programs, e-commerce, marketing, events, and fundraising.</p>
-              <div class="project-list">
-                <ul>
-               		<li>
-               			<a href="/courageous/website" class="btn link">Website</a>
-               		</li>
-               		<li>
-               			<a href="/courageous/identity" class="btn link">Brand Identity + Marketing</a>
-               		</li>
-               	</ul>
-              </div>
-  					</div>
-  					<div class="img-block img-bg crgs" id="site-hero"></div>
-  				</div>
-  			</div>
-      </div>
-		</div>
-    <div class="bg-fade">
     </div>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="project-card-outlined">
+        <div class="content">
+          <div class="meta">
+            <div class="tag">SimSpace</div>
+            <div class="tag">Sr. UX Designer</div>
+          </div>
+          <h2>Monorail Design System</h2>
+          <p>Co-designed a new themeable and accessible design system for an existing and future platform.</p>
+          <a class="button" role="button" aria-label="button" href="https://www.dropbox.com/s/yypyeo0t66djdgq/Monorail.pdf?dl=0" target="_blank">Case Study<i class="fa-solid fa-arrow-up-right-from-square right"></i></a>
+          <img src="/images/Design System.png" alt="Design system tokens and button anatomy" />
+        </div>
+      </div>
+      <div class="project-card-outlined">
+        <div class="content">
+          <div class="meta">
+            <div class="tag">MassChallenge</div>
+            <div class="tag">Product Manager</div>
+            <div class="tag">UX Designer</div>
+          </div>
+          <h2>Central Account Model</h2>
+          <p>Unified user account types to reduce onboarding friction and improve data quality.</p>
+          <a class="button" role="button" aria-label="button" href="https://www.dropbox.com/s/1hl2qt0ss9yrcz1/Central%20Account%20Model.pdf?dl=0" target="_blank">Case Study<i class="fa-solid fa-arrow-up-right-from-square right"></i></a>
+          <img src="/images/Central Account.png" alt="Infinity stack of profile card snippets" />
+        </div>
+      </div>
+      <div class="project-card-outlined">
+        <div class="content">
+          <div class="meta">
+            <div class="tag">MassChallenge</div>
+            <div class="tag">UX Designer</div>
+          </div>
+          <h2>Information Architecture</h2>
+          <p>Improved platform usability and maintainability through dramatically overhauling the IA.</p>
+          <a class="button" role="button" aria-label="button" href="https://www.dropbox.com/s/0crwmphnpdmpcbw/Information%20Architecture.pdf?dl=0" target="_blank">Case Study<i class="fa-solid fa-arrow-up-right-from-square right"></i></a>
+          <img src="/images/Information Architecture.png" alt="A tree diagram for a web application" />
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="inner">
+          <h2>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </h2>
+          <ul>
+            <li>
+              <a class="link" href="mailto:hugh.freund@gmail.com" target="_blank">hugh.freund@gmail.com</a>
+            </li>
+            <li>
+              <a class="link" href="https://www.linkedin.com/in/hughfreund/" target="_blank">linkedin.com/in/hughfreund</a>
+            </li>
+            <li>
+              <a class="link" href="https://github.com/hfreund" target="_blank">github.com/hfreund</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <button class="btn-toggle">Toggle Dark-Mode</button> -->
+    <script>
+      const btn = document.querySelector(".btn-toggle");
+      const theme = document.querySelector("#theme-link");
+      btn.addEventListener("click", function () {
+        // Swap out the URL for the different stylesheets
+        if (theme.getAttribute("href") == "/new-site/assets/css/style-dark.css") {
+          theme.href = "/new-site/assets/css/style-light.css";
+        } else {
+          theme.href = "/new-site/assets/css/style-dark.css";
+        }
+      });
+    </script>
   </div>
 </body>
+
 </html>
