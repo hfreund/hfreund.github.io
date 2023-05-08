@@ -29,12 +29,13 @@ body {
       grid-gap: 1.5em;
     }
   }
-  @media (max-width: 599px) {
+  @media (max-width: 1023px) {
     height: calc(100vh - 16em);
   }
 }
 
 .content {
+  padding-top: 4em;
   @media (min-width: 600px) {
     overflow-y: scroll;
   }
@@ -53,7 +54,12 @@ img {
   -webkit-box-pack: center;
   justify-content: center;
   flex-shrink: 0;
-  max-width: 8em;
+  max-width: 10em;
+  max-height: 10em;
+  @media (max-width: 599px) {
+    max-width: 6px;
+    max-height: 6px;
+  }
   border-radius: 50%;
   overflow: hidden;
   width: 100%;
@@ -61,4 +67,5 @@ img {
   text-align: center;
   object-fit: cover;
   color: transparent;
+  margin-top: 1em;
 }
