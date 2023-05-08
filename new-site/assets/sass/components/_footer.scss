@@ -9,10 +9,10 @@
     .inner {
         padding: 2em 2.5em;
     }
-    a {
+    .link {
         color: $secondary;
         &:hover {
-            color: lighten($color: $secondary, $amount: 0.1)
+            color: lighten($color: $secondary, $amount: 0.25)
         }
     }
     ul {
