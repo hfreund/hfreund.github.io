@@ -462,7 +462,7 @@ body {
     display: grid;
     grid-template-columns: minmax(350px, 400px) 1fr;
     grid-gap: 2em;
-    padding: 1em 2em 2em 3em;
+    padding: 1em 0 2em 3em;
     height: 100vh;
     overflow-y: hidden;
   }
@@ -481,7 +481,7 @@ body {
   align-self: center;
   padding: 0;
 }
-@media (max-width: 599px) {
+@media (max-width: 1023px) {
   .about .content {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -495,7 +495,7 @@ body {
 }
 
 .content {
-  padding-top: 4em;
+  padding: 4em 2em;
 }
 @media (min-width: 600px) {
   .content {
@@ -528,8 +528,8 @@ img {
 }
 @media (max-width: 599px) {
   .avatar {
-    max-width: 6px;
-    max-height: 6px;
+    max-width: 6em;
+    max-height: 6em;
   }
 }
 
