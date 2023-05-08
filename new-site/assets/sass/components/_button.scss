@@ -16,7 +16,7 @@
     background-color: transparent;
     color: $text-color !important;
     &:hover {
-      background-color: lighten($primary, $amount: 0.15);
+      background-color: transparentize($color: $primary, $amount: 0.9);
     }
   }
   &.outline {
