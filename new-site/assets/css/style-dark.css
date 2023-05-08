@@ -625,10 +625,10 @@ img {
 .footer .inner {
   padding: 2em 2.5em;
 }
-.footer a {
+.footer .link {
   color: #000B1F;
 }
-.footer a:hover {
+.footer .link:hover {
   color: #000b20;
 }
 .footer ul {
