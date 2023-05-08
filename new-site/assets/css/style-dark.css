@@ -481,7 +481,7 @@ body {
   align-self: center;
   padding: 0;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1023px) and (min-width: 600px) {
   .about .content {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -494,12 +494,10 @@ body {
   }
 }
 
-.content {
-  padding: 4em 2em;
-}
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .content {
     overflow-y: scroll;
+    padding: 4em 2em;
   }
 }
 
@@ -528,8 +526,8 @@ img {
 }
 @media (max-width: 599px) {
   .avatar {
-    max-width: 6em;
-    max-height: 6em;
+    max-width: 8em;
+    max-height: 8em;
   }
 }
 
