@@ -454,18 +454,26 @@ body {
   background-color: #000B1F;
 }
 
+.layout {
+  padding: 1em 2em 2em;
+}
 @media (min-width: 1024px) {
   .layout {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: minmax(350px, 400px) 1fr;
     grid-gap: 2em;
+    padding: 1em 2em 2em 3em;
     height: 100vh;
     overflow-y: hidden;
   }
 }
+@media (max-width: 599px) {
+  .layout {
+    padding: 1em 1em 2em;
+  }
+}
 
 .about {
-  padding: 2em 4em;
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -475,18 +483,13 @@ body {
 }
 @media (max-width: 599px) {
   .about {
-    padding: 2em 1.5em;
     height: calc(100vh - 16em);
   }
 }
 
-.content {
-  padding: 2.5em 4em 3em;
-  overflow-y: scroll;
-}
-@media (max-width: 599px) {
+@media (min-width: 600px) {
   .content {
-    padding: 1em;
+    overflow-y: scroll;
   }
 }
 
@@ -531,7 +534,7 @@ img {
   color: #E5E0D2 !important;
 }
 .button.ghost:hover {
-  background-color: #e5e0d2;
+  background-color: rgba(229, 224, 210, 0.1);
 }
 .button.outline {
   border-color: #E5E0D2;
