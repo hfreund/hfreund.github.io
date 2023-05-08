@@ -1,9 +1,11 @@
 
 .project-card-outlined {
     margin: 3em 0 6em;
-    max-width: 800px;
     border: 1px solid;
     border-radius: 3em;
+    @media (min-width: 1024px) {
+        max-width: 800px;
+    }
     @media (max-width:599px) {
         border-radius: 2em;
     }

@@ -488,12 +488,15 @@ body {
     grid-gap: 1.5em;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 1023px) {
   .about {
     height: calc(100vh - 16em);
   }
 }
 
+.content {
+  padding-top: 4em;
+}
 @media (min-width: 600px) {
   .content {
     overflow-y: scroll;
@@ -511,7 +514,8 @@ img {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  max-width: 8em;
+  max-width: 10em;
+  max-height: 10em;
   border-radius: 50%;
   overflow: hidden;
   width: 100%;
@@ -520,6 +524,13 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   color: transparent;
+  margin-top: 1em;
+}
+@media (max-width: 599px) {
+  .avatar {
+    max-width: 6px;
+    max-height: 6px;
+  }
 }
 
 .button {
@@ -558,9 +569,13 @@ img {
 
 .project-card-outlined {
   margin: 3em 0 6em;
-  max-width: 800px;
   border: 1px solid;
   border-radius: 3em;
+}
+@media (min-width: 1024px) {
+  .project-card-outlined {
+    max-width: 800px;
+  }
 }
 @media (max-width: 599px) {
   .project-card-outlined {
