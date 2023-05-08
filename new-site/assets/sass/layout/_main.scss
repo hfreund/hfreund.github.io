@@ -23,6 +23,11 @@ body {
   .content {
     align-self: center;
     padding: 0;
+    @media (max-width: 599px) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 1.5em;
+    }
   }
   @media (max-width: 599px) {
     height: calc(100vh - 16em);

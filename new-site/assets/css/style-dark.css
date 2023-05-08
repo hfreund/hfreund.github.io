@@ -482,6 +482,13 @@ body {
   padding: 0;
 }
 @media (max-width: 599px) {
+  .about .content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1.5em;
+  }
+}
+@media (max-width: 599px) {
   .about {
     height: calc(100vh - 16em);
   }
