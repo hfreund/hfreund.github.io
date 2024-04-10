@@ -83,12 +83,19 @@ img {
   margin: 0 auto;
   text-align: center;
   display: grid;
+  padding: 2em;
   &.one {
-    grid: 1fr;
+    grid-template-columns: 1fr;
+    max-width: 48px;
   }
   &.two {
-    grid: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
-    max-width: 48em;
+    max-width: 80em;
+  }
+  &.three {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    max-width: 80em;
   }
 }
