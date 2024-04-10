@@ -549,7 +549,7 @@ img {
 }
 .image.one {
   grid-template-columns: 1fr;
-  max-width: 48px;
+  max-width: 48em;
 }
 .image.two {
   grid-template-columns: 1fr 1fr;
