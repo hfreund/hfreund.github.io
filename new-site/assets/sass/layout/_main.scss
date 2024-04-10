@@ -69,3 +69,26 @@ img {
   color: transparent;
   margin-top: 1em;
 }
+
+// PROJECT
+
+.project-layout {
+  .content-section {
+  margin: 0 auto;
+  max-width: 48em;
+}
+}
+
+.image {
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  .one {
+    grid: 1fr;
+  }
+  .two {
+    grid: 1fr 1fr;
+    grid-gap: 2em;
+    max-width: 48em;
+  }
+}

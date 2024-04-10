@@ -531,6 +531,25 @@ img {
   }
 }
 
+.project-layout .content-section {
+  margin: 0 auto;
+  max-width: 48em;
+}
+
+.image {
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+}
+.image .one {
+  grid: 1fr;
+}
+.image .two {
+  grid: 1fr 1fr;
+  grid-gap: 2em;
+  max-width: 48em;
+}
+
 .button {
   display: inline-block;
   padding: 0.75em 1.24em;
