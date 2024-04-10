@@ -541,10 +541,10 @@ img {
   text-align: center;
   display: grid;
 }
-.image .one {
+.image.one {
   grid: 1fr;
 }
-.image .two {
+.image.two {
   grid: 1fr 1fr;
   grid-gap: 2em;
   max-width: 48em;
