@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Nunito:300,400,700');
+//@import url('https://fonts.googleapis.com/css2?family=Inter');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
 
-$base-font-family: 'Merriweather', sans-serif;
-$base-font-size: 1.6rem;
-$base-font-weight: 300;
-$base-line-height: 1.6;
 
-$heading-font-family: 'Nunito', sans-serif;
-$heading-font-weight: 400;
+$base-font-family: 'IBM Plex Sans', Arial, sans-serif;
+$base-font-size: 1.125rem;
+$base-font-weight: 400;
+$base-line-height: 1.21;
+
 html {
   font-size: 16px;
   line-height: 1.4;
@@ -16,112 +16,72 @@ body {
   font-weight: $base-font-weight;
   line-height: $base-line-height;
   margin: 0;
+  color: $text-color;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $heading-font-family;
-  font-weight: $heading-font-weight;
-  line-height: 1.4;
+  font-weight: 600;
 }
 h1 {
-  font-size: 2.4rem;
-  @include for-tablet-landscape-up {
-    font-size: 3.4rem;
-  }
+  font-size: 2rem;
+  // @include for-tablet-landscape-up {
+  //  font-size: 3.4rem;
+  // }
+  line-height: 1.61375;
 }
 h2 {
-  font-size: 2rem;
-  @include for-tablet-landscape-up {
-    font-size: 2.6rem;
-  }
+  font-size: 1.5rem;
+  line-height: 1.21;
 }
-h3 {
-  font-size: 1.7rem;
-  @include for-tablet-landscape-up {
-    font-size: 2.2rem;
-  }
-}
-h4 {
-  font-size: 1.4rem;
-  @include for-tablet-landscape-up {
-    font-size: 1.8rem;
-  }
-}
-h5 {
-  font-size: 1.2rem;
-  @include for-tablet-landscape-up {
-    font-size: 1.4rem;
-  }
-}
-h6 {
-  font-size: 1rem;
-  @include for-tablet-landscape-up {
-    font-size: 1.2rem;
-  }
+.subtitle {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.21;
+  margin: 0;
+  margin: 0 0 0.25em;
+  opacity: 0.85;
 }
 p {
-  font-size: 1rem;
-  font-weight: 300;
-  &.lead {
-    opacity: 0.8;
-    line-height: 1.6;
-    margin: 1em 0 0;
-    @include for-phone-only {
-      font-size: 1.1rem;
-    }
-    @include for-tablet-portrait-only {
-      font-size: 1.15rem;
-    }
-    @include for-tablet-landscape-up {
-      font-size: 1.3rem;
-    }
+  font-size: 1.1rem;
+  .callout {
+    font-size: 1.5em;
+    font-weight: 200;
+    line-height: 1.4;
+    margin-bottom: 2em;
+  }
+  &.byline {
+    font-size: 1.3rem;
+    line-height: 1.21;
+    opacity: 0.85;
   }
 }
-.muted {
-  opacity: 0.8;
+
+.button {
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.21;
+  text-decoration: none;
 }
-.img-caption {
-    opacity: 0.6;
-    font-size: 0.85rem;
-    font-weight: 400;
-    text-rendering: optimizelegibility;
-    margin-top: 0.25em;
-}
-.separator {
-    width: 100%;
-    border-top: 1px solid;
-    margin: 4em 0 2.5em;
-}
-.text-grid {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  @include for-phone-only {
-    margin: 2em 2em 2em 3.25em;
+
+.link {
+  color: $text-color;
+  &:hover {
+    color: lighten($color: $text-color, $amount: 0.25);
   }
-  @include for-tablet-portrait-only {
-    margin: 3em 5em;
-    width: calc(100% - 10em);
-    max-width: 680px;
-  }
-  @include for-tablet-landscape-up {
-    width: 100%;
-    max-width: 680px;
-    margin: 2em auto;
+  &:visited {
+    color: $text-color;
   }
 }
-.text-grid-item {
-  margin-bottom: 1.5em;
-  h5 {
-    margin: 0.5em 0 0;
-  }
-  p {
-    margin: 0.35em 0;
-  }
-  @include for-phone-only {
-    flex-basis: 100%;
-  }
-  @include for-tablet-portrait-up {
-    flex-basis: calc(50% - 1em);
-  }
+
+.tag {
+  padding: 0.5em 0.75em;
+  border-radius: 10em;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 500;
+  background: rgba($primary, 0.2);
+  margin-right: 1em;
 }
+
