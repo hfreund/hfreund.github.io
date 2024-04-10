@@ -51,6 +51,11 @@ p {
     line-height: 1.4;
     margin-bottom: 2em;
   }
+  &.byline {
+    font-size: 1.3rem;
+    line-height: 1.21;
+    opacity: 0.85;
+  }
 }
 
 .button {
