@@ -83,10 +83,10 @@ img {
   margin: 0 auto;
   text-align: center;
   display: grid;
-  .one {
+  &.one {
     grid: 1fr;
   }
-  .two {
+  &.two {
     grid: 1fr 1fr;
     grid-gap: 2em;
     max-width: 48em;
