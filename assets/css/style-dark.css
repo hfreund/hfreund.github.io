@@ -545,6 +545,10 @@ img {
   padding: 2em;
   border-top: 1px solid #E5E0D2;
   background-color: #000B1F;
+  max-width: 100%;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .image {
@@ -600,6 +604,9 @@ img {
 }
 .button i.right {
   margin-left: 0.5em;
+}
+.button i.left {
+  margin-right: 0.5em;
 }
 
 .project-card-outlined {
