@@ -77,6 +77,12 @@ img {
   margin: 0 auto;
   max-width: 48em;
 }
+.footer {
+  margin: 4em;
+  padding: 2em;
+  border-top: 1px solid $border-color;
+  background-color: $background-color;
+}
 }
 
 .image {

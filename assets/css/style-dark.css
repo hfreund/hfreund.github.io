@@ -540,6 +540,12 @@ img {
   margin: 0 auto;
   max-width: 48em;
 }
+.project-layout .footer {
+  margin: 4em;
+  padding: 2em;
+  border-top: 1px solid #E5E0D2;
+  background-color: #000B1F;
+}
 
 .image {
   margin: 0 auto;
