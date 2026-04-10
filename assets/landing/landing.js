@@ -49,18 +49,31 @@
   }
 
   function getAudioContext() {
-    if (!audioCtx) {
-      var AC = window.AudioContext || window.webkitAudioContext;
+    if (audioCtx) {
+      return audioCtx;
+    }
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) {
+      return null;
+    }
+    try {
       audioCtx = new AC();
       masterGain = audioCtx.createGain();
       masterGain.gain.value = 0;
       masterGain.connect(audioCtx.destination);
+    } catch (e) {
+      audioCtx = null;
+      masterGain = null;
+      return null;
     }
     return audioCtx;
   }
 
   function resumeAudio() {
     var ctx = getAudioContext();
+    if (!ctx) {
+      return Promise.resolve();
+    }
     if (ctx.state === "suspended") {
       return ctx.resume();
     }
