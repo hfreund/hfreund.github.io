@@ -33,6 +33,8 @@
   var masterGain = null;
   var humNodes = null;
   var muted = false;
+  /** True after user toggles mute before or during startup — do not overwrite from storage in onStart */
+  var muteTouchedByUser = false;
   var started = false;
   var animationComplete = false;
 
@@ -297,7 +299,10 @@
     if (started) return;
     started = true;
     getAudioContext();
-    muted = localStorage.getItem(STORAGE_MUTE) === "1";
+    /* Keep in-memory muted (init + any pre-start clicks); re-reading storage here overwrote user toggles */
+    if (!muteTouchedByUser) {
+      muted = localStorage.getItem(STORAGE_MUTE) === "1";
+    }
     applyMuteState();
 
     muteBtn.hidden = false;
@@ -334,6 +339,7 @@
     }, START_DELAY_MS);
 
     muteBtn.addEventListener("click", function () {
+      muteTouchedByUser = true;
       muted = !muted;
       applyMuteState();
       resumeAudioThenMaybeHum();
