@@ -1,0 +1,490 @@
+/*
+  Terminal landing — design tokens (living spec)
+  Palette: phosphor green on near-black with cool green bias; CRT line texture.
+*/
+:root {
+  --color-bg: hsl(165 12% 5%);
+  --color-bg-elevated: hsl(165 10% 8%);
+  --color-phosphor: hsl(145 65% 62%);
+  --color-phosphor-dim: hsl(150 35% 42%);
+  /* Line tint (alpha also scaled by --crt-lines-opacity on the layer) */
+  --color-line: hsla(150 60% 50% / 0.14);
+  --color-vignette: hsl(165 20% 2%);
+
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Code", monospace;
+
+  --text-step: clamp(1rem, 2.5vw + 0.75rem, 1.35rem);
+  --line-height-body: 1.65;
+  --letter-spacing-body: 0.02em;
+
+  --duration-cursor-blink: 1.06s;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --space-screen: clamp(1.25rem, 4vw, 2.5rem);
+  --max-text-width: 42rem;
+  /* Bottom status bar — smaller than body, IDE / terminal strip */
+  --font-size-status: clamp(0.7rem, 0.35vw + 0.62rem, 0.8rem);
+
+  /* CRT + scene tokens — memorialized defaults (match scene-tuning drawer reset) */
+  --crt-gap: 3px;
+  --crt-line-w: 1px;
+  /* End of colored stripe — set in JS to gap+lineW (avoids calc() bugs in gradients) */
+  --crt-line-end: 4px;
+  --crt-blur: 0.55px;
+  --crt-glow: 0.3575px;
+  --crt-lines-opacity: 0.3;
+
+  /* Center radial (“pool of light”) */
+  --center-radial-opacity: 0.15;
+  --center-radial-fade-end: 35%;
+  --center-radial-ell-w: 70%;
+  --center-radial-ell-h: 100%;
+  --center-radial-at-y: 45%;
+
+  /* Viewport border + single outer glow */
+  --edge-border-width: 1px;
+  --edge-border-opacity: 0.3;
+  --edge-diffusion: 24px;
+  --edge-shadow-opacity: 0.28;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-cursor-blink: 0.01s;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  overflow-x: visible;
+  overflow-y: visible;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: visible;
+  overflow-y: visible;
+  font-family: var(--font-mono);
+  font-size: var(--text-step);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-body);
+  color: var(--color-phosphor);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Central radial gradient — sits on body background, under vignette */
+.bg-center-radial {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse var(--center-radial-ell-w) var(--center-radial-ell-h) at 50% var(--center-radial-at-y),
+    hsla(155 25% 12% / var(--center-radial-opacity)) 0%,
+    transparent var(--center-radial-fade-end)
+  );
+}
+
+/* Vertical scan lines — spacing / width / diffusion (blur + glow) / opacity via vars */
+.crt-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  /* Use --crt-line-end instead of calc(gap+w) — Safari/WebKit often drops invalid gradients */
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent var(--crt-gap),
+    var(--color-line) var(--crt-gap),
+    var(--color-line) var(--crt-line-end)
+  );
+  filter: blur(var(--crt-blur))
+    drop-shadow(0 0 var(--crt-glow) hsla(150 55% 48% / 0.32));
+  opacity: var(--crt-lines-opacity);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt-lines {
+    filter: none;
+    /* Do not override opacity — let --crt-lines-opacity and the debug slider work */
+  }
+}
+
+/* Vignette — over center radial, under scan lines */
+.crt-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    transparent 40%,
+    var(--color-vignette) 100%
+  );
+  opacity: 0.55;
+}
+
+/* Border + one soft outer shadow — above main so sliders read clearly */
+.edge-border {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  box-sizing: border-box;
+  background: transparent;
+  border: var(--edge-border-width) solid hsla(155 30% 42% / var(--edge-border-opacity));
+  box-shadow: 0 0 var(--edge-diffusion) hsla(155 38% 52% / var(--edge-shadow-opacity));
+}
+
+main {
+  position: relative;
+  z-index: 3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-screen);
+  /* Reserve space for fixed bottom status bar on short viewports */
+  padding-bottom: max(var(--space-screen), 3.25rem);
+}
+
+.terminal-wrap {
+  max-width: var(--max-text-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.terminal-line {
+  margin: 0;
+  font-weight: 400;
+}
+
+#typed {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Auth0 word — reads as body text; link affordance + phosphor block on hover */
+a.typed-auth0-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  cursor: text;
+  border-radius: 2px;
+  /* Reserve highlight box so hover doesn’t shift layout */
+  padding: 0.06em 0.14em;
+  margin: -0.06em -0.14em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition:
+    background-color 0.12s var(--ease-out-soft),
+    color 0.12s var(--ease-out-soft);
+}
+
+a.typed-auth0-link:hover {
+  cursor: pointer;
+  background-color: var(--color-phosphor);
+  color: var(--color-bg);
+}
+
+a.typed-auth0-link:focus-visible {
+  outline: 2px solid var(--color-phosphor);
+  outline-offset: 2px;
+}
+
+/* Bottom status strip — contact links (IDE / terminal status bar) */
+.site-status {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  padding: 0.45rem var(--space-screen);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-status);
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  color: var(--color-phosphor-dim);
+}
+
+.site-status__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  width: 100%;
+}
+
+.site-status__nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.65rem;
+}
+
+.site-status__sep {
+  color: hsla(150 30% 38% / 0.65);
+  user-select: none;
+}
+
+.site-status__link,
+.site-status__mute {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.12s var(--ease-out-soft);
+}
+
+.site-status__link:hover,
+.site-status__mute:hover {
+  color: var(--color-phosphor);
+}
+
+.site-status__link:focus-visible,
+.site-status__mute:focus-visible {
+  outline: 2px solid var(--color-phosphor);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+.site-status__mute {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+.site-status__mute[aria-pressed="true"] {
+  opacity: 0.7;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1.15em;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  background: var(--color-phosphor);
+  animation: cursor-blink var(--duration-cursor-blink) step-end infinite;
+}
+
+.cursor.is-off {
+  animation: none;
+  opacity: 0;
+}
+
+@keyframes cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Screen reader only */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Scene tuning drawer --- */
+.crt-debug-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 59;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: hsla(165 20% 4% / 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.22s ease,
+    visibility 0.22s ease;
+  pointer-events: none;
+}
+
+.crt-debug-backdrop.crt-debug-backdrop--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.crt-debug-drawer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  max-height: min(52vh, 30rem);
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.crt-debug-drawer.crt-debug-drawer--open {
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt-debug-backdrop,
+  .crt-debug-drawer {
+    transition: none;
+  }
+}
+
+.crt-debug-panel {
+  max-height: min(52vh, 30rem);
+  overflow: auto;
+  padding: 0.65rem 0.85rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: hsl(145 45% 78%);
+  background: hsla(165 14% 7% / 0.97);
+  border-top: 1px solid hsla(150 30% 35% / 0.45);
+  border-radius: 0;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -8px 32px hsla(0 0% 0% / 0.35);
+}
+
+.crt-debug-panel header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.crt-debug-panel h2 {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: hsl(145 40% 62%);
+}
+
+.crt-debug-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.crt-debug-actions button {
+  font-family: inherit;
+  font-size: 0.68rem;
+  padding: 0.3rem 0.55rem;
+  cursor: pointer;
+  color: hsl(145 50% 82%);
+  background: hsla(150 25% 22% / 0.6);
+  border: 1px solid hsla(150 30% 40% / 0.5);
+  border-radius: 2px;
+}
+
+.crt-debug-actions button:hover {
+  background: hsla(150 30% 28% / 0.75);
+}
+
+.crt-debug-actions button:focus-visible {
+  outline: 2px solid var(--color-phosphor);
+  outline-offset: 2px;
+}
+
+.crt-debug-subhead {
+  margin: 0.35rem 0 0.25rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: hsl(150 25% 48%);
+}
+
+.crt-debug-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.45rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.crt-debug-field label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 0.2rem;
+  color: hsl(150 28% 58%);
+}
+
+.crt-debug-field .crt-debug-value {
+  font-variant-numeric: tabular-nums;
+  color: hsl(145 55% 72%);
+}
+
+.crt-debug-field input[type="range"] {
+  width: 100%;
+  accent-color: hsl(145 50% 48%);
+}
+
+.crt-debug-output {
+  margin: 0;
+  padding: 0.45rem 0.5rem;
+  font-size: 0.65rem;
+  line-height: 1.45;
+  color: hsl(145 40% 72%);
+  background: hsl(165 12% 4%);
+  border: 1px solid hsla(150 25% 28% / 0.5);
+  border-radius: 2px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  user-select: text;
+  max-height: 9rem;
+  overflow: auto;
+}
+
+.crt-debug-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.62rem;
+  color: hsl(150 22% 48%);
+}
