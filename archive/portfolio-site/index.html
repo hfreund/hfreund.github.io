@@ -113,16 +113,18 @@
     </div>
     <!-- <button class="btn-toggle">Toggle Dark-Mode</button> -->
     <script>
-      const btn = document.querySelector(".btn-toggle");
-      const theme = document.querySelector("#theme-link");
-      btn.addEventListener("click", function () {
-        // Swap out the URL for the different stylesheets
-        if (theme.getAttribute("href") == "/archive/portfolio-site/assets/css/style-dark.css") {
-          theme.href = "/archive/portfolio-site/assets/css/style-light.css";
-        } else {
-          theme.href = "/archive/portfolio-site/assets/css/style-dark.css";
-        }
-      });
+      (function () {
+        var btn = document.querySelector(".btn-toggle");
+        var theme = document.querySelector("#theme-link");
+        if (!btn || !theme) return;
+        btn.addEventListener("click", function () {
+          if (theme.getAttribute("href") == "/archive/portfolio-site/assets/css/style-dark.css") {
+            theme.href = "/archive/portfolio-site/assets/css/style-light.css";
+          } else {
+            theme.href = "/archive/portfolio-site/assets/css/style-dark.css";
+          }
+        });
+      })();
     </script>
   </div>
 </body>

@@ -29,6 +29,10 @@
   var srStatus = document.getElementById("sr-status");
   var terminalBlock = document.getElementById("terminal-block");
 
+  if (!typedEl || !muteBtn || !srStatus || !terminalBlock) {
+    return;
+  }
+
   var audioCtx = null;
   var masterGain = null;
   var humNodes = null;
