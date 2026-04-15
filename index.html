@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
-    <link href="assets/landing/landing.css?v=15" rel="stylesheet" />
+    <link href="assets/landing/landing.css?v=16" rel="stylesheet" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHM3G6YENT"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -31,6 +31,103 @@
     <div class="crt-lines" aria-hidden="true"></div>
     <div class="edge-border" id="edge-border" aria-hidden="true"></div>
 
+    <header class="file-menu" aria-label="File menu">
+      <nav class="file-menu__bar" role="menubar" aria-label="Primary sections">
+        <div class="file-menu__group">
+          <button
+            type="button"
+            class="file-menu__trigger ui-highlight-link"
+            id="menu-trigger-writing"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="menu-writing"
+            data-menu-trigger
+            data-menu-id="menu-writing"
+            data-menu-hotkey="F1"
+          >
+            F1 Writing
+          </button>
+          <div class="file-menu__panel" id="menu-writing" role="menu" aria-labelledby="menu-trigger-writing" hidden>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Journal
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Notes
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Essays
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Ideas
+            </button>
+          </div>
+        </div>
+
+        <div class="file-menu__group">
+          <button
+            type="button"
+            class="file-menu__trigger ui-highlight-link"
+            id="menu-trigger-building"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="menu-building"
+            data-menu-trigger
+            data-menu-id="menu-building"
+            data-menu-hotkey="F2"
+          >
+            F2 Building
+          </button>
+          <div class="file-menu__panel" id="menu-building" role="menu" aria-labelledby="menu-trigger-building" hidden>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Product work
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Experiments
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Systems
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Archive
+            </button>
+          </div>
+        </div>
+
+        <div class="file-menu__group">
+          <button
+            type="button"
+            class="file-menu__trigger ui-highlight-link"
+            id="menu-trigger-about"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="menu-about"
+            data-menu-trigger
+            data-menu-id="menu-about"
+            data-menu-hotkey="F3"
+          >
+            F3 About
+          </button>
+          <div class="file-menu__panel" id="menu-about" role="menu" aria-labelledby="menu-trigger-about" hidden>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Bio
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Principles
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Contact
+            </button>
+            <button type="button" class="file-menu__item ui-highlight-link" role="menuitem" data-menu-item>
+              Colophon
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <main>
       <div class="terminal-wrap" id="terminal-block">
         <p class="terminal-line">
@@ -43,22 +140,22 @@
       <div class="site-status__row">
         <nav class="site-status__nav" aria-label="Contact links">
           <a
-            class="site-status__link"
+            class="site-status__link ui-highlight-link"
             href="https://www.linkedin.com/in/hughfreund/"
             rel="noopener noreferrer"
             target="_blank"
             >LinkedIn</a>
           <span class="site-status__sep" aria-hidden="true">·</span>
           <a
-            class="site-status__link"
+            class="site-status__link ui-highlight-link"
             href="https://github.com/hfreund"
             rel="noopener noreferrer"
             target="_blank"
             >GitHub</a>
           <span class="site-status__sep" aria-hidden="true">·</span>
-          <a class="site-status__link" href="mailto:hugh.freund@gmail.com">Email</a>
+          <a class="site-status__link ui-highlight-link" href="mailto:hugh.freund@gmail.com">Email</a>
         </nav>
-        <button type="button" class="site-status__mute" id="mute-btn" aria-pressed="false" hidden>
+        <button type="button" class="site-status__mute ui-highlight-link" id="mute-btn" aria-pressed="false" hidden>
           Sound on
         </button>
       </div>
@@ -187,6 +284,6 @@
       </aside>
     </div>
 
-    <script src="assets/landing/landing.js?v=18" defer></script>
+    <script src="assets/landing/landing.js?v=19" defer></script>
   </body>
 </html>

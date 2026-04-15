@@ -12,6 +12,7 @@
   var DELETE_SUFFIX = "designer.";
   var ADD_SUFFIX = "builder at Auth0.";
   var AUTH0_LINK_CLASS = "typed-auth0-link";
+  var HIGHLIGHT_CLASS = "ui-highlight-link";
   var AUTH0_HREF = "https://auth0.design/";
   var STORAGE_MUTE = "hf-landing-muted";
 
@@ -240,7 +241,7 @@
     typedEl.appendChild(document.createTextNode(prefix));
     var a = document.createElement("a");
     a.href = AUTH0_HREF;
-    a.className = AUTH0_LINK_CLASS;
+    a.className = AUTH0_LINK_CLASS + " " + HIGHLIGHT_CLASS;
     a.textContent = "Auth0";
     a.rel = "noopener noreferrer";
     a.target = "_blank";
@@ -369,6 +370,214 @@
   }
 
   init();
+})();
+
+/**
+ * Top file menu interactions.
+ */
+(function () {
+  "use strict";
+
+  var menuRoot = document.querySelector(".file-menu");
+  if (!menuRoot) {
+    return;
+  }
+
+  var triggers = Array.prototype.slice.call(menuRoot.querySelectorAll("[data-menu-trigger]"));
+  var openTrigger = null;
+
+  function getPanel(trigger) {
+    var id = trigger.getAttribute("data-menu-id");
+    if (!id) return null;
+    return document.getElementById(id);
+  }
+
+  function getItems(trigger) {
+    var panel = getPanel(trigger);
+    if (!panel) return [];
+    return Array.prototype.slice.call(panel.querySelectorAll("[data-menu-item]"));
+  }
+
+  function closeMenu(trigger) {
+    var panel = getPanel(trigger);
+    if (!panel) return;
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.classList.remove("is-active");
+    panel.hidden = true;
+    var items = getItems(trigger);
+    items.forEach(function (item) {
+      item.tabIndex = -1;
+      item.classList.remove("is-active");
+    });
+  }
+
+  function closeAllMenus() {
+    triggers.forEach(closeMenu);
+    openTrigger = null;
+  }
+
+  function openMenu(trigger, focusFirstItem) {
+    if (openTrigger && openTrigger !== trigger) {
+      closeMenu(openTrigger);
+    }
+    var panel = getPanel(trigger);
+    if (!panel) return;
+    trigger.setAttribute("aria-expanded", "true");
+    trigger.classList.add("is-active");
+    panel.hidden = false;
+    openTrigger = trigger;
+
+    var items = getItems(trigger);
+    items.forEach(function (item, index) {
+      item.tabIndex = index === 0 ? 0 : -1;
+    });
+    if (focusFirstItem && items.length) {
+      items[0].focus();
+      items[0].classList.add("is-active");
+    }
+  }
+
+  function moveMenuFocus(items, currentIndex, nextIndex) {
+    items.forEach(function (item) {
+      item.classList.remove("is-active");
+      item.tabIndex = -1;
+    });
+    var bounded = (nextIndex + items.length) % items.length;
+    items[bounded].tabIndex = 0;
+    items[bounded].classList.add("is-active");
+    items[bounded].focus();
+  }
+
+  function moveTriggerFocus(fromTrigger, step) {
+    var i = triggers.indexOf(fromTrigger);
+    if (i === -1) return;
+    var next = (i + step + triggers.length) % triggers.length;
+    triggers[next].focus();
+    openMenu(triggers[next], false);
+  }
+
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener("click", function () {
+      if (trigger.getAttribute("aria-expanded") === "true") {
+        closeAllMenus();
+      } else {
+        openMenu(trigger, false);
+      }
+    });
+
+    trigger.addEventListener("focus", function () {
+      openMenu(trigger, false);
+    });
+
+    trigger.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        openMenu(trigger, true);
+        return;
+      }
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        openMenu(trigger, false);
+        var items = getItems(trigger);
+        if (items.length) {
+          moveMenuFocus(items, 0, items.length - 1);
+        }
+        return;
+      }
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        moveTriggerFocus(trigger, 1);
+        return;
+      }
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        moveTriggerFocus(trigger, -1);
+        return;
+      }
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openMenu(trigger, true);
+      }
+      if (e.key === "Escape") {
+        e.preventDefault();
+        closeAllMenus();
+      }
+    });
+  });
+
+  menuRoot.addEventListener("keydown", function (e) {
+    var activeItem = e.target.closest("[data-menu-item]");
+    if (!activeItem) return;
+
+    var panel = activeItem.closest(".file-menu__panel");
+    if (!panel) return;
+    var trigger = panel.previousElementSibling;
+    var items = Array.prototype.slice.call(panel.querySelectorAll("[data-menu-item]"));
+    var currentIndex = items.indexOf(activeItem);
+    if (currentIndex === -1) return;
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      moveMenuFocus(items, currentIndex, currentIndex + 1);
+      return;
+    }
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+      moveMenuFocus(items, currentIndex, currentIndex - 1);
+      return;
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      moveTriggerFocus(trigger, 1);
+      return;
+    }
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      moveTriggerFocus(trigger, -1);
+      return;
+    }
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeAllMenus();
+      trigger.focus();
+      return;
+    }
+    if (e.key === "Tab") {
+      closeAllMenus();
+      return;
+    }
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      closeAllMenus();
+      trigger.focus();
+    }
+  });
+
+  document.addEventListener("pointerdown", function (e) {
+    if (!menuRoot.contains(e.target)) {
+      closeAllMenus();
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    var key = e.key;
+    if (key === "F1" || key === "F2" || key === "F3") {
+      var match = triggers.find(function (trigger) {
+        return trigger.getAttribute("data-menu-hotkey") === key;
+      });
+      if (match) {
+        e.preventDefault();
+        openMenu(match, true);
+      }
+      return;
+    }
+    if (key === "Escape" && openTrigger) {
+      e.preventDefault();
+      var focusedTrigger = openTrigger;
+      closeAllMenus();
+      focusedTrigger.focus();
+    }
+  });
 })();
 
 /**
