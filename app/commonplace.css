@@ -1,0 +1,134 @@
+.commonplace-page {
+  min-height: 100vh;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  color: var(--color-phosphor);
+  background:
+    radial-gradient(ellipse 80% 70% at 50% 20%, hsla(155 25% 12% / 0.28), transparent 60%),
+    var(--color-bg);
+}
+
+.commonplace-shell {
+  width: min(100%, 58rem);
+  margin: 0 auto;
+}
+
+.commonplace-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+}
+
+.commonplace-eyebrow,
+.commonplace-session {
+  margin: 0 0 0.4rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-phosphor-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.commonplace-title {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.commonplace-card {
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid hsla(150 30% 42% / 0.28);
+  background: hsla(165 10% 8% / 0.72);
+  box-shadow: 0 0 40px hsla(155 38% 52% / 0.08);
+}
+
+.commonplace-card + .commonplace-card {
+  margin-top: 1rem;
+}
+
+.commonplace-card h2 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.2;
+}
+
+.commonplace-card p {
+  margin: 0;
+  color: hsl(145 45% 78%);
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+}
+
+.commonplace-card p + p {
+  margin-top: 0.75rem;
+}
+
+.commonplace-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.commonplace-link,
+.commonplace-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.6rem 0.85rem;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--color-bg);
+  text-decoration: none;
+  background: var(--color-phosphor);
+  border: 1px solid var(--color-phosphor);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.commonplace-link--ghost,
+.commonplace-button--ghost {
+  color: var(--color-phosphor);
+  background: transparent;
+}
+
+.commonplace-form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.commonplace-label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--color-phosphor-dim);
+}
+
+.commonplace-input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  font-size: 1rem;
+  color: hsl(145 45% 78%);
+  background: hsl(165 12% 4%);
+  border: 1px solid hsla(150 30% 42% / 0.45);
+  border-radius: 2px;
+}
+
+.commonplace-input:focus {
+  outline: 2px solid var(--color-phosphor);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .commonplace-header {
+    display: block;
+  }
+
+  .commonplace-session {
+    margin-top: 1rem;
+  }
+}

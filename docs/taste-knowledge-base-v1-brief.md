@@ -35,13 +35,15 @@ An agent can retrieve relevant entries and highlights to understand the user's t
 
 ### Portfolio Agent
 
-A future portfolio site can expose public entries and published work to visitors through an agent. Public access should be controlled by `is_public = true`; private material remains available only to the user and private agents.
+A future portfolio site can expose public entries and published work to visitors through an agent on `/commonplace`. Public access should be controlled by `is_public = true`; private material remains available only to the authenticated owner and private agents.
 
 ## Content Model
 
 The system centers on a single `entries` table. Everything saved is an entry: a reference, a project, a thought, a principle, a piece of writing, a document, an image, a video, a song, or a link.
 
 Supporting tables provide highlights, tags, entry-tag review state, and relations between entries.
+
+The database/project name is `commonplace`.
 
 ## Core Entry Fields
 
@@ -221,15 +223,16 @@ The UI should infer defaults to reduce friction:
 
 ## Capture Surfaces
 
-The first interface should work anywhere the user can open a website. A simple authenticated upload/capture page on the portfolio domain is the best V1 target because it works from an iPhone, personal laptop, and restrictive work laptop without requiring installed software.
+The first interface should work anywhere the user can open a website. `/commonplace` is the V1 route and should be a single unified surface for both authenticated owner use and public visitors.
 
-Possible routes:
+Route behavior is determined by authentication state:
 
-- `/brain`
-- `/taste`
-- `/graph`
+- Authenticated owner: full capture interface plus agent chat. Typing or pasting into the chat saves to the knowledge base, with the knowledge agent handling input.
+- Public visitor: agent chat only. The portfolio agent handles input and draws only from public-safe entries.
 
-The page should support:
+There is intentionally no separate route for owner capture versus the public portfolio agent. The owner should be able to capture and converse in the same session without context switching, replacing the earlier two-route consideration.
+
+For the authenticated owner, the page should support:
 
 - URL paste for articles, websites, Instagram posts, Spotify links, podcasts, videos, Figma links, and other hosted references.
 - Text capture for quick thoughts, observations, and principles.
@@ -279,7 +282,7 @@ The open question "what should the first agent be allowed to read and write?" me
 
 For V1, the safest split is:
 
-- Private assistant: can read all entries, highlights, tags, and relations.
+- Authenticated knowledge agent: can read all entries, highlights, tags, and relations.
 - Public portfolio agent: can read only entries where `is_public = true`.
 - Any agent: can suggest summaries, tags, qualities, highlights, and relations.
 - Any agent: should not silently publish entries, change `is_public`, delete content, or permanently accept taxonomy changes without user confirmation.
@@ -292,4 +295,3 @@ The first write-capable agent should probably create draft enrichment suggestion
 - What capture patterns work best across iPhone, personal laptop, and restrictive work laptop?
 - What vocabulary and browsing patterns best support design taste recall?
 - How should AI suggestions be reviewed without slowing down capture?
-- What should the first authenticated web capture page be called?

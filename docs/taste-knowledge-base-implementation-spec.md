@@ -2,32 +2,34 @@
 
 ## Purpose
 
-This spec translates the V1 brief and research synthesis into an implementation plan for the first working version of the Taste & Knowledge Base. V1 should focus on fast private capture. Viewing, editing, search, and agent chat come after capture is working.
+This spec translates the V1 brief and research synthesis into an implementation plan for the first working version of the Taste & Knowledge Base. V1 should focus on a unified `/commonplace` surface where the authenticated owner can capture and converse, while public visitors can ask the portfolio agent about public-safe material. Viewing, editing, and search come after the unified surface is working.
 
 ## Product Scope
 
-V1 is a private capture surface at `/brain`.
+V1 is a single unified surface at `/commonplace`.
 
-The first version should let the user:
+For the authenticated owner, the first version should allow:
 
 - Authenticate.
 - Paste or type a URL.
 - Paste or type text.
+- Type or paste into agent chat and have the knowledge agent save useful input to the knowledge base.
 - Optionally add `why_saved`.
 - Upload or paste a screenshot or work artifact.
 - Save the entry quickly.
 - See a simple confirmation that capture succeeded.
 
+For public visitors, the same route should show agent chat only. The portfolio agent should answer from public-safe entries and should not expose private capture UI.
+
 V1 does not need:
 
 - Full browse/search.
 - Editing entries.
-- Agent chat.
 - Review inbox for AI suggestions.
 - Import/export.
-- Public portfolio agent.
 - Browser extension.
 - Native app.
+- A separate private capture route.
 
 ## Recommended Architecture
 
@@ -35,7 +37,7 @@ Convert this repo into a small Next.js app and keep the existing portfolio conte
 
 ### Why Next.js
 
-The current site is mostly static, but `/brain` needs capabilities that GitHub Pages does not provide by itself:
+The current site is mostly static, but `/commonplace` needs capabilities that GitHub Pages does not provide by itself:
 
 - Auth-protected private pages.
 - Server-side API routes.
@@ -57,7 +59,7 @@ Likely migration path:
 
 - Move existing static assets into `public/`.
 - Recreate the current homepage as `app/page.tsx` or a static page component.
-- Add `/brain` as `app/brain/page.tsx`.
+- Add `/commonplace` as `app/commonplace/page.tsx`.
 - Add API routes under `app/api/`.
 
 ### Hosting Recommendation
@@ -68,7 +70,6 @@ GitHub Pages is fine for static hosting, but it does not run server-side routes,
 
 Alternative later:
 
-- Keep the public portfolio on GitHub Pages and deploy `/brain` separately.
 - Use Cloudflare Pages/Workers instead of Vercel.
 
 For V1, one Next.js app on Vercel is simpler.
@@ -81,7 +82,7 @@ Recommended path:
 
 - Use Supabase Auth with email magic link.
 - Restrict access to an allowlisted email.
-- Protect `/brain` and all write APIs.
+- Use authentication state to unlock owner-only `/commonplace` UI and write APIs.
 
 Supabase Auth is the right V1 default because the app is already using Supabase for data and storage. It avoids an extra vendor, integrates naturally with Supabase row-level security, and should be faster to set up than Auth0.
 
@@ -89,14 +90,18 @@ Defer Auth0 unless there is a real reason to add a more complex identity provide
 
 Auth rules:
 
-- Only the authenticated owner can access `/brain`.
+- `/commonplace` is accessible to both authenticated owner and public visitors.
+- Authenticated owner sees the full capture interface plus knowledge agent chat.
+- Public visitors see portfolio agent chat only.
 - Public portfolio pages remain unauthenticated.
 - API routes that create entries require authentication.
-- The public portfolio agent later must not use the private authenticated retrieval path.
+- The public portfolio agent must not use the private authenticated retrieval path.
 
 ## Database
 
 Use Supabase Postgres for V1.
+
+The Supabase database/project name is `commonplace`.
 
 Supabase will store:
 
@@ -165,7 +170,7 @@ Examples:
 
 ### Mobile Experience
 
-The `/brain` page must be designed for phone use from the start. V1 does not need a native app or true iOS Share Sheet integration, but the web page should be fast and comfortable on mobile Safari.
+The `/commonplace` page must be designed for phone use from the start. V1 does not need a native app or true iOS Share Sheet integration, but the web page should be fast and comfortable on mobile Safari.
 
 Mobile requirements:
 
@@ -180,14 +185,17 @@ Later mobile helpers can include an iOS Shortcut that sends URLs, text, images, 
 
 ### Basic Flow
 
-1. User opens `/brain`.
+1. User opens `/commonplace`.
 2. User authenticates if needed.
-3. User enters a URL, text, pasted content, or uploaded file.
-4. User optionally adds `why_saved`.
-5. User clicks save.
+3. If authenticated as the owner, the user sees capture controls plus knowledge agent chat.
+4. Owner enters a URL, text, pasted content, chat message, or uploaded file.
+5. Owner optionally adds `why_saved`.
 6. App creates an entry with inferred defaults.
 7. App shows a quick saved confirmation.
-8. AI enrichment can run afterward.
+8. The knowledge agent handles chat input and can save useful typed or pasted material.
+9. AI enrichment can run afterward.
+
+For a public visitor, `/commonplace` shows portfolio agent chat only. The portfolio agent handles input and retrieves only from public-safe entries.
 
 ### Required Fields
 
@@ -308,6 +316,7 @@ Initial routes:
 - `POST /api/entries`: create an entry from URL, text, optional `why_saved`, and optional file metadata.
 - `POST /api/uploads`: upload screenshot or work artifact to Supabase Storage.
 - `POST /api/enrich`: trigger enrichment for one entry after save. In V1 this can be called in a fire-and-forget client flow or triggered immediately by the server after entry creation; it does not need a queue.
+- `POST /api/chat`: auth-aware agent chat. Authenticated owner requests use the knowledge agent and may save typed or pasted input. Public requests use the portfolio agent and public-safe retrieval only.
 
 Later routes:
 
@@ -316,7 +325,6 @@ Later routes:
 - `POST /api/highlights`: add highlights.
 - `POST /api/tags`: create or update tags.
 - `POST /api/search`: search entries.
-- `POST /api/chat`: private agent chat.
 
 ## AI Enrichment
 
@@ -351,7 +359,7 @@ V1:
 Later:
 
 - Add chunk-level permissions if public entries contain mixed private/public material.
-- Add a separate public view or public vector index before launching a public portfolio agent.
+- Add a public-safe vector index before broadening portfolio agent retrieval.
 
 Important future consideration:
 
@@ -366,12 +374,13 @@ Important future consideration:
 - Deploy to Vercel.
 - Add environment variable structure.
 - Add Supabase Auth with email magic link.
-- Protect `/brain`.
+- Add `/commonplace` as the unified route.
+- Protect owner-only UI and write APIs by authentication state.
 
 ### Slice 2: Capture
 
-- Build `/brain` capture page.
-- Make `/brain` mobile-responsive from the start.
+- Build `/commonplace` with authenticated owner capture controls.
+- Make `/commonplace` mobile-responsive from the start.
 - Add input for URL/text first.
 - Add optional `why_saved`.
 - Save entries to Supabase.
@@ -397,8 +406,8 @@ Important future consideration:
 
 - Add full-text search.
 - Add embeddings and semantic search.
-- Add private agent chat over entries and highlights.
-- Add public-safe retrieval path later for the portfolio agent.
+- Add knowledge agent chat over all entries and highlights for the authenticated owner.
+- Add portfolio agent chat over public-safe entries for public visitors.
 
 ## Decisions Before Coding
 
@@ -406,4 +415,5 @@ Important future consideration:
 - Use Supabase Auth with email magic link; do not start with Auth0.
 - Include uploads in Slice 2, but ship URL/text capture first and add uploads after.
 - Run enrichment after save in a fire-and-forget flow; no queue at V1 scale.
-- Use a Supabase project name that can be seen publicly without embarrassment, such as `hugh-brain`, `hugh-tastebase`, or `hugh-knowledge-base`.
+- Use `commonplace` as the Supabase database/project name.
+- Use `/commonplace` as a single auth-aware surface; do not add a separate private capture route.

@@ -1,2 +1,4 @@
 test.htm
 node_modules/
+.env*.local
+.next/
