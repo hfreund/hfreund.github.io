@@ -2,6 +2,7 @@
 
 import { createBrowserClient } from "@supabase/ssr";
 
+import type { Database } from "@/lib/database.types";
 import { getSupabasePublishableKey, getSupabaseUrl } from "@/lib/env";
 
 export function createClient() {
@@ -12,5 +13,5 @@ export function createClient() {
     throw new Error("Missing Supabase browser environment variables.");
   }
 
-  return createBrowserClient(supabaseUrl, supabasePublishableKey);
+  return createBrowserClient<Database>(supabaseUrl, supabasePublishableKey);
 }

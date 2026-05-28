@@ -1,11 +1,16 @@
 import Link from "next/link";
 
+import { CaptureForm } from "@/app/commonplace/capture-form";
+import type { Entry } from "@/lib/database.types";
 import { getOwnerEmail, hasSupabaseConfig } from "@/lib/env";
 import { createClient } from "@/lib/supabase/server";
 
-async function getUserEmail() {
+async function getCommonplaceState() {
   if (!hasSupabaseConfig()) {
-    return null;
+    return {
+      userEmail: null,
+      recentEntries: [],
+    };
   }
 
   const supabase = await createClient();
@@ -13,11 +18,27 @@ async function getUserEmail() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  return user?.email?.toLowerCase() ?? null;
+  const userEmail = user?.email?.toLowerCase() ?? null;
+  let recentEntries: Entry[] = [];
+
+  if (userEmail && userEmail === getOwnerEmail()?.toLowerCase()) {
+    const { data } = await supabase
+      .from("entries")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .limit(5);
+
+    recentEntries = data ?? [];
+  }
+
+  return {
+    userEmail,
+    recentEntries,
+  };
 }
 
 export default async function CommonplacePage() {
-  const userEmail = await getUserEmail();
+  const { userEmail, recentEntries } = await getCommonplaceState();
   const ownerEmail = getOwnerEmail()?.toLowerCase();
   const isOwner = Boolean(userEmail && ownerEmail && userEmail === ownerEmail);
 
@@ -34,22 +55,47 @@ export default async function CommonplacePage() {
           </p>
         </header>
 
-        {isOwner ? <OwnerPlaceholder /> : <PublicPlaceholder userEmail={userEmail} />}
+        {isOwner ? <OwnerWorkspace recentEntries={recentEntries} /> : <PublicPlaceholder userEmail={userEmail} />}
       </div>
     </main>
   );
 }
 
-function OwnerPlaceholder() {
+function OwnerWorkspace({ recentEntries }: { recentEntries: Entry[] }) {
   return (
     <>
       <section className="commonplace-card">
-        <h2>Owner workspace</h2>
+        <h2>Capture</h2>
         <p>
-          This is the authenticated owner surface. Slice 2 will add capture, and the agent layer will later let
-          typing or pasting here save to the knowledge base.
+          Save a link or thought quickly. The app infers whether it is a reference link or a text note and keeps it
+          private by default.
         </p>
-        <p>For now, authentication and route mode are wired and ready for the capture build.</p>
+        <CaptureForm />
+      </section>
+
+      <section className="commonplace-card">
+        <h2>Recent captures</h2>
+        {recentEntries.length > 0 ? (
+          <ol className="commonplace-entry-list">
+            {recentEntries.map((entry) => (
+              <li className="commonplace-entry" key={entry.id}>
+                <p className="commonplace-entry__meta">
+                  {entry.content_type} · {entry.media_type} · {formatDate(entry.created_at)}
+                </p>
+                <h3>{getEntryTitle(entry)}</h3>
+                {entry.url ? (
+                  <a href={entry.url} target="_blank" rel="noreferrer">
+                    {entry.url}
+                  </a>
+                ) : null}
+                {entry.body ? <p>{entry.body}</p> : null}
+                {entry.why_saved ? <p className="commonplace-entry__why">Why saved: {entry.why_saved}</p> : null}
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p>No captures yet. Save a link or thought to start the collection.</p>
+        )}
         <form className="commonplace-actions" action="/auth/sign-out" method="post">
           <button className="commonplace-button commonplace-button--ghost" type="submit">
             Sign out
@@ -58,6 +104,31 @@ function OwnerPlaceholder() {
       </section>
     </>
   );
+}
+
+function getEntryTitle(entry: Entry) {
+  if (entry.title) {
+    return entry.title;
+  }
+
+  if (entry.url) {
+    try {
+      return new URL(entry.url).hostname.replace(/^www\./, "");
+    } catch {
+      return entry.url;
+    }
+  }
+
+  return entry.body?.slice(0, 80) ?? "Untitled entry";
+}
+
+function formatDate(value: string) {
+  return new Intl.DateTimeFormat("en", {
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  }).format(new Date(value));
 }
 
 function PublicPlaceholder({ userEmail }: { userEmail: string | null }) {

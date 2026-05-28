@@ -99,6 +99,12 @@
   gap: 0.9rem;
 }
 
+.commonplace-capture {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
 .commonplace-label {
   display: grid;
   gap: 0.35rem;
@@ -121,6 +127,73 @@
 .commonplace-input:focus {
   outline: 2px solid var(--color-phosphor);
   outline-offset: 2px;
+}
+
+.commonplace-textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.commonplace-textarea--small {
+  min-height: 5.5rem;
+}
+
+.commonplace-form-status {
+  margin: 0;
+  align-self: center;
+  font-size: 0.9rem;
+}
+
+.commonplace-form-status--error {
+  color: hsl(20 80% 72%);
+}
+
+.commonplace-form-status--saved {
+  color: hsl(145 55% 72%);
+}
+
+.commonplace-entry-list {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  list-style: none;
+}
+
+.commonplace-entry {
+  padding-top: 1rem;
+  border-top: 1px solid hsla(150 30% 42% / 0.24);
+}
+
+.commonplace-entry:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.commonplace-entry h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.commonplace-entry a {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0.45rem;
+  overflow-wrap: anywhere;
+  color: hsl(145 55% 72%);
+}
+
+.commonplace-entry__meta,
+.commonplace-entry__why {
+  color: var(--color-phosphor-dim);
+}
+
+.commonplace-entry__meta {
+  margin-bottom: 0.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 640px) {
