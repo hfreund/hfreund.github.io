@@ -1,1 +1,8 @@
 test.htm
+node_modules/
+.env*.local
+.next/
+.npm-cache/
+.vercel-home/
+.vercel-config/
+.vercel
